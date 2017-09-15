@@ -1,0 +1,13 @@
+@@ Function return type doesnt match what gets returned
+nummer functie pizza(draad stijn){
+    geefterug stijn;
+}
+
+@@ Function returns not existing ID
+draad functie pizza2(draad pizza){
+    geefterug pizza3;
+}
+
+pizza("stijn");
+
+pizza2("pizza");

@@ -1,0 +1,456 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Server-Side HTTPS Support &mdash; Akka Documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/base.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/docs.css" type="text/css" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '2.4.11',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/toc.js"></script>
+    <script type="text/javascript" src="../../_static/prettify.js"></script>
+    <script type="text/javascript" src="../../_static/highlightCode.js"></script>
+    <script type="text/javascript" src="../../_static/effects.core.js"></script>
+    <script type="text/javascript" src="../../_static/effects.highlight.js"></script>
+    <script type="text/javascript" src="../../_static/scrollTo.js"></script>
+    <script type="text/javascript" src="../../_static/contentsFix.js"></script>
+    <script type="text/javascript" src="../../_static/ga.js"></script>
+    <script type="text/javascript" src="../../_static/warnOldDocs.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="top" title="Akka Documentation" href="../../index.html" />
+    <link rel="up" title="Akka HTTP" href="index.html" />
+    <link rel="next" title="Migration Guide between experimental builds of Akka HTTP (2.4.x)" href="../../scala/http/migration-guide-2.4.x-experimental.html" />
+    <link rel="prev" title="Configuration" href="configuration.html" />
+
+
+  </head>
+  <body>
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="container">
+        <div class="navbar-logo">
+          <a href="http://akka.io"><img class="svg-logo" src="../../_static/akka_full_color.svg" /></a>
+        </div>
+        <ul class="nav">
+          <li><a href="http://akka.io/docs">Documentation</a></li>
+          <li><a href="http://doc.akka.io/docs/akka/current/additional/faq.html">FAQ</a></li>
+          <li><a href="http://akka.io/downloads">Download</a></li>
+          <li><a href="http://groups.google.com/group/akka-user">Mailing List</a></li>
+          <li><a href="http://github.com/akka/akka">Code</a></li>
+          <li><a href="http://www.lightbend.com/how/subscription">Commercial Support</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="main">
+    <div class="container">
+      <div class="page-title">Server-Side HTTPS Support</div>
+      <div class="pdf-link"><a href="../../AkkaScala.pdf" title="Akka Scala Documentation"><img src="../../_static/pdf-scala-icon.png" style="height: 40px;" /></a></div>
+      <div class="pdf-link"><a href="../../AkkaJava.pdf" title="Akka Java Documentation"><img src="../../_static/pdf-java-icon.png" style="height: 40px;" /></a></div>
+    </div>
+    <div class="main-container">
+      <div class="container">
+        <div class="row">
+          <div class="span12">
+            <ul class="breadcrumb">
+              <li>
+                 <span class="divider">|</span> <a href="../../scala/http/migration-guide-2.4.x-experimental.html">Migration Guide between experimental builds of Akka HTTP (2.4.x)</a> <span class="divider">»</span>
+              </li>
+              <li>
+                <a href="../../java.html">Java Contents</a> <span class="divider">|</span> <a href="../../scala.html">Scala Contents</a>
+              </li>
+              <li>
+                <span class="divider">«</span> <a href="configuration.html">Configuration</a> <span class="divider">|</span>
+              </li>
+              <li style="float: left">
+                Version 2.4.11
+              </li>
+              <li style="float: left">
+                <input type="search" id="search" class="form-control" />
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row"><div class="span9">
+            
+  <div class="section" id="server-side-https-support">
+<span id="serversidehttps-java"></span><h1>Server-Side HTTPS Support</h1>
+<p>Akka HTTP supports TLS encryption on the server-side as well as on the <a class="reference internal" href="../../scala/http/client-side/client-https-support.html#clientsidehttps"><em>client-side</em></a>.</p>
+<p>The central vehicle for configuring encryption is the <tt class="docutils literal"><span class="pre">HttpsConnectionContext</span></tt>, which can be created using
+the static method <tt class="docutils literal"><span class="pre">ConnectionContext.https</span></tt> which is defined like this:</p>
+<div class="highlight-scala"><div class="highlight"><pre><span class="c1">// ConnectionContext</span>
+<span class="cm">/** Used to serve HTTPS traffic. */</span>
+<span class="k">def</span> <span class="n">https</span><span class="o">(</span><span class="n">sslContext</span><span class="k">:</span> <span class="kt">SSLContext</span><span class="o">)</span><span class="k">:</span> <span class="kt">HttpsConnectionContext</span> <span class="o">=</span>
+  <span class="n">scaladsl</span><span class="o">.</span><span class="nc">ConnectionContext</span><span class="o">.</span><span class="n">https</span><span class="o">(</span><span class="n">sslContext</span><span class="o">)</span>
+
+<span class="cm">/** Used to serve HTTPS traffic. */</span>
+<span class="k">def</span> <span class="n">https</span><span class="o">(</span>
+  <span class="n">sslContext</span><span class="k">:</span>          <span class="kt">SSLContext</span><span class="o">,</span>
+  <span class="n">sslConfig</span><span class="k">:</span>           <span class="kt">Optional</span><span class="o">[</span><span class="kt">AkkaSSLConfig</span><span class="o">],</span>
+  <span class="n">enabledCipherSuites</span><span class="k">:</span> <span class="kt">Optional</span><span class="o">[</span><span class="kt">JCollection</span><span class="o">[</span><span class="kt">String</span><span class="o">]],</span>
+  <span class="n">enabledProtocols</span><span class="k">:</span>    <span class="kt">Optional</span><span class="o">[</span><span class="kt">JCollection</span><span class="o">[</span><span class="kt">String</span><span class="o">]],</span>
+  <span class="n">clientAuth</span><span class="k">:</span>          <span class="kt">Optional</span><span class="o">[</span><span class="kt">TLSClientAuth</span><span class="o">],</span>
+  <span class="n">sslParameters</span><span class="k">:</span>       <span class="kt">Optional</span><span class="o">[</span><span class="kt">SSLParameters</span><span class="o">])</span> <span class="k">=</span>
+  <span class="n">scaladsl</span><span class="o">.</span><span class="nc">ConnectionContext</span><span class="o">.</span><span class="n">https</span><span class="o">(</span>
+    <span class="n">sslContext</span><span class="o">,</span>
+    <span class="nc">OptionConverters</span><span class="o">.</span><span class="n">toScala</span><span class="o">(</span><span class="n">sslConfig</span><span class="o">),</span>
+    <span class="nc">OptionConverters</span><span class="o">.</span><span class="n">toScala</span><span class="o">(</span><span class="n">enabledCipherSuites</span><span class="o">).</span><span class="n">map</span><span class="o">(</span><span class="nc">Util</span><span class="o">.</span><span class="n">immutableSeq</span><span class="o">(</span><span class="k">_</span><span class="o">)),</span>
+    <span class="nc">OptionConverters</span><span class="o">.</span><span class="n">toScala</span><span class="o">(</span><span class="n">enabledProtocols</span><span class="o">).</span><span class="n">map</span><span class="o">(</span><span class="nc">Util</span><span class="o">.</span><span class="n">immutableSeq</span><span class="o">(</span><span class="k">_</span><span class="o">)),</span>
+    <span class="nc">OptionConverters</span><span class="o">.</span><span class="n">toScala</span><span class="o">(</span><span class="n">clientAuth</span><span class="o">),</span>
+    <span class="nc">OptionConverters</span><span class="o">.</span><span class="n">toScala</span><span class="o">(</span><span class="n">sslParameters</span><span class="o">))</span>
+</pre></div>
+</div>
+<p>On the server-side the <tt class="docutils literal"><span class="pre">bind</span></tt>, and <tt class="docutils literal"><span class="pre">bindAndHandleXXX</span></tt> methods of the <a class="reference external" href="https://github.com/akka/akka/blob/master/akka-http-core/src/main/scala/akka/http/javadsl/Http.scala">akka.http.javadsl.Http</a> extension define an
+optional <tt class="docutils literal"><span class="pre">httpsContext</span></tt> parameter, which can receive the HTTPS configuration in the form of an <tt class="docutils literal"><span class="pre">HttpsContext</span></tt>
+instance.
+If defined encryption is enabled on all accepted connections. Otherwise it is disabled (which is the default).</p>
+<p>For detailed documentation for client-side HTTPS support refer to <a class="reference internal" href="../../scala/http/client-side/client-https-support.html#clientsidehttps"><em>Client-Side HTTPS Support</em></a>.</p>
+<div class="section" id="ssl-config">
+<span id="ssl-config-java"></span><h2>SSL-Config</h2>
+<p>Akka HTTP heavily relies on, and delegates most configuration of any SSL/TLS related options to
+<a class="reference external" href="http://typesafehub.github.io/ssl-config/">Lightbend SSL-Config</a>, which is a library specialized in providing an secure-by-default SSLContext
+and related options.</p>
+<p>Please refer to the <a class="reference external" href="http://typesafehub.github.io/ssl-config/">Lightbend SSL-Config</a> documentation for detailed documentation of all available settings.</p>
+<p>SSL Config settings used by Akka HTTP (as well as Streaming TCP) are located under the <cite>akka.ssl-config</cite> namespace.</p>
+<p>In order to use SSL-Config in Akka so it logs to the right ActorSystem-wise logger etc., the
+<tt class="docutils literal"><span class="pre">AkkaSSLConfig</span></tt> extension is provided. Obtaining it is as simple as:</p>
+<div class="highlight-scala"><div class="highlight"><pre><span class="k">final</span> <span class="nc">ActorSystem</span> <span class="n">system</span> <span class="k">=</span> <span class="nc">ActorSystem</span><span class="o">.</span><span class="n">create</span><span class="o">();</span>
+
+<span class="k">final</span> <span class="nc">AkkaSSLConfig</span> <span class="n">sslConfig</span> <span class="k">=</span> <span class="nc">AkkaSSLConfig</span><span class="o">.</span><span class="n">get</span><span class="o">(</span><span class="n">system</span><span class="o">);</span>
+</pre></div>
+</div>
+<p>While typical usage, for example for configuring http client settings would be applied globally by configuring
+ssl-config in <tt class="docutils literal"><span class="pre">application.conf</span></tt>, it's possible to obtain the extension and <tt class="docutils literal"><span class="pre">copy</span></tt> it while modifying any
+configuration that you might need to change and then use that specific <tt class="docutils literal"><span class="pre">AkkaSSLConfig</span></tt> instance while establishing
+connections be it client or server-side.</p>
+</div>
+<div class="section" id="obtaining-ssl-tls-certificates">
+<h2>Obtaining SSL/TLS Certificates</h2>
+<p>In order to run an HTTPS server a certificate has to be provided, which usually is either obtained from a signing
+authority or created by yourself for local or staging environment purposes.</p>
+<p>Signing authorities often provide instructions on how to create a Java keystore (typically with reference to Tomcat
+configuration). If you want to generate your own certificates, the official Oracle documentation on how to generate
+keystores using the JDK keytool utility can be found <a class="reference external" href="https://docs.oracle.com/javase/8/docs/technotes/tools/unix/keytool.html">here</a>.</p>
+<p>SSL-Config provides a more targeted guide on generating certificates, so we recommend you start with the guide
+titled <a class="reference external" href="http://typesafehub.github.io/ssl-config/CertificateGeneration.html">Generating X.509 Certificates</a>.</p>
+</div>
+<div class="section" id="using-https">
+<span id="using-https-java"></span><h2>Using HTTPS</h2>
+<p>Once you have obtained the server certificate, using it is as simple as preparing an <tt class="docutils literal"><span class="pre">HttpsConnectionContext</span></tt>
+and either setting it as the default one to be used by all servers started by the given <tt class="docutils literal"><span class="pre">Http</span></tt> extension
+or passing it in explicitly when binding the server.</p>
+<p>The below example shows how setting up HTTPS works when using the <tt class="docutils literal"><span class="pre">akka.http.javadsl.server.HttpApp</span></tt> convenience class.
+Firstly you will create and configure an instance of <tt class="docutils literal"><span class="pre">akka.http.javadsl.HttpsConnectionContext</span></tt> :</p>
+<div class="highlight-scala"><pre>// ** CONFIGURING ADDITIONAL SETTINGS ** //
+
+public static HttpsConnectionContext useHttps(ActorSystem system) {
+    HttpsConnectionContext https = null;
+    try {
+      // initialise the keystore
+      // !!! never put passwords into code !!!
+      final char[] password = new char[]{'a', 'b', 'c', 'd', 'e', 'f'};
+
+      final KeyStore ks = KeyStore.getInstance("PKCS12");
+      final InputStream keystore = SimpleServerApp.class.getClassLoader().getResourceAsStream("httpsDemoKeys/keys/server.p12");
+      if (keystore == null) {
+        throw new RuntimeException("Keystore required!");
+      }
+      ks.load(keystore, password);
+
+      final KeyManagerFactory keyManagerFactory = KeyManagerFactory.getInstance("SunX509");
+      keyManagerFactory.init(ks, password);
+
+      final TrustManagerFactory tmf = TrustManagerFactory.getInstance("SunX509");
+      tmf.init(ks);
+
+      final SSLContext sslContext = SSLContext.getInstance("TLS");
+      sslContext.init(keyManagerFactory.getKeyManagers(), tmf.getTrustManagers(), new SecureRandom());
+
+      https = ConnectionContext.https(sslContext);
+
+    } catch (NoSuchAlgorithmException | KeyManagementException e) {
+      system.log().error("Exception while configuring HTTPS.", e);
+    } catch (CertificateException | KeyStoreException | UnrecoverableKeyException | IOException e) {
+      system.log().error("Exception while ", e);
+    }
+
+    return https;
+}
+</pre>
+</div>
+<p>Then pass it to <tt class="docutils literal"><span class="pre">akka.http.javadsl.Http</span></tt> class's <tt class="docutils literal"><span class="pre">setDefaultServerHttpContext</span></tt> method, like in the below <tt class="docutils literal"><span class="pre">main</span></tt> method.</p>
+<div class="highlight-scala"><div class="highlight"><pre><span class="n">public</span> <span class="nc">Route</span> <span class="n">multiply</span><span class="o">(</span><span class="n">int</span> <span class="n">x</span><span class="o">,</span> <span class="n">int</span> <span class="n">y</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">int</span> <span class="n">result</span> <span class="k">=</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span><span class="o">;</span>
+  <span class="k">return</span> <span class="n">complete</span><span class="o">(</span><span class="nc">String</span><span class="o">.</span><span class="n">format</span><span class="o">(</span><span class="s">&quot;%d * %d = %d&quot;</span><span class="o">,</span> <span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">,</span> <span class="n">result</span><span class="o">));</span>
+<span class="o">}</span>
+
+<span class="n">public</span> <span class="nc">CompletionStage</span><span class="o">&lt;</span><span class="nc">Route</span><span class="o">&gt;</span> <span class="n">multiplyAsync</span><span class="o">(</span><span class="nc">Executor</span> <span class="n">ctx</span><span class="o">,</span> <span class="n">int</span> <span class="n">x</span><span class="o">,</span> <span class="n">int</span> <span class="n">y</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">return</span> <span class="nc">CompletableFuture</span><span class="o">.</span><span class="n">supplyAsync</span><span class="o">(()</span> <span class="o">-&gt;</span> <span class="n">multiply</span><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">),</span> <span class="n">ctx</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="n">public</span> <span class="nc">Route</span> <span class="n">createRoute</span><span class="o">()</span> <span class="o">{</span>
+  <span class="nc">Route</span> <span class="n">addHandler</span> <span class="k">=</span> <span class="n">parameter</span><span class="o">(</span><span class="nc">StringUnmarshallers</span><span class="o">.</span><span class="nc">INTEGER</span><span class="o">,</span> <span class="s">&quot;x&quot;</span><span class="o">,</span> <span class="n">x</span> <span class="o">-&gt;</span>
+    <span class="n">parameter</span><span class="o">(</span><span class="nc">StringUnmarshallers</span><span class="o">.</span><span class="nc">INTEGER</span><span class="o">,</span> <span class="s">&quot;y&quot;</span><span class="o">,</span> <span class="n">y</span> <span class="o">-&gt;</span> <span class="o">{</span>
+      <span class="n">int</span> <span class="n">result</span> <span class="k">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="o">;</span>
+      <span class="k">return</span> <span class="n">complete</span><span class="o">(</span><span class="nc">String</span><span class="o">.</span><span class="n">format</span><span class="o">(</span><span class="s">&quot;%d + %d = %d&quot;</span><span class="o">,</span> <span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">,</span> <span class="n">result</span><span class="o">));</span>
+    <span class="o">})</span>
+  <span class="o">);</span>
+
+  <span class="nc">BiFunction</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">,</span> <span class="nc">Integer</span><span class="o">,</span> <span class="nc">Route</span><span class="o">&gt;</span> <span class="n">subtractHandler</span> <span class="k">=</span> <span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">{</span>
+    <span class="n">int</span> <span class="n">result</span> <span class="k">=</span> <span class="n">x</span> <span class="o">-</span> <span class="n">y</span><span class="o">;</span>
+    <span class="k">return</span> <span class="n">complete</span><span class="o">(</span><span class="nc">String</span><span class="o">.</span><span class="n">format</span><span class="o">(</span><span class="s">&quot;%d - %d = %d&quot;</span><span class="o">,</span> <span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">,</span> <span class="n">result</span><span class="o">));</span>
+  <span class="o">};</span>
+
+  <span class="k">return</span>
+    <span class="n">route</span><span class="o">(</span>
+      <span class="c1">// matches the empty path</span>
+      <span class="n">pathSingleSlash</span><span class="o">(()</span> <span class="o">-&gt;</span>
+        <span class="n">getFromResource</span><span class="o">(</span><span class="s">&quot;web/calculator.html&quot;</span><span class="o">)</span>
+      <span class="o">),</span>
+      <span class="c1">// matches paths like this: /add?x=42&amp;y=23</span>
+      <span class="n">path</span><span class="o">(</span><span class="s">&quot;add&quot;</span><span class="o">,</span> <span class="o">()</span> <span class="o">-&gt;</span> <span class="n">addHandler</span><span class="o">),</span>
+      <span class="n">path</span><span class="o">(</span><span class="s">&quot;subtract&quot;</span><span class="o">,</span> <span class="o">()</span> <span class="o">-&gt;</span>
+        <span class="n">parameter</span><span class="o">(</span><span class="nc">StringUnmarshallers</span><span class="o">.</span><span class="nc">INTEGER</span><span class="o">,</span> <span class="s">&quot;x&quot;</span><span class="o">,</span> <span class="n">x</span> <span class="o">-&gt;</span>
+          <span class="n">parameter</span><span class="o">(</span><span class="nc">StringUnmarshallers</span><span class="o">.</span><span class="nc">INTEGER</span><span class="o">,</span> <span class="s">&quot;y&quot;</span><span class="o">,</span> <span class="n">y</span> <span class="o">-&gt;</span>
+            <span class="n">subtractHandler</span><span class="o">.</span><span class="n">apply</span><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">)</span>
+          <span class="o">)</span>
+        <span class="o">)</span>
+      <span class="o">),</span>
+      <span class="c1">// matches paths like this: /multiply/{x}/{y}</span>
+      <span class="n">path</span><span class="o">(</span><span class="nc">PathMatchers</span><span class="o">.</span><span class="n">segment</span><span class="o">(</span><span class="s">&quot;multiply&quot;</span><span class="o">).</span><span class="n">slash</span><span class="o">(</span><span class="n">integerSegment</span><span class="o">()).</span><span class="n">slash</span><span class="o">(</span><span class="n">integerSegment</span><span class="o">()),</span>
+        <span class="k">this</span><span class="o">::</span><span class="n">multiply</span>
+      <span class="o">),</span>
+      <span class="n">path</span><span class="o">(</span><span class="nc">PathMatchers</span><span class="o">.</span><span class="n">segment</span><span class="o">(</span><span class="s">&quot;multiplyAsync&quot;</span><span class="o">).</span><span class="n">slash</span><span class="o">(</span><span class="n">integerSegment</span><span class="o">()).</span><span class="n">slash</span><span class="o">(</span><span class="n">integerSegment</span><span class="o">()),</span> <span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">)</span> <span class="o">-&gt;</span>
+        <span class="n">extractExecutionContext</span><span class="o">(</span><span class="n">ctx</span> <span class="o">-&gt;</span>
+          <span class="n">onSuccess</span><span class="o">(()</span> <span class="o">-&gt;</span> <span class="n">multiplyAsync</span><span class="o">(</span><span class="n">ctx</span><span class="o">,</span> <span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">),</span> <span class="nc">Function</span><span class="o">.</span><span class="n">identity</span><span class="o">())</span>
+        <span class="o">)</span>
+      <span class="o">),</span>
+      <span class="n">post</span><span class="o">(()</span> <span class="o">-&gt;</span>
+        <span class="n">path</span><span class="o">(</span><span class="s">&quot;hello&quot;</span><span class="o">,</span> <span class="o">()</span> <span class="o">-&gt;</span>
+          <span class="n">entity</span><span class="o">(</span><span class="n">entityToString</span><span class="o">(),</span> <span class="n">body</span> <span class="o">-&gt;</span>
+            <span class="n">complete</span><span class="o">(</span><span class="s">&quot;Hello &quot;</span> <span class="o">+</span> <span class="n">body</span> <span class="o">+</span> <span class="s">&quot;!&quot;</span><span class="o">)</span>
+          <span class="o">)</span>
+        <span class="o">)</span>
+      <span class="o">)</span>
+    <span class="o">);</span>
+<span class="o">}</span>
+
+<span class="c1">// ** STARTING THE SERVER ** //</span>
+
+<span class="n">public</span> <span class="n">static</span> <span class="n">void</span> <span class="n">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="n">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+  <span class="k">final</span> <span class="nc">ActorSystem</span> <span class="n">system</span> <span class="k">=</span> <span class="nc">ActorSystem</span><span class="o">.</span><span class="n">create</span><span class="o">(</span><span class="s">&quot;SimpleServerApp&quot;</span><span class="o">);</span>
+  <span class="k">final</span> <span class="nc">ActorMaterializer</span> <span class="n">materializer</span> <span class="k">=</span> <span class="nc">ActorMaterializer</span><span class="o">.</span><span class="n">create</span><span class="o">(</span><span class="n">system</span><span class="o">);</span>
+  <span class="k">final</span> <span class="nc">Http</span> <span class="n">http</span> <span class="k">=</span> <span class="nc">Http</span><span class="o">.</span><span class="n">get</span><span class="o">(</span><span class="n">system</span><span class="o">);</span>
+
+  <span class="n">boolean</span> <span class="n">useHttps</span> <span class="k">=</span> <span class="kc">false</span><span class="o">;</span> <span class="c1">// pick value from anywhere</span>
+  <span class="k">if</span> <span class="o">(</span> <span class="n">useHttps</span> <span class="o">)</span> <span class="o">{</span>
+    <span class="nc">HttpsConnectionContext</span> <span class="n">https</span> <span class="k">=</span> <span class="n">useHttps</span><span class="o">(</span><span class="n">system</span><span class="o">);</span>
+    <span class="n">http</span><span class="o">.</span><span class="n">setDefaultServerHttpContext</span><span class="o">(</span><span class="n">https</span><span class="o">);</span>
+  <span class="o">}</span>
+
+  <span class="k">final</span> <span class="nc">SimpleServerApp</span> <span class="n">app</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">SimpleServerApp</span><span class="o">();</span>
+  <span class="k">final</span> <span class="nc">Flow</span><span class="o">&lt;</span><span class="nc">HttpRequest</span><span class="o">,</span> <span class="nc">HttpResponse</span><span class="o">,</span> <span class="nc">NotUsed</span><span class="o">&gt;</span> <span class="n">flow</span> <span class="k">=</span> <span class="n">app</span><span class="o">.</span><span class="n">createRoute</span><span class="o">().</span><span class="n">flow</span><span class="o">(</span><span class="n">system</span><span class="o">,</span> <span class="n">materializer</span><span class="o">);</span>
+
+  <span class="nc">Http</span><span class="o">.</span><span class="n">get</span><span class="o">(</span><span class="n">system</span><span class="o">).</span><span class="n">bindAndHandle</span><span class="o">(</span><span class="n">flow</span><span class="o">,</span> <span class="nc">ConnectHttp</span><span class="o">.</span><span class="n">toHost</span><span class="o">(</span><span class="s">&quot;localhost&quot;</span><span class="o">,</span> <span class="mi">8080</span><span class="o">),</span> <span class="n">materializer</span><span class="o">);</span>
+
+  <span class="nc">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="o">(</span><span class="s">&quot;Type RETURN to exit&quot;</span><span class="o">);</span>
+  <span class="nc">System</span><span class="o">.</span><span class="n">in</span><span class="o">.</span><span class="n">read</span><span class="o">();</span>
+  <span class="n">system</span><span class="o">.</span><span class="n">terminate</span><span class="o">();</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="running-both-http-and-https">
+<h2>Running both HTTP and HTTPS</h2>
+<p>If you want to run HTTP and HTTPS servers in a single application, you can call <tt class="docutils literal"><span class="pre">bind...</span></tt> methods twice,
+one for HTTPS, and the other for HTTP.</p>
+<p>When configuring HTTPS, you can do it up like explained in the above <a class="reference internal" href="#using-https-java"><em>Using HTTPS</em></a> section,</p>
+<div class="highlight-scala"><pre>// ** CONFIGURING ADDITIONAL SETTINGS ** //
+
+public static HttpsConnectionContext useHttps(ActorSystem system) {
+    HttpsConnectionContext https = null;
+    try {
+      // initialise the keystore
+      // !!! never put passwords into code !!!
+      final char[] password = new char[]{'a', 'b', 'c', 'd', 'e', 'f'};
+
+      final KeyStore ks = KeyStore.getInstance("PKCS12");
+      final InputStream keystore = SimpleServerApp.class.getClassLoader().getResourceAsStream("httpsDemoKeys/keys/server.p12");
+      if (keystore == null) {
+        throw new RuntimeException("Keystore required!");
+      }
+      ks.load(keystore, password);
+
+      final KeyManagerFactory keyManagerFactory = KeyManagerFactory.getInstance("SunX509");
+      keyManagerFactory.init(ks, password);
+
+      final TrustManagerFactory tmf = TrustManagerFactory.getInstance("SunX509");
+      tmf.init(ks);
+
+      final SSLContext sslContext = SSLContext.getInstance("TLS");
+      sslContext.init(keyManagerFactory.getKeyManagers(), tmf.getTrustManagers(), new SecureRandom());
+
+      https = ConnectionContext.https(sslContext);
+
+    } catch (NoSuchAlgorithmException | KeyManagementException e) {
+      system.log().error("Exception while configuring HTTPS.", e);
+    } catch (CertificateException | KeyStoreException | UnrecoverableKeyException | IOException e) {
+      system.log().error("Exception while ", e);
+    }
+
+    return https;
+}
+</pre>
+</div>
+<p>or via <a class="reference internal" href="#ssl-config-java"><em>SSL-Config</em></a> (not explained here though).</p>
+<p>Then, call <tt class="docutils literal"><span class="pre">bind...</span></tt> methods twice like below.
+The blow <tt class="docutils literal"><span class="pre">SimpleServerApp.useHttps(system)</span></tt> is calling the above defined HTTP <tt class="docutils literal"><span class="pre">public</span> <span class="pre">static</span> <span class="pre">HttpsConnectionContext</span> <span class="pre">useHttps(ActorSystem</span> <span class="pre">system)</span></tt> method.</p>
+<div class="highlight-scala"><div class="highlight"><pre><span class="k">final</span> <span class="nc">Http</span> <span class="n">http</span> <span class="k">=</span> <span class="nc">Http</span><span class="o">.</span><span class="n">get</span><span class="o">(</span><span class="n">system</span><span class="o">);</span>
+<span class="c1">//Run HTTP server firstly</span>
+<span class="n">http</span><span class="o">.</span><span class="n">bindAndHandle</span><span class="o">(</span><span class="n">flow</span><span class="o">,</span> <span class="nc">ConnectHttp</span><span class="o">.</span><span class="n">toHost</span><span class="o">(</span><span class="s">&quot;localhost&quot;</span><span class="o">,</span> <span class="mi">80</span><span class="o">),</span> <span class="n">materializer</span><span class="o">);</span>
+
+<span class="c1">//get configured HTTPS context</span>
+<span class="nc">HttpsConnectionContext</span> <span class="n">https</span> <span class="k">=</span> <span class="nc">SimpleServerApp</span><span class="o">.</span><span class="n">useHttps</span><span class="o">(</span><span class="n">system</span><span class="o">);</span>
+
+<span class="c1">// sets default context to HTTPS – all Http() bound servers for this ActorSystem will use HTTPS from now on</span>
+<span class="n">http</span><span class="o">.</span><span class="n">setDefaultServerHttpContext</span><span class="o">(</span><span class="n">https</span><span class="o">);</span>
+
+<span class="c1">//Then run HTTPS server</span>
+<span class="n">http</span><span class="o">.</span><span class="n">bindAndHandle</span><span class="o">(</span><span class="n">flow</span><span class="o">,</span> <span class="nc">ConnectHttp</span><span class="o">.</span><span class="n">toHost</span><span class="o">(</span><span class="s">&quot;localhost&quot;</span><span class="o">,</span> <span class="mi">443</span><span class="o">),</span> <span class="n">materializer</span><span class="o">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="further-reading">
+<h2>Further reading</h2>
+<p>The topic of properly configuring HTTPS for your web server is an always changing one,
+thus we recommend staying up to date with various security breach news and of course
+keep your JVM at the latest version possible, as the default settings are often updated by
+Oracle in reaction to various security updates and known issues.</p>
+<p>We also recommend having a look at the <a class="reference external" href="https://www.playframework.com/documentation/2.5.x/ConfiguringHttps#ssl-certificates">Play documentation about securing your app</a>,
+as well as the techniques described in the Play documentation about setting up a <a class="reference external" href="https://www.playframework.com/documentation/2.5.x/HTTPServer">reverse proxy to terminate TLS in
+front of your application</a> instead of terminating TLS inside the JVM, and therefore Akka HTTP, itself.</p>
+<p>Other excellent articles on the subject:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://docs.oracle.com/javase/8/docs/technotes/guides/security/jsse/JSSERefGuide.html#CreateKeystore">Oracle Java SE 8: Creating a Keystore using JSSE</a></li>
+<li><a class="reference external" href="https://docs.oracle.com/javase/8/docs/technotes/guides/security/certpath/CertPathProgGuide.html">Java PKI Programmer's Guide</a></li>
+<li><a class="reference external" href="https://tersesystems.com/2014/03/20/fixing-x509-certificates/">Fixing X.509 Certificates</a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+          <div class="span3"><p class="contents-title">Contents</p>
+              <div id="scroller-anchor">
+                <div id="scroller">
+                  <div id="toc"></div>
+                </div>
+              </div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+  <div class="container">
+    <ul>
+      <li><h5>Akka</h5></li>
+      <li><a href="http://akka.io/docs">Documentation</a></li>
+      <li><a href="http://doc.akka.io/docs/akka/current/additional/faq.html">FAQ</a></li>
+      <li><a href="http://akka.io/downloads">Downloads</a></li>
+      <li><a href="http://akka.io/news">News</a></li>
+      <li><a href="http://letitcrash.com">Blog</a></li>
+    </ul>
+    <ul>
+      <li><h5>Contribute</h5></li>
+      <li><a href="http://akka.io/community">Community Projects</a></li>
+      <li><a href="http://github.com/akka/akka">Source Code</a></li>
+      <li><a href="http://groups.google.com/group/akka-user">Mailing List</a></li>
+      <li><a href="http://doc.akka.io/docs/akka/current/project/issue-tracking.html">Report a Bug</a></li>
+    </ul>
+    <ul>
+      <li><h5>Company</h5></li>
+      <li><a href="http://www.lightbend.com/how/subscription">Commercial Support</a></li>
+      <li><a href="http://akka.io/team">Team</a></li>
+      <li><a href="mailto:info@lightbend.com">Contact</a></li>
+    </ul>
+    <ul>
+      <li><img src="../../_static/akka_icon_reverse.svg" align="center"/></li>
+    </ul>
+  </div>
+  <div class="container copyright">
+    <p style="float: left;">
+      © 2015 <a href="http://www.lightbend.com/">Lightbend Inc.</a> <span class="license">Akka is Open Source and available under the Apache 2 License.</span>
+    </p>
+    <p style="float: right; font-size: 12px;">
+      Last updated: Sep 30, 2016
+    </p>
+  </div>
+</div>
+<script type="text/javascript">
+  var $toc = $('#toc');
+  $toc.toc();
+
+  // show clickable section sign when section header hovered:
+  $('.section h2,.section h3,.section h4,.section h5').each(function(i, el) {
+      var $el = $(el);
+      $el.prepend($("<a class='section-marker' href='#" + $el.attr("id") + "'>&sect;</a>"))
+  });
+</script>
+
+<!-- Algolia docs search -->
+<script type="text/javascript">
+  var version = DOCUMENTATION_OPTIONS.VERSION;
+
+  var lang = "scala";
+  var path = window.location.pathname;
+  if (path.includes("/java/") || path.includes("java.html")) lang = "java";
+
+  console.log("Search configured for:", lang, "@", version);
+
+  docsearch({
+    apiKey: '543bad5ad786495d9ccd445ed34ed082',
+    indexName: 'akka_io',
+    inputSelector: '#search',
+    algoliaOptions: {
+      hitsPerPage: 5,
+      facetFilters: '[' + '["language:' + lang + '","language:general"]' + ',"version:' + version + '"]'
+    }
+  });
+
+  // set up "/" as global shortcut for focusing on search
+  $(document).keypress(function (event) {
+    if (event.keyCode == 47) {
+      $("#q").focus();
+      return false; // swallow key event, otherwise the / char would be input into the search box
+    }
+  });
+</script>
+
+  
+
+  </body>
+</html>

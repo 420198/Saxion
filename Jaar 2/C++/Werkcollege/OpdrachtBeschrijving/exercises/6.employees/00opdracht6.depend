@@ -1,0 +1,107 @@
+# depslib dependency file v1.0
+1483999006 source:d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\exercises\6.employees\administrator.cc
+	"asserts.h"
+	"Administrator.h"
+
+1483986789 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\exercises\6.employees\asserts.h
+	"where.h"
+	"assert_error.h"
+
+1483986789 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\exercises\6.employees\where.h
+
+1483986789 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\exercises\6.employees\assert_error.h
+	<stdexcept>
+
+1483986789 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\exercises\6.employees\animal.h
+	<string>
+	<iostream>
+
+1484120258 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\exercises\6.employees\administrator.h
+	"Employee.h"
+
+1483986789 source:d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\exercises\6.employees\animal.cc
+	"asserts.h"
+	"Animal.h"
+
+1483986789 source:d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\exercises\6.employees\assert_error.cc
+	<string>
+	<sstream>
+	"assert_error.h"
+
+1482412802 source:d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\exercises\6.employees\cage.cc
+	"common.h"
+	"asserts.h"
+	"Animal.h"
+	"Cage.h"
+
+1483986789 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\exercises\6.employees\common.h
+
+1476904946 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\exercises\6.employees\cage.h
+	<string>
+	<iostream>
+	<map>
+
+1483998054 source:d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\exercises\6.employees\employee.cc
+	"asserts.h"
+	"Animal.h"
+	"Cage.h"
+	"Employee.h"
+
+1484221837 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\exercises\6.employees\employee.h
+	<string>
+	<vector>
+	<iostream>
+
+1483999090 source:d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\exercises\6.employees\keeper.cc
+	"asserts.h"
+	"Animal.h"
+	"Cage.h"
+	"Keeper.h"
+	"Employee.h"
+
+1483998249 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\exercises\6.employees\keeper.h
+	"Employee.h"
+	<string>
+	<vector>
+	<iostream>
+
+1484054548 source:d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\exercises\6.employees\main.cc
+	<iostream>
+	<fstream>
+	<string>
+	<cstdlib>
+	"Zoo.h"
+	"Employee.h"
+	"Animal.h"
+	"ansi.h"
+	"asserts.h"
+	"Manager.h"
+	"Administrator.h"
+	"Keeper.h"
+
+1483986789 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\exercises\6.employees\zoo.h
+	<string>
+	<map>
+	<vector>
+
+1483986789 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\exercises\6.employees\ansi.h
+	"common.h"
+
+1484221823 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\exercises\6.employees\manager.h
+	<string>
+	<vector>
+	<iostream>
+	"Employee.h"
+
+1484054750 source:d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\exercises\6.employees\manager.cc
+	"Manager.h"
+	"asserts.h"
+	"Animal.h"
+	"Cage.h"
+	"Employee.h"
+
+1483987434 source:d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\exercises\6.employees\src\administrator.cc
+	"Administrator.h"
+
+1483987434 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\exercises\6.employees\include\administrator.h
+

@@ -1,0 +1,1010 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="shell"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/waro/Desktop/Shell/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/waro/Desktop/Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/waro/Desktop/Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/waro/Desktop/Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/waro/Desktop/Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/waro/Desktop/Shell/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/waro/Desktop/Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/waro/Desktop/Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/waro/Desktop/Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/waro/Desktop/Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/waro/Desktop/Shell/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/waro/Desktop/Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/waro/Desktop/Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/waro/Desktop/Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/waro/Desktop/Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="shell">
+				<Option output="/home/waro/Desktop/Shell/cmake-build-debug/shell" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/waro/Desktop/Shell/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/waro/Desktop/Shell/runtime/src"/>
+					<Add directory="/home/waro/Desktop/Shell/src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/waro/Desktop/Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 shell"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/waro/Desktop/Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/waro/Desktop/Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/waro/Desktop/Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="shell/fast">
+				<Option output="/home/waro/Desktop/Shell/cmake-build-debug/shell" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/waro/Desktop/Shell/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/waro/Desktop/Shell/runtime/src"/>
+					<Add directory="/home/waro/Desktop/Shell/src"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/waro/Desktop/Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 shell/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/waro/Desktop/Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/waro/Desktop/Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/waro/Desktop/Shell/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/waro/Desktop/Shell/gen/ShellGrammarBaseVisitor.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/gen/ShellGrammarBaseVisitor.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/gen/ShellGrammarLexer.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/gen/ShellGrammarLexer.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/gen/ShellGrammarParser.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/gen/ShellGrammarParser.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/gen/ShellGrammarVisitor.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/gen/ShellGrammarVisitor.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/ANTLRErrorListener.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/ANTLRErrorStrategy.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/ANTLRFileStream.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/ANTLRFileStream.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/ANTLRInputStream.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/ANTLRInputStream.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/BailErrorStrategy.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/BailErrorStrategy.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/BaseErrorListener.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/BaseErrorListener.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/BufferedTokenStream.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/BufferedTokenStream.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/CharStream.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/CharStream.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/CommonToken.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/CommonToken.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/CommonTokenFactory.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/CommonTokenFactory.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/CommonTokenStream.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/CommonTokenStream.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/ConsoleErrorListener.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/ConsoleErrorListener.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/DefaultErrorStrategy.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/DefaultErrorStrategy.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/DiagnosticErrorListener.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/DiagnosticErrorListener.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/Exceptions.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/Exceptions.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/FailedPredicateException.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/FailedPredicateException.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/IRecognizer.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/InputMismatchException.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/InputMismatchException.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/IntStream.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/IntStream.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/InterpreterRuleContext.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/InterpreterRuleContext.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/Lexer.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/Lexer.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/LexerInterpreter.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/LexerInterpreter.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/LexerNoViableAltException.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/LexerNoViableAltException.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/ListTokenSource.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/ListTokenSource.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/NoViableAltException.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/NoViableAltException.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/Parser.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/Parser.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/ParserInterpreter.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/ParserInterpreter.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/ParserRuleContext.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/ParserRuleContext.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/ProxyErrorListener.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/ProxyErrorListener.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/RecognitionException.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/RecognitionException.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/Recognizer.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/Recognizer.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/RuleContext.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/RuleContext.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/RuleContextWithAltNum.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/RuleContextWithAltNum.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/RuntimeMetaData.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/RuntimeMetaData.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/Token.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/TokenFactory.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/TokenSource.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/TokenStream.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/TokenStream.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/TokenStreamRewriter.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/TokenStreamRewriter.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/UnbufferedCharStream.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/UnbufferedCharStream.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/UnbufferedTokenStream.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/UnbufferedTokenStream.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/Vocabulary.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/Vocabulary.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/WritableToken.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/antlr4-common.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/antlr4-runtime.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/ATN.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/ATN.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/ATNConfig.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/ATNConfig.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/ATNConfigSet.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/ATNConfigSet.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/ATNDeserializationOptions.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/ATNDeserializationOptions.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/ATNDeserializer.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/ATNDeserializer.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/ATNSerializer.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/ATNSerializer.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/ATNSimulator.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/ATNSimulator.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/ATNState.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/ATNState.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/ATNType.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/AbstractPredicateTransition.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/AbstractPredicateTransition.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/ActionTransition.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/ActionTransition.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/AmbiguityInfo.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/AmbiguityInfo.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/ArrayPredictionContext.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/ArrayPredictionContext.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/AtomTransition.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/AtomTransition.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/BasicBlockStartState.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/BasicBlockStartState.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/BasicState.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/BasicState.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/BlockEndState.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/BlockEndState.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/BlockStartState.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/ContextSensitivityInfo.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/ContextSensitivityInfo.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/DecisionEventInfo.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/DecisionEventInfo.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/DecisionInfo.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/DecisionInfo.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/DecisionState.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/DecisionState.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/EmptyPredictionContext.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/EmptyPredictionContext.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/EpsilonTransition.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/EpsilonTransition.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/ErrorInfo.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/ErrorInfo.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/LL1Analyzer.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/LL1Analyzer.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/LexerATNConfig.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/LexerATNConfig.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/LexerATNSimulator.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/LexerATNSimulator.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/LexerAction.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/LexerActionExecutor.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/LexerActionExecutor.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/LexerActionType.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/LexerChannelAction.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/LexerChannelAction.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/LexerCustomAction.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/LexerCustomAction.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/LexerIndexedCustomAction.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/LexerIndexedCustomAction.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/LexerModeAction.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/LexerModeAction.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/LexerMoreAction.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/LexerMoreAction.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/LexerPopModeAction.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/LexerPopModeAction.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/LexerPushModeAction.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/LexerPushModeAction.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/LexerSkipAction.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/LexerSkipAction.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/LexerTypeAction.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/LexerTypeAction.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/LookaheadEventInfo.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/LookaheadEventInfo.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/LoopEndState.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/LoopEndState.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/NotSetTransition.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/NotSetTransition.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/OrderedATNConfigSet.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/OrderedATNConfigSet.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/ParseInfo.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/ParseInfo.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/ParserATNSimulator.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/ParserATNSimulator.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/PlusBlockStartState.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/PlusBlockStartState.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/PlusLoopbackState.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/PlusLoopbackState.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/PrecedencePredicateTransition.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/PrecedencePredicateTransition.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/PredicateEvalInfo.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/PredicateEvalInfo.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/PredicateTransition.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/PredicateTransition.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/PredictionContext.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/PredictionContext.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/PredictionMode.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/PredictionMode.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/ProfilingATNSimulator.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/ProfilingATNSimulator.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/RangeTransition.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/RangeTransition.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/RuleStartState.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/RuleStartState.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/RuleStopState.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/RuleStopState.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/RuleTransition.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/RuleTransition.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/SemanticContext.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/SemanticContext.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/SetTransition.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/SetTransition.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/SingletonPredictionContext.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/SingletonPredictionContext.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/StarBlockStartState.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/StarBlockStartState.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/StarLoopEntryState.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/StarLoopEntryState.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/StarLoopbackState.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/StarLoopbackState.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/TokensStartState.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/TokensStartState.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/Transition.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/Transition.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/WildcardTransition.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/atn/WildcardTransition.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/dfa/DFA.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/dfa/DFA.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/dfa/DFASerializer.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/dfa/DFASerializer.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/dfa/DFAState.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/dfa/DFAState.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/dfa/LexerDFASerializer.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/dfa/LexerDFASerializer.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/misc/Interval.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/misc/Interval.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/misc/IntervalSet.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/misc/IntervalSet.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/misc/MurmurHash.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/misc/MurmurHash.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/misc/Predicate.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/support/Any.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/support/Arrays.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/support/Arrays.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/support/BitSet.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/support/CPPUtils.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/support/CPPUtils.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/support/Declarations.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/support/StringUtils.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/support/StringUtils.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/support/guid.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/support/guid.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/AbstractParseTreeVisitor.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/ErrorNode.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/ErrorNodeImpl.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/ErrorNodeImpl.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/IterativeParseTreeWalker.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/IterativeParseTreeWalker.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/ParseTree.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/ParseTree.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/ParseTreeListener.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/ParseTreeProperty.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/ParseTreeVisitor.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/ParseTreeWalker.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/ParseTreeWalker.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/TerminalNode.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/TerminalNodeImpl.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/TerminalNodeImpl.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/Trees.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/Trees.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/pattern/Chunk.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/pattern/ParseTreeMatch.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/pattern/ParseTreeMatch.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/pattern/ParseTreePattern.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/pattern/ParseTreePattern.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/pattern/ParseTreePatternMatcher.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/pattern/ParseTreePatternMatcher.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/pattern/RuleTagToken.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/pattern/RuleTagToken.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/pattern/TagChunk.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/pattern/TagChunk.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/pattern/TextChunk.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/pattern/TextChunk.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/pattern/TokenTagToken.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/pattern/TokenTagToken.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/xpath/XPath.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/xpath/XPath.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/xpath/XPathElement.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/xpath/XPathElement.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/xpath/XPathLexer.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/xpath/XPathLexer.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/xpath/XPathLexerErrorListener.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/xpath/XPathLexerErrorListener.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/xpath/XPathRuleAnywhereElement.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/xpath/XPathRuleAnywhereElement.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/xpath/XPathRuleElement.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/xpath/XPathRuleElement.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/xpath/XPathTokenAnywhereElement.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/xpath/XPathTokenAnywhereElement.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/xpath/XPathTokenElement.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/xpath/XPathTokenElement.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/xpath/XPathWildcardAnywhereElement.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/xpath/XPathWildcardAnywhereElement.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/xpath/XPathWildcardElement.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/runtime/src/tree/xpath/XPathWildcardElement.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/src/Commands.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/src/Commands.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/src/Helpers.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/src/Helpers.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/src/MyVisitor.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/src/MyVisitor.h">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/src/main.cpp">
+			<Option target="shell"/>
+		</Unit>
+		<Unit filename="/home/waro/Desktop/Shell/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

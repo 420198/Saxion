@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:E1_basicIO.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:E2_sizes.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:E3_relations.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:E4_cage.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:E5_operators.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:E6_employees.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:E7_finally.xcodeproj">
+   </FileRef>
+</Workspace>

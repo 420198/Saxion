@@ -1,0 +1,45 @@
+<!--
+  Created by IntelliJ IDEA.
+  Model.User: sklar
+  Date: 8/31/2016
+  Time: 7:24 PM
+  To change this template use File | Settings | File Templates.
+-->
+<html>
+<head>
+    <title>Title</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/media_queries.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="form">
+        <div class="l_r_Box">
+            <div class="header"><h1>Login Form</h1></div>
+            <form name="form" class="login" action="login" method="post">
+                <input type="text" name="username" class="username"placeholder="Username"/><br/>
+                <input type="password" name="password" class="password" placeholder="Password"/><br/>
+                <input type="submit" class="submit" name="Send" value="Send"/>
+                <input type="reset" class="reset" name="Reset" valie="Reset"/><br/>
+            </form>
+        </div>
+    </div>
+    <div id="form">
+        <div class="l_r_Box">
+            <div class="header"><h1>Register Form</h1></div>
+            <form name="form_login" class="login" action="register" method="post">
+                <input type="text" name="username" class="username"placeholder="Username"/><br/>
+                <input type="password" name="password" class="password"placeholder="Password"/><br/>
+                <div class="soort">
+                    <input type="radio" name="soort" value="Model.Huurder" id="huurder"/>
+                    <label for="huurder">Huurder</label><br/>
+
+                    <input type="radio" name="soort" value="Model.Verhuurder" id="verhuurder"/>
+                    <label for="verhuurder">Verhuurder</label><br/>
+                </div>
+                <input type="submit" class="submit" name="Send" value="Send"/>
+                <input type="reset" class="reset" name="Reset" valie="Reset"/><br/>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+// This file contains the doxygen code for this assignment
+/** \mainpage
+
+<h2>Operators</h2>
+
+<p>In this assignment we will refactor the Person and Marriage
+	classes from the third assignment.
+	We are going to add various \e operators.
+
+@note
+You'll have to copy Person.h, Person.cc, Marriage.h and Marriage.cc
+	from task 3 (relations) to this directory.
+<br>The Person.h and Marriage.h files provided in this directory
+	are just dummies to keep doxygen happy.
+<br>Do not overwrite any other existing files.
+
+<h3>Assignment</h3>
+<ul>
+<li>Write a "helper", i.e. a stand-alone output operator (<b>&lt;&lt;</b>),
+	to print a Gender constant (MALE, FEMALE) on an \e ostream
+	(e.g. as 'm' or 'f' or as "male" and "female").
+	<br>Note: Since an \e enum is not a \e class
+		there is no need to declare it a \e friend.
+	<br>Note: Since Gender is defined within class Person,
+		you'll need to prefix Gender and the constants
+		with <tt>Person::</tt> e.g. <tt>Person::Gender</tt>,
+		<tt>Person::MALE</tt> and <tt>Person::FEMALE</tt>.
+	<br>Hint: ternary operator: \e expr ? \e if_true : \e if_false .
+<li>Write a "helper", i.e. a stand-alone output operator,
+	to print a Person object on an \e ostream. It should print the
+	name, year of birth and the gender,
+	e.g. "Beast (1970:m)", "Beauty (1976:f)".
+	<br>Note: It should be declared a \e friend of Person
+	so it will be granted access to the private attributes of a Person.
+<li>Write a "helper", i.e. a stand-alone output operator,
+	to print a Marriage object on an \e ostream. It should print the
+	year they got married, the two people involved, and
+	if they have a child, it should also print the child.
+	<br>Note: It should be declared a \e friend of Marriage
+	so it will be granted access to the private attributes of a Marriage.
+<li>Write a "helper", i.e. a stand-alone "less-than" \e boolean operator,
+	to compare two Persons by comparing their names.
+	<br>Note: The \e string class already provides a suitable \b &lt; operator.
+	<br>Note: Such a \b &lt; helper is used by the standard library when sorting Persons.
+<li>Write a "helper", i.e. a stand-alone "less-than" \e boolean operator,
+	to compare two Marriages by comparing their wedding years.
+	<br>Note: Such a helper is used by the standard library when sorting Marriages.
+</ul>
+@note
+	Your code will not compile until you have defined
+	all five operators because your IDE insists on
+	building the entire program all the time.
+
+<p>And example of possible test code:
+@code
+	// Create two people
+	Person*  p1 = new Person("jan", 1900, Person::MALE);
+	Person*  p2 = new Person("maria", 1910, Person::FEMALE);
+	// Marriage
+	Marriage*  hp = new Marriage(p1, p2, 1929);
+	// Using the various operators you wrote
+	cout << (*p1) << endl;	// information about the first person
+	cout << (*p2) << endl;	// information about the second person
+	cout << (*hp) << endl;	// tells the two people involved
+	check(*p1 < *p2);		// verify: "jan" < "maria"
+	check(!(*p2 < *p1));	// verify: ! ("maria" < "jan")
+	// Add a child
+	Person*  pc = new Person("joop", 1931, Person::MALE);
+	hp->addChild(pc);
+	cout << (*hp) << endl;	// now also tells the child
+	// ... etc ...
+@endcode
+
+The output should be something like:
+
+@code
+	jan (1900:m)
+	maria (1910:f)
+	married 1929: jan (1900:m) + maria (1910:f)
+	married 1929: jan (1900:m) + maria (1910:f) & joop (1931:m)
+@endcode
+
+<p>HINTS:
+about
+<a target='faq'
+	href='https://isocpp.org/wiki/faq/friends'>friends</a>,
+the
+<a target='faq'
+	href='https://isocpp.org/wiki/faq/input-output#output-operator'>output-operator</a>,
+the
+<a target='cpp'
+	href='http://en.cppreference.com/w/cpp/string/basic_string/operator_cmp'>string compare</a> operators,
+the \e ternary
+<a target='cpp'
+	href='http://en.cppreference.com/w/cpp/language/operator_other#Conditional_operator'>conditional-operator</a>,
+the \e comparison <a target='cpp'
+	href='http://en.cppreference.com/w/cpp/language/operator_comparison'>operators</a>.
+<p>For further study:
+about <a target='cpp'
+	href='http://en.cppreference.com/w/cpp/language/operators'>operators</a>
+and
+<a target='faq'
+	href='https://isocpp.org/wiki/faq/operator-overloading'>operator overloading</a>.
+<br><br></p>
+
+ */

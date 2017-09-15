@@ -1,0 +1,67 @@
+<component name="libraryTable">
+  <library name="aeron-client-1.0.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/aeron-client-1.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/aeron-driver-1.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/Agrona-0.5.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/akka-actor_2.11-2.4.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/akka-agent_2.11-2.4.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/akka-camel_2.11-2.4.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/akka-cluster-metrics_2.11-2.4.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/akka-cluster-sharding_2.11-2.4.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/akka-cluster-tools_2.11-2.4.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/akka-cluster_2.11-2.4.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/akka-contrib_2.11-2.4.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/akka-distributed-data-experimental_2.11-2.4.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/akka-http-core_2.11-2.4.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/akka-http-experimental_2.11-2.4.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/akka-http-jackson-experimental_2.11-2.4.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/akka-http-spray-json-experimental_2.11-2.4.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/akka-http-testkit_2.11-2.4.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/akka-http-xml-experimental_2.11-2.4.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/akka-kernel_2.11-2.4.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/akka-multi-node-testkit_2.11-2.4.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/akka-parsing_2.11-2.4.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/akka-persistence-query-experimental_2.11-2.4.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/akka-persistence-tck_2.11-2.4.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/akka-persistence_2.11-2.4.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/akka-protobuf_2.11-2.4.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/akka-remote_2.11-2.4.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/akka-slf4j_2.11-2.4.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/akka-stream-testkit_2.11-2.4.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/akka-stream_2.11-2.4.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/akka-testkit_2.11-2.4.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/akka-typed-experimental_2.11-2.4.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/camel-core-2.13.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/config-1.3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/guava-16.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/hamcrest-core-1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/jackson-annotations-2.7.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/jackson-core-2.7.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/jackson-databind-2.7.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/jaxb-impl-2.2.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/junit-4.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/leveldb-0.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/leveldb-api-0.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/leveldbjni-all-1.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/netty-3.10.6.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/reactive-streams-1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/scala-java8-compat_2.11-0.7.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/scala-parser-combinators_2.11-1.0.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/scala-reflect-2.11.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/scala-stm_2.11-0.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/scala-xml_2.11-1.0.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/scalactic_2.11-3.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/scalatest_2.11-3.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/sigar-loader-1.6.6-rev002.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/slf4j-api-1.7.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/spray-json_2.11-1.3.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/ssl-config-akka_2.11-0.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/ssl-config-core_2.11-0.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/akka/uncommons-maths-1.2.2a.jar!/" />
+      <root url="jar://$PROJECT_DIR$/akka-2.4.11/lib/scala-library-2.11.8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

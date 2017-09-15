@@ -1,0 +1,458 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Source Streaming &mdash; Akka Documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/base.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/docs.css" type="text/css" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '2.4.11',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/toc.js"></script>
+    <script type="text/javascript" src="../../../_static/prettify.js"></script>
+    <script type="text/javascript" src="../../../_static/highlightCode.js"></script>
+    <script type="text/javascript" src="../../../_static/effects.core.js"></script>
+    <script type="text/javascript" src="../../../_static/effects.highlight.js"></script>
+    <script type="text/javascript" src="../../../_static/scrollTo.js"></script>
+    <script type="text/javascript" src="../../../_static/contentsFix.js"></script>
+    <script type="text/javascript" src="../../../_static/ga.js"></script>
+    <script type="text/javascript" src="../../../_static/warnOldDocs.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="top" title="Akka Documentation" href="../../../index.html" />
+    <link rel="up" title="High-level Server-Side API" href="index.html" />
+    <link rel="next" title="Route TestKit" href="testkit.html" />
+    <link rel="prev" title="Case Class Extraction" href="case-class-extraction.html" />
+
+
+  </head>
+  <body>
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="container">
+        <div class="navbar-logo">
+          <a href="http://akka.io"><img class="svg-logo" src="../../../_static/akka_full_color.svg" /></a>
+        </div>
+        <ul class="nav">
+          <li><a href="http://akka.io/docs">Documentation</a></li>
+          <li><a href="http://doc.akka.io/docs/akka/current/additional/faq.html">FAQ</a></li>
+          <li><a href="http://akka.io/downloads">Download</a></li>
+          <li><a href="http://groups.google.com/group/akka-user">Mailing List</a></li>
+          <li><a href="http://github.com/akka/akka">Code</a></li>
+          <li><a href="http://www.lightbend.com/how/subscription">Commercial Support</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="main">
+    <div class="container">
+      <div class="page-title">Source Streaming</div>
+      <div class="pdf-link"><a href="../../../AkkaScala.pdf" title="Akka Scala Documentation"><img src="../../../_static/pdf-scala-icon.png" style="height: 40px;" /></a></div>
+      <div class="pdf-link"><a href="../../../AkkaJava.pdf" title="Akka Java Documentation"><img src="../../../_static/pdf-java-icon.png" style="height: 40px;" /></a></div>
+    </div>
+    <div class="main-container">
+      <div class="container">
+        <div class="row">
+          <div class="span12">
+            <ul class="breadcrumb">
+              <li>
+                 <span class="divider">|</span> <a href="testkit.html">Route TestKit</a> <span class="divider">»</span>
+              </li>
+              <li>
+                <a href="../../../java.html">Java Contents</a> <span class="divider">|</span> <a href="../../../scala.html">Scala Contents</a>
+              </li>
+              <li>
+                <span class="divider">«</span> <a href="case-class-extraction.html">Case Class Extraction</a> <span class="divider">|</span>
+              </li>
+              <li style="float: left">
+                Version 2.4.11
+              </li>
+              <li style="float: left">
+                <input type="search" id="search" class="form-control" />
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row"><div class="span9">
+            
+  <div class="section" id="source-streaming">
+<span id="json-streaming-scala"></span><h1>Source Streaming</h1>
+<p>Akka HTTP supports completing a request with an Akka <tt class="docutils literal"><span class="pre">Source[T,</span> <span class="pre">_]</span></tt>, which makes it possible to easily build
+and consume streaming end-to-end APIs which apply back-pressure throughout the entire stack.</p>
+<p>It is possible to complete requests with raw <tt class="docutils literal"><span class="pre">Source[ByteString,</span> <span class="pre">_]</span></tt>, however often it is more convenient to
+stream on an element-by-element basis, and allow Akka HTTP to handle the rendering internally - for example as a JSON array,
+or CSV stream (where each element is separated by a new-line).</p>
+<p>In the following sections we investigate how to make use of the JSON Streaming infrastructure,
+however the general hints apply to any kind of element-by-element streaming you could imagine.</p>
+</div>
+<div class="section" id="json-streaming">
+<h1>JSON Streaming</h1>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/JSON_Streaming">JSON Streaming</a> is a term refering to streaming a (possibly infinite) stream of element as independent JSON
+objects as a continuous HTTP request or response. The elements are most often separated using newlines,
+however do not have to be. Concatenating elements side-by-side or emitting &quot;very long&quot; JSON array is also another
+use case.</p>
+<p>In the below examples, we'll be refering to the <tt class="docutils literal"><span class="pre">Tweet</span></tt> and <tt class="docutils literal"><span class="pre">Measurement</span></tt> case classes as our model, which are defined as:</p>
+<div class="highlight-scala"><div class="highlight"><pre><span class="k">case</span> <span class="k">class</span> <span class="nc">Tweet</span><span class="o">(</span><span class="n">uid</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="n">txt</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span>
+<span class="k">case</span> <span class="k">class</span> <span class="nc">Measurement</span><span class="o">(</span><span class="n">id</span><span class="k">:</span> <span class="kt">String</span><span class="o">,</span> <span class="n">value</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>And as always with spray-json, we provide our (Un)Marshaller instances as implicit values using the <tt class="docutils literal"><span class="pre">jsonFormat##</span></tt>
+method to generate them statically:</p>
+<div class="highlight-scala"><div class="highlight"><pre><span class="k">object</span> <span class="nc">MyJsonProtocol</span>
+  <span class="k">extends</span> <span class="n">akka</span><span class="o">.</span><span class="n">http</span><span class="o">.</span><span class="n">scaladsl</span><span class="o">.</span><span class="n">marshallers</span><span class="o">.</span><span class="n">sprayjson</span><span class="o">.</span><span class="nc">SprayJsonSupport</span>
+  <span class="k">with</span> <span class="n">spray</span><span class="o">.</span><span class="n">json</span><span class="o">.</span><span class="nc">DefaultJsonProtocol</span> <span class="o">{</span>
+
+  <span class="k">implicit</span> <span class="k">val</span> <span class="n">tweetFormat</span> <span class="k">=</span> <span class="n">jsonFormat2</span><span class="o">(</span><span class="nc">Tweet</span><span class="o">.</span><span class="n">apply</span><span class="o">)</span>
+  <span class="k">implicit</span> <span class="k">val</span> <span class="n">measurementFormat</span> <span class="k">=</span> <span class="n">jsonFormat2</span><span class="o">(</span><span class="nc">Measurement</span><span class="o">.</span><span class="n">apply</span><span class="o">)</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<div class="section" id="responding-with-json-streams">
+<h2>Responding with JSON Streams</h2>
+<p>In this example we implement an API representing an infinite stream of tweets, very much like Twitter's <a class="reference external" href="https://dev.twitter.com/streaming/overview">Streaming API</a>.</p>
+<p>Firstly, we'll need to get some additional marshalling infrastructure set up, that is able to marshal to and from an
+Akka Streams <tt class="docutils literal"><span class="pre">Source[T,_]</span></tt>. One such trait, containing the needed marshallers is <tt class="docutils literal"><span class="pre">SprayJsonSupport</span></tt>, which uses
+spray-json (a high performance json parser library), and is shipped as part of Akka HTTP in the
+<tt class="docutils literal"><span class="pre">akka-http-spray-json-experimental</span></tt> module.</p>
+<p>Once the general infrastructure is prepared we import our model's marshallers, generated by spray-json (Step 1),
+and enable JSON Streaming by making an implicit <tt class="docutils literal"><span class="pre">EntityStreamingSupport</span></tt> instance available (Step 2).
+Akka HTTP pre-packages JSON and CSV entity streaming support, however it is simple to add your own, in case you'd
+like to stream a different content type (for example plists or protobuf).</p>
+<p>The final step is simply completing a request using a Source of tweets, as simple as that:</p>
+<div class="highlight-scala"><div class="highlight"><pre><span class="c1">// [1] import &quot;my protocol&quot;, for marshalling Tweet objects:</span>
+<span class="k">import</span> <span class="nn">MyJsonProtocol._</span>
+
+<span class="c1">// [2] pick a Source rendering support trait:</span>
+<span class="c1">// Note that the default support renders the Source as JSON Array</span>
+<span class="k">implicit</span> <span class="k">val</span> <span class="n">jsonStreamingSupport</span><span class="k">:</span> <span class="kt">JsonEntityStreamingSupport</span> <span class="o">=</span> <span class="nc">EntityStreamingSupport</span><span class="o">.</span><span class="n">json</span><span class="o">()</span>
+
+<span class="k">val</span> <span class="n">route</span> <span class="k">=</span>
+  <span class="n">path</span><span class="o">(</span><span class="s">&quot;tweets&quot;</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// [3] simply complete a request with a source of tweets:</span>
+    <span class="k">val</span> <span class="n">tweets</span><span class="k">:</span> <span class="kt">Source</span><span class="o">[</span><span class="kt">Tweet</span>, <span class="kt">NotUsed</span><span class="o">]</span> <span class="k">=</span> <span class="n">getTweets</span>
+    <span class="n">complete</span><span class="o">(</span><span class="n">tweets</span><span class="o">)</span>
+  <span class="o">}</span>
+
+<span class="c1">// tests ------------------------------------------------------------</span>
+<span class="k">val</span> <span class="nc">AcceptJson</span> <span class="k">=</span> <span class="nc">Accept</span><span class="o">(</span><span class="nc">MediaRange</span><span class="o">(</span><span class="nc">MediaTypes</span><span class="o">.</span><span class="n">`application/json`</span><span class="o">))</span>
+<span class="k">val</span> <span class="nc">AcceptXml</span> <span class="k">=</span> <span class="nc">Accept</span><span class="o">(</span><span class="nc">MediaRange</span><span class="o">(</span><span class="nc">MediaTypes</span><span class="o">.</span><span class="n">`text/xml`</span><span class="o">))</span>
+
+<span class="nc">Get</span><span class="o">(</span><span class="s">&quot;/tweets&quot;</span><span class="o">).</span><span class="n">withHeaders</span><span class="o">(</span><span class="nc">AcceptJson</span><span class="o">)</span> <span class="o">~&gt;</span> <span class="n">route</span> <span class="o">~&gt;</span> <span class="n">check</span> <span class="o">{</span>
+  <span class="n">responseAs</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="n">shouldEqual</span>
+    <span class="s">&quot;&quot;&quot;[&quot;&quot;&quot;</span> <span class="o">+</span>
+    <span class="s">&quot;&quot;&quot;{&quot;uid&quot;:1,&quot;txt&quot;:&quot;#Akka rocks!&quot;},&quot;&quot;&quot;</span> <span class="o">+</span>
+    <span class="s">&quot;&quot;&quot;{&quot;uid&quot;:2,&quot;txt&quot;:&quot;Streaming is so hot right now!&quot;},&quot;&quot;&quot;</span> <span class="o">+</span>
+    <span class="s">&quot;&quot;&quot;{&quot;uid&quot;:3,&quot;txt&quot;:&quot;You cannot enter the same river twice.&quot;}&quot;&quot;&quot;</span> <span class="o">+</span>
+    <span class="s">&quot;&quot;&quot;]&quot;&quot;&quot;</span>
+<span class="o">}</span>
+
+<span class="c1">// endpoint can only marshal Json, so it will *reject* requests for application/xml:</span>
+<span class="nc">Get</span><span class="o">(</span><span class="s">&quot;/tweets&quot;</span><span class="o">).</span><span class="n">withHeaders</span><span class="o">(</span><span class="nc">AcceptXml</span><span class="o">)</span> <span class="o">~&gt;</span> <span class="n">route</span> <span class="o">~&gt;</span> <span class="n">check</span> <span class="o">{</span>
+  <span class="n">handled</span> <span class="n">should</span> <span class="o">===(</span><span class="kc">false</span><span class="o">)</span>
+  <span class="n">rejection</span> <span class="n">should</span> <span class="o">===(</span><span class="nc">UnacceptedResponseContentTypeRejection</span><span class="o">(</span><span class="nc">Set</span><span class="o">(</span><span class="nc">ContentTypes</span><span class="o">.</span><span class="n">`application/json`</span><span class="o">)))</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>The reason the <tt class="docutils literal"><span class="pre">EntityStreamingSupport</span></tt> has to be enabled explicitly is that one might want to configure how the
+stream should be rendered. We'll dicuss this in depth in the next section though.</p>
+<div class="section" id="customising-response-rendering-mode">
+<h3>Customising response rendering mode</h3>
+<p>Since it is not always possible to directly and confidently answer the question of how a stream of <tt class="docutils literal"><span class="pre">T</span></tt> should look on
+the wire, the <tt class="docutils literal"><span class="pre">EntityStreamingSupport</span></tt> traits come into play and allow fine-tuning the streams rendered representation.</p>
+<p>For example, in case of JSON Streaming, there isn't really one standard about rendering the response. Some APIs prefer
+to render multiple JSON objects in a line-by-line fashion (Twitter's streaming APIs for example), while others simply return
+very large arrays, which could be streamed as well.</p>
+<p>Akka defaults to the second one (streaming a JSON Array), as it is correct JSON and clients not expecting
+a streaming API would still be able to consume it in a naive way if they'd want to.</p>
+<p>The line-by-line aproach however is also pretty popular even though it is not valid JSON. It's relatively simplicity for
+client-side parsing is a strong point in case to pick this format for your Streaming APIs.
+Below we demonstrate how to reconfigure the support trait to render the JSON as</p>
+<div class="highlight-scala"><div class="highlight"><pre><span class="k">import</span> <span class="nn">MyJsonProtocol._</span>
+
+<span class="c1">// Configure the EntityStreamingSupport to render the elements as:</span>
+<span class="c1">// {&quot;example&quot;:42}</span>
+<span class="c1">// {&quot;example&quot;:43}</span>
+<span class="c1">// ...</span>
+<span class="c1">// {&quot;example&quot;:1000}</span>
+<span class="k">val</span> <span class="n">start</span> <span class="k">=</span> <span class="nc">ByteString</span><span class="o">.</span><span class="n">empty</span>
+<span class="k">val</span> <span class="n">sep</span> <span class="k">=</span> <span class="nc">ByteString</span><span class="o">(</span><span class="s">&quot;\n&quot;</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">end</span> <span class="k">=</span> <span class="nc">ByteString</span><span class="o">.</span><span class="n">empty</span>
+
+<span class="k">implicit</span> <span class="k">val</span> <span class="n">jsonStreamingSupport</span> <span class="k">=</span> <span class="nc">EntityStreamingSupport</span><span class="o">.</span><span class="n">json</span><span class="o">()</span>
+  <span class="o">.</span><span class="n">withFramingRenderer</span><span class="o">(</span><span class="nc">Flow</span><span class="o">[</span><span class="kt">ByteString</span><span class="o">].</span><span class="n">intersperse</span><span class="o">(</span><span class="n">start</span><span class="o">,</span> <span class="n">sep</span><span class="o">,</span> <span class="n">end</span><span class="o">))</span>
+
+<span class="k">val</span> <span class="n">route</span> <span class="k">=</span>
+  <span class="n">path</span><span class="o">(</span><span class="s">&quot;tweets&quot;</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// [3] simply complete a request with a source of tweets:</span>
+    <span class="k">val</span> <span class="n">tweets</span><span class="k">:</span> <span class="kt">Source</span><span class="o">[</span><span class="kt">Tweet</span>, <span class="kt">NotUsed</span><span class="o">]</span> <span class="k">=</span> <span class="n">getTweets</span>
+    <span class="n">complete</span><span class="o">(</span><span class="n">tweets</span><span class="o">)</span>
+  <span class="o">}</span>
+
+<span class="c1">// tests ------------------------------------------------------------</span>
+<span class="k">val</span> <span class="nc">AcceptJson</span> <span class="k">=</span> <span class="nc">Accept</span><span class="o">(</span><span class="nc">MediaRange</span><span class="o">(</span><span class="nc">MediaTypes</span><span class="o">.</span><span class="n">`application/json`</span><span class="o">))</span>
+
+<span class="nc">Get</span><span class="o">(</span><span class="s">&quot;/tweets&quot;</span><span class="o">).</span><span class="n">withHeaders</span><span class="o">(</span><span class="nc">AcceptJson</span><span class="o">)</span> <span class="o">~&gt;</span> <span class="n">route</span> <span class="o">~&gt;</span> <span class="n">check</span> <span class="o">{</span>
+  <span class="n">responseAs</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="n">shouldEqual</span>
+    <span class="s">&quot;&quot;&quot;{&quot;uid&quot;:1,&quot;txt&quot;:&quot;#Akka rocks!&quot;}&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s">&quot;\n&quot;</span> <span class="o">+</span>
+    <span class="s">&quot;&quot;&quot;{&quot;uid&quot;:2,&quot;txt&quot;:&quot;Streaming is so hot right now!&quot;}&quot;&quot;&quot;</span> <span class="o">+</span> <span class="s">&quot;\n&quot;</span> <span class="o">+</span>
+    <span class="s">&quot;&quot;&quot;{&quot;uid&quot;:3,&quot;txt&quot;:&quot;You cannot enter the same river twice.&quot;}&quot;&quot;&quot;</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>Another interesting feature is parallel marshalling. Since marshalling can potentially take much time,
+it is possible to marshal multiple elements of the stream in parallel. This is simply a configuration
+option on <tt class="docutils literal"><span class="pre">EntityStreamingSupport</span></tt> and is configurable like this:</p>
+<div class="highlight-scala"><div class="highlight"><pre><span class="k">import</span> <span class="nn">MyJsonProtocol._</span>
+<span class="k">implicit</span> <span class="k">val</span> <span class="n">jsonStreamingSupport</span><span class="k">:</span> <span class="kt">JsonEntityStreamingSupport</span> <span class="o">=</span>
+  <span class="nc">EntityStreamingSupport</span><span class="o">.</span><span class="n">json</span><span class="o">()</span>
+    <span class="o">.</span><span class="n">withParallelMarshalling</span><span class="o">(</span><span class="n">parallelism</span> <span class="k">=</span> <span class="mi">8</span><span class="o">,</span> <span class="n">unordered</span> <span class="k">=</span> <span class="kc">false</span><span class="o">)</span>
+
+<span class="n">path</span><span class="o">(</span><span class="s">&quot;tweets&quot;</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="n">tweets</span><span class="k">:</span> <span class="kt">Source</span><span class="o">[</span><span class="kt">Tweet</span>, <span class="kt">NotUsed</span><span class="o">]</span> <span class="k">=</span> <span class="n">getTweets</span>
+  <span class="n">complete</span><span class="o">(</span><span class="n">tweets</span><span class="o">)</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>The above shown mode perserves ordering of the Source's elements, which may sometimes be a required property,
+for example when streaming a strictly ordered dataset. Sometimes the contept of strict-order does not apply to the
+data being streamed though, which allows us to exploit this property and use an <tt class="docutils literal"><span class="pre">unordered</span></tt> rendering.</p>
+<p>This also is a configuration option and is used as shown below. Effectively this will allow Akka's marshalling infrastructure
+to concurrently marshallup to <tt class="docutils literal"><span class="pre">parallelism</span></tt> elements and emit the first which is marshalled onto the <tt class="docutils literal"><span class="pre">HttpResponse</span></tt>:</p>
+<div class="highlight-scala"><div class="highlight"><pre><span class="k">import</span> <span class="nn">MyJsonProtocol._</span>
+<span class="k">implicit</span> <span class="k">val</span> <span class="n">jsonStreamingSupport</span><span class="k">:</span> <span class="kt">JsonEntityStreamingSupport</span> <span class="o">=</span>
+  <span class="nc">EntityStreamingSupport</span><span class="o">.</span><span class="n">json</span><span class="o">()</span>
+    <span class="o">.</span><span class="n">withParallelMarshalling</span><span class="o">(</span><span class="n">parallelism</span> <span class="k">=</span> <span class="mi">8</span><span class="o">,</span> <span class="n">unordered</span> <span class="k">=</span> <span class="kc">true</span><span class="o">)</span>
+
+<span class="n">path</span><span class="o">(</span><span class="s">&quot;tweets&quot;</span> <span class="o">/</span> <span class="s">&quot;unordered&quot;</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="n">tweets</span><span class="k">:</span> <span class="kt">Source</span><span class="o">[</span><span class="kt">Tweet</span>, <span class="kt">NotUsed</span><span class="o">]</span> <span class="k">=</span> <span class="n">getTweets</span>
+  <span class="n">complete</span><span class="o">(</span><span class="n">tweets</span><span class="o">)</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>This allows us to _potentially_ render elements faster onto the HttpResponse, since it can avoid &quot;head of line blocking&quot;,
+in case one element in front of the stream takes a long time to marshall, yet others after it are very quick to marshall.</p>
+</div>
+</div>
+<div class="section" id="consuming-json-streaming-uploads">
+<h2>Consuming JSON Streaming uploads</h2>
+<p>Sometimes the client may be sending a streaming request, for example an embedded device initiated a connection with
+the server and is feeding it with one line of measurement data.</p>
+<p>In this example, we want to consume this data in a streaming fashion from the request entity, and also apply
+back-pressure to the underlying TCP connection, if the server can not cope with the rate of incoming data (back-pressure
+will be applied automatically thanks to using Akka HTTP/Streams).</p>
+<div class="highlight-scala"><div class="highlight"><pre><span class="c1">// [1] import &quot;my protocol&quot;, for unmarshalling Measurement objects:</span>
+<span class="k">import</span> <span class="nn">MyJsonProtocol._</span>
+
+<span class="c1">// [2] enable Json Streaming</span>
+<span class="k">implicit</span> <span class="k">val</span> <span class="n">jsonStreamingSupport</span> <span class="k">=</span> <span class="nc">EntityStreamingSupport</span><span class="o">.</span><span class="n">json</span><span class="o">()</span>
+
+<span class="c1">// prepare your persisting logic here</span>
+<span class="k">val</span> <span class="n">persistMetrics</span> <span class="k">=</span> <span class="nc">Flow</span><span class="o">[</span><span class="kt">Measurement</span><span class="o">]</span>
+
+<span class="k">val</span> <span class="n">route</span> <span class="k">=</span>
+  <span class="n">path</span><span class="o">(</span><span class="s">&quot;metrics&quot;</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// [3] extract Source[Measurement, _]</span>
+    <span class="n">entity</span><span class="o">(</span><span class="n">asSourceOf</span><span class="o">[</span><span class="kt">Measurement</span><span class="o">])</span> <span class="o">{</span> <span class="n">measurements</span> <span class="k">=&gt;</span>
+      <span class="c1">// alternative syntax:</span>
+      <span class="c1">// entity(as[Source[Measurement, NotUsed]]) { measurements =&gt;</span>
+      <span class="k">val</span> <span class="n">measurementsSubmitted</span><span class="k">:</span> <span class="kt">Future</span><span class="o">[</span><span class="kt">Int</span><span class="o">]</span> <span class="k">=</span>
+        <span class="n">measurements</span>
+          <span class="o">.</span><span class="n">via</span><span class="o">(</span><span class="n">persistMetrics</span><span class="o">)</span>
+          <span class="o">.</span><span class="n">runFold</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span> <span class="o">{</span> <span class="o">(</span><span class="n">cnt</span><span class="o">,</span> <span class="k">_</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="n">cnt</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">}</span>
+
+      <span class="n">complete</span> <span class="o">{</span>
+        <span class="n">measurementsSubmitted</span><span class="o">.</span><span class="n">map</span><span class="o">(</span><span class="n">n</span> <span class="k">=&gt;</span> <span class="nc">Map</span><span class="o">(</span><span class="s">&quot;msg&quot;</span> <span class="o">-&gt;</span> <span class="n">s</span><span class="s">&quot;&quot;&quot;Total metrics received: $n&quot;&quot;&quot;</span><span class="o">))</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+
+<span class="c1">// tests ------------------------------------------------------------</span>
+<span class="c1">// uploading an array or newline separated values works out of the box</span>
+<span class="k">val</span> <span class="n">data</span> <span class="k">=</span> <span class="nc">HttpEntity</span><span class="o">(</span>
+  <span class="nc">ContentTypes</span><span class="o">.</span><span class="n">`application/json`</span><span class="o">,</span>
+  <span class="s">&quot;&quot;&quot;</span>
+<span class="s">    |{&quot;id&quot;:&quot;temp&quot;,&quot;value&quot;:32}</span>
+<span class="s">    |{&quot;id&quot;:&quot;temp&quot;,&quot;value&quot;:31}</span>
+<span class="s">    |</span>
+<span class="s">  &quot;&quot;&quot;</span><span class="o">.</span><span class="n">stripMargin</span><span class="o">)</span>
+
+<span class="nc">Post</span><span class="o">(</span><span class="s">&quot;/metrics&quot;</span><span class="o">,</span> <span class="n">entity</span> <span class="k">=</span> <span class="n">data</span><span class="o">)</span> <span class="o">~&gt;</span> <span class="n">route</span> <span class="o">~&gt;</span> <span class="n">check</span> <span class="o">{</span>
+  <span class="n">status</span> <span class="n">should</span> <span class="o">===(</span><span class="nc">StatusCodes</span><span class="o">.</span><span class="nc">OK</span><span class="o">)</span>
+  <span class="n">responseAs</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="n">should</span> <span class="o">===(</span><span class="s">&quot;&quot;&quot;{&quot;msg&quot;:&quot;Total metrics received: 2&quot;}&quot;&quot;&quot;</span><span class="o">)</span>
+<span class="o">}</span>
+
+<span class="c1">// the FramingWithContentType will reject any content type that it does not understand:</span>
+<span class="k">val</span> <span class="n">xmlData</span> <span class="k">=</span> <span class="nc">HttpEntity</span><span class="o">(</span>
+  <span class="nc">ContentTypes</span><span class="o">.</span><span class="n">`text/xml(UTF-8)`</span><span class="o">,</span>
+  <span class="s">&quot;&quot;&quot;|&lt;data id=&quot;temp&quot; value=&quot;32&quot;/&gt;</span>
+<span class="s">     |&lt;data id=&quot;temp&quot; value=&quot;31&quot;/&gt;&quot;&quot;&quot;</span><span class="o">.</span><span class="n">stripMargin</span><span class="o">)</span>
+
+<span class="nc">Post</span><span class="o">(</span><span class="s">&quot;/metrics&quot;</span><span class="o">,</span> <span class="n">entity</span> <span class="k">=</span> <span class="n">xmlData</span><span class="o">)</span> <span class="o">~&gt;</span> <span class="n">route</span> <span class="o">~&gt;</span> <span class="n">check</span> <span class="o">{</span>
+  <span class="n">handled</span> <span class="n">should</span> <span class="o">===(</span><span class="kc">false</span><span class="o">)</span>
+  <span class="n">rejection</span> <span class="n">should</span> <span class="o">===(</span><span class="nc">UnsupportedRequestContentTypeRejection</span><span class="o">(</span><span class="nc">Set</span><span class="o">(</span><span class="nc">ContentTypes</span><span class="o">.</span><span class="n">`application/json`</span><span class="o">)))</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="simple-csv-streaming-example">
+<h2>Simple CSV streaming example</h2>
+<p>Akka HTTP provides another <tt class="docutils literal"><span class="pre">EntityStreamingSupport</span></tt> out of the box, namely <tt class="docutils literal"><span class="pre">csv</span></tt> (comma-separated values).
+For completeness, we demonstrate its usage in the below snippet. As you'll notice, switching betweeen streaming
+modes is fairly simple, one only has to make sure that an implicit <tt class="docutils literal"><span class="pre">Marshaller</span></tt> of the requested type is available,
+and that the streaming support operates on the same <tt class="docutils literal"><span class="pre">Content-Type</span></tt> as the rendered values. Otherwise you'll see
+an error during runtime that the marshaller did not expose the expected content type and thus we can not render
+the streaming response).</p>
+<div class="highlight-scala"><div class="highlight"><pre><span class="c1">// [1] provide a marshaller to ByteString</span>
+<span class="k">implicit</span> <span class="k">val</span> <span class="n">tweetAsCsv</span> <span class="k">=</span> <span class="nc">Marshaller</span><span class="o">.</span><span class="n">strict</span><span class="o">[</span><span class="kt">Tweet</span>, <span class="kt">ByteString</span><span class="o">]</span> <span class="o">{</span> <span class="n">t</span> <span class="k">=&gt;</span>
+  <span class="nc">Marshalling</span><span class="o">.</span><span class="nc">WithFixedContentType</span><span class="o">(</span><span class="nc">ContentTypes</span><span class="o">.</span><span class="n">`text/csv(UTF-8)`</span><span class="o">,</span> <span class="o">()</span> <span class="k">=&gt;</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="n">txt</span> <span class="k">=</span> <span class="n">t</span><span class="o">.</span><span class="n">txt</span><span class="o">.</span><span class="n">replaceAll</span><span class="o">(</span><span class="s">&quot;,&quot;</span><span class="o">,</span> <span class="s">&quot;.&quot;</span><span class="o">)</span>
+    <span class="k">val</span> <span class="n">uid</span> <span class="k">=</span> <span class="n">t</span><span class="o">.</span><span class="n">uid</span>
+    <span class="nc">ByteString</span><span class="o">(</span><span class="nc">List</span><span class="o">(</span><span class="n">uid</span><span class="o">,</span> <span class="n">txt</span><span class="o">).</span><span class="n">mkString</span><span class="o">(</span><span class="s">&quot;,&quot;</span><span class="o">))</span>
+  <span class="o">})</span>
+<span class="o">}</span>
+
+<span class="c1">// [2] enable csv streaming:</span>
+<span class="k">implicit</span> <span class="k">val</span> <span class="n">csvStreaming</span> <span class="k">=</span> <span class="nc">EntityStreamingSupport</span><span class="o">.</span><span class="n">csv</span><span class="o">()</span>
+
+<span class="k">val</span> <span class="n">route</span> <span class="k">=</span>
+  <span class="n">path</span><span class="o">(</span><span class="s">&quot;tweets&quot;</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="n">tweets</span><span class="k">:</span> <span class="kt">Source</span><span class="o">[</span><span class="kt">Tweet</span>, <span class="kt">NotUsed</span><span class="o">]</span> <span class="k">=</span> <span class="n">getTweets</span>
+    <span class="n">complete</span><span class="o">(</span><span class="n">tweets</span><span class="o">)</span>
+  <span class="o">}</span>
+
+<span class="c1">// tests ------------------------------------------------------------</span>
+<span class="k">val</span> <span class="nc">AcceptCsv</span> <span class="k">=</span> <span class="nc">Accept</span><span class="o">(</span><span class="nc">MediaRange</span><span class="o">(</span><span class="nc">MediaTypes</span><span class="o">.</span><span class="n">`text/csv`</span><span class="o">))</span>
+
+<span class="nc">Get</span><span class="o">(</span><span class="s">&quot;/tweets&quot;</span><span class="o">).</span><span class="n">withHeaders</span><span class="o">(</span><span class="nc">AcceptCsv</span><span class="o">)</span> <span class="o">~&gt;</span> <span class="n">route</span> <span class="o">~&gt;</span> <span class="n">check</span> <span class="o">{</span>
+  <span class="n">responseAs</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="n">shouldEqual</span>
+    <span class="s">&quot;1,#Akka rocks!&quot;</span> <span class="o">+</span> <span class="s">&quot;\n&quot;</span> <span class="o">+</span>
+    <span class="s">&quot;2,Streaming is so hot right now!&quot;</span> <span class="o">+</span> <span class="s">&quot;\n&quot;</span> <span class="o">+</span>
+    <span class="s">&quot;3,You cannot enter the same river twice.&quot;</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="implementing-custom-entitystreamingsupport-traits">
+<h2>Implementing custom EntityStreamingSupport traits</h2>
+<p>The <tt class="docutils literal"><span class="pre">EntityStreamingSupport</span></tt> infrastructure is open for extension and not bound to any single format, content type
+or marshalling library. The provided JSON support does not rely on Spray JSON directly, but uses <tt class="docutils literal"><span class="pre">Marshaller[T,</span> <span class="pre">ByteString]</span></tt>
+instances, which can be provided using any JSON marshalling library (such as Circe, Jawn or Play JSON).</p>
+<p>When implementing a custom support trait, one should simply extend the <tt class="docutils literal"><span class="pre">EntityStreamingSupport</span></tt> abstract class,
+and implement all of it's methods. It's best to use the existing implementations as a guideline.</p>
+</div>
+</div>
+
+
+          </div>
+          <div class="span3"><p class="contents-title">Contents</p>
+              <div id="scroller-anchor">
+                <div id="scroller">
+                  <div id="toc"></div>
+                </div>
+              </div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+  <div class="container">
+    <ul>
+      <li><h5>Akka</h5></li>
+      <li><a href="http://akka.io/docs">Documentation</a></li>
+      <li><a href="http://doc.akka.io/docs/akka/current/additional/faq.html">FAQ</a></li>
+      <li><a href="http://akka.io/downloads">Downloads</a></li>
+      <li><a href="http://akka.io/news">News</a></li>
+      <li><a href="http://letitcrash.com">Blog</a></li>
+    </ul>
+    <ul>
+      <li><h5>Contribute</h5></li>
+      <li><a href="http://akka.io/community">Community Projects</a></li>
+      <li><a href="http://github.com/akka/akka">Source Code</a></li>
+      <li><a href="http://groups.google.com/group/akka-user">Mailing List</a></li>
+      <li><a href="http://doc.akka.io/docs/akka/current/project/issue-tracking.html">Report a Bug</a></li>
+    </ul>
+    <ul>
+      <li><h5>Company</h5></li>
+      <li><a href="http://www.lightbend.com/how/subscription">Commercial Support</a></li>
+      <li><a href="http://akka.io/team">Team</a></li>
+      <li><a href="mailto:info@lightbend.com">Contact</a></li>
+    </ul>
+    <ul>
+      <li><img src="../../../_static/akka_icon_reverse.svg" align="center"/></li>
+    </ul>
+  </div>
+  <div class="container copyright">
+    <p style="float: left;">
+      © 2015 <a href="http://www.lightbend.com/">Lightbend Inc.</a> <span class="license">Akka is Open Source and available under the Apache 2 License.</span>
+    </p>
+    <p style="float: right; font-size: 12px;">
+      Last updated: Sep 30, 2016
+    </p>
+  </div>
+</div>
+<script type="text/javascript">
+  var $toc = $('#toc');
+  $toc.toc();
+
+  // show clickable section sign when section header hovered:
+  $('.section h2,.section h3,.section h4,.section h5').each(function(i, el) {
+      var $el = $(el);
+      $el.prepend($("<a class='section-marker' href='#" + $el.attr("id") + "'>&sect;</a>"))
+  });
+</script>
+
+<!-- Algolia docs search -->
+<script type="text/javascript">
+  var version = DOCUMENTATION_OPTIONS.VERSION;
+
+  var lang = "scala";
+  var path = window.location.pathname;
+  if (path.includes("/java/") || path.includes("java.html")) lang = "java";
+
+  console.log("Search configured for:", lang, "@", version);
+
+  docsearch({
+    apiKey: '543bad5ad786495d9ccd445ed34ed082',
+    indexName: 'akka_io',
+    inputSelector: '#search',
+    algoliaOptions: {
+      hitsPerPage: 5,
+      facetFilters: '[' + '["language:' + lang + '","language:general"]' + ',"version:' + version + '"]'
+    }
+  });
+
+  // set up "/" as global shortcut for focusing on search
+  $(document).keypress(function (event) {
+    if (event.keyCode == 47) {
+      $("#q").focus();
+      return false; // swallow key event, otherwise the / char would be input into the search box
+    }
+  });
+</script>
+
+  
+
+  </body>
+</html>

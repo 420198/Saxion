@@ -1,0 +1,3 @@
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/cmake-build-debug/CMakeFiles/5_operators.dir
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/cmake-build-debug/CMakeFiles/rebuild_cache.dir

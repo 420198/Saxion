@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="750.0" maxWidth="1200.0" minHeight="750.0" minWidth="1200.0"
+            prefHeight="750.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8"
+            fx:controller="GUI.Main">
+    <top>
+        <MenuBar style="-fx-background-color: #1d232d;-fx-text-fill: #fff;" BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" style="-fx-text-fill: #fff;" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Close"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" style="-fx-text-fill: #fff;" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Delete"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" style="-fx-text-fill: #fff;" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <Pane style="-fx-background-color: #1d232d;" BorderPane.alignment="CENTER">
+            <children>
+                <TextField id="username" fx:id="username" layoutX="488.0" layoutY="337.0" maxHeight="39.0"
+                           maxWidth="223.0" minHeight="39.0" minWidth="223.0" onAction="#setUsername" prefHeight="39.0"
+                           prefWidth="223.0"/>
+                <Button id="setusernamebutton" fx:id="setusernamebutton" alignment="CENTER" graphicTextGap="1.0"
+                        layoutX="488.0" layoutY="403.0" maxHeight="50.0" maxWidth="223.0" minHeight="50.0"
+                        minWidth="223.0" mnemonicParsing="false" onAction="#setUsername" prefHeight="50.0"
+                        prefWidth="223.0" style="-fx-background-color: #f25d3f;" text="Set name" textFill="WHITE">
+                    <font>
+                        <Font size="23.0"/>
+                    </font>
+                    <rotationAxis>
+                        <Point3D/>
+                    </rotationAxis>
+                </Button>
+                <Text fill="WHITE" layoutX="499.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                      text="Enter username" wrappingWidth="201.5">
+                    <font>
+                        <Font size="28.0"/>
+                    </font>
+                </Text>
+                <TextField id="userNameIncorrect" fx:id="userNameIncorrect" alignment="CENTER" editable="false"
+                           layoutX="419.0" layoutY="200.0" maxHeight="39.0" maxWidth="375.0" minHeight="39.0"
+                           minWidth="375.0" prefHeight="39.0" prefWidth="375.0"
+                           style="-fx-background-color: #ff5a53; -fx-text-inner-color: #fff;"
+                           text="Username must atleast be 3 characters long!" visible="false">
+                    <rotationAxis>
+                        <Point3D/>
+                    </rotationAxis>
+                </TextField>
+            </children>
+        </Pane>
+    </center>
+</BorderPane>

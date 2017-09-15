@@ -1,0 +1,132 @@
+.class public WorkingFile4
+.super java/lang/Object
+
+.method public <init>()V
+	.limit stack 5
+	.limit locals 1
+	aload_0
+	invokespecial java/lang/Object/<init>()V
+	return
+.end method
+
+.method public static main([Ljava/lang/String;)V
+	.limit stack 5
+	.limit locals 1
+
+	aload 0
+
+	new WorkingFile4
+	dup
+	invokespecial WorkingFile4/<init>()V
+	invokespecial WorkingFile4/startpunt()V
+
+	return
+.end method
+
+.method public startpunt()V
+	.limit stack 55
+	.limit locals 6
+
+	ldc ""
+	astore 1
+	iconst_0
+	istore 2
+	fconst_0
+	fstore 3
+	aload 0
+	invokevirtual WorkingFile4/geefTerugFunctie()Ljava/lang/String;
+	astore 4
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	aload 4
+	invokevirtual java/io/PrintStream/println(Ljava/lang/String;)V
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	ldc "\r\nGeef een woord dat word meegegeven aan een functie die gelijk terug gegeven wordt"
+	invokevirtual java/io/PrintStream/println(Ljava/lang/String;)V
+	aload 1
+	new java/util/Scanner
+	dup
+	getstatic java/lang/System/in Ljava/io/InputStream;
+	invokespecial java/util/Scanner/<init>(Ljava/io/InputStream;)V
+	invokevirtual java/util/Scanner/nextLine()Ljava/lang/String;
+	astore 1
+	aload 0
+	aload 1
+	invokevirtual WorkingFile4/geefParameterTerug(Ljava/lang/String;)Ljava/lang/String;
+	astore 5
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	aload 5
+	invokevirtual java/io/PrintStream/println(Ljava/lang/String;)V
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	ldc "\r\nGeef een heel getal op die vergelijkt moet worden in een zolang loop"
+	invokevirtual java/io/PrintStream/println(Ljava/lang/String;)V
+	iload 2
+	new java/util/Scanner
+	dup
+	getstatic java/lang/System/in Ljava/io/InputStream;
+	invokespecial java/util/Scanner/<init>(Ljava/io/InputStream;)V
+	invokevirtual java/util/Scanner/nextInt()I
+	istore 2
+	zolang_1:
+	iload 2
+	bipush 0
+	if_icmple zolang_1_end
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	ldc "\r\nAantal keer geschreven "
+	invokevirtual java/io/PrintStream/println(Ljava/lang/String;)V
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	iload 2
+	invokevirtual java/io/PrintStream/println(I)V
+	iinc 2 -1
+	goto zolang_1
+	zolang_1_end:
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	ldc "\r\nGeef een komma getal op voor een zolang loop"
+	invokevirtual java/io/PrintStream/println(Ljava/lang/String;)V
+	fload 3
+	new java/util/Scanner
+	dup
+	getstatic java/lang/System/in Ljava/io/InputStream;
+	invokespecial java/util/Scanner/<init>(Ljava/io/InputStream;)V
+	invokevirtual java/util/Scanner/nextFloat()F
+	fstore 3
+	zolang_2:
+	fload 3
+	f2i
+	bipush 0
+	if_icmple zolang_2_end
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	ldc "\r\nAantal keer geschreven "
+	invokevirtual java/io/PrintStream/println(Ljava/lang/String;)V
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	fload 3
+	invokevirtual java/io/PrintStream/println(F)V
+	fload 3
+	fconst_1
+	fsub
+	fstore 3
+	goto zolang_2
+	zolang_2_end:
+
+	return
+.end method
+
+.method public geefTerugFunctie()Ljava/lang/String;
+	.limit stack 3
+	.limit locals 2
+
+	ldc "Terug gegeven draad"
+	astore 1
+	aload 1
+
+	areturn
+.end method
+
+.method public geefParameterTerug(Ljava/lang/String;)Ljava/lang/String;
+	.limit stack 1
+	.limit locals 2
+
+	aload 1
+
+	areturn
+.end method
+

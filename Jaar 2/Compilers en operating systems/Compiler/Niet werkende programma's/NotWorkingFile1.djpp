@@ -1,0 +1,8 @@
+@@ Function call is giving parameters while the function itself doesnt have any parameters
+
+draad functie pizza(){
+    draad stijn = "stijn";
+    geefterug stijn;
+}
+
+draad s = pizza("stijn");

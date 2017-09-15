@@ -1,0 +1,8 @@
+@@ Function call has return type while function is void
+
+leegte functie pizza(){
+    draad stijn = "stijn";
+    geefterug stijn;
+}
+
+pizza();

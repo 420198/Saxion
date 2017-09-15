@@ -1,0 +1,29 @@
+<%--
+  Created by IntelliJ IDEA.
+  Model.User: sklar
+  Date: 8/31/2016
+  Time: 8:29 PM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>Title</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+<header><h1>Register Form</h1></header>
+<div id="form">
+    <div id="loginBox">
+        <form name="form_login" class="login" action="register" method="post">
+            <input type="text" name="username" class="login_username"/><br/>
+            <input type="password" name="password" class="login_password"/><br/>
+            <input type="submit" class="login_submit" name="Send" value="Send"/>
+            <input type="reset" class="login_reset" name="Reset" valie="Reset"/>">
+            <span class="error">${error}</span>
+        </form>
+    </div>
+</div>
+</body>
+</html>

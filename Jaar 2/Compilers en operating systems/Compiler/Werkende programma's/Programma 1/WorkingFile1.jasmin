@@ -1,0 +1,45 @@
+.class public WorkingFile1
+.super java/lang/Object
+
+.method public <init>()V
+	.limit stack 5
+	.limit locals 1
+	aload_0
+	invokespecial java/lang/Object/<init>()V
+	return
+.end method
+
+.method public static main([Ljava/lang/String;)V
+	.limit stack 5
+	.limit locals 1
+
+	aload 0
+
+	new WorkingFile1
+	dup
+	invokespecial WorkingFile1/<init>()V
+	invokespecial WorkingFile1/startpunt()V
+
+	return
+.end method
+
+.method public startpunt()V
+	.limit stack 5
+	.limit locals 2
+
+	bipush 0
+	istore 1
+	for_loop_1:
+	iload 1
+	bipush 20
+	if_icmpge for_loop_1_end
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	ldc "Ik ben een werkende programma"
+	invokevirtual java/io/PrintStream/println(Ljava/lang/String;)V
+	iinc 1 1
+	goto for_loop_1
+	for_loop_1_end:
+
+	return
+.end method
+

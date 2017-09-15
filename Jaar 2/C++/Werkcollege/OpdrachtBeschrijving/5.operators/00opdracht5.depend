@@ -1,0 +1,75 @@
+# depslib dependency file v1.0
+1455301870 source:d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\5.operators\assert_error.cc
+	<string>
+	<sstream>
+	"assert_error.h"
+
+1455301692 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\5.operators\assert_error.h
+	<stdexcept>
+
+1477151032 source:d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\5.operators\main.cc
+	<cstdlib>
+	"TestPrint.h"
+	"TestLess.h"
+
+1476987634 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\5.operators\testprint.h
+	"UnitTest.h"
+
+1476710758 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\5.operators\unittest.h
+	<vector>
+	<string>
+
+1476987460 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\5.operators\testless.h
+	"UnitTest.h"
+
+1481807258 source:d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\5.operators\marriage.cc
+	"asserts.h"
+	"Person.h"
+	"Marriage.h"
+	<iostream>
+
+1455302364 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\5.operators\asserts.h
+	"where.h"
+	"assert_error.h"
+
+1455302416 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\5.operators\where.h
+
+1481807469 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\5.operators\person.h
+	<string>
+	<iostream>
+
+1481122763 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\5.operators\marriage.h
+	<iostream>
+
+1481807279 source:d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\5.operators\person.cc
+	"asserts.h"
+	"Person.h"
+
+1477217046 source:d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\5.operators\testless.cc
+	"ansi.h"
+	"asserts.h"
+	<iostream>
+	"Person.h"
+	"Marriage.h"
+	"TestLess.h"
+
+1352237946 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\5.operators\ansi.h
+	"common.h"
+
+1478719528 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\5.operators\common.h
+
+1477151118 source:d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\5.operators\testprint.cc
+	"ansi.h"
+	"asserts.h"
+	<iostream>
+	"TestPrint.h"
+	"Person.h"
+	"Marriage.h"
+
+1476710746 source:d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\5.operators\unittest.cc
+	"ansi.h"
+	"asserts.h"
+	<iostream>
+	<stdexcept>
+	"UnitTest.h"
+

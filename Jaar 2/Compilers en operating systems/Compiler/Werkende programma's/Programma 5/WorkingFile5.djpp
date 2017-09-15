@@ -1,0 +1,59 @@
+@@Defined variable printing
+nummer getal1 = 12-3;
+nummer getal2 = 12*12;
+nummer getal3 = 12+12;
+nummer getal4 = 12/6;
+nummer getal5 = 12%3;
+
+nummer getal6 = 20;
+
+schrijf "Getal 1 (12-3 reken expressie)";
+schrijf getal1;
+
+schrijf "\r\nGetal 2 (12*12 reken expressie)";
+schrijf getal2;
+
+schrijf "\r\nGetal 3 (12+12 reken expressie)";
+schrijf getal3;
+
+schrijf "\r\nGetal 4 (12/6 reken expressie)";
+schrijf getal4;
+
+schrijf "\r\nGetal 5 (12%3 reken expressie)";
+schrijf getal5;
+
+@@ Straight print
+schrijf "\r\n20 kleiner dan 30:";
+schrijf 20<30;
+
+schrijf "\r\n30 kleiner dan 20:";
+schrijf 30<20;
+
+@@ Straight print rekendundige expressies
+schrijf "\r\n20+20=";
+schrijf 20+20;
+
+schrijf "\r\n20/20=";
+schrijf 20/20;
+
+schrijf "\r\n20*20=";
+schrijf 20*20;
+
+schrijf "\r\n20-20=";
+schrijf 20-20;
+
+schrijf "\r\n20%15=";
+schrijf 20%15;
+
+@@ schrijf *= expressies
+schrijf "\r\n20*=10";
+schrijf getal6*=10;
+
+schrijf "\r\n200/=10";
+schrijf getal6/=10;
+
+schrijf "\r\n20-=10";
+schrijf getal6-=10;
+
+schrijf "\r\n10+=10";
+schrijf getal6+=10;

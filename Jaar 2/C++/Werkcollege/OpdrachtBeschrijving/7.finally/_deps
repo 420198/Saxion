@@ -1,0 +1,2 @@
+assert_error.o: assert_error.cc assert_error.h
+main.o: main.cc

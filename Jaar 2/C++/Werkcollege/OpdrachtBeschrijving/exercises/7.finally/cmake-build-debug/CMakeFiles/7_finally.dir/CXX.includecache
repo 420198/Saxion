@@ -1,0 +1,66 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/7.finally/Ticket.cc
+Ticket.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/7.finally/Ticket.h
+asserts.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/7.finally/asserts.h
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/7.finally/Ticket.h
+ostream
+-
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/7.finally/Union.cc
+Union.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/7.finally/Union.h
+stdexcept
+-
+iostream
+-
+algorithm
+-
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/7.finally/Union.h
+list
+-
+ostream
+-
+set
+-
+Ticket.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/7.finally/Ticket.h
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/7.finally/assert_error.cc
+string
+-
+sstream
+-
+assert_error.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/7.finally/assert_error.h
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/7.finally/assert_error.h
+stdexcept
+-
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/7.finally/asserts.h
+where.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/7.finally/where.h
+assert_error.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/7.finally/assert_error.h
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/7.finally/main.cc
+iostream
+-
+Union.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/7.finally/Union.h
+stdexcept
+-
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/7.finally/where.h
+

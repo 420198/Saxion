@@ -1,0 +1,450 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Implications of the streaming nature of Request/Response Entities &mdash; Akka Documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/base.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/docs.css" type="text/css" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '2.4.11',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/toc.js"></script>
+    <script type="text/javascript" src="../../_static/prettify.js"></script>
+    <script type="text/javascript" src="../../_static/highlightCode.js"></script>
+    <script type="text/javascript" src="../../_static/effects.core.js"></script>
+    <script type="text/javascript" src="../../_static/effects.highlight.js"></script>
+    <script type="text/javascript" src="../../_static/scrollTo.js"></script>
+    <script type="text/javascript" src="../../_static/contentsFix.js"></script>
+    <script type="text/javascript" src="../../_static/ga.js"></script>
+    <script type="text/javascript" src="../../_static/warnOldDocs.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="top" title="Akka Documentation" href="../../index.html" />
+    <link rel="up" title="Akka HTTP" href="index.html" />
+    <link rel="next" title="Configuration" href="configuration.html" />
+    <link rel="prev" title="Akka HTTP Timeouts" href="common/timeouts.html" />
+
+
+  </head>
+  <body>
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="container">
+        <div class="navbar-logo">
+          <a href="http://akka.io"><img class="svg-logo" src="../../_static/akka_full_color.svg" /></a>
+        </div>
+        <ul class="nav">
+          <li><a href="http://akka.io/docs">Documentation</a></li>
+          <li><a href="http://doc.akka.io/docs/akka/current/additional/faq.html">FAQ</a></li>
+          <li><a href="http://akka.io/downloads">Download</a></li>
+          <li><a href="http://groups.google.com/group/akka-user">Mailing List</a></li>
+          <li><a href="http://github.com/akka/akka">Code</a></li>
+          <li><a href="http://www.lightbend.com/how/subscription">Commercial Support</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="main">
+    <div class="container">
+      <div class="page-title">Implications of the streaming nature of Request/Response Entities</div>
+      <div class="pdf-link"><a href="../../AkkaScala.pdf" title="Akka Scala Documentation"><img src="../../_static/pdf-scala-icon.png" style="height: 40px;" /></a></div>
+      <div class="pdf-link"><a href="../../AkkaJava.pdf" title="Akka Java Documentation"><img src="../../_static/pdf-java-icon.png" style="height: 40px;" /></a></div>
+    </div>
+    <div class="main-container">
+      <div class="container">
+        <div class="row">
+          <div class="span12">
+            <ul class="breadcrumb">
+              <li>
+                 <span class="divider">|</span> <a href="configuration.html">Configuration</a> <span class="divider">»</span>
+              </li>
+              <li>
+                <a href="../../java.html">Java Contents</a> <span class="divider">|</span> <a href="../../scala.html">Scala Contents</a>
+              </li>
+              <li>
+                <span class="divider">«</span> <a href="common/timeouts.html">Akka HTTP Timeouts</a> <span class="divider">|</span>
+              </li>
+              <li style="float: left">
+                Version 2.4.11
+              </li>
+              <li style="float: left">
+                <input type="search" id="search" class="form-control" />
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row"><div class="span9">
+            
+  <div class="section" id="implications-of-the-streaming-nature-of-request-response-entities">
+<span id="implications-of-streaming-http-entities-java"></span><h1>Implications of the streaming nature of Request/Response Entities</h1>
+<p>Akka HTTP is streaming <em>all the way through</em>, which means that the back-pressure mechanisms enabled by Akka Streams
+are exposed through all layers–from the TCP layer, through the HTTP server, all the way up to the user-facing <tt class="docutils literal"><span class="pre">HttpRequest</span></tt>
+and <tt class="docutils literal"><span class="pre">HttpResponse</span></tt> and their <tt class="docutils literal"><span class="pre">HttpEntity</span></tt> APIs.</p>
+<p>This has surprising implications if you are used to non-streaming / not-reactive HTTP clients.
+Specifically it means that: &quot;<em>lack of consumption of the HTTP Entity, is signaled as back-pressure to the other
+side of the connection</em>&quot;. This is a feature, as it allows one only to consume the entity, and back-pressure servers/clients
+from overwhelming our application, possibly causing un-necessary buffering of the entity in memory.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Consuming (or discarding) the Entity of a request is mandatory!
+If <em>accidentally</em> left neither consumed or discarded Akka HTTP will
+assume the incoming data should remain back-pressured, and will stall the incoming data via TCP back-pressure mechanisms.
+A client should consume the Entity regardless of the status of the <tt class="docutils literal"><span class="pre">HttpResponse</span></tt>.</p>
+</div>
+<div class="section" id="client-side-handling-of-streaming-http-entities">
+<h2>Client-Side handling of streaming HTTP Entities</h2>
+<div class="section" id="consuming-the-http-response-entity-client">
+<h3>Consuming the HTTP Response Entity (Client)</h3>
+<p>The most common use-case of course is consuming the response entity, which can be done via
+running the underlying <tt class="docutils literal"><span class="pre">dataBytes</span></tt> Source. This is as simple as running the dataBytes source,
+(or on the server-side using directives such as <tt class="docutils literal"><span class="pre">BasicDirectives.extractDataBytes</span></tt>).</p>
+<p>It is encouraged to use various streaming techniques to utilise the underlying infrastructure to its fullest,
+for example by framing the incoming chunks, parsing them line-by-line and then connecting the flow into another
+destination Sink, such as a File or other Akka Streams connector:</p>
+<div class="highlight-scala"><div class="highlight"><pre><span class="k">import</span> <span class="nn">java.io.File</span><span class="o">;</span>
+<span class="k">import</span> <span class="nn">akka.actor.ActorSystem</span><span class="o">;</span>
+
+<span class="k">import</span> <span class="nn">java.util.concurrent.TimeUnit</span><span class="o">;</span>
+<span class="k">import</span> <span class="nn">java.util.function.Function</span><span class="o">;</span> 
+<span class="k">import</span> <span class="nn">akka.stream.ActorMaterializer</span><span class="o">;</span>
+<span class="k">import</span> <span class="nn">akka.stream.javadsl.Framing</span><span class="o">;</span>
+<span class="k">import</span> <span class="nn">akka.http.javadsl.model.</span><span class="o">*;</span>
+<span class="k">import</span> <span class="nn">scala.concurrent.duration.FiniteDuration</span><span class="o">;</span>
+<span class="k">import</span> <span class="nn">scala.util.Try</span><span class="o">;</span>
+
+    <span class="k">final</span> <span class="nc">ActorSystem</span> <span class="n">system</span> <span class="k">=</span> <span class="nc">ActorSystem</span><span class="o">.</span><span class="n">create</span><span class="o">();</span>
+    <span class="k">final</span> <span class="nc">ExecutionContextExecutor</span> <span class="n">dispatcher</span> <span class="k">=</span> <span class="n">system</span><span class="o">.</span><span class="n">dispatcher</span><span class="o">();</span>
+    <span class="k">final</span> <span class="nc">ActorMaterializer</span> <span class="n">materializer</span> <span class="k">=</span> <span class="nc">ActorMaterializer</span><span class="o">.</span><span class="n">create</span><span class="o">(</span><span class="n">system</span><span class="o">);</span>
+
+    <span class="k">final</span> <span class="nc">HttpResponse</span> <span class="n">response</span> <span class="k">=</span> <span class="n">responseFromSomewhere</span><span class="o">();</span>
+
+    <span class="k">final</span> <span class="nc">Function</span><span class="o">&lt;</span><span class="nc">ByteString</span><span class="o">,</span> <span class="nc">ByteString</span><span class="o">&gt;</span> <span class="n">transformEachLine</span> <span class="k">=</span> <span class="n">line</span> <span class="o">-&gt;</span> <span class="n">line</span> <span class="cm">/* some transformation here */</span><span class="o">;</span>
+
+    <span class="k">final</span> <span class="n">int</span> <span class="n">maximumFrameLength</span> <span class="k">=</span> <span class="mi">256</span><span class="o">;</span>
+
+    <span class="n">response</span><span class="o">.</span><span class="n">entity</span><span class="o">().</span><span class="n">getDataBytes</span><span class="o">()</span>
+      <span class="o">.</span><span class="n">via</span><span class="o">(</span><span class="nc">Framing</span><span class="o">.</span><span class="n">delimiter</span><span class="o">(</span><span class="nc">ByteString</span><span class="o">.</span><span class="n">fromString</span><span class="o">(</span><span class="s">&quot;\n&quot;</span><span class="o">),</span> <span class="n">maximumFrameLength</span><span class="o">,</span> <span class="nc">FramingTruncation</span><span class="o">.</span><span class="nc">ALLOW</span><span class="o">))</span>
+      <span class="o">.</span><span class="n">map</span><span class="o">(</span><span class="n">transformEachLine</span><span class="o">::</span><span class="n">apply</span><span class="o">)</span>
+      <span class="o">.</span><span class="n">runWith</span><span class="o">(</span><span class="nc">FileIO</span><span class="o">.</span><span class="n">toPath</span><span class="o">(</span><span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="s">&quot;/tmp/example.out&quot;</span><span class="o">).</span><span class="n">toPath</span><span class="o">()),</span> <span class="n">materializer</span><span class="o">);</span>
+</pre></div>
+</div>
+<p>however sometimes the need may arise to consume the entire entity as <tt class="docutils literal"><span class="pre">Strict</span></tt> entity (which means that it is
+completely loaded into memory). Akka HTTP provides a special <tt class="docutils literal"><span class="pre">toStrict(timeout,</span> <span class="pre">materializer)</span></tt> method which can be used to
+eagerly consume the entity and make it available in memory:</p>
+<div class="highlight-scala"><div class="highlight"><pre><span class="k">final</span> <span class="k">class</span> <span class="nc">ExamplePerson</span> <span class="o">{</span>
+  <span class="k">final</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+  <span class="n">public</span> <span class="nc">ExamplePerson</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span> <span class="k">this</span><span class="o">.</span><span class="n">name</span> <span class="k">=</span> <span class="n">name</span><span class="o">;</span> <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="n">public</span> <span class="nc">ExamplePerson</span> <span class="n">parse</span><span class="o">(</span><span class="nc">ByteString</span> <span class="n">line</span><span class="o">)</span> <span class="o">{</span> 
+  <span class="k">return</span> <span class="k">new</span> <span class="nc">ExamplePerson</span><span class="o">(</span><span class="n">line</span><span class="o">.</span><span class="n">utf8String</span><span class="o">());</span> 
+<span class="o">}</span>
+  <span class="k">final</span> <span class="nc">ActorSystem</span> <span class="n">system</span> <span class="k">=</span> <span class="nc">ActorSystem</span><span class="o">.</span><span class="n">create</span><span class="o">();</span>
+  <span class="k">final</span> <span class="nc">ExecutionContextExecutor</span> <span class="n">dispatcher</span> <span class="k">=</span> <span class="n">system</span><span class="o">.</span><span class="n">dispatcher</span><span class="o">();</span>
+  <span class="k">final</span> <span class="nc">ActorMaterializer</span> <span class="n">materializer</span> <span class="k">=</span> <span class="nc">ActorMaterializer</span><span class="o">.</span><span class="n">create</span><span class="o">(</span><span class="n">system</span><span class="o">);</span>
+  
+  <span class="k">final</span> <span class="nc">HttpResponse</span> <span class="n">response</span> <span class="k">=</span> <span class="n">responseFromSomewhere</span><span class="o">();</span>
+  
+  <span class="c1">// toStrict to enforce all data be loaded into memory from the connection</span>
+  <span class="k">final</span> <span class="nc">CompletionStage</span><span class="o">&lt;</span><span class="nc">HttpEntity</span><span class="o">.</span><span class="nc">Strict</span><span class="o">&gt;</span> <span class="n">strictEntity</span> <span class="k">=</span> <span class="n">response</span><span class="o">.</span><span class="n">entity</span><span class="o">()</span>
+      <span class="o">.</span><span class="n">toStrict</span><span class="o">(</span><span class="nc">FiniteDuration</span><span class="o">.</span><span class="n">create</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="nc">TimeUnit</span><span class="o">.</span><span class="nc">SECONDS</span><span class="o">).</span><span class="n">toMillis</span><span class="o">(),</span> <span class="n">materializer</span><span class="o">);</span>
+
+  <span class="c1">// while API remains the same to consume dataBytes, now they&#39;re in memory already:</span>
+
+  <span class="k">final</span> <span class="nc">CompletionStage</span><span class="o">&lt;</span><span class="nc">ExamplePerson</span><span class="o">&gt;</span> <span class="n">person</span> <span class="k">=</span> 
+    <span class="n">strictEntity</span>
+      <span class="o">.</span><span class="n">thenCompose</span><span class="o">(</span><span class="n">strict</span> <span class="o">-&gt;</span>
+        <span class="n">strict</span><span class="o">.</span><span class="n">getDataBytes</span><span class="o">()</span>
+          <span class="o">.</span><span class="n">runFold</span><span class="o">(</span><span class="nc">ByteString</span><span class="o">.</span><span class="n">empty</span><span class="o">(),</span> <span class="o">(</span><span class="n">acc</span><span class="o">,</span> <span class="n">b</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="n">acc</span><span class="o">.</span><span class="n">concat</span><span class="o">(</span><span class="n">b</span><span class="o">),</span> <span class="n">materializer</span><span class="o">)</span>
+          <span class="o">.</span><span class="n">thenApply</span><span class="o">(</span><span class="k">this</span><span class="o">::</span><span class="n">parse</span><span class="o">)</span>
+      <span class="o">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="discarding-the-http-response-entity-client">
+<h3>Discarding the HTTP Response Entity (Client)</h3>
+<p>Sometimes when calling HTTP services we do not care about their response payload (e.g. all we care about is the response code),
+yet as explained above entity still has to be consumed in some way, otherwise we'll be exherting back-pressure on the
+underlying TCP connection.</p>
+<p>The <tt class="docutils literal"><span class="pre">discardEntityBytes</span></tt> convenience method serves the purpose of easily discarding the entity if it has no purpose for us.
+It does so by piping the incoming bytes directly into an <tt class="docutils literal"><span class="pre">Sink.ignore</span></tt>.</p>
+<p>The two snippets below are equivalent, and work the same way on the server-side for incoming HTTP Requests:</p>
+<div class="highlight-scala"><div class="highlight"><pre><span class="k">final</span> <span class="nc">ActorSystem</span> <span class="n">system</span> <span class="k">=</span> <span class="nc">ActorSystem</span><span class="o">.</span><span class="n">create</span><span class="o">();</span>
+<span class="k">final</span> <span class="nc">ExecutionContextExecutor</span> <span class="n">dispatcher</span> <span class="k">=</span> <span class="n">system</span><span class="o">.</span><span class="n">dispatcher</span><span class="o">();</span>
+<span class="k">final</span> <span class="nc">ActorMaterializer</span> <span class="n">materializer</span> <span class="k">=</span> <span class="nc">ActorMaterializer</span><span class="o">.</span><span class="n">create</span><span class="o">(</span><span class="n">system</span><span class="o">);</span>
+
+<span class="k">final</span> <span class="nc">HttpResponse</span> <span class="n">response</span> <span class="k">=</span> <span class="n">responseFromSomewhere</span><span class="o">();</span>
+
+<span class="k">final</span> <span class="nc">HttpMessage</span><span class="o">.</span><span class="nc">DiscardedEntity</span> <span class="n">discarded</span> <span class="k">=</span> <span class="n">response</span><span class="o">.</span><span class="n">discardEntityBytes</span><span class="o">(</span><span class="n">materializer</span><span class="o">);</span>
+
+<span class="n">discarded</span><span class="o">.</span><span class="n">completionStage</span><span class="o">().</span><span class="n">whenComplete</span><span class="o">((</span><span class="n">done</span><span class="o">,</span> <span class="n">ex</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">{</span>
+  <span class="nc">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="o">(</span><span class="s">&quot;Entity discarded completely!&quot;</span><span class="o">);</span>
+<span class="o">});</span>
+</pre></div>
+</div>
+<p>Or the equivalent low-level code achieving the same result:</p>
+<div class="highlight-scala"><div class="highlight"><pre><span class="k">final</span> <span class="nc">ActorSystem</span> <span class="n">system</span> <span class="k">=</span> <span class="nc">ActorSystem</span><span class="o">.</span><span class="n">create</span><span class="o">();</span>
+<span class="k">final</span> <span class="nc">ExecutionContextExecutor</span> <span class="n">dispatcher</span> <span class="k">=</span> <span class="n">system</span><span class="o">.</span><span class="n">dispatcher</span><span class="o">();</span>
+<span class="k">final</span> <span class="nc">ActorMaterializer</span> <span class="n">materializer</span> <span class="k">=</span> <span class="nc">ActorMaterializer</span><span class="o">.</span><span class="n">create</span><span class="o">(</span><span class="n">system</span><span class="o">);</span>
+
+<span class="k">final</span> <span class="nc">HttpResponse</span> <span class="n">response</span> <span class="k">=</span> <span class="n">responseFromSomewhere</span><span class="o">();</span>
+
+<span class="k">final</span> <span class="nc">CompletionStage</span><span class="o">&lt;</span><span class="nc">Done</span><span class="o">&gt;</span> <span class="n">discardingComplete</span> <span class="k">=</span> <span class="n">response</span><span class="o">.</span><span class="n">entity</span><span class="o">().</span><span class="n">getDataBytes</span><span class="o">().</span><span class="n">runWith</span><span class="o">(</span><span class="nc">Sink</span><span class="o">.</span><span class="n">ignore</span><span class="o">(),</span> <span class="n">materializer</span><span class="o">);</span>
+
+<span class="n">discardingComplete</span><span class="o">.</span><span class="n">whenComplete</span><span class="o">((</span><span class="n">done</span><span class="o">,</span> <span class="n">ex</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">{</span>
+  <span class="nc">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="o">(</span><span class="s">&quot;Entity discarded completely!&quot;</span><span class="o">);</span>
+<span class="o">});</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="server-side-handling-of-streaming-http-entities">
+<h2>Server-Side handling of streaming HTTP Entities</h2>
+<p>Similarily as with the Client-side, HTTP Entities are directly linked to Streams which are fed by the underlying
+TCP connection. Thus, if request entities remain not consumed, the server will back-pressure the connection, expecting
+that the user-code will eventually decide what to do with the incoming data.</p>
+<p>Note that some directives force an implicit <tt class="docutils literal"><span class="pre">toStrict</span></tt> operation, such as <tt class="docutils literal"><span class="pre">entity(exampleUnmarshaller,</span> <span class="pre">example</span> <span class="pre">-&gt;</span> <span class="pre">{})</span></tt> and similar ones.</p>
+<div class="section" id="consuming-the-http-request-entity-server">
+<h3>Consuming the HTTP Request Entity (Server)</h3>
+<p>The simplest way of consuming the incoming request entity is to simply transform it into an actual domain object,
+for example by using the <a class="reference internal" href="routing-dsl/directives/marshalling-directives/entity.html#entity-java"><em>entity</em></a> directive:</p>
+<div class="highlight-scala"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Bid</span> <span class="o">{</span>
+  <span class="k">final</span> <span class="nc">String</span> <span class="n">userId</span><span class="o">;</span>
+  <span class="k">final</span> <span class="n">int</span> <span class="n">bid</span><span class="o">;</span>
+
+  <span class="nc">Bid</span><span class="o">(</span><span class="nc">String</span> <span class="n">userId</span><span class="o">,</span> <span class="n">int</span> <span class="n">bid</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="n">userId</span> <span class="k">=</span> <span class="n">userId</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="n">bid</span> <span class="k">=</span> <span class="n">bid</span><span class="o">;</span> 
+  <span class="o">}</span>
+<span class="o">}</span>
+  <span class="k">final</span> <span class="nc">ActorSystem</span> <span class="n">system</span> <span class="k">=</span> <span class="nc">ActorSystem</span><span class="o">.</span><span class="n">create</span><span class="o">();</span>
+  <span class="k">final</span> <span class="nc">ExecutionContextExecutor</span> <span class="n">dispatcher</span> <span class="k">=</span> <span class="n">system</span><span class="o">.</span><span class="n">dispatcher</span><span class="o">();</span>
+  <span class="k">final</span> <span class="nc">ActorMaterializer</span> <span class="n">materializer</span> <span class="k">=</span> <span class="nc">ActorMaterializer</span><span class="o">.</span><span class="n">create</span><span class="o">(</span><span class="n">system</span><span class="o">);</span>
+  
+  <span class="k">final</span> <span class="nc">Unmarshaller</span><span class="o">&lt;</span><span class="nc">HttpEntity</span><span class="o">,</span> <span class="nc">Bid</span><span class="o">&gt;</span> <span class="n">asBid</span> <span class="k">=</span> <span class="nc">Jackson</span><span class="o">.</span><span class="n">unmarshaller</span><span class="o">(</span><span class="nc">Bid</span><span class="o">.</span><span class="n">class</span><span class="o">);</span>
+
+  <span class="k">final</span> <span class="nc">Route</span> <span class="n">s</span> <span class="k">=</span> <span class="n">path</span><span class="o">(</span><span class="s">&quot;bid&quot;</span><span class="o">,</span> <span class="o">()</span> <span class="o">-&gt;</span>
+    <span class="n">put</span><span class="o">(()</span> <span class="o">-&gt;</span>
+      <span class="n">entity</span><span class="o">(</span><span class="n">asBid</span><span class="o">,</span> <span class="n">bid</span> <span class="o">-&gt;</span>
+        <span class="c1">// incoming entity is fully consumed and converted into a Bid</span>
+        <span class="n">complete</span><span class="o">(</span><span class="s">&quot;The bid was: &quot;</span> <span class="o">+</span> <span class="n">bid</span><span class="o">)</span>
+      <span class="o">)</span>
+    <span class="o">)</span>
+  <span class="o">);</span>
+</pre></div>
+</div>
+<p>Of course you can access the raw dataBytes as well and run the underlying stream, for example piping it into an
+FileIO Sink, that signals completion via a <tt class="docutils literal"><span class="pre">CompletionStage&lt;IoResult&gt;</span></tt> once all the data has been written into the file:</p>
+<div class="highlight-scala"><div class="highlight"><pre><span class="k">final</span> <span class="nc">ActorSystem</span> <span class="n">system</span> <span class="k">=</span> <span class="nc">ActorSystem</span><span class="o">.</span><span class="n">create</span><span class="o">();</span>
+<span class="k">final</span> <span class="nc">ExecutionContextExecutor</span> <span class="n">dispatcher</span> <span class="k">=</span> <span class="n">system</span><span class="o">.</span><span class="n">dispatcher</span><span class="o">();</span>
+<span class="k">final</span> <span class="nc">ActorMaterializer</span> <span class="n">materializer</span> <span class="k">=</span> <span class="nc">ActorMaterializer</span><span class="o">.</span><span class="n">create</span><span class="o">(</span><span class="n">system</span><span class="o">);</span>
+
+<span class="k">final</span> <span class="nc">Route</span> <span class="n">s</span> <span class="k">=</span>
+  <span class="n">put</span><span class="o">(()</span> <span class="o">-&gt;</span>
+    <span class="n">path</span><span class="o">(</span><span class="s">&quot;lines&quot;</span><span class="o">,</span> <span class="o">()</span> <span class="o">-&gt;</span>
+      <span class="n">withoutSizeLimit</span><span class="o">(()</span> <span class="o">-&gt;</span>
+        <span class="n">extractDataBytes</span><span class="o">(</span><span class="n">bytes</span> <span class="o">-&gt;</span> <span class="o">{</span>
+          <span class="k">final</span> <span class="nc">CompletionStage</span><span class="o">&lt;</span><span class="nc">IOResult</span><span class="o">&gt;</span> <span class="n">res</span> <span class="k">=</span> <span class="n">bytes</span><span class="o">.</span><span class="n">runWith</span><span class="o">(</span><span class="nc">FileIO</span><span class="o">.</span><span class="n">toPath</span><span class="o">(</span><span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="s">&quot;/tmp/example.out&quot;</span><span class="o">).</span><span class="n">toPath</span><span class="o">()),</span> <span class="n">materializer</span><span class="o">);</span>
+
+          <span class="k">return</span> <span class="n">onComplete</span><span class="o">(()</span> <span class="o">-&gt;</span> <span class="n">res</span><span class="o">,</span> <span class="n">ioResult</span> <span class="o">-&gt;</span>
+            <span class="c1">// we only want to respond once the incoming data has been handled:</span>
+            <span class="n">complete</span><span class="o">(</span><span class="s">&quot;Finished writing data :&quot;</span> <span class="o">+</span> <span class="n">ioResult</span><span class="o">));</span>
+        <span class="o">})</span>
+      <span class="o">)</span>
+    <span class="o">)</span>
+  <span class="o">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="discarding-the-http-request-entity-server">
+<h3>Discarding the HTTP Request Entity (Server)</h3>
+<p>Sometimes, depending on some validation (e.g. checking if given user is allowed to perform uploads or not)
+you may want to decide to discard the uploaded entity.</p>
+<p>Please note that discarding means that the entire upload will proceed, even though you are not interested in the data
+being streamed to the server - this may be useful if you are simply not interested in the given entity, however
+you don't want to abort the entire connection (which we'll demonstrate as well), since there may be more requests
+pending on the same connection still.</p>
+<p>In order to discard the databytes explicitly you can invoke the <tt class="docutils literal"><span class="pre">discardEntityBytes</span></tt> bytes of the incoming <tt class="docutils literal"><span class="pre">HTTPRequest</span></tt>:</p>
+<div class="highlight-scala"><div class="highlight"><pre><span class="k">final</span> <span class="nc">ActorSystem</span> <span class="n">system</span> <span class="k">=</span> <span class="nc">ActorSystem</span><span class="o">.</span><span class="n">create</span><span class="o">();</span>
+<span class="k">final</span> <span class="nc">ExecutionContextExecutor</span> <span class="n">dispatcher</span> <span class="k">=</span> <span class="n">system</span><span class="o">.</span><span class="n">dispatcher</span><span class="o">();</span>
+<span class="k">final</span> <span class="nc">ActorMaterializer</span> <span class="n">materializer</span> <span class="k">=</span> <span class="nc">ActorMaterializer</span><span class="o">.</span><span class="n">create</span><span class="o">(</span><span class="n">system</span><span class="o">);</span>
+
+<span class="k">final</span> <span class="nc">Route</span> <span class="n">s</span> <span class="k">=</span>
+  <span class="n">put</span><span class="o">(()</span> <span class="o">-&gt;</span>
+    <span class="n">path</span><span class="o">(</span><span class="s">&quot;lines&quot;</span><span class="o">,</span> <span class="o">()</span> <span class="o">-&gt;</span>
+      <span class="n">withoutSizeLimit</span><span class="o">(()</span> <span class="o">-&gt;</span>
+        <span class="n">extractRequest</span><span class="o">(</span><span class="n">r</span> <span class="o">-&gt;</span> <span class="o">{</span>
+          <span class="k">final</span> <span class="nc">CompletionStage</span><span class="o">&lt;</span><span class="nc">Done</span><span class="o">&gt;</span> <span class="n">res</span> <span class="k">=</span> <span class="n">r</span><span class="o">.</span><span class="n">discardEntityBytes</span><span class="o">(</span><span class="n">materializer</span><span class="o">).</span><span class="n">completionStage</span><span class="o">();</span>
+
+          <span class="k">return</span> <span class="n">onComplete</span><span class="o">(()</span> <span class="o">-&gt;</span> <span class="n">res</span><span class="o">,</span> <span class="n">done</span> <span class="o">-&gt;</span>
+            <span class="c1">// we only want to respond once the incoming data has been handled:</span>
+            <span class="n">complete</span><span class="o">(</span><span class="s">&quot;Finished writing data :&quot;</span> <span class="o">+</span> <span class="n">done</span><span class="o">));</span>
+        <span class="o">})</span>
+      <span class="o">)</span>
+    <span class="o">)</span>
+  <span class="o">);</span>
+</pre></div>
+</div>
+<p>A related concept is <em>cancelling</em> the incoming <tt class="docutils literal"><span class="pre">entity.getDataBytes()</span></tt> stream, which results in Akka HTTP
+<em>abruptly closing the connection from the Client</em>. This may be useful when you detect that the given user should not be allowed to make any
+uploads at all, and you want to drop the connection (instead of reading and ignoring the incoming data).
+This can be done by attaching the incoming <tt class="docutils literal"><span class="pre">entity.getDataBytes()</span></tt> to a <tt class="docutils literal"><span class="pre">Sink.cancelled</span></tt> which will cancel
+the entity stream, which in turn will cause the underlying connection to be shut-down by the server –
+effectively hard-aborting the incoming request:</p>
+<div class="highlight-scala"><div class="highlight"><pre><span class="k">final</span> <span class="nc">ActorSystem</span> <span class="n">system</span> <span class="k">=</span> <span class="nc">ActorSystem</span><span class="o">.</span><span class="n">create</span><span class="o">();</span>
+<span class="k">final</span> <span class="nc">ExecutionContextExecutor</span> <span class="n">dispatcher</span> <span class="k">=</span> <span class="n">system</span><span class="o">.</span><span class="n">dispatcher</span><span class="o">();</span>
+<span class="k">final</span> <span class="nc">ActorMaterializer</span> <span class="n">materializer</span> <span class="k">=</span> <span class="nc">ActorMaterializer</span><span class="o">.</span><span class="n">create</span><span class="o">(</span><span class="n">system</span><span class="o">);</span>
+
+<span class="k">final</span> <span class="nc">Route</span> <span class="n">s</span> <span class="k">=</span>
+  <span class="n">put</span><span class="o">(()</span> <span class="o">-&gt;</span>
+    <span class="n">path</span><span class="o">(</span><span class="s">&quot;lines&quot;</span><span class="o">,</span> <span class="o">()</span> <span class="o">-&gt;</span>
+      <span class="n">withoutSizeLimit</span><span class="o">(()</span> <span class="o">-&gt;</span>
+        <span class="n">extractDataBytes</span><span class="o">(</span><span class="n">bytes</span> <span class="o">-&gt;</span> <span class="o">{</span>
+          <span class="c1">// Closing connections, method 1 (eager):</span>
+          <span class="c1">// we deem this request as illegal, and close the connection right away:</span>
+          <span class="n">bytes</span><span class="o">.</span><span class="n">runWith</span><span class="o">(</span><span class="nc">Sink</span><span class="o">.</span><span class="n">cancelled</span><span class="o">(),</span> <span class="n">materializer</span><span class="o">);</span>  <span class="c1">// &quot;brutally&quot; closes the connection</span>
+
+          <span class="c1">// Closing connections, method 2 (graceful):</span>
+          <span class="c1">// consider draining connection and replying with `Connection: Close` header</span>
+          <span class="c1">// if you want the client to close after this request/reply cycle instead:</span>
+          <span class="k">return</span> <span class="n">respondWithHeader</span><span class="o">(</span><span class="nc">Connection</span><span class="o">.</span><span class="n">create</span><span class="o">(</span><span class="s">&quot;close&quot;</span><span class="o">),</span> <span class="o">()</span> <span class="o">-&gt;</span> 
+            <span class="n">complete</span><span class="o">(</span><span class="nc">StatusCodes</span><span class="o">.</span><span class="nc">FORBIDDEN</span><span class="o">,</span> <span class="s">&quot;Not allowed!&quot;</span><span class="o">)</span>
+          <span class="o">);</span>
+        <span class="o">})</span>
+      <span class="o">)</span>
+    <span class="o">)</span>
+  <span class="o">);</span>
+</pre></div>
+</div>
+<p>Closing connections is also explained in depth in the <a class="reference internal" href="server-side/low-level-server-side-api.html#http-closing-connection-low-level-java"><em>Closing a connection</em></a> section of the docs.</p>
+</div>
+<div class="section" id="pending-automatic-discarding-of-not-used-entities">
+<h3>Pending: Automatic discarding of not used entities</h3>
+<p>Under certain conditions it is possible to detect an entity is very unlikely to be used by the user for a given request,
+and issue warnings or discard the entity automatically. This advanced feature has not been implemented yet, see the below
+note and issues for further discussion and ideas.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>An advanced feature code named &quot;auto draining&quot; has been discussed and proposed for Akka HTTP, and we're hoping
+to implement or help the community implement it.</p>
+<p class="last">You can read more about it in <a class="reference external" href="https://github.com/akka/akka/issues/18716">issue #18716</a>
+as well as <a class="reference external" href="https://github.com/akka/akka/issues/18540">issue #18540</a> ; as always, contributions are very welcome!</p>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <div class="span3"><p class="contents-title">Contents</p>
+              <div id="scroller-anchor">
+                <div id="scroller">
+                  <div id="toc"></div>
+                </div>
+              </div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+  <div class="container">
+    <ul>
+      <li><h5>Akka</h5></li>
+      <li><a href="http://akka.io/docs">Documentation</a></li>
+      <li><a href="http://doc.akka.io/docs/akka/current/additional/faq.html">FAQ</a></li>
+      <li><a href="http://akka.io/downloads">Downloads</a></li>
+      <li><a href="http://akka.io/news">News</a></li>
+      <li><a href="http://letitcrash.com">Blog</a></li>
+    </ul>
+    <ul>
+      <li><h5>Contribute</h5></li>
+      <li><a href="http://akka.io/community">Community Projects</a></li>
+      <li><a href="http://github.com/akka/akka">Source Code</a></li>
+      <li><a href="http://groups.google.com/group/akka-user">Mailing List</a></li>
+      <li><a href="http://doc.akka.io/docs/akka/current/project/issue-tracking.html">Report a Bug</a></li>
+    </ul>
+    <ul>
+      <li><h5>Company</h5></li>
+      <li><a href="http://www.lightbend.com/how/subscription">Commercial Support</a></li>
+      <li><a href="http://akka.io/team">Team</a></li>
+      <li><a href="mailto:info@lightbend.com">Contact</a></li>
+    </ul>
+    <ul>
+      <li><img src="../../_static/akka_icon_reverse.svg" align="center"/></li>
+    </ul>
+  </div>
+  <div class="container copyright">
+    <p style="float: left;">
+      © 2015 <a href="http://www.lightbend.com/">Lightbend Inc.</a> <span class="license">Akka is Open Source and available under the Apache 2 License.</span>
+    </p>
+    <p style="float: right; font-size: 12px;">
+      Last updated: Sep 30, 2016
+    </p>
+  </div>
+</div>
+<script type="text/javascript">
+  var $toc = $('#toc');
+  $toc.toc();
+
+  // show clickable section sign when section header hovered:
+  $('.section h2,.section h3,.section h4,.section h5').each(function(i, el) {
+      var $el = $(el);
+      $el.prepend($("<a class='section-marker' href='#" + $el.attr("id") + "'>&sect;</a>"))
+  });
+</script>
+
+<!-- Algolia docs search -->
+<script type="text/javascript">
+  var version = DOCUMENTATION_OPTIONS.VERSION;
+
+  var lang = "scala";
+  var path = window.location.pathname;
+  if (path.includes("/java/") || path.includes("java.html")) lang = "java";
+
+  console.log("Search configured for:", lang, "@", version);
+
+  docsearch({
+    apiKey: '543bad5ad786495d9ccd445ed34ed082',
+    indexName: 'akka_io',
+    inputSelector: '#search',
+    algoliaOptions: {
+      hitsPerPage: 5,
+      facetFilters: '[' + '["language:' + lang + '","language:general"]' + ',"version:' + version + '"]'
+    }
+  });
+
+  // set up "/" as global shortcut for focusing on search
+  $(document).keypress(function (event) {
+    if (event.keyCode == 47) {
+      $("#q").focus();
+      return false; // swallow key event, otherwise the / char would be input into the search box
+    }
+  });
+</script>
+
+  
+
+  </body>
+</html>

@@ -1,0 +1,113 @@
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .article > article {
+        margin: 0;
+        padding: 0px;
+        height: auto;
+        float: none;
+        background: red;
+    }
+
+    .article {
+        width: 100%;
+    }
+
+    .article > article > h1 {
+        padding: 5px;
+    }
+
+    .article > article > p {
+        padding: 5px;
+        font-size: 25px;
+    }
+
+    .vak-info {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 659px) {
+    #vak-3 {
+        height: 700px;
+        padding-bottom: 25px;
+    }
+
+    .arrowfix {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .vak-wit-text {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    #aboutinfo {
+        width: inherit;
+        padding: 10px;
+    }
+
+    .iconbar-icon {
+        width: 100%;
+        height: auto;
+        padding: 5px;
+        margin-top: 10px;
+    }
+
+    #vak-2 {
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        height: 60px;
+    }
+
+    .logo-container > a > h2 {
+        display: none;
+    }
+
+    .logo-container > a > img {
+        margin-top: 2px;
+        height: 60px;
+        width: 60px;
+    }
+
+    .menu {
+        line-height: 60px;
+        font-size: 0.8em;
+    }
+
+    .vak-1-container {
+        margin: 0;
+        padding: 0;
+    }
+
+    .vak-1-container > div {
+        margin: 0;
+        padding: 0;
+        float: none;
+        width: 100%;
+    }
+
+    .video-leftside {
+        float: none;
+    }
+
+    .video-rightside {
+        float: none;
+    }
+
+    .video-leftside > article {
+        margin-top: 15px;
+    }
+
+    .video-rightside > video {
+        margin: 15px auto;
+        width: 85%;
+    }
+
+}

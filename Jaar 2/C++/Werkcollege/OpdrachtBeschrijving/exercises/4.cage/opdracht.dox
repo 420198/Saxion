@@ -1,0 +1,31 @@
+// This file contains the doxygen code for this assignment
+/** \mainpage
+
+<h2>About containers and iterators</h2>
+
+<p>Finish the methods of class Cage (see the TODO comments in Cage.cc).
+	<br>The interface in Cage.h tells what the various methods are supposed to do.
+
+<p>HINT:
+	First look at <a target='cpp'
+	href='http://en.cppreference.com/w/cpp/container'>the standard containers</a>.
+	Especially pay attention to
+	<a target='cpp'
+	href='http://en.cppreference.com/w/cpp/container/map'>std::map&lt;Key,Value&gt;</a>,
+	<a target='cpp'
+	href='http://en.cppreference.com/w/cpp/utility/pair/make_pair'>std::make_pair</a>
+	or
+	<a target='cpp'
+	href='http://en.cppreference.com/w/cpp/container/map/operator_at'>std::map::operator[]</a>
+	and
+	<a target='cpp'
+	href='http://en.cppreference.com/w/cpp/container/map/find'>std::map::find</a>
+	</p>
+
+<p>Use your common sense to add various sanity checks (e.g. require(expr))</p>
+
+<p>HINT: Of course you can peek at Cage::saveFile and steal some code</p>
+
+<p><br></p>
+
+ */

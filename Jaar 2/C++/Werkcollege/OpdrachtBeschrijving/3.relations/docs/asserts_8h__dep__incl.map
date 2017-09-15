@@ -1,0 +1,8 @@
+<map id="asserts.h" name="asserts.h">
+<area shape="rect" id="node2" href="$main_8cc.html" title="The main function running the testcases. " alt="" coords="5,80,73,107"/>
+<area shape="rect" id="node3" href="$Marriage_8cc.html" title="The implementation of class Marriage. " alt="" coords="98,80,189,107"/>
+<area shape="rect" id="node4" href="$Person_8cc.html" title="The implementation of class Person. " alt="" coords="213,80,295,107"/>
+<area shape="rect" id="node5" href="$TestOrdinary_8cc.html" title="The implementation of class TestOrdinary. " alt="" coords="319,80,434,107"/>
+<area shape="rect" id="node6" href="$TestToYoung_8cc.html" title="The implementation of class TestToYoung. " alt="" coords="459,80,577,107"/>
+<area shape="rect" id="node7" href="$UnitTest_8cc.html" title="The implementation of class UnitTest. " alt="" coords="602,80,693,107"/>
+</map>

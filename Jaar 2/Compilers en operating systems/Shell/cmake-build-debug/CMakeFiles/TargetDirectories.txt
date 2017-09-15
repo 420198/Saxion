@@ -1,0 +1,3 @@
+/home/waro/Desktop/Shell/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/waro/Desktop/Shell/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/waro/Desktop/Shell/cmake-build-debug/CMakeFiles/shell.dir

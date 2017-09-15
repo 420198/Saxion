@@ -1,0 +1,67 @@
+# depslib dependency file v1.0
+1476904898 source:d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\4.cage\animal.cc
+	"asserts.h"
+	"Animal.h"
+
+1455302364 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\4.cage\asserts.h
+	"where.h"
+	"assert_error.h"
+
+1455302416 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\4.cage\where.h
+
+1455301692 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\4.cage\assert_error.h
+	<stdexcept>
+
+1476904872 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\4.cage\animal.h
+	<string>
+	<iostream>
+
+1455301870 source:d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\4.cage\assert_error.cc
+	<string>
+	<sstream>
+	"assert_error.h"
+
+1476727318 source:d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\4.cage\employee.cc
+	"asserts.h"
+	"Animal.h"
+	"Cage.h"
+	"Employee.h"
+
+1476904946 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\4.cage\cage.h
+	<string>
+	<iostream>
+	<map>
+
+1476957998 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\4.cage\employee.h
+	<string>
+	<vector>
+	<iostream>
+
+1481025619 source:d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\4.cage\main.cc
+	<iostream>
+	<fstream>
+	<string>
+	<cstdlib>
+	"Zoo.h"
+	"Employee.h"
+	"Animal.h"
+	"ansi.h"
+	"asserts.h"
+
+1476953600 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\4.cage\zoo.h
+	<string>
+	<map>
+	<vector>
+
+1352237946 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\4.cage\ansi.h
+	"common.h"
+
+1478719528 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\4.cage\common.h
+
+1481027392 source:d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\4.cage\zoo.cc
+	"Zoo.h"
+	"Animal.h"
+	"Cage.h"
+	"Employee.h"
+	"asserts.h"
+

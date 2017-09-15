@@ -1,0 +1,5 @@
+MyTest.o: MyTest.cc asserts.h where.h assert_error.h MyTest.h UnitTest.h
+main.o: main.cc MyTest.h UnitTest.h
+assert_error.o: assert_error.cc assert_error.h
+UnitTest.o: UnitTest.cc ansi.h common.h asserts.h where.h assert_error.h \
+ UnitTest.h

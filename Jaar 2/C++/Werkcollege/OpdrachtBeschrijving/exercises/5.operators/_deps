@@ -1,0 +1,8 @@
+TestPrint.o: TestPrint.cc ansi.h common.h asserts.h where.h \
+ assert_error.h TestPrint.h UnitTest.h Person.h Marriage.h
+main.o: main.cc TestPrint.h UnitTest.h TestLess.h
+assert_error.o: assert_error.cc assert_error.h
+UnitTest.o: UnitTest.cc ansi.h common.h asserts.h where.h assert_error.h \
+ UnitTest.h
+TestLess.o: TestLess.cc ansi.h common.h asserts.h where.h assert_error.h \
+ Person.h Marriage.h TestLess.h UnitTest.h

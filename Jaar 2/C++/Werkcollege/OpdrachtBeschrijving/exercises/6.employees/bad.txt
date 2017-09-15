@@ -1,0 +1,10 @@
+1	101	monkey	toto	10
+1	102	monkey	toto	8
+1	101	lion	leo	20
+1	101	turtle	slomo	70
+3	1	101	boss1	30
+3	1	101	boss2	30
+3	3	103	slave	20	monkey	101
+3	3	103	slove	21	turtle	101
+3	2	102	pen	24	101
+0

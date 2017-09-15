@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="Workspace">
+		<Project filename="../1.basicIO/00opdracht1.cbp" />
+		<Project filename="../2.sizes/00opdracht2.cbp" />
+		<Project filename="../3.relations/00opdracht3.cbp" />
+		<Project filename="../4.cage/00opdracht4.cbp" />
+		<Project filename="../5.operators/00opdracht5.cbp" />
+		<Project filename="../6.employees/00opdracht6.cbp" />
+		<Project filename="../7.finally/00opdracht7.cbp" />
+	</Workspace>
+</CodeBlocks_workspace_file>

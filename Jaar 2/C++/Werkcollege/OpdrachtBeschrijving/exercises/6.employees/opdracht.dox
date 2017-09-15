@@ -1,0 +1,35 @@
+// This file contains the doxygen code for this assignment
+/** \mainpage
+
+<h2>Inheritance and polymorphism</h2>
+
+<p>We want to eliminate <span style='color:green'>Employee::kind</span>
+	by introducing sub-types of class Employee.</p>
+
+<p>First you have to copy some files from the "cage" assignment:
+	Employee.h and Employee.cc, Cage.cc, Zoo.cc and Main.cc.
+@note You'll have to tell your IDE to add these new files to your project.
+<p>Now refactor <span style='color:navy'>Employee.h</span>
+	and <span style='color:navy'>Employee.cc</span>.
+	Create three derived classes: \e Manager, \e Administrator and \e Keeper,
+	which will have the type-specific attributes and methods.
+	Remove the now redundant code from class Employee.
+
+<p>The Employee::Kind enum should become fully redundant
+	(so e.g. Employee::getKind() will disappear)
+	because the employee type is now expressed as
+	the object's type (i.e. a class) rather than via
+	the object's attribute (The '<span
+	style='color:green'>kind</span>' attribute has to be removed).
+	The only reason to keep the enum around is for some code
+	in Main.cc which uses it when saving/loading zoo data.
+
+<p>You should also remove the various isFoo() methods
+	because now we can verify the employee type by looking at
+	the actual object type.
+
+<p>Some code in Zoo.cc and Main.cc
+	will have to be refactored too.
+
+<p><br></p>
+ */

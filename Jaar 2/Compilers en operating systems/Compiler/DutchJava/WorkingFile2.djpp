@@ -1,0 +1,24 @@
+leegte functie ikPraat(draad gepraat, nummer aantalKeerGepraat){
+    nummer index = 0;
+    zolang(index < aantalKeerGepraat){
+        schrijf gepraat;
+        index++;
+    }
+}
+
+ikPraat("Dit is een leuk praatje",30);
+
+draad stijn;
+stijn = "Ik ben stijn";
+
+draad frank;
+
+schrijf "\r\nWat is zijn naam";
+stijn < (draad);
+schrijf "\r\nNaam is ";
+schrijf stijn;
+
+schrijf "\r\nWat is zijn naam";
+frank < (draad);
+schrijf "\r\nNaam is ";
+schrijf frank;

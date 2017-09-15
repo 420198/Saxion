@@ -1,0 +1,12 @@
+TestOrdinary.o: TestOrdinary.cc asserts.h where.h assert_error.h \
+ TestOrdinary.h UnitTest.h Person.h Marriage.h
+TestToYoung.o: TestToYoung.cc asserts.h where.h assert_error.h \
+ TestToYoung.h UnitTest.h Person.h Marriage.h
+main.o: main.cc asserts.h where.h assert_error.h TestToYoung.h UnitTest.h \
+ TestOrdinary.h
+Marriage.o: Marriage.cc asserts.h where.h assert_error.h Person.h \
+ Marriage.h
+assert_error.o: assert_error.cc assert_error.h
+UnitTest.o: UnitTest.cc ansi.h common.h asserts.h where.h assert_error.h \
+ UnitTest.h
+Person.o: Person.cc asserts.h where.h assert_error.h Person.h

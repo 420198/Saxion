@@ -1,0 +1,1315 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>ddata - akka.cluster.ddata</title>
+          <meta name="description" content="ddata - akka.cluster.ddata" />
+          <meta name="keywords" content="ddata akka.cluster.ddata" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+      <script type="text/javascript" src="../../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../../lib/diagrams.js" id="diagrams-js"></script>
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../index.html';
+            var hash = 'akka.cluster.ddata.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img alt="Package" src="../../../lib/package_big.png" />
+        <p id="owner"><a href="../../package.html" class="extype" name="akka">akka</a>.<a href="../package.html" class="extype" name="akka.cluster">cluster</a></p>
+        <h1>ddata</h1><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ddata</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block diagram-container" id="content-diagram-container">
+                <span class="toggle diagram-link">Content Hierarchy</span>
+                <div class="diagram" id="content-diagram"><svg class="package-diagram" id="graph1" viewBox="0.00 0.00 2542.00 220.00" height="220pt" width="2542pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 216)" class="graph" id="graph0"><polygon points="-4,4 -4,-216 2538,-216 2538,4 -4,4" stroke="white" fill="white"></polygon><!-- node0 --><g class="node class" id="graph1_0"><g id="a_class|graph1_0"><a xlink:title="akka.cluster.ddata.VersionVector" xlink:href="VersionVector.html#inheritance-diagram"><polygon points="2154,-88 2048,-88 2048,-62 2154,-62 2154,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-81" x="2060" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="2079.76" text-anchor="start">VersionVector</text></a></g></g><!-- node14 --><g class="node class" id="graph1_14"><g id="a_class|graph1_14"><a xlink:title="akka.cluster.ddata.OneVersionVector" xlink:href="OneVersionVector.html#inheritance-diagram"><polygon points="2090.25,-26 1965.75,-26 1965.75,-0 2090.25,-0 2090.25,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-19" x="1978" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-8.74951" x="1997.81" text-anchor="start">OneVersionVector</text></a></g></g><!-- node0&#45;&gt;node14 --><g class="edge inheritance" id="graph1_0_14"><g id="a_inheritance|graph1_0_14"><a xlink:title="OneVersionVector is a subtype of VersionVector"><path d="M2082.21,-58.5563C2069.93,-48.4643 2054.12,-35.4716 2042.75,-26.1238" stroke="#d4d4d4" fill="none"></path><polygon points="2081.25,-60.0352 2086.23,-61.8581 2083.48,-57.3313 2081.25,-60.0352" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node15 --><g class="node class" id="graph1_15"><g id="a_class|graph1_15"><a xlink:title="akka.cluster.ddata.ManyVersionVector" xlink:href="ManyVersionVector.html#inheritance-diagram"><polygon points="2239,-26 2109,-26 2109,-0 2239,-0 2239,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-19" x="2121" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-8.74951" x="2140.53" text-anchor="start">ManyVersionVector</text></a></g></g><!-- node0&#45;&gt;node15 --><g class="edge inheritance" id="graph1_0_15"><g id="a_inheritance|graph1_0_15"><a xlink:title="ManyVersionVector is a subtype of VersionVector"><path d="M2119.79,-58.5563C2132.07,-48.4643 2147.88,-35.4716 2159.25,-26.1238" stroke="#d4d4d4" fill="none"></path><polygon points="2118.52,-57.3313 2115.77,-61.8581 2120.75,-60.0352 2118.52,-57.3313" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node1 --><g class="node trait" id="graph1_1"><g id="a_trait|graph1_1"><a xlink:title="akka.cluster.ddata.ReplicatedDataSerialization" xlink:href="ReplicatedDataSerialization.html#inheritance-diagram"><polygon points="1512.25,-150 1345.75,-150 1345.75,-124 1512.25,-124 1512.25,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-143" x="1358" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-132.75" x="1377.69" text-anchor="start">ReplicatedDataSerialization</text></a></g></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph1_1_0"><g id="a_inheritance|graph1_1_0"><a xlink:title="VersionVector is a subtype of ReplicatedDataSerialization"><path d="M1517.94,-132.146C1637.01,-126.269 1854.63,-113.015 2039,-88 2041.93,-87.602 2044.94,-87.1545 2047.97,-86.6723" stroke="#d4d4d4" fill="none"></path><polygon points="1517.6,-130.41 1512.69,-132.403 1517.77,-133.906 1517.6,-130.41" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node4 --><g class="node class" id="graph1_4"><g id="a_class|graph1_4"><a xlink:title="akka.cluster.ddata.PNCounterMapKey" xlink:href="PNCounterMapKey.html#inheritance-diagram"><polygon points="1029,-88 899,-88 899,-62 1029,-62 1029,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-81" x="911" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="930.535" text-anchor="start">PNCounterMapKey</text></a></g></g><!-- node1&#45;&gt;node4 --><g class="edge inheritance" id="graph1_1_4"><g id="a_inheritance|graph1_1_4"><a xlink:title="PNCounterMapKey is a subtype of ReplicatedDataSerialization"><path d="M1340.57,-126.131C1261.24,-117.042 1141.69,-102.766 1038,-88 1035.17,-87.5963 1032.27,-87.1734 1029.35,-86.7375" stroke="#d4d4d4" fill="none"></path><polygon points="1340.57,-127.892 1345.74,-126.722 1340.97,-124.415 1340.57,-127.892" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node5 --><g class="node class" id="graph1_5"><g id="a_class|graph1_5"><a xlink:title="akka.cluster.ddata.PNCounterMap" xlink:href="PNCounterMap.html#inheritance-diagram"><polygon points="2285.25,-88 2172.75,-88 2172.75,-62 2285.25,-62 2285.25,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-81" x="2185" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="2204.65" text-anchor="start">PNCounterMap</text></a></g></g><!-- node1&#45;&gt;node5 --><g class="edge inheritance" id="graph1_1_5"><g id="a_inheritance|graph1_1_5"><a xlink:title="PNCounterMap is a subtype of ReplicatedDataSerialization"><path d="M1517.66,-133.479C1655.95,-128.811 1931.19,-116.558 2163,-88 2166.12,-87.6155 2169.32,-87.1787 2172.54,-86.7047" stroke="#d4d4d4" fill="none"></path><polygon points="1517.34,-131.739 1512.4,-133.656 1517.45,-135.237 1517.34,-131.739" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node6 --><g class="node class" id="graph1_6"><g id="a_class|graph1_6"><a xlink:title="akka.cluster.ddata.PNCounterKey" xlink:href="PNCounterKey.html#inheritance-diagram"><polygon points="1158.25,-88 1047.75,-88 1047.75,-62 1158.25,-62 1158.25,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-81" x="1060" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="1079.76" text-anchor="start">PNCounterKey</text></a></g></g><!-- node1&#45;&gt;node6 --><g class="edge inheritance" id="graph1_1_6"><g id="a_inheritance|graph1_1_6"><a xlink:title="PNCounterKey is a subtype of ReplicatedDataSerialization"><path d="M1358.55,-123.057C1306.03,-113.404 1232.52,-99.8893 1168,-88 1164.84,-87.4177 1161.59,-86.8193 1158.32,-86.2152" stroke="#d4d4d4" fill="none"></path><polygon points="1358.33,-124.797 1363.57,-123.979 1358.97,-121.354 1358.33,-124.797" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node7 --><g class="node class" id="graph1_7"><g id="a_class|graph1_7"><a xlink:title="akka.cluster.ddata.PNCounter" xlink:href="PNCounter.html#inheritance-diagram"><polygon points="2398,-88 2304,-88 2304,-62 2398,-62 2398,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-81" x="2316" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="2335.88" text-anchor="start">PNCounter</text></a></g></g><!-- node1&#45;&gt;node7 --><g class="edge inheritance" id="graph1_1_7"><g id="a_inheritance|graph1_1_7"><a xlink:title="PNCounter is a subtype of ReplicatedDataSerialization"><path d="M1517.51,-132.8C1706.84,-125.675 2145.91,-107.582 2294,-88 2297.21,-87.5758 2300.5,-87.0701 2303.82,-86.51" stroke="#d4d4d4" fill="none"></path><polygon points="1517.19,-131.061 1512.26,-132.997 1517.32,-134.558 1517.19,-131.061" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node8 --><g class="node class" id="graph1_8"><g id="a_class|graph1_8"><a xlink:title="akka.cluster.ddata.ORSetKey" xlink:href="ORSetKey.html#inheritance-diagram"><polygon points="1281,-88 1177,-88 1177,-62 1281,-62 1281,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-81" x="1189" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="1208.88" text-anchor="start">ORSetKey[A]</text></a></g></g><!-- node1&#45;&gt;node8 --><g class="edge inheritance" id="graph1_1_8"><g id="a_inheritance|graph1_1_8"><a xlink:title="ORSetKey[A] is a subtype of ReplicatedDataSerialization"><path d="M1383.53,-122.36C1349.06,-112.019 1302.14,-97.9422 1269.07,-88.0213" stroke="#d4d4d4" fill="none"></path><polygon points="1383.23,-124.097 1388.53,-123.858 1384.24,-120.745 1383.23,-124.097" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node9 --><g class="node class" id="graph1_9"><g id="a_class|graph1_9"><a xlink:title="akka.cluster.ddata.ORSet" xlink:href="ORSet.html#inheritance-diagram"><polygon points="1566.25,-88 1479.75,-88 1479.75,-62 1566.25,-62 1566.25,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-81" x="1492" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="1511.99" text-anchor="start">ORSet[A]</text></a></g></g><!-- node1&#45;&gt;node9 --><g class="edge inheritance" id="graph1_1_9"><g id="a_inheritance|graph1_1_9"><a xlink:title="ORSet[A] is a subtype of ReplicatedDataSerialization"><path d="M1452.37,-121.08C1468.3,-110.917 1489.11,-97.6342 1504.01,-88.1238" stroke="#d4d4d4" fill="none"></path><polygon points="1451.3,-119.693 1448.02,-123.858 1453.18,-122.643 1451.3,-119.693" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node10 --><g class="node class" id="graph1_10"><g id="a_class|graph1_10"><a xlink:title="akka.cluster.ddata.ORMultiMapKey" xlink:href="ORMultiMapKey.html#inheritance-diagram"><polygon points="128.25,-88 -0.25,-88 -0.25,-62 128.25,-62 128.25,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-81" x="12" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="31.5986" text-anchor="start">ORMultiMapKey[A]</text></a></g></g><!-- node1&#45;&gt;node10 --><g class="edge inheritance" id="graph1_1_10"><g id="a_inheritance|graph1_1_10"><a xlink:title="ORMultiMapKey[A] is a subtype of ReplicatedDataSerialization"><path d="M1340.49,-134.136C1088.77,-128.609 371.994,-111.233 138,-88 134.892,-87.6914 131.716,-87.3352 128.512,-86.943" stroke="#d4d4d4" fill="none"></path><polygon points="1340.58,-135.889 1345.62,-134.249 1340.66,-132.389 1340.58,-135.889" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node11 --><g class="node class" id="graph1_11"><g id="a_class|graph1_11"><a xlink:title="akka.cluster.ddata.ORMultiMap" xlink:href="ORMultiMap.html#inheritance-diagram"><polygon points="1924,-88 1812,-88 1812,-62 1924,-62 1924,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-81" x="1824" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="1843.71" text-anchor="start">ORMultiMap[A]</text></a></g></g><!-- node1&#45;&gt;node11 --><g class="edge inheritance" id="graph1_1_11"><g id="a_inheritance|graph1_1_11"><a xlink:title="ORMultiMap[A] is a subtype of ReplicatedDataSerialization"><path d="M1517.77,-125.998C1593.67,-117.114 1705.73,-103.209 1803,-88 1805.83,-87.5568 1808.74,-87.0858 1811.66,-86.5965" stroke="#d4d4d4" fill="none"></path><polygon points="1517.13,-124.311 1512.37,-126.629 1517.54,-127.787 1517.13,-124.311" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node12 --><g class="node class" id="graph1_12"><g id="a_class|graph1_12"><a xlink:title="akka.cluster.ddata.ORMapKey" xlink:href="ORMapKey.html#inheritance-diagram"><polygon points="255,-88 147,-88 147,-62 255,-62 255,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-81" x="159" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="178.655" text-anchor="start">ORMapKey[A]</text></a></g></g><!-- node1&#45;&gt;node12 --><g class="edge inheritance" id="graph1_1_12"><g id="a_inheritance|graph1_1_12"><a xlink:title="ORMapKey[A] is a subtype of ReplicatedDataSerialization"><path d="M1340.56,-136.779C1145.5,-137.53 663.908,-134.072 264,-88 261.124,-87.6687 258.183,-87.2809 255.218,-86.8515" stroke="#d4d4d4" fill="none"></path><polygon points="1340.69,-138.529 1345.68,-136.758 1340.68,-135.029 1340.69,-138.529" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node13 --><g class="node class" id="graph1_13"><g id="a_class|graph1_13"><a xlink:title="akka.cluster.ddata.ORMap" xlink:href="ORMap.html#inheritance-diagram"><polygon points="1675.25,-88 1584.75,-88 1584.75,-62 1675.25,-62 1675.25,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-81" x="1597" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="1616.77" text-anchor="start">ORMap[A]</text></a></g></g><!-- node1&#45;&gt;node13 --><g class="edge inheritance" id="graph1_1_13"><g id="a_inheritance|graph1_1_13"><a xlink:title="ORMap[A] is a subtype of ReplicatedDataSerialization"><path d="M1474.69,-122.36C1509.33,-112.019 1556.49,-97.9422 1589.73,-88.0213" stroke="#d4d4d4" fill="none"></path><polygon points="1473.97,-120.751 1469.68,-123.858 1474.97,-124.105 1473.97,-120.751" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node16 --><g class="node class" id="graph1_16"><g id="a_class|graph1_16"><a xlink:title="akka.cluster.ddata.LWWRegisterKey" xlink:href="LWWRegisterKey.html#inheritance-diagram"><polygon points="408.25,-88 273.75,-88 273.75,-62 408.25,-62 408.25,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-81" x="286" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="305.916" text-anchor="start">LWWRegisterKey[A]</text></a></g></g><!-- node1&#45;&gt;node16 --><g class="edge inheritance" id="graph1_1_16"><g id="a_inheritance|graph1_1_16"><a xlink:title="LWWRegisterKey[A] is a subtype of ReplicatedDataSerialization"><path d="M1340.32,-135.045C1163.99,-132.428 757.04,-122.804 417,-88 414.209,-87.7144 411.365,-87.3949 408.495,-87.0489" stroke="#d4d4d4" fill="none"></path><polygon points="1340.44,-136.797 1345.47,-135.12 1340.49,-133.297 1340.44,-136.797" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node17 --><g class="node class" id="graph1_17"><g id="a_class|graph1_17"><a xlink:title="akka.cluster.ddata.LWWRegister" xlink:href="LWWRegister.html#inheritance-diagram"><polygon points="2533.25,-88 2416.75,-88 2416.75,-62 2533.25,-62 2533.25,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-81" x="2429" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="2448.53" text-anchor="start">LWWRegister[A]</text></a></g></g><!-- node1&#45;&gt;node17 --><g class="edge inheritance" id="graph1_1_17"><g id="a_inheritance|graph1_1_17"><a xlink:title="LWWRegister[A] is a subtype of ReplicatedDataSerialization"><path d="M1517.47,-133.084C1724.55,-126.028 2236.12,-107.194 2407,-88 2410.1,-87.6521 2413.27,-87.2511 2416.46,-86.8113" stroke="#d4d4d4" fill="none"></path><polygon points="1517.27,-131.34 1512.33,-133.259 1517.39,-134.838 1517.27,-131.34" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node18 --><g class="node class" id="graph1_18"><g id="a_class|graph1_18"><a xlink:title="akka.cluster.ddata.LWWMapKey" xlink:href="LWWMapKey.html#inheritance-diagram"><polygon points="543.25,-88 426.75,-88 426.75,-62 543.25,-62 543.25,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-81" x="439" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="458.807" text-anchor="start">LWWMapKey[A]</text></a></g></g><!-- node1&#45;&gt;node18 --><g class="edge inheritance" id="graph1_1_18"><g id="a_inheritance|graph1_1_18"><a xlink:title="LWWMapKey[A] is a subtype of ReplicatedDataSerialization"><path d="M1340.48,-134.737C1181.91,-131.677 839.119,-121.442 552,-88 549.183,-87.6719 546.305,-87.2998 543.403,-86.8949" stroke="#d4d4d4" fill="none"></path><polygon points="1340.55,-136.488 1345.58,-134.834 1340.61,-132.989 1340.55,-136.488" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node19 --><g class="node class" id="graph1_19"><g id="a_class|graph1_19"><a xlink:title="akka.cluster.ddata.LWWMap" xlink:href="LWWMap.html#inheritance-diagram"><polygon points="1794,-88 1694,-88 1694,-62 1794,-62 1794,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-81" x="1706" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="1725.92" text-anchor="start">LWWMap[A]</text></a></g></g><!-- node1&#45;&gt;node19 --><g class="edge inheritance" id="graph1_1_19"><g id="a_inheritance|graph1_1_19"><a xlink:title="LWWMap[A] is a subtype of ReplicatedDataSerialization"><path d="M1499.23,-123.002C1550.47,-113.464 1621.58,-100.117 1684,-88 1687.23,-87.3725 1690.56,-86.721 1693.92,-86.0605" stroke="#d4d4d4" fill="none"></path><polygon points="1498.62,-121.336 1494.02,-123.971 1499.26,-124.777 1498.62,-121.336" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node21 --><g class="node class" id="graph1_21"><g id="a_class|graph1_21"><a xlink:title="akka.cluster.ddata.GSetKey" xlink:href="GSetKey.html#inheritance-diagram"><polygon points="658.25,-88 561.75,-88 561.75,-62 658.25,-62 658.25,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-81" x="574" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="593.988" text-anchor="start">GSetKey[A]</text></a></g></g><!-- node1&#45;&gt;node21 --><g class="edge inheritance" id="graph1_1_21"><g id="a_inheritance|graph1_1_21"><a xlink:title="GSetKey[A] is a subtype of ReplicatedDataSerialization"><path d="M1340.73,-134.576C1198.35,-131.353 909.411,-120.976 667,-88 664.194,-87.6183 661.32,-87.1766 658.427,-86.6925" stroke="#d4d4d4" fill="none"></path><polygon points="1340.7,-136.326 1345.74,-134.688 1340.78,-132.827 1340.7,-136.326" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node22 --><g class="node class" id="graph1_22"><g id="a_class|graph1_22"><a xlink:title="akka.cluster.ddata.GSet" xlink:href="GSet.html#inheritance-diagram"><polygon points="1378.25,-88 1299.75,-88 1299.75,-62 1378.25,-62 1378.25,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-81" x="1312" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="1331.6" text-anchor="start">GSet[A]</text></a></g></g><!-- node1&#45;&gt;node22 --><g class="edge inheritance" id="graph1_1_22"><g id="a_inheritance|graph1_1_22"><a xlink:title="GSet[A] is a subtype of ReplicatedDataSerialization"><path d="M1406.62,-121.08C1391.38,-110.917 1371.45,-97.6342 1357.19,-88.1238" stroke="#d4d4d4" fill="none"></path><polygon points="1405.66,-122.541 1410.79,-123.858 1407.6,-119.628 1405.66,-122.541" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node23 --><g class="node class" id="graph1_23"><g id="a_class|graph1_23"><a xlink:title="akka.cluster.ddata.GCounterKey" xlink:href="GCounterKey.html#inheritance-diagram"><polygon points="781.25,-88 676.75,-88 676.75,-62 781.25,-62 781.25,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-81" x="689" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="708.818" text-anchor="start">GCounterKey</text></a></g></g><!-- node1&#45;&gt;node23 --><g class="edge inheritance" id="graph1_1_23"><g id="a_inheritance|graph1_1_23"><a xlink:title="GCounterKey is a subtype of ReplicatedDataSerialization"><path d="M1340.62,-132.696C1216.99,-127.316 985.59,-114.488 790,-88 787.219,-87.6234 784.374,-87.1995 781.506,-86.7418" stroke="#d4d4d4" fill="none"></path><polygon points="1340.63,-134.448 1345.7,-132.915 1340.78,-130.951 1340.63,-134.448" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node24 --><g class="node class" id="graph1_24"><g id="a_class|graph1_24"><a xlink:title="akka.cluster.ddata.GCounter" xlink:href="GCounter.html#inheritance-diagram"><polygon points="2030,-88 1942,-88 1942,-62 2030,-62 2030,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-81" x="1954" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="1973.93" text-anchor="start">GCounter</text></a></g></g><!-- node1&#45;&gt;node24 --><g class="edge inheritance" id="graph1_1_24"><g id="a_inheritance|graph1_1_24"><a xlink:title="GCounter is a subtype of ReplicatedDataSerialization"><path d="M1517.41,-131.01C1618.38,-124.516 1788.33,-111.169 1933,-88 1935.89,-87.5375 1938.85,-87.011 1941.84,-86.4429" stroke="#d4d4d4" fill="none"></path><polygon points="1517.23,-129.267 1512.35,-131.333 1517.45,-132.76 1517.23,-129.267" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node25 --><g class="node class" id="graph1_25"><g id="a_class|graph1_25"><a xlink:title="akka.cluster.ddata.FlagKey" xlink:href="FlagKey.html#inheritance-diagram"><polygon points="880.25,-88 799.75,-88 799.75,-62 880.25,-62 880.25,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-81" x="812" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="831.769" text-anchor="start">FlagKey</text></a></g></g><!-- node1&#45;&gt;node25 --><g class="edge inheritance" id="graph1_1_25"><g id="a_inheritance|graph1_1_25"><a xlink:title="FlagKey is a subtype of ReplicatedDataSerialization"><path d="M1340.38,-132.1C1233.16,-126.465 1047.43,-113.759 890,-88 886.828,-87.4811 883.56,-86.8708 880.285,-86.2051" stroke="#d4d4d4" fill="none"></path><polygon points="1340.34,-133.85 1345.42,-132.363 1340.52,-130.355 1340.34,-133.85" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node26 --><g class="node class" id="graph1_26"><g id="a_class|graph1_26"><a xlink:title="akka.cluster.ddata.Flag" xlink:href="Flag.html#inheritance-diagram"><polygon points="1461,-88 1397,-88 1397,-62 1461,-62 1461,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-81" x="1409" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="1428.88" text-anchor="start">Flag</text></a></g></g><!-- node1&#45;&gt;node26 --><g class="edge inheritance" id="graph1_1_26"><g id="a_inheritance|graph1_1_26"><a xlink:title="Flag is a subtype of ReplicatedDataSerialization"><path d="M1429,-118.683C1429,-108.896 1429,-96.9026 1429,-88.1238" stroke="#d4d4d4" fill="none"></path><polygon points="1427.25,-118.858 1429,-123.858 1430.75,-118.858 1427.25,-118.858" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2 --><g class="node trait" id="graph1_2"><g id="a_trait|graph1_2"><a xlink:title="akka.cluster.ddata.ReplicatedData" xlink:href="ReplicatedData.html#inheritance-diagram"><polygon points="1928.25,-212 1815.75,-212 1815.75,-186 1928.25,-186 1928.25,-212" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-205" x="1828" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-194.75" x="1847.92" text-anchor="start">ReplicatedData</text></a></g></g><!-- node2&#45;&gt;node0 --><g class="edge inheritance" id="graph1_2_0"><g id="a_inheritance|graph1_2_0"><a xlink:title="VersionVector is a subtype of ReplicatedData"><path d="M1933.56,-197.189C2012.27,-194.697 2141.99,-185.198 2172,-150 2191.41,-127.24 2154.77,-102.483 2127.28,-88.1526" stroke="#d4d4d4" fill="none"></path><polygon points="1933.4,-195.443 1928.46,-197.343 1933.51,-198.942 1933.4,-195.443" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node3 --><g class="node trait" id="graph1_3"><g id="a_trait|graph1_3"><a xlink:title="akka.cluster.ddata.RemovedNodePruning" xlink:href="RemovedNodePruning.html#inheritance-diagram"><polygon points="1944.25,-150 1799.75,-150 1799.75,-124 1944.25,-124 1944.25,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-143" x="1812" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-132.75" x="1831.52" text-anchor="start">RemovedNodePruning</text></a></g></g><!-- node2&#45;&gt;node3 --><g class="edge inheritance" id="graph1_2_3"><g id="a_inheritance|graph1_2_3"><a xlink:title="RemovedNodePruning is a subtype of ReplicatedData"><path d="M1872,-180.683C1872,-170.896 1872,-158.903 1872,-150.124" stroke="#d4d4d4" fill="none"></path><polygon points="1870.25,-180.858 1872,-185.858 1873.75,-180.858 1870.25,-180.858" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2&#45;&gt;node5 --><g class="edge inheritance" id="graph1_2_5"><g id="a_inheritance|graph1_2_5"><a xlink:title="PNCounterMap is a subtype of ReplicatedData"><path d="M1933.6,-195.131C2013.92,-190.313 2148.9,-178.193 2189,-150 2210.27,-135.049 2221.3,-105.114 2226.05,-88.2592" stroke="#d4d4d4" fill="none"></path><polygon points="1933.28,-193.397 1928.39,-195.438 1933.49,-196.891 1933.28,-193.397" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2&#45;&gt;node7 --><g class="edge inheritance" id="graph1_2_7"><g id="a_inheritance|graph1_2_7"><a xlink:title="PNCounter is a subtype of ReplicatedData"><path d="M1933.7,-195.997C2003.55,-192.226 2119.97,-181.351 2215,-150 2260.44,-135.009 2308.44,-105.089 2333.47,-88.248" stroke="#d4d4d4" fill="none"></path><polygon points="1933.24,-194.269 1928.34,-196.278 1933.42,-197.764 1933.24,-194.269" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2&#45;&gt;node9 --><g class="edge inheritance" id="graph1_2_9"><g id="a_inheritance|graph1_2_9"><a xlink:title="ORSet[A] is a subtype of ReplicatedData"><path d="M1821.91,-184.541C1789.47,-175.509 1746.45,-162.934 1709,-150 1652.17,-130.374 1587.21,-103.48 1551.06,-88.1031" stroke="#d4d4d4" fill="none"></path><polygon points="1821.74,-186.309 1827.02,-185.96 1822.67,-182.937 1821.74,-186.309" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2&#45;&gt;node11 --><g class="edge inheritance" id="graph1_2_11"><g id="a_inheritance|graph1_2_11"><a xlink:title="ORMultiMap[A] is a subtype of ReplicatedData"><path d="M1829.9,-183.695C1814.53,-176.197 1798.77,-165.303 1790,-150 1784.25,-139.975 1784.36,-134.087 1790,-124 1799.31,-107.344 1817.03,-95.7558 1833.23,-88.1445" stroke="#d4d4d4" fill="none"></path><polygon points="1829.37,-185.383 1834.65,-185.914 1830.86,-182.212 1829.37,-185.383" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2&#45;&gt;node13 --><g class="edge inheritance" id="graph1_2_13"><g id="a_inheritance|graph1_2_13"><a xlink:title="ORMap[A] is a subtype of ReplicatedData"><path d="M1836.51,-183.989C1814.25,-174.907 1785.12,-162.48 1760,-150 1720,-130.122 1675.07,-103.55 1649.88,-88.2528" stroke="#d4d4d4" fill="none"></path><polygon points="1835.86,-185.614 1841.15,-185.875 1837.18,-182.371 1835.86,-185.614" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2&#45;&gt;node17 --><g class="edge inheritance" id="graph1_2_17"><g id="a_inheritance|graph1_2_17"><a xlink:title="LWWRegister[A] is a subtype of ReplicatedData"><path d="M1933.83,-194.284C2010.81,-188.756 2145.94,-176.083 2259,-150 2327.75,-134.139 2405.32,-104.559 2446.21,-88.0056" stroke="#d4d4d4" fill="none"></path><polygon points="1933.25,-192.57 1928.39,-194.669 1933.5,-196.061 1933.25,-192.57" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2&#45;&gt;node19 --><g class="edge inheritance" id="graph1_2_19"><g id="a_inheritance|graph1_2_19"><a xlink:title="LWWMap[A] is a subtype of ReplicatedData"><path d="M1833.66,-183.786C1816.27,-175.882 1796.42,-164.649 1782,-150 1764.27,-131.99 1753.02,-104.023 1747.68,-88.128" stroke="#d4d4d4" fill="none"></path><polygon points="1833.21,-185.501 1838.49,-185.927 1834.63,-182.301 1833.21,-185.501" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2&#45;&gt;node22 --><g class="edge inheritance" id="graph1_2_22"><g id="a_inheritance|graph1_2_22"><a xlink:title="GSet[A] is a subtype of ReplicatedData"><path d="M1810.66,-197.06C1676.72,-194.372 1367.51,-184.461 1336,-150 1320.73,-133.3 1327.87,-104.586 1333.83,-88.2705" stroke="#d4d4d4" fill="none"></path><polygon points="1810.7,-198.811 1815.74,-197.16 1810.77,-195.312 1810.7,-198.811" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2&#45;&gt;node24 --><g class="edge inheritance" id="graph1_2_24"><g id="a_inheritance|graph1_2_24"><a xlink:title="GCounter is a subtype of ReplicatedData"><path d="M1906.5,-183.526C1922.3,-175.517 1940.29,-164.27 1953,-150 1969.37,-131.618 1978.78,-103.787 1983.1,-88.0161" stroke="#d4d4d4" fill="none"></path><polygon points="1905.38,-182.125 1901.67,-185.907 1906.93,-185.263 1905.38,-182.125" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2&#45;&gt;node26 --><g class="edge inheritance" id="graph1_2_26"><g id="a_inheritance|graph1_2_26"><a xlink:title="Flag is a subtype of ReplicatedData"><path d="M1810.58,-187.794C1763.06,-179.324 1695.82,-166.085 1638,-150 1573.1,-131.948 1499.27,-103.996 1459.04,-88.1152" stroke="#d4d4d4" fill="none"></path><polygon points="1810.46,-189.551 1815.69,-188.701 1811.07,-186.105 1810.46,-189.551" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node27 --><g class="node class" id="graph1_27"><g id="a_class|graph1_27"><a xlink:title="akka.cluster.ddata.AbstractReplicatedData" xlink:href="AbstractReplicatedData.html#inheritance-diagram"><polygon points="2163,-150 2001,-150 2001,-124 2163,-124 2163,-150" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-143" x="2013" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-132.75" x="2032.69" text-anchor="start">AbstractReplicatedData[D]</text></a></g></g><!-- node2&#45;&gt;node27 --><g class="edge inheritance" id="graph1_2_27"><g id="a_inheritance|graph1_2_27"><a xlink:title="AbstractReplicatedData[D] is a subtype of ReplicatedData"><path d="M1919.48,-184.433C1955.66,-174.096 2005.02,-159.993 2039.82,-150.05" stroke="#d4d4d4" fill="none"></path><polygon points="1918.57,-182.874 1914.24,-185.93 1919.53,-186.239 1918.57,-182.874" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node3&#45;&gt;node0 --><g class="edge inheritance" id="graph1_3_0"><g id="a_inheritance|graph1_3_0"><a xlink:title="VersionVector is a subtype of RemovedNodePruning"><path d="M1923.3,-122.56C1962.79,-112.211 2016.9,-98.0339 2055.01,-88.0504" stroke="#d4d4d4" fill="none"></path><polygon points="1922.46,-120.97 1918.07,-123.93 1923.35,-124.356 1922.46,-120.97" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node3&#45;&gt;node5 --><g class="edge inheritance" id="graph1_3_5"><g id="a_inheritance|graph1_3_5"><a xlink:title="PNCounterMap is a subtype of RemovedNodePruning"><path d="M1949.65,-123.546C2008.3,-114.053 2090.77,-100.523 2163,-88 2166.1,-87.4629 2169.28,-86.9055 2172.49,-86.3382" stroke="#d4d4d4" fill="none"></path><polygon points="1949.06,-121.868 1944.41,-124.394 1949.62,-125.323 1949.06,-121.868" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node3&#45;&gt;node7 --><g class="edge inheritance" id="graph1_3_7"><g id="a_inheritance|graph1_3_7"><a xlink:title="PNCounter is a subtype of RemovedNodePruning"><path d="M1949.76,-128.043C2052.98,-117.328 2229.67,-98.4071 2294,-88 2297.19,-87.4832 2300.48,-86.9082 2303.79,-86.2974" stroke="#d4d4d4" fill="none"></path><polygon points="1949.39,-126.322 1944.6,-128.578 1949.75,-129.803 1949.39,-126.322" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node3&#45;&gt;node9 --><g class="edge inheritance" id="graph1_3_9"><g id="a_inheritance|graph1_3_9"><a xlink:title="ORSet[A] is a subtype of RemovedNodePruning"><path d="M1794.74,-124.954C1734.65,-116.016 1649.28,-102.557 1575,-88 1572.18,-87.4477 1569.28,-86.8531 1566.37,-86.2347" stroke="#d4d4d4" fill="none"></path><polygon points="1794.54,-126.694 1799.74,-125.697 1795.05,-123.232 1794.54,-126.694" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node3&#45;&gt;node11 --><g class="edge inheritance" id="graph1_3_11"><g id="a_inheritance|graph1_3_11"><a xlink:title="ORMultiMap[A] is a subtype of RemovedNodePruning"><path d="M1870.85,-118.683C1870.19,-108.896 1869.39,-96.9026 1868.81,-88.1238" stroke="#d4d4d4" fill="none"></path><polygon points="1869.11,-118.986 1871.19,-123.858 1872.6,-118.753 1869.11,-118.986" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node3&#45;&gt;node13 --><g class="edge inheritance" id="graph1_3_13"><g id="a_inheritance|graph1_3_13"><a xlink:title="ORMap[A] is a subtype of RemovedNodePruning"><path d="M1818.43,-122.718C1775.5,-112.074 1715.92,-97.3036 1675.33,-87.2392" stroke="#d4d4d4" fill="none"></path><polygon points="1818.04,-124.426 1823.32,-123.93 1818.89,-121.028 1818.04,-124.426" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node3&#45;&gt;node19 --><g class="edge inheritance" id="graph1_3_19"><g id="a_inheritance|graph1_3_19"><a xlink:title="LWWMap[A] is a subtype of RemovedNodePruning"><path d="M1841.55,-121.727C1819.71,-111.487 1790.59,-97.8374 1769.86,-88.1238" stroke="#d4d4d4" fill="none"></path><polygon points="1840.83,-123.32 1846.1,-123.858 1842.31,-120.151 1840.83,-123.32" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node3&#45;&gt;node24 --><g class="edge inheritance" id="graph1_3_24"><g id="a_inheritance|graph1_3_24"><a xlink:title="GCounter is a subtype of RemovedNodePruning"><path d="M1899.85,-121.34C1919.23,-111.145 1944.74,-97.7155 1962.96,-88.1238" stroke="#d4d4d4" fill="none"></path><polygon points="1898.68,-119.981 1895.07,-123.858 1900.31,-123.078 1898.68,-119.981" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node20 --><g class="node class" id="graph1_20"><g id="a_class|graph1_20"><a xlink:title="akka.cluster.ddata.Key" xlink:href="Key.html#inheritance-diagram"><polygon points="705.25,-150 632.75,-150 632.75,-124 705.25,-124 705.25,-150" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-143" x="645" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-132.75" x="664.663" text-anchor="start">Key[T]</text></a></g></g><!-- node20&#45;&gt;node4 --><g class="edge inheritance" id="graph1_20_4"><g id="a_inheritance|graph1_20_4"><a xlink:title="PNCounterMapKey is a subtype of Key[T]"><path d="M710.566,-127.546C761.285,-117.23 847.376,-99.7201 904.954,-88.0094" stroke="#d4d4d4" fill="none"></path><polygon points="710.02,-125.871 705.469,-128.583 710.717,-129.301 710.02,-125.871" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node20&#45;&gt;node6 --><g class="edge inheritance" id="graph1_20_6"><g id="a_inheritance|graph1_20_6"><a xlink:title="PNCounterKey is a subtype of Key[T]"><path d="M710.696,-131.309C779.172,-123.44 919.669,-106.606 1038,-88 1041.17,-87.5009 1044.43,-86.9675 1047.72,-86.4131" stroke="#d4d4d4" fill="none"></path><polygon points="710.261,-129.597 705.493,-131.905 710.659,-133.074 710.261,-129.597" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node20&#45;&gt;node8 --><g class="edge inheritance" id="graph1_20_8"><g id="a_inheritance|graph1_20_8"><a xlink:title="ORSetKey[A] is a subtype of Key[T]"><path d="M710.612,-133.333C796.311,-127.544 998.597,-112.357 1167,-88 1170.26,-87.5292 1173.6,-87.0039 1176.97,-86.4434" stroke="#d4d4d4" fill="none"></path><polygon points="710.255,-131.603 705.383,-133.684 710.489,-135.095 710.255,-131.603" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node20&#45;&gt;node10 --><g class="edge inheritance" id="graph1_20_10"><g id="a_inheritance|graph1_20_10"><a xlink:title="ORMultiMapKey[A] is a subtype of Key[T]"><path d="M627.323,-133.239C537.621,-127.074 319.66,-110.911 138,-88 134.901,-87.6091 131.733,-87.1861 128.535,-86.7404" stroke="#d4d4d4" fill="none"></path><polygon points="627.422,-134.999 632.53,-133.595 627.661,-131.507 627.422,-134.999" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node20&#45;&gt;node12 --><g class="edge inheritance" id="graph1_20_12"><g id="a_inheritance|graph1_20_12"><a xlink:title="ORMapKey[A] is a subtype of Key[T]"><path d="M627.433,-132.047C553.918,-124.839 396.231,-108.404 264,-88 261.139,-87.5585 258.209,-87.083 255.254,-86.5848" stroke="#d4d4d4" fill="none"></path><polygon points="627.433,-133.805 632.58,-132.55 627.774,-130.322 627.433,-133.805" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node20&#45;&gt;node16 --><g class="edge inheritance" id="graph1_20_16"><g id="a_inheritance|graph1_20_16"><a xlink:title="LWWRegisterKey[A] is a subtype of Key[T]"><path d="M627.398,-128.39C571.746,-118.21 472.462,-100.048 406.663,-88.0115" stroke="#d4d4d4" fill="none"></path><polygon points="627.412,-130.171 632.645,-129.35 628.042,-126.728 627.412,-130.171" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node20&#45;&gt;node18 --><g class="edge inheritance" id="graph1_20_18"><g id="a_inheritance|graph1_20_18"><a xlink:title="LWWMapKey[A] is a subtype of Key[T]"><path d="M627.657,-122.519C595.916,-112.168 552.484,-98.0057 521.907,-88.0348" stroke="#d4d4d4" fill="none"></path><polygon points="627.351,-124.26 632.648,-124.146 628.436,-120.932 627.351,-124.26" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node20&#45;&gt;node21 --><g class="edge inheritance" id="graph1_20_21"><g id="a_inheritance|graph1_20_21"><a xlink:title="GSetKey[A] is a subtype of Key[T]"><path d="M653.554,-120.292C643.668,-110.239 631.034,-97.3904 621.922,-88.1238" stroke="#d4d4d4" fill="none"></path><polygon points="652.307,-121.52 657.06,-123.858 654.803,-119.066 652.307,-121.52" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node20&#45;&gt;node23 --><g class="edge inheritance" id="graph1_20_23"><g id="a_inheritance|graph1_20_23"><a xlink:title="GCounterKey is a subtype of Key[T]"><path d="M684.708,-120.292C694.761,-110.239 707.61,-97.3904 716.876,-88.1238" stroke="#d4d4d4" fill="none"></path><polygon points="683.44,-119.085 681.142,-123.858 685.915,-121.56 683.44,-119.085" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node20&#45;&gt;node25 --><g class="edge inheritance" id="graph1_20_25"><g id="a_inheritance|graph1_20_25"><a xlink:title="FlagKey is a subtype of Key[T]"><path d="M708.6,-122.105C738.002,-111.789 777.696,-97.8609 805.739,-88.0213" stroke="#d4d4d4" fill="none"></path><polygon points="707.743,-120.551 703.604,-123.858 708.902,-123.854 707.743,-120.551" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
+              </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="akka.cluster.ddata.AbstractReplicatedData" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="AbstractReplicatedData[D&lt;:akka.cluster.ddata.AbstractReplicatedData[D]]extendsReplicatedData"></a>
+      <a id="AbstractReplicatedData[D&lt;:AbstractReplicatedData[D]]:AbstractReplicatedData[D]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="AbstractReplicatedData.html"><span class="name">AbstractReplicatedData</span></a><span class="tparams">[<span name="D">D &lt;: <a href="AbstractReplicatedData.html" class="extype" name="akka.cluster.ddata.AbstractReplicatedData">AbstractReplicatedData</a>[<span class="extype" name="akka.cluster.ddata.AbstractReplicatedData.D">D</span>]</span>]</span><span class="result"> extends <a href="ReplicatedData.html" class="extype" name="akka.cluster.ddata.ReplicatedData">ReplicatedData</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@AbstractReplicatedData[D&lt;:akka.cluster.ddata.AbstractReplicatedData[D]]extendsReplicatedData" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Java API: Interface for implementing a <a href="ReplicatedData.html" class="extype" name="akka.cluster.ddata.ReplicatedData">ReplicatedData</a> in Java.</p><div class="fullcomment"><div class="comment cmt"><p>Java API: Interface for implementing a <a href="ReplicatedData.html" class="extype" name="akka.cluster.ddata.ReplicatedData">ReplicatedData</a> in Java.</p><p>The type parameter <code>D</code> is a self-recursive type to be defined by the
+concrete implementation.
+E.g. <code>class TwoPhaseSet extends AbstractReplicatedData&lt;TwoPhaseSet&gt;</code>
+</p></div></div>
+    </li><li name="akka.cluster.ddata.DistributedData" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="DistributedDataextendsExtension"></a>
+      <a id="DistributedData:DistributedData"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="DistributedData.html"><span class="name">DistributedData</span></a><span class="result"> extends <a href="../../actor/Extension.html" class="extype" name="akka.actor.Extension">Extension</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@DistributedDataextendsExtension" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Akka extension for convenient configuration and use of the
+<a href="Replicator.html" class="extype" name="akka.cluster.ddata.Replicator">Replicator</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Akka extension for convenient configuration and use of the
+<a href="Replicator.html" class="extype" name="akka.cluster.ddata.Replicator">Replicator</a>. Configuration settings are defined in the
+<code>akka.cluster.ddata</code> section, see <code>reference.conf</code>.
+</p></div></div>
+    </li><li name="akka.cluster.ddata.Flag" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FlagextendsReplicatedDatawithReplicatedDataSerializationwithProductwithSerializable"></a>
+      <a id="Flag:Flag"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Flag.html"><span class="name">Flag</span></a><span class="params">(<span name="enabled">enabled: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="result"> extends <a href="ReplicatedData.html" class="extype" name="akka.cluster.ddata.ReplicatedData">ReplicatedData</a> with <a href="ReplicatedDataSerialization.html" class="extype" name="akka.cluster.ddata.ReplicatedDataSerialization">ReplicatedDataSerialization</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@FlagextendsReplicatedDatawithReplicatedDataSerializationwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Implements a boolean flag CRDT that is initialized to <code>false</code> and
+can be switched to <code>true</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Implements a boolean flag CRDT that is initialized to <code>false</code> and
+can be switched to <code>true</code>. <code>true</code> wins over <code>false</code> in merge.</p><p>This class is immutable, i.e. &quot;modifying&quot; methods return a new instance.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@SerialVersionUID</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="akka.cluster.ddata.FlagKey" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FlagKeyextendsKey[akka.cluster.ddata.Flag]withReplicatedDataSerializationwithProductwithSerializable"></a>
+      <a id="FlagKey:FlagKey"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="FlagKey.html"><span class="name">FlagKey</span></a><span class="params">(<span name="_id">_id: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="Key.html" class="extype" name="akka.cluster.ddata.Key">Key</a>[<a href="Flag.html" class="extype" name="akka.cluster.ddata.Flag">Flag</a>] with <a href="ReplicatedDataSerialization.html" class="extype" name="akka.cluster.ddata.ReplicatedDataSerialization">ReplicatedDataSerialization</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@FlagKeyextendsKey[akka.cluster.ddata.Flag]withReplicatedDataSerializationwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@SerialVersionUID</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="akka.cluster.ddata.GCounter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="GCounterextendsReplicatedDatawithReplicatedDataSerializationwithRemovedNodePruningwithFastMerge"></a>
+      <a id="GCounter:GCounter"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="GCounter.html"><span class="name">GCounter</span></a><span class="result"> extends <a href="ReplicatedData.html" class="extype" name="akka.cluster.ddata.ReplicatedData">ReplicatedData</a> with <a href="ReplicatedDataSerialization.html" class="extype" name="akka.cluster.ddata.ReplicatedDataSerialization">ReplicatedDataSerialization</a> with <a href="RemovedNodePruning.html" class="extype" name="akka.cluster.ddata.RemovedNodePruning">RemovedNodePruning</a> with <span class="extype" name="akka.cluster.ddata.FastMerge">FastMerge</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@GCounterextendsReplicatedDatawithReplicatedDataSerializationwithRemovedNodePruningwithFastMerge" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Implements a 'Growing Counter' CRDT, also called a 'G-Counter'.</p><div class="fullcomment"><div class="comment cmt"><p>Implements a 'Growing Counter' CRDT, also called a 'G-Counter'.</p><p>It is described in the paper
+<a href="http://hal.upmc.fr/file/index/docid/555588/filename/techreport.pdf">A comprehensive study of Convergent and Commutative Replicated Data Types</a>.</p><p>A G-Counter is a increment-only counter (inspired by vector clocks) in
+which only increment and merge are possible. Incrementing the counter
+adds 1 to the count for the current node. Divergent histories are
+resolved by taking the maximum count for each node (like a vector
+clock merge). The value of the counter is the sum of all node counts.</p><p>This class is immutable, i.e. &quot;modifying&quot; methods return a new instance.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@SerialVersionUID</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="akka.cluster.ddata.GCounterKey" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="GCounterKeyextendsKey[akka.cluster.ddata.GCounter]withReplicatedDataSerializationwithProductwithSerializable"></a>
+      <a id="GCounterKey:GCounterKey"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="GCounterKey.html"><span class="name">GCounterKey</span></a><span class="params">(<span name="_id">_id: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="Key.html" class="extype" name="akka.cluster.ddata.Key">Key</a>[<a href="GCounter.html" class="extype" name="akka.cluster.ddata.GCounter">GCounter</a>] with <a href="ReplicatedDataSerialization.html" class="extype" name="akka.cluster.ddata.ReplicatedDataSerialization">ReplicatedDataSerialization</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@GCounterKeyextendsKey[akka.cluster.ddata.GCounter]withReplicatedDataSerializationwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@SerialVersionUID</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="akka.cluster.ddata.GSet" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="GSet[A]extendsReplicatedDatawithReplicatedDataSerializationwithFastMergewithProductwithSerializable"></a>
+      <a id="GSet[A]:GSet[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="GSet.html"><span class="name">GSet</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="elements">elements: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="akka.cluster.ddata.GSet.A">A</span>]</span>)</span><span class="result"> extends <a href="ReplicatedData.html" class="extype" name="akka.cluster.ddata.ReplicatedData">ReplicatedData</a> with <a href="ReplicatedDataSerialization.html" class="extype" name="akka.cluster.ddata.ReplicatedDataSerialization">ReplicatedDataSerialization</a> with <span class="extype" name="akka.cluster.ddata.FastMerge">FastMerge</span> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@GSet[A]extendsReplicatedDatawithReplicatedDataSerializationwithFastMergewithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Implements a 'Add Set' CRDT, also called a 'G-Set'.</p><div class="fullcomment"><div class="comment cmt"><p>Implements a 'Add Set' CRDT, also called a 'G-Set'. You can't
+remove elements of a G-Set.</p><p>It is described in the paper
+<a href="http://hal.upmc.fr/file/index/docid/555588/filename/techreport.pdf">A comprehensive study of Convergent and Commutative Replicated Data Types</a>.</p><p>A G-Set doesn't accumulate any garbage apart from the elements themselves.</p><p>This class is immutable, i.e. &quot;modifying&quot; methods return a new instance.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@SerialVersionUID</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="akka.cluster.ddata.GSetKey" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="GSetKey[A]extendsKey[akka.cluster.ddata.GSet[A]]withReplicatedDataSerializationwithProductwithSerializable"></a>
+      <a id="GSetKey[A]:GSetKey[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="GSetKey.html"><span class="name">GSetKey</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="_id">_id: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="Key.html" class="extype" name="akka.cluster.ddata.Key">Key</a>[<a href="GSet.html" class="extype" name="akka.cluster.ddata.GSet">GSet</a>[<span class="extype" name="akka.cluster.ddata.GSetKey.A">A</span>]] with <a href="ReplicatedDataSerialization.html" class="extype" name="akka.cluster.ddata.ReplicatedDataSerialization">ReplicatedDataSerialization</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@GSetKey[A]extendsKey[akka.cluster.ddata.GSet[A]]withReplicatedDataSerializationwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@SerialVersionUID</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="akka.cluster.ddata.Key" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="Key[+T&lt;:akka.cluster.ddata.ReplicatedData]extendsSerializable"></a>
+      <a id="Key[+T&lt;:ReplicatedData]:Key[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Key.html"><span class="name">Key</span></a><span class="tparams">[<span name="T">+T &lt;: <a href="ReplicatedData.html" class="extype" name="akka.cluster.ddata.ReplicatedData">ReplicatedData</a></span>]</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@Key[+T&lt;:akka.cluster.ddata.ReplicatedData]extendsSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Key for the key-value data in <a href="Replicator.html" class="extype" name="akka.cluster.ddata.Replicator">Replicator</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Key for the key-value data in <a href="Replicator.html" class="extype" name="akka.cluster.ddata.Replicator">Replicator</a>. The type of the data value
+is defined in the key. Keys are compared equal if the <code>id</code> strings are equal,
+i.e. use unique identifiers.</p><p>Specific classes are provided for the built in data types, e.g. <a href="ORSetKey.html" class="extype" name="akka.cluster.ddata.ORSetKey">ORSetKey</a>,
+and you can create your own keys.
+</p></div></div>
+    </li><li name="akka.cluster.ddata.LWWMap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="LWWMap[A]extendsReplicatedDatawithReplicatedDataSerializationwithRemovedNodePruning"></a>
+      <a id="LWWMap[A]:LWWMap[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="LWWMap.html"><span class="name">LWWMap</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <a href="ReplicatedData.html" class="extype" name="akka.cluster.ddata.ReplicatedData">ReplicatedData</a> with <a href="ReplicatedDataSerialization.html" class="extype" name="akka.cluster.ddata.ReplicatedDataSerialization">ReplicatedDataSerialization</a> with <a href="RemovedNodePruning.html" class="extype" name="akka.cluster.ddata.RemovedNodePruning">RemovedNodePruning</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@LWWMap[A]extendsReplicatedDatawithReplicatedDataSerializationwithRemovedNodePruning" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Specialized <a href="ORMap.html" class="extype" name="akka.cluster.ddata.ORMap">ORMap</a> with <a href="LWWRegister.html" class="extype" name="akka.cluster.ddata.LWWRegister">LWWRegister</a> values.</p><div class="fullcomment"><div class="comment cmt"><p>Specialized <a href="ORMap.html" class="extype" name="akka.cluster.ddata.ORMap">ORMap</a> with <a href="LWWRegister.html" class="extype" name="akka.cluster.ddata.LWWRegister">LWWRegister</a> values.</p><p><code>LWWRegister</code> relies on synchronized clocks and should only be used when the choice of
+value is not important for concurrent updates occurring within the clock skew.</p><p>Instead of using timestamps based on <code>System.currentTimeMillis()</code> time it is possible to
+use a timestamp value based on something else, for example an increasing version number
+from a database record that is used for optimistic concurrency control.</p><p>For first-write-wins semantics you can use the <a href="LWWRegister$.html#reverseClock[A]:akka.cluster.ddata.LWWRegister.Clock[A]" class="extmbr" name="akka.cluster.ddata.LWWRegister#reverseClock">LWWRegister#reverseClock</a> instead of the
+<a href="LWWRegister$.html#defaultClock[A]:akka.cluster.ddata.LWWRegister.Clock[A]" class="extmbr" name="akka.cluster.ddata.LWWRegister#defaultClock">LWWRegister#defaultClock</a></p><p>This class is immutable, i.e. &quot;modifying&quot; methods return a new instance.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@SerialVersionUID</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="akka.cluster.ddata.LWWMapKey" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="LWWMapKey[A]extendsKey[akka.cluster.ddata.LWWMap[A]]withReplicatedDataSerializationwithProductwithSerializable"></a>
+      <a id="LWWMapKey[A]:LWWMapKey[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="LWWMapKey.html"><span class="name">LWWMapKey</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="_id">_id: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="Key.html" class="extype" name="akka.cluster.ddata.Key">Key</a>[<a href="LWWMap.html" class="extype" name="akka.cluster.ddata.LWWMap">LWWMap</a>[<span class="extype" name="akka.cluster.ddata.LWWMapKey.A">A</span>]] with <a href="ReplicatedDataSerialization.html" class="extype" name="akka.cluster.ddata.ReplicatedDataSerialization">ReplicatedDataSerialization</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@LWWMapKey[A]extendsKey[akka.cluster.ddata.LWWMap[A]]withReplicatedDataSerializationwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@SerialVersionUID</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="akka.cluster.ddata.LWWRegister" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="LWWRegister[A]extendsReplicatedDatawithReplicatedDataSerialization"></a>
+      <a id="LWWRegister[A]:LWWRegister[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="LWWRegister.html"><span class="name">LWWRegister</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <a href="ReplicatedData.html" class="extype" name="akka.cluster.ddata.ReplicatedData">ReplicatedData</a> with <a href="ReplicatedDataSerialization.html" class="extype" name="akka.cluster.ddata.ReplicatedDataSerialization">ReplicatedDataSerialization</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@LWWRegister[A]extendsReplicatedDatawithReplicatedDataSerialization" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Implements a 'Last Writer Wins Register' CRDT, also called a 'LWW-Register'.</p><div class="fullcomment"><div class="comment cmt"><p>Implements a 'Last Writer Wins Register' CRDT, also called a 'LWW-Register'.</p><p>It is described in the paper
+<a href="http://hal.upmc.fr/file/index/docid/555588/filename/techreport.pdf">A comprehensive study of Convergent and Commutative Replicated Data Types</a>.</p><p>Merge takes the register with highest timestamp. Note that this
+relies on synchronized clocks. <code>LWWRegister</code> should only be used when the choice of
+value is not important for concurrent updates occurring within the clock skew.</p><p>Merge takes the register updated by the node with lowest address (<code>UniqueAddress</code> is ordered)
+if the timestamps are exactly the same.</p><p>Instead of using timestamps based on <code>System.currentTimeMillis()</code> time it is possible to
+use a timestamp value based on something else, for example an increasing version number
+from a database record that is used for optimistic concurrency control.</p><p>For first-write-wins semantics you can use the <a href="LWWRegister$.html#reverseClock[A]:akka.cluster.ddata.LWWRegister.Clock[A]" class="extmbr" name="akka.cluster.ddata.LWWRegister#reverseClock">LWWRegister#reverseClock</a> instead of the
+<a href="LWWRegister$.html#defaultClock[A]:akka.cluster.ddata.LWWRegister.Clock[A]" class="extmbr" name="akka.cluster.ddata.LWWRegister#defaultClock">LWWRegister#defaultClock</a></p><p>This class is immutable, i.e. &quot;modifying&quot; methods return a new instance.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@SerialVersionUID</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="akka.cluster.ddata.LWWRegisterKey" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="LWWRegisterKey[A]extendsKey[akka.cluster.ddata.LWWRegister[A]]withReplicatedDataSerializationwithProductwithSerializable"></a>
+      <a id="LWWRegisterKey[A]:LWWRegisterKey[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="LWWRegisterKey.html"><span class="name">LWWRegisterKey</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="_id">_id: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="Key.html" class="extype" name="akka.cluster.ddata.Key">Key</a>[<a href="LWWRegister.html" class="extype" name="akka.cluster.ddata.LWWRegister">LWWRegister</a>[<span class="extype" name="akka.cluster.ddata.LWWRegisterKey.A">A</span>]] with <a href="ReplicatedDataSerialization.html" class="extype" name="akka.cluster.ddata.ReplicatedDataSerialization">ReplicatedDataSerialization</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@LWWRegisterKey[A]extendsKey[akka.cluster.ddata.LWWRegister[A]]withReplicatedDataSerializationwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@SerialVersionUID</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="akka.cluster.ddata.ManyVersionVector" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ManyVersionVectorextendsVersionVectorwithProductwithSerializable"></a>
+      <a id="ManyVersionVector:ManyVersionVector"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ManyVersionVector.html"><span class="name">ManyVersionVector</span></a><span class="params">(<span name="versions">versions: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.collection.immutable.TreeMap" class="extype" target="_top">TreeMap</a>[<a href="../UniqueAddress.html" class="extype" name="akka.cluster.UniqueAddress">UniqueAddress</a>, <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Long" class="extype" target="_top">Long</a>]</span>)</span><span class="result"> extends <a href="VersionVector.html" class="extype" name="akka.cluster.ddata.VersionVector">VersionVector</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@ManyVersionVectorextendsVersionVectorwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.ORMap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ORMap[A&lt;:akka.cluster.ddata.ReplicatedData]extendsReplicatedDatawithReplicatedDataSerializationwithRemovedNodePruning"></a>
+      <a id="ORMap[A&lt;:ReplicatedData]:ORMap[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ORMap.html"><span class="name">ORMap</span></a><span class="tparams">[<span name="A">A &lt;: <a href="ReplicatedData.html" class="extype" name="akka.cluster.ddata.ReplicatedData">ReplicatedData</a></span>]</span><span class="result"> extends <a href="ReplicatedData.html" class="extype" name="akka.cluster.ddata.ReplicatedData">ReplicatedData</a> with <a href="ReplicatedDataSerialization.html" class="extype" name="akka.cluster.ddata.ReplicatedDataSerialization">ReplicatedDataSerialization</a> with <a href="RemovedNodePruning.html" class="extype" name="akka.cluster.ddata.RemovedNodePruning">RemovedNodePruning</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@ORMap[A&lt;:akka.cluster.ddata.ReplicatedData]extendsReplicatedDatawithReplicatedDataSerializationwithRemovedNodePruning" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Implements a 'Observed Remove Map' CRDT, also called a 'OR-Map'.</p><div class="fullcomment"><div class="comment cmt"><p>Implements a 'Observed Remove Map' CRDT, also called a 'OR-Map'.</p><p>It has similar semantics as an <a href="ORSet.html" class="extype" name="akka.cluster.ddata.ORSet">ORSet</a>, but in case of concurrent updates
+the values are merged, and must therefore be <a href="ReplicatedData.html" class="extype" name="akka.cluster.ddata.ReplicatedData">ReplicatedData</a> types themselves.</p><p>This class is immutable, i.e. &quot;modifying&quot; methods return a new instance.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@SerialVersionUID</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="akka.cluster.ddata.ORMapKey" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ORMapKey[A&lt;:akka.cluster.ddata.ReplicatedData]extendsKey[akka.cluster.ddata.ORMap[A]]withReplicatedDataSerializationwithProductwithSerializable"></a>
+      <a id="ORMapKey[A&lt;:ReplicatedData]:ORMapKey[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ORMapKey.html"><span class="name">ORMapKey</span></a><span class="tparams">[<span name="A">A &lt;: <a href="ReplicatedData.html" class="extype" name="akka.cluster.ddata.ReplicatedData">ReplicatedData</a></span>]</span><span class="params">(<span name="_id">_id: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="Key.html" class="extype" name="akka.cluster.ddata.Key">Key</a>[<a href="ORMap.html" class="extype" name="akka.cluster.ddata.ORMap">ORMap</a>[<span class="extype" name="akka.cluster.ddata.ORMapKey.A">A</span>]] with <a href="ReplicatedDataSerialization.html" class="extype" name="akka.cluster.ddata.ReplicatedDataSerialization">ReplicatedDataSerialization</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@ORMapKey[A&lt;:akka.cluster.ddata.ReplicatedData]extendsKey[akka.cluster.ddata.ORMap[A]]withReplicatedDataSerializationwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@SerialVersionUID</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="akka.cluster.ddata.ORMultiMap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ORMultiMap[A]extendsReplicatedDatawithReplicatedDataSerializationwithRemovedNodePruning"></a>
+      <a id="ORMultiMap[A]:ORMultiMap[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ORMultiMap.html"><span class="name">ORMultiMap</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <a href="ReplicatedData.html" class="extype" name="akka.cluster.ddata.ReplicatedData">ReplicatedData</a> with <a href="ReplicatedDataSerialization.html" class="extype" name="akka.cluster.ddata.ReplicatedDataSerialization">ReplicatedDataSerialization</a> with <a href="RemovedNodePruning.html" class="extype" name="akka.cluster.ddata.RemovedNodePruning">RemovedNodePruning</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@ORMultiMap[A]extendsReplicatedDatawithReplicatedDataSerializationwithRemovedNodePruning" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An immutable multi-map implementation.</p><div class="fullcomment"><div class="comment cmt"><p>An immutable multi-map implementation. This class wraps an
+<a href="ORMap.html" class="extype" name="akka.cluster.ddata.ORMap">ORMap</a> with an <a href="ORSet.html" class="extype" name="akka.cluster.ddata.ORSet">ORSet</a> for the map's value.</p><p>This class is immutable, i.e. &quot;modifying&quot; methods return a new instance.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@SerialVersionUID</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="akka.cluster.ddata.ORMultiMapKey" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ORMultiMapKey[A]extendsKey[akka.cluster.ddata.ORMultiMap[A]]withReplicatedDataSerializationwithProductwithSerializable"></a>
+      <a id="ORMultiMapKey[A]:ORMultiMapKey[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ORMultiMapKey.html"><span class="name">ORMultiMapKey</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="_id">_id: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="Key.html" class="extype" name="akka.cluster.ddata.Key">Key</a>[<a href="ORMultiMap.html" class="extype" name="akka.cluster.ddata.ORMultiMap">ORMultiMap</a>[<span class="extype" name="akka.cluster.ddata.ORMultiMapKey.A">A</span>]] with <a href="ReplicatedDataSerialization.html" class="extype" name="akka.cluster.ddata.ReplicatedDataSerialization">ReplicatedDataSerialization</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@ORMultiMapKey[A]extendsKey[akka.cluster.ddata.ORMultiMap[A]]withReplicatedDataSerializationwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@SerialVersionUID</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="akka.cluster.ddata.ORSet" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ORSet[A]extendsReplicatedDatawithReplicatedDataSerializationwithRemovedNodePruningwithFastMerge"></a>
+      <a id="ORSet[A]:ORSet[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ORSet.html"><span class="name">ORSet</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <a href="ReplicatedData.html" class="extype" name="akka.cluster.ddata.ReplicatedData">ReplicatedData</a> with <a href="ReplicatedDataSerialization.html" class="extype" name="akka.cluster.ddata.ReplicatedDataSerialization">ReplicatedDataSerialization</a> with <a href="RemovedNodePruning.html" class="extype" name="akka.cluster.ddata.RemovedNodePruning">RemovedNodePruning</a> with <span class="extype" name="akka.cluster.ddata.FastMerge">FastMerge</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@ORSet[A]extendsReplicatedDatawithReplicatedDataSerializationwithRemovedNodePruningwithFastMerge" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Implements a 'Observed Remove Set' CRDT, also called a 'OR-Set'.</p><div class="fullcomment"><div class="comment cmt"><p>Implements a 'Observed Remove Set' CRDT, also called a 'OR-Set'.
+Elements can be added and removed any number of times. Concurrent add wins
+over remove.</p><p>It is not implemented as in the paper
+<a href="http://hal.upmc.fr/file/index/docid/555588/filename/techreport.pdf">A comprehensive study of Convergent and Commutative Replicated Data Types</a>.
+This is more space efficient and doesn't accumulate garbage for removed elements.
+It is described in the paper
+<a href="https://hal.inria.fr/file/index/docid/738680/filename/RR-8083.pdf">An optimized conflict-free replicated set</a>
+The implementation is inspired by the Riak DT <a href="https://github.com/basho/riak_dt/blob/develop/src/riak_dt_orswot.erl">
+riak_dt_orswot</a>.</p><p>The ORSet has a version vector that is incremented when an element is added to
+the set. The <code>node -&gt; count</code> pair for that increment is stored against the
+element as its &quot;birth dot&quot;. Every time the element is re-added to the set,
+its &quot;birth dot&quot; is updated to that of the <code>node -&gt; count</code> version vector entry
+resulting from the add. When an element is removed, we simply drop it, no tombstones.</p><p>When an element exists in replica A and not replica B, is it because A added
+it and B has not yet seen that, or that B removed it and A has not yet seen that?
+In this implementation we compare the <code>dot</code> of the present element to the version vector
+in the Set it is absent from. If the element dot is not &quot;seen&quot; by the Set version vector,
+that means the other set has yet to see this add, and the item is in the merged
+Set. If the Set version vector dominates the dot, that means the other Set has removed this
+element already, and the item is not in the merged Set.</p><p>This class is immutable, i.e. &quot;modifying&quot; methods return a new instance.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@SerialVersionUID</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="akka.cluster.ddata.ORSetKey" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ORSetKey[A]extendsKey[akka.cluster.ddata.ORSet[A]]withReplicatedDataSerializationwithProductwithSerializable"></a>
+      <a id="ORSetKey[A]:ORSetKey[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ORSetKey.html"><span class="name">ORSetKey</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="_id">_id: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="Key.html" class="extype" name="akka.cluster.ddata.Key">Key</a>[<a href="ORSet.html" class="extype" name="akka.cluster.ddata.ORSet">ORSet</a>[<span class="extype" name="akka.cluster.ddata.ORSetKey.A">A</span>]] with <a href="ReplicatedDataSerialization.html" class="extype" name="akka.cluster.ddata.ReplicatedDataSerialization">ReplicatedDataSerialization</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@ORSetKey[A]extendsKey[akka.cluster.ddata.ORSet[A]]withReplicatedDataSerializationwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@SerialVersionUID</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="akka.cluster.ddata.OneVersionVector" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="OneVersionVectorextendsVersionVectorwithProductwithSerializable"></a>
+      <a id="OneVersionVector:OneVersionVector"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="OneVersionVector.html"><span class="name">OneVersionVector</span></a><span class="result"> extends <a href="VersionVector.html" class="extype" name="akka.cluster.ddata.VersionVector">VersionVector</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@OneVersionVectorextendsVersionVectorwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.PNCounter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="PNCounterextendsReplicatedDatawithReplicatedDataSerializationwithRemovedNodePruning"></a>
+      <a id="PNCounter:PNCounter"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="PNCounter.html"><span class="name">PNCounter</span></a><span class="result"> extends <a href="ReplicatedData.html" class="extype" name="akka.cluster.ddata.ReplicatedData">ReplicatedData</a> with <a href="ReplicatedDataSerialization.html" class="extype" name="akka.cluster.ddata.ReplicatedDataSerialization">ReplicatedDataSerialization</a> with <a href="RemovedNodePruning.html" class="extype" name="akka.cluster.ddata.RemovedNodePruning">RemovedNodePruning</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@PNCounterextendsReplicatedDatawithReplicatedDataSerializationwithRemovedNodePruning" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Implements a 'Increment/Decrement Counter' CRDT, also called a 'PN-Counter'.</p><div class="fullcomment"><div class="comment cmt"><p>Implements a 'Increment/Decrement Counter' CRDT, also called a 'PN-Counter'.</p><p>It is described in the paper
+<a href="http://hal.upmc.fr/file/index/docid/555588/filename/techreport.pdf">A comprehensive study of Convergent and Commutative Replicated Data Types</a>.</p><p>PN-Counters allow the counter to be incremented by tracking the
+increments (P) separate from the decrements (N). Both P and N are represented
+as two internal <a href="GCounter.html" class="extype" name="akka.cluster.ddata.GCounter">GCounter</a>s. Merge is handled by merging the internal P and N
+counters. The value of the counter is the value of the P counter minus
+the value of the N counter.</p><p>This class is immutable, i.e. &quot;modifying&quot; methods return a new instance.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@SerialVersionUID</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="akka.cluster.ddata.PNCounterKey" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="PNCounterKeyextendsKey[akka.cluster.ddata.PNCounter]withReplicatedDataSerializationwithProductwithSerializable"></a>
+      <a id="PNCounterKey:PNCounterKey"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="PNCounterKey.html"><span class="name">PNCounterKey</span></a><span class="params">(<span name="_id">_id: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="Key.html" class="extype" name="akka.cluster.ddata.Key">Key</a>[<a href="PNCounter.html" class="extype" name="akka.cluster.ddata.PNCounter">PNCounter</a>] with <a href="ReplicatedDataSerialization.html" class="extype" name="akka.cluster.ddata.ReplicatedDataSerialization">ReplicatedDataSerialization</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@PNCounterKeyextendsKey[akka.cluster.ddata.PNCounter]withReplicatedDataSerializationwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@SerialVersionUID</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="akka.cluster.ddata.PNCounterMap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="PNCounterMapextendsReplicatedDatawithReplicatedDataSerializationwithRemovedNodePruning"></a>
+      <a id="PNCounterMap:PNCounterMap"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="PNCounterMap.html"><span class="name">PNCounterMap</span></a><span class="result"> extends <a href="ReplicatedData.html" class="extype" name="akka.cluster.ddata.ReplicatedData">ReplicatedData</a> with <a href="ReplicatedDataSerialization.html" class="extype" name="akka.cluster.ddata.ReplicatedDataSerialization">ReplicatedDataSerialization</a> with <a href="RemovedNodePruning.html" class="extype" name="akka.cluster.ddata.RemovedNodePruning">RemovedNodePruning</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@PNCounterMapextendsReplicatedDatawithReplicatedDataSerializationwithRemovedNodePruning" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Map of named counters.</p><div class="fullcomment"><div class="comment cmt"><p>Map of named counters. Specialized <a href="ORMap.html" class="extype" name="akka.cluster.ddata.ORMap">ORMap</a> with <a href="PNCounter.html" class="extype" name="akka.cluster.ddata.PNCounter">PNCounter</a> values.</p><p>This class is immutable, i.e. &quot;modifying&quot; methods return a new instance.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@SerialVersionUID</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="akka.cluster.ddata.PNCounterMapKey" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="PNCounterMapKeyextendsKey[akka.cluster.ddata.PNCounterMap]withReplicatedDataSerializationwithProductwithSerializable"></a>
+      <a id="PNCounterMapKey:PNCounterMapKey"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="PNCounterMapKey.html"><span class="name">PNCounterMapKey</span></a><span class="params">(<span name="_id">_id: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="Key.html" class="extype" name="akka.cluster.ddata.Key">Key</a>[<a href="PNCounterMap.html" class="extype" name="akka.cluster.ddata.PNCounterMap">PNCounterMap</a>] with <a href="ReplicatedDataSerialization.html" class="extype" name="akka.cluster.ddata.ReplicatedDataSerialization">ReplicatedDataSerialization</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@PNCounterMapKeyextendsKey[akka.cluster.ddata.PNCounterMap]withReplicatedDataSerializationwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@SerialVersionUID</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="akka.cluster.ddata.RemovedNodePruning" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="RemovedNodePruningextendsReplicatedData"></a>
+      <a id="RemovedNodePruning:RemovedNodePruning"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="RemovedNodePruning.html"><span class="name">RemovedNodePruning</span></a><span class="result"> extends <a href="ReplicatedData.html" class="extype" name="akka.cluster.ddata.ReplicatedData">ReplicatedData</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@RemovedNodePruningextendsReplicatedData" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt"><a href="ReplicatedData.html" class="extype" name="akka.cluster.ddata.ReplicatedData">ReplicatedData</a> that has support for pruning of data
+belonging to a specific node may implement this interface.</p><div class="fullcomment"><div class="comment cmt"><p><a href="ReplicatedData.html" class="extype" name="akka.cluster.ddata.ReplicatedData">ReplicatedData</a> that has support for pruning of data
+belonging to a specific node may implement this interface.
+When a node is removed from the cluster these methods will be
+used by the <a href="Replicator.html" class="extype" name="akka.cluster.ddata.Replicator">Replicator</a> to collapse data from the removed node
+into some other node in the cluster.
+</p></div></div>
+    </li><li name="akka.cluster.ddata.ReplicatedData" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ReplicatedDataextendsAnyRef"></a>
+      <a id="ReplicatedData:ReplicatedData"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ReplicatedData.html"><span class="name">ReplicatedData</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@ReplicatedDataextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Interface for implementing a state based convergent
+replicated data type (CvRDT).</p><div class="fullcomment"><div class="comment cmt"><p>Interface for implementing a state based convergent
+replicated data type (CvRDT).</p><p>ReplicatedData types must be serializable with an Akka
+Serializer. It is highly recommended to implement a serializer with
+Protobuf or similar. The built in data types are marked with
+<a href="ReplicatedDataSerialization.html" class="extype" name="akka.cluster.ddata.ReplicatedDataSerialization">ReplicatedDataSerialization</a> and serialized with
+<a href="protobuf/ReplicatedDataSerializer.html" class="extype" name="akka.cluster.ddata.protobuf.ReplicatedDataSerializer">akka.cluster.ddata.protobuf.ReplicatedDataSerializer</a>.</p><p>Serialization of the data types are used in remote messages and also
+for creating message digests (SHA-1) to detect changes. Therefore it is
+important that the serialization produce the same bytes for the same content.
+For example sets and maps should be sorted deterministically in the serialization.</p><p>ReplicatedData types should be immutable, i.e. &quot;modifying&quot; methods should return
+a new instance.
+</p></div></div>
+    </li><li name="akka.cluster.ddata.ReplicatedDataSerialization" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ReplicatedDataSerializationextendsSerializable"></a>
+      <a id="ReplicatedDataSerialization:ReplicatedDataSerialization"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ReplicatedDataSerialization.html"><span class="name">ReplicatedDataSerialization</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@ReplicatedDataSerializationextendsSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Marker trait for <code>ReplicatedData</code> serialized by
+<a href="protobuf/ReplicatedDataSerializer.html" class="extype" name="akka.cluster.ddata.protobuf.ReplicatedDataSerializer">akka.cluster.ddata.protobuf.ReplicatedDataSerializer</a>.</p>
+    </li><li name="akka.cluster.ddata.Replicator" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ReplicatorextendsActorwithActorLogging"></a>
+      <a id="Replicator:Replicator"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Replicator.html"><span class="name">Replicator</span></a><span class="result"> extends <a href="../../actor/Actor.html" class="extype" name="akka.actor.Actor">Actor</a> with <a href="../../actor/ActorLogging.html" class="extype" name="akka.actor.ActorLogging">ActorLogging</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@ReplicatorextendsActorwithActorLogging" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A replicated in-memory data store supporting low latency and high availability
+requirements.</p><div class="fullcomment"><div class="comment cmt"><p>A replicated in-memory data store supporting low latency and high availability
+requirements.</p><p>The <code>Replicator</code> actor takes care of direct replication and gossip based
+dissemination of Conflict Free Replicated Data Types (CRDTs) to replicas in the
+the cluster.
+The data types must be convergent CRDTs and implement <a href="ReplicatedData.html" class="extype" name="akka.cluster.ddata.ReplicatedData">ReplicatedData</a>, i.e.
+they provide a monotonic merge function and the state changes always converge.</p><p>You can use your own custom <a href="ReplicatedData.html" class="extype" name="akka.cluster.ddata.ReplicatedData">ReplicatedData</a> types, and several types are provided
+by this package, such as:</p><ul><li>Counters: <a href="GCounter.html" class="extype" name="akka.cluster.ddata.GCounter">GCounter</a>, <a href="PNCounter.html" class="extype" name="akka.cluster.ddata.PNCounter">PNCounter</a></li><li>Registers: <a href="LWWRegister.html" class="extype" name="akka.cluster.ddata.LWWRegister">LWWRegister</a>, <a href="Flag.html" class="extype" name="akka.cluster.ddata.Flag">Flag</a></li><li>Sets: <a href="GSet.html" class="extype" name="akka.cluster.ddata.GSet">GSet</a>, <a href="ORSet.html" class="extype" name="akka.cluster.ddata.ORSet">ORSet</a></li><li>Maps: <a href="ORMap.html" class="extype" name="akka.cluster.ddata.ORMap">ORMap</a>, <a href="ORMultiMap.html" class="extype" name="akka.cluster.ddata.ORMultiMap">ORMultiMap</a>, <a href="LWWMap.html" class="extype" name="akka.cluster.ddata.LWWMap">LWWMap</a>, <a href="PNCounterMap.html" class="extype" name="akka.cluster.ddata.PNCounterMap">PNCounterMap</a></li></ul><p>For good introduction to the CRDT subject watch the
+<a href="http://www.ustream.tv/recorded/61448875">The Final Causal Frontier</a>
+and <a href="http://vimeo.com/43903960">Eventually Consistent Data Structures</a>
+talk by Sean Cribbs and and the
+<a href="http://research.microsoft.com/apps/video/dl.aspx?id=153540">talk by Mark Shapiro</a>
+and read the excellent paper <a href="http://hal.upmc.fr/docs/00/55/55/88/PDF/techreport.pdf">
+A comprehensive study of Convergent and Commutative Replicated Data Types</a>
+by Mark Shapiro et. al.</p><p>The <code>Replicator</code> actor must be started on each node in the cluster, or group of
+nodes tagged with a specific role. It communicates with other <code>Replicator</code> instances
+with the same path (without address) that are running on other nodes . For convenience it
+can be used with the <a href="DistributedData.html" class="extype" name="akka.cluster.ddata.DistributedData">DistributedData</a> extension.</p><h4> Update </h4><p>To modify and replicate a <a href="ReplicatedData.html" class="extype" name="akka.cluster.ddata.ReplicatedData">ReplicatedData</a> value you send a <a href="Replicator$$Update.html" class="extype" name="akka.cluster.ddata.Replicator.Update">Replicator.Update</a> message
+to the local <code>Replicator</code>.
+The current data value for the <code>key</code> of the <code>Update</code> is passed as parameter to the <code>modify</code>
+function of the <code>Update</code>. The function is supposed to return the new value of the data, which
+will then be replicated according to the given consistency level.</p><p>The <code>modify</code> function is called by the <code>Replicator</code> actor and must therefore be a pure
+function that only uses the data parameter and stable fields from enclosing scope. It must
+for example not access <code>sender()</code> reference of an enclosing actor.</p><p><code>Update</code> is intended to only be sent from an actor running in same local <code>ActorSystem</code> as
+the <code>Replicator</code>, because the <code>modify</code> function is typically not serializable.</p><p>You supply a write consistency level which has the following meaning:</p><ul><li><code>WriteLocal</code> the value will immediately only be written to the local replica,
+    and later disseminated with gossip</li><li><code>WriteTo(n)</code> the value will immediately be written to at least <code>n</code> replicas,
+    including the local replica</li><li><code>WriteMajority</code> the value will immediately be written to a majority of replicas, i.e.
+    at least <code>N/2 + 1</code> replicas, where N is the number of nodes in the cluster
+    (or cluster role group)</li><li><code>WriteAll</code> the value will immediately be written to all nodes in the cluster
+    (or all nodes in the cluster role group)</li></ul><p>As reply of the <code>Update</code> a <a href="Replicator$$UpdateSuccess.html" class="extype" name="akka.cluster.ddata.Replicator.UpdateSuccess">Replicator.UpdateSuccess</a> is sent to the sender of the
+<code>Update</code> if the value was successfully replicated according to the supplied consistency
+level within the supplied timeout. Otherwise a <a href="Replicator$$UpdateFailure.html" class="extype" name="akka.cluster.ddata.Replicator.UpdateFailure">Replicator.UpdateFailure</a> subclass is
+sent back. Note that a <a href="Replicator$$UpdateTimeout.html" class="extype" name="akka.cluster.ddata.Replicator.UpdateTimeout">Replicator.UpdateTimeout</a> reply does not mean that the update completely failed
+or was rolled back. It may still have been replicated to some nodes, and will eventually
+be replicated to all nodes with the gossip protocol.</p><p>You will always see your own writes. For example if you send two <code>Update</code> messages
+changing the value of the same <code>key</code>, the <code>modify</code> function of the second message will
+see the change that was performed by the first <code>Update</code> message.</p><p>In the <code>Update</code> message you can pass an optional request context, which the <code>Replicator</code>
+does not care about, but is included in the reply messages. This is a convenient
+way to pass contextual information (e.g. original sender) without having to use <code>ask</code>
+or local correlation data structures.</p><h4> Get </h4><p>To retrieve the current value of a data you send <a href="Replicator$$Get.html" class="extype" name="akka.cluster.ddata.Replicator.Get">Replicator.Get</a> message to the
+<code>Replicator</code>. You supply a consistency level which has the following meaning:</p><ul><li><code>ReadLocal</code> the value will only be read from the local replica</li><li><code>ReadFrom(n)</code> the value will be read and merged from <code>n</code> replicas,
+    including the local replica</li><li><code>ReadMajority</code> the value will be read and merged from a majority of replicas, i.e.
+    at least <code>N/2 + 1</code> replicas, where N is the number of nodes in the cluster
+    (or cluster role group)</li><li><code>ReadAll</code> the value will be read and merged from all nodes in the cluster
+    (or all nodes in the cluster role group)</li></ul><p>As reply of the <code>Get</code> a <a href="Replicator$$GetSuccess.html" class="extype" name="akka.cluster.ddata.Replicator.GetSuccess">Replicator.GetSuccess</a> is sent to the sender of the
+<code>Get</code> if the value was successfully retrieved according to the supplied consistency
+level within the supplied timeout. Otherwise a <a href="Replicator$$GetFailure.html" class="extype" name="akka.cluster.ddata.Replicator.GetFailure">Replicator.GetFailure</a> is sent.
+If the key does not exist the reply will be <a href="Replicator$$NotFound.html" class="extype" name="akka.cluster.ddata.Replicator.NotFound">Replicator.NotFound</a>.</p><p>You will always read your own writes. For example if you send a <code>Update</code> message
+followed by a <code>Get</code> of the same <code>key</code> the <code>Get</code> will retrieve the change that was
+performed by the preceding <code>Update</code> message. However, the order of the reply messages are
+not defined, i.e. in the previous example you may receive the <code>GetSuccess</code> before
+the <code>UpdateSuccess</code>.</p><p>In the <code>Get</code> message you can pass an optional request context in the same way as for the
+<code>Update</code> message, described above. For example the original sender can be passed and replied
+to after receiving and transforming <code>GetSuccess</code>.</p><h4> Subscribe </h4><p>You may also register interest in change notifications by sending <a href="Replicator$$Subscribe.html" class="extype" name="akka.cluster.ddata.Replicator.Subscribe">Replicator.Subscribe</a>
+message to the <code>Replicator</code>. It will send <a href="Replicator$$Changed.html" class="extype" name="akka.cluster.ddata.Replicator.Changed">Replicator.Changed</a> messages to the registered
+subscriber when the data for the subscribed key is updated. Subscribers will be notified
+periodically with the configured <code>notify-subscribers-interval</code>, and it is also possible to
+send an explicit <code>Replicator.FlushChanges</code> message to the <code>Replicator</code> to notify the subscribers
+immediately.</p><p>The subscriber is automatically removed if the subscriber is terminated. A subscriber can
+also be deregistered with the <a href="Replicator$$Unsubscribe.html" class="extype" name="akka.cluster.ddata.Replicator.Unsubscribe">Replicator.Unsubscribe</a> message.</p><h4> Delete </h4><p>A data entry can be deleted by sending a <a href="Replicator$$Delete.html" class="extype" name="akka.cluster.ddata.Replicator.Delete">Replicator.Delete</a> message to the local
+local <code>Replicator</code>. As reply of the <code>Delete</code> a <a href="Replicator$$DeleteSuccess.html" class="extype" name="akka.cluster.ddata.Replicator.DeleteSuccess">Replicator.DeleteSuccess</a> is sent to
+the sender of the <code>Delete</code> if the value was successfully deleted according to the supplied
+consistency level within the supplied timeout. Otherwise a <a href="Replicator$$ReplicationDeleteFailure.html" class="extype" name="akka.cluster.ddata.Replicator.ReplicationDeleteFailure">Replicator.ReplicationDeleteFailure</a>
+is sent. Note that <code>ReplicationDeleteFailure</code> does not mean that the delete completely failed or
+was rolled back. It may still have been replicated to some nodes, and may eventually be replicated
+to all nodes.</p><p>A deleted key cannot be reused again, but it is still recommended to delete unused
+data entries because that reduces the replication overhead when new nodes join the cluster.
+Subsequent <code>Delete</code>, <code>Update</code> and <code>Get</code> requests will be replied with <a href="Replicator$$DataDeleted.html" class="extype" name="akka.cluster.ddata.Replicator.DataDeleted">Replicator.DataDeleted</a>.
+Subscribers will receive <a href="Replicator$$DataDeleted.html" class="extype" name="akka.cluster.ddata.Replicator.DataDeleted">Replicator.DataDeleted</a>.</p><h4> CRDT Garbage </h4><p>One thing that can be problematic with CRDTs is that some data types accumulate history (garbage).
+For example a <code>GCounter</code> keeps track of one counter per node. If a <code>GCounter</code> has been updated
+from one node it will associate the identifier of that node forever. That can become a problem
+for long running systems with many cluster nodes being added and removed. To solve this problem
+the <code>Replicator</code> performs pruning of data associated with nodes that have been removed from the
+cluster. Data types that need pruning have to implement <a href="RemovedNodePruning.html" class="extype" name="akka.cluster.ddata.RemovedNodePruning">RemovedNodePruning</a>. The pruning consists
+of several steps:</p><ul><li>When a node is removed from the cluster it is first important that all updates that were
+done by that node are disseminated to all other nodes. The pruning will not start before the
+<code>maxPruningDissemination</code> duration has elapsed. The time measurement is stopped when any
+replica is unreachable, so it should be configured to worst case in a healthy cluster.</li><li>The nodes are ordered by their address and the node ordered first is called leader.
+The leader initiates the pruning by adding a <code>PruningInitialized</code> marker in the data envelope.
+This is gossiped to all other nodes and they mark it as seen when they receive it.</li><li>When the leader sees that all other nodes have seen the <code>PruningInitialized</code> marker
+the leader performs the pruning and changes the marker to <code>PruningPerformed</code> so that nobody
+else will redo the pruning. The data envelope with this pruning state is a CRDT itself.
+The pruning is typically performed by &quot;moving&quot; the part of the data associated with
+the removed node to the leader node. For example, a <code>GCounter</code> is a <code>Map</code> with the node as key
+and the counts done by that node as value. When pruning the value of the removed node is
+moved to the entry owned by the leader node. See <a href="RemovedNodePruning.html#prune(removedNode:akka.cluster.UniqueAddress,collapseInto:akka.cluster.UniqueAddress):RemovedNodePruning.this.T" class="extmbr" name="akka.cluster.ddata.RemovedNodePruning#prune">RemovedNodePruning#prune</a>.</li><li>Thereafter the data is always cleared from parts associated with the removed node so that
+it does not come back when merging. See <a href="RemovedNodePruning.html#pruningCleanup(removedNode:akka.cluster.UniqueAddress):RemovedNodePruning.this.T" class="extmbr" name="akka.cluster.ddata.RemovedNodePruning#pruningCleanup">RemovedNodePruning#pruningCleanup</a></li><li>After another <code>maxPruningDissemination</code> duration after pruning the last entry from the
+removed node the <code>PruningPerformed</code> markers in the data envelope are collapsed into a
+single tombstone entry, for efficiency. Clients may continue to use old data and therefore
+all data are always cleared from parts associated with tombstoned nodes.</li></ul></div></div>
+    </li><li name="akka.cluster.ddata.ReplicatorSettings" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ReplicatorSettingsextendsAnyRef"></a>
+      <a id="ReplicatorSettings:ReplicatorSettings"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ReplicatorSettings.html"><span class="name">ReplicatorSettings</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@ReplicatorSettingsextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt"></p>
+    </li><li name="akka.cluster.ddata.VersionVector" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="VersionVectorextendsReplicatedDatawithReplicatedDataSerializationwithRemovedNodePruning"></a>
+      <a id="VersionVector:VersionVector"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="VersionVector.html"><span class="name">VersionVector</span></a><span class="result"> extends <a href="ReplicatedData.html" class="extype" name="akka.cluster.ddata.ReplicatedData">ReplicatedData</a> with <a href="ReplicatedDataSerialization.html" class="extype" name="akka.cluster.ddata.ReplicatedDataSerialization">ReplicatedDataSerialization</a> with <a href="RemovedNodePruning.html" class="extype" name="akka.cluster.ddata.RemovedNodePruning">RemovedNodePruning</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@VersionVectorextendsReplicatedDatawithReplicatedDataSerializationwithRemovedNodePruning" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Representation of a Vector-based clock (counting clock), inspired by Lamport logical clocks.</p><div class="fullcomment"><div class="comment cmt"><p>Representation of a Vector-based clock (counting clock), inspired by Lamport logical clocks.</p><pre>Reference:
+   <span class="num">1</span>) Leslie Lamport (<span class="num">1978</span>). <span class="lit">"Time, clocks, and the ordering of events in a distributed system"</span>. Communications of the ACM <span class="num">21</span> (<span class="num">7</span>): <span class="num">558</span>-<span class="num">565.</span>
+   <span class="num">2</span>) Friedemann Mattern (<span class="num">1988</span>). <span class="lit">"Virtual Time and Global States of Distributed Systems"</span>. Workshop on Parallel and Distributed Algorithms: pp. <span class="num">215</span>-<span class="num">226</span></pre><p>Based on code from <code>akka.cluster.VectorClock</code>.</p><p>This class is immutable, i.e. &quot;modifying&quot; methods return a new instance.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@SerialVersionUID</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="akka.cluster.ddata.DistributedData" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DistributedData"></a>
+      <a id="DistributedData:DistributedData"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="DistributedData$.html"><span class="name">DistributedData</span></a><span class="result"> extends <a href="../../actor/ExtensionId.html" class="extype" name="akka.actor.ExtensionId">ExtensionId</a>[<a href="DistributedData.html" class="extype" name="akka.cluster.ddata.DistributedData">DistributedData</a>] with <a href="../../actor/ExtensionIdProvider.html" class="extype" name="akka.actor.ExtensionIdProvider">ExtensionIdProvider</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@DistributedData" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.Flag" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Flag"></a>
+      <a id="Flag:Flag"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Flag$.html"><span class="name">Flag</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@Flag" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.FlagKey" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FlagKey"></a>
+      <a id="FlagKey:FlagKey"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="FlagKey$.html"><span class="name">FlagKey</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@FlagKey" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.GCounter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GCounter"></a>
+      <a id="GCounter:GCounter"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="GCounter$.html"><span class="name">GCounter</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@GCounter" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.GCounterKey" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GCounterKey"></a>
+      <a id="GCounterKey:GCounterKey"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="GCounterKey$.html"><span class="name">GCounterKey</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@GCounterKey" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.GSet" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GSet"></a>
+      <a id="GSet:GSet"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="GSet$.html"><span class="name">GSet</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@GSet" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.GSetKey" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GSetKey"></a>
+      <a id="GSetKey:GSetKey"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="GSetKey$.html"><span class="name">GSetKey</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@GSetKey" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.Key" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Key"></a>
+      <a id="Key:Key"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Key$.html"><span class="name">Key</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@Key" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.LWWMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LWWMap"></a>
+      <a id="LWWMap:LWWMap"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="LWWMap$.html"><span class="name">LWWMap</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@LWWMap" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.LWWMapKey" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LWWMapKey"></a>
+      <a id="LWWMapKey:LWWMapKey"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="LWWMapKey$.html"><span class="name">LWWMapKey</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@LWWMapKey" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.LWWRegister" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LWWRegister"></a>
+      <a id="LWWRegister:LWWRegister"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="LWWRegister$.html"><span class="name">LWWRegister</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@LWWRegister" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.LWWRegisterKey" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LWWRegisterKey"></a>
+      <a id="LWWRegisterKey:LWWRegisterKey"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="LWWRegisterKey$.html"><span class="name">LWWRegisterKey</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@LWWRegisterKey" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.ORMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ORMap"></a>
+      <a id="ORMap:ORMap"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ORMap$.html"><span class="name">ORMap</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@ORMap" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.ORMapKey" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ORMapKey"></a>
+      <a id="ORMapKey:ORMapKey"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ORMapKey$.html"><span class="name">ORMapKey</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@ORMapKey" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.ORMultiMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ORMultiMap"></a>
+      <a id="ORMultiMap:ORMultiMap"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ORMultiMap$.html"><span class="name">ORMultiMap</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@ORMultiMap" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.ORMultiMapKey" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ORMultiMapKey"></a>
+      <a id="ORMultiMapKey:ORMultiMapKey"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ORMultiMapKey$.html"><span class="name">ORMultiMapKey</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@ORMultiMapKey" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.ORSet" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ORSet"></a>
+      <a id="ORSet:ORSet"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ORSet$.html"><span class="name">ORSet</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@ORSet" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.ORSetKey" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ORSetKey"></a>
+      <a id="ORSetKey:ORSetKey"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ORSetKey$.html"><span class="name">ORSetKey</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@ORSetKey" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.PNCounter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PNCounter"></a>
+      <a id="PNCounter:PNCounter"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="PNCounter$.html"><span class="name">PNCounter</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@PNCounter" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.PNCounterKey" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PNCounterKey"></a>
+      <a id="PNCounterKey:PNCounterKey"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="PNCounterKey$.html"><span class="name">PNCounterKey</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@PNCounterKey" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.PNCounterMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PNCounterMap"></a>
+      <a id="PNCounterMap:PNCounterMap"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="PNCounterMap$.html"><span class="name">PNCounterMap</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@PNCounterMap" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.PNCounterMapKey" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PNCounterMapKey"></a>
+      <a id="PNCounterMapKey:PNCounterMapKey"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="PNCounterMapKey$.html"><span class="name">PNCounterMapKey</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@PNCounterMapKey" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.Replicator" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Replicator"></a>
+      <a id="Replicator:Replicator"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Replicator$.html"><span class="name">Replicator</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@Replicator" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.ReplicatorSettings" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ReplicatorSettings"></a>
+      <a id="ReplicatorSettings:ReplicatorSettings"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ReplicatorSettings$.html"><span class="name">ReplicatorSettings</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@ReplicatorSettings" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.VersionVector" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VersionVector"></a>
+      <a id="VersionVector:VersionVector"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="VersionVector$.html"><span class="name">VersionVector</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@VersionVector" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">VersionVector module with helper classes and methods.</p>
+    </li><li name="akka.cluster.ddata.protobuf" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="protobuf"></a>
+      <a id="protobuf:protobuf"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="protobuf/package.html"><span class="name">protobuf</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.package@protobuf" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>

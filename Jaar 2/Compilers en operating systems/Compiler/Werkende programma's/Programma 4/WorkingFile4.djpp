@@ -1,0 +1,48 @@
+draad functie geefTerugFunctie(){
+    draad string = "Terug gegeven draad";
+    geefterug string;
+}
+draad functie geefParameterTerug(draad parameter){
+    geefterug parameter;
+}
+@@Define variable
+draad param;
+nummer zolangNummer;
+vliegend zolangVliegendNummer;
+
+@@ Geef terug functie zonder parameter
+draad geefTerug = geefTerugFunctie();
+schrijf geefTerug;
+
+schrijf "\r\nGeef een woord dat word meegegeven aan een functie die gelijk terug gegeven wordt";
+
+@@ Lees woord in
+param < (draad);
+
+@@ Roept functie aan
+draad geefParameterTerug = geefParameterTerug(param);
+
+@@ Schrijft het terug gegeven weg
+schrijf geefParameterTerug;
+
+schrijf "\r\nGeef een heel getal op die vergelijkt moet worden in een zolang loop";
+
+@@ Lees nummer in
+zolangNummer < (nummer);
+
+zolang(zolangNummer > 0){
+    schrijf "\r\nAantal keer geschreven ";
+    schrijf zolangNummer;
+    zolangNummer--;
+}
+
+schrijf "\r\nGeef een komma getal op voor een zolang loop";
+
+@@ Lees nummer in
+zolangVliegendNummer < (vliegend);
+
+zolang(zolangVliegendNummer > 0){
+    schrijf "\r\nAantal keer geschreven ";
+    schrijf zolangVliegendNummer;
+    zolangVliegendNummer--;
+}

@@ -1,0 +1,97 @@
+.list-view .list-cell:even {
+    -fx-background-color: transparent;
+}
+
+.list-view .list-cell:odd {
+    -fx-background-color: transparent;
+}
+
+.list-view .scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+
+.list-view .scroll-bar:horizontal .track,
+.list-view .scroll-bar:vertical .track {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+    -fx-border-radius: 2em;
+}
+
+/* The increment and decrement button CSS class of scrollbar */
+.list-view .scroll-bar:horizontal .increment-button,
+.list-view .scroll-bar:horizontal .decrement-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0em;
+    -fx-padding: 0 0 10 0;
+}
+
+/* The increment and decrement button CSS class of scrollbar */
+
+.list-view .scroll-bar:vertical .increment-button,
+.list-view .scroll-bar:vertical .decrement-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0em;
+    -fx-padding: 0 10 0 0;
+}
+
+.list-view .scroll-bar .increment-arrow,
+.list-view .scroll-bar .decrement-arrow {
+    -fx-shape: " ";
+    -fx-padding: 0;
+}
+
+/* The main scrollbar **thumb** CSS class which we drag every time (movable) */
+.list-view .scroll-bar:horizontal .thumb,
+.list-view .scroll-bar:vertical .thumb {
+    -fx-background-color: #4883bc;
+    -fx-background-insets: 2, 0, 0;
+    -fx-background-radius: 2em;
+}
+
+.text-area {
+    -text-area-background: transparent;
+}
+
+.text-area .content {
+    -fx-background-color: transparent;
+}
+
+.button:hover {
+    -fx-cursor: hand;
+}
+
+.addfriendbutton:hover {
+    -fx-underline: true;
+}
+
+.list-view .list-cell:hover {
+    -fx-background-color: #2c3548;
+    -fx-cursor: hand;
+}
+
+.createGroupButton:hover {
+    -fx-border-color: #ff746d;
+    -fx-text-fill: #ff746d;
+    -fx-background-color: #465364;
+}
+.chatlist .list-cell:hover{
+    -fx-background-color: transparent;
+    -fx-cursor: default;
+}
+.addbuttonclass{
+    -fx-text-fill:  #2281a8;
+    -fx-border-color:  #2281a8;
+    -webkit-animation-duration: .5s;
+    -moz-animation-duration: .5s;
+    -o-animation-duration: .5s;
+    animation-duration: .5s;
+}
+.addbuttonclass:hover{
+    -fx-border-color:  #ff5a53;
+    -fx-text-fill:   #ff5a53;
+    -webkit-animation-duration: .5s;
+    -moz-animation-duration: .5s;
+    -o-animation-duration: .5s;
+    animation-duration: .5s;
+}

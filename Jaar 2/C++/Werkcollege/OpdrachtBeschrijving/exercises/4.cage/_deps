@@ -1,0 +1,9 @@
+Zoo.o: Zoo.cc Zoo.h Animal.h Cage.h Employee.h asserts.h where.h \
+ assert_error.h
+Cage.o: Cage.cc common.h asserts.h where.h assert_error.h Animal.h Cage.h
+Animal.o: Animal.cc asserts.h where.h assert_error.h Animal.h
+Employee.o: Employee.cc asserts.h where.h assert_error.h Animal.h Cage.h \
+ Employee.h
+assert_error.o: assert_error.cc assert_error.h
+Main.o: Main.cc Zoo.h Employee.h Animal.h ansi.h common.h asserts.h \
+ where.h assert_error.h

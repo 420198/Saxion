@@ -1,0 +1,71 @@
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+    background-color: #444;
+    color: white;
+    text-align: center;
+}
+
+.l_r_Box {
+    width: 35%;
+    margin-left: 10%;
+    float:left;
+    border:1px solid #444;
+    border-top:none;
+}
+
+.password {
+    border: #444 1px solid;
+    border-radius: 5px;
+    padding: 5px;
+    font-size:20px;
+    width:50%;
+    margin-left:25%;
+}
+
+.username {
+    border: #444 1px solid;
+    border-radius: 5px;
+    padding:5px;
+    font-size:20px;
+    width:50%;
+    margin-left:25%;
+}
+.submit{
+    border:none;
+    color:white;
+    background-color:#444;
+    font-size:20px;
+    padding:8px;
+    margin-top:10px;
+    width:20%;
+    margin-left:25%;
+}
+.reset{
+    border:#444 1px solid;
+    background-color:white;
+    color:#444;
+    font-size: 20px;
+    padding:8px;
+    margin-top:10px;
+    width:20%;
+    margin-left:9.5%;
+}
+.error{
+    width:90%;
+    font-size: 18px;
+    margin-left:5%;
+    padding:5px;
+    color:red;
+    display:block;
+    text-align: center;
+}
+.soort{
+    margin-top:10px;
+    margin-left: 25%;
+}

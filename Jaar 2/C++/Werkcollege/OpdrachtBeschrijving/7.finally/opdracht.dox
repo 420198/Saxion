@@ -1,0 +1,123 @@
+// This file contains the doxygen code for this assignment
+/** \mainpage
+
+<h2>Singleton &amp; Exceptions</h2>
+
+<p>For this assignment you must write a program from scratch.
+Only the asserts.h file and it's supporting files are given.
+Read the entire assignment before you start coding.</p>
+
+<p>Develop the program in the following three steps. 
+The names of classes and methods shown are just examples,
+they are not mandatory.</p>
+
+<h4>Step 1</h4>
+
+<p>Implement the @b singleton class Union
+(or maybe Bond: the @em Branche @em Organisatie @em Nederlandse @em Dierentuinen)
+which represents the Dutch Zoo Union.
+
+    @code static Union* Union::getTheUnion(); @endcode
+or (whatever your prefer)
+    @code static Union& Union::getTheUnion(); @endcode
+
+<p>The zoo union issues tickets (class Ticket) via:
+    @code class Ticket* Union::getTicket(int n); // make a ticket @endcode
+Each ticket can be used up to \e n times (the credit),
+for instance for a group of \e n people,
+or a single person visiting \e n zoos one at a time,
+or any combination of this.
+The parameter \e n should be optional with a default of 1.
+
+Tickets issued have to be registered with the zoo union.
+
+@note Carefully consider your choice of container class for keeping track of tickets.
+    And how are you going to keep track of the credit of each ticket?
+
+<p>When somebody wants to visit a zoo the ticket will be checked using:
+@code bool Union::isValidTicket(Ticket*, int n); // validate a ticket @endcode
+where \e n is the number of people seeking entrance.
+The parameter \e n should be optional with a default of 1.
+
+When \e n is less or equal to the current credit of the ticket,
+the value of \e n is subtracted from that credit,
+otherwise the ticket is rejected.
+
+When the credit of the ticket reaches zero,
+the ticket instance should be destroyed.
+
+The method returns \b true if the visitor(s) should be granted entrance,
+\b false otherwise.
+
+@note	Since C++ does not garbage collect for you like java does,
+don't forget to destroy the expired tickets somewhere,
+otherwise your program will run out of memory eventually!
+
+When the program finishes, the Union should report about
+any remaining unused tickets (and their outstanding credit).
+Don't forget to destroy those tickets too.
+
+Write a main function to test everything.
+
+<h4>Step 2</h4>
+
+Extend your main function to try and fake tickets
+e.g. by creating one yourself,
+copying an existing ticket, etc..
+Use your imagination for other ways to commit fraud.
+
+At the same time extend the Union class with code
+to catch fraudulent tickets.
+
+@note What will happen when in main you \b delete a genuine ticket?
+
+When a fake ticket is detected or somebody tries
+to enter the zoo with a ticket with insufficient credit,
+your code should throw exceptions.
+You should also consider whether it is desirable and/or feasible
+to detect the situation that somebody, outside the Union,
+tries to delete a genuine ticket.
+
+@note Your bond &amp; ticket code should throw at least
+one exception \b class instance
+and one \b non-class exception (i.e. using some C++ built-in type).
+
+Extend your main function to catch the various exceptions
+and briefly report about what happened.
+
+@note Your catch clauses should also catch exceptions thrown by
+e.g. the asserts checks and exceptions thrown by the standard library.
+
+Your program should be able to catch all kinds of exceptions,
+and at least differentiate between those from the Union itself,
+the ones thrown by the asserts checks,
+the ones from the standard library
+and finally whatever you may have forgotten.
+
+@note	These modifications will have the side effect that
+the boolean method 'isValidTicket' will now no longer
+return \b false (it throws an exception instead),
+so it's name and type no longer match it's actual behaviour.
+For now we will ignore this blemish.
+
+<h4>Step 3</h4>
+
+Use the various features of C++ (introduced during the lecture)
+that can \b prevent somebody from makeing fake tickets (or deleting them)
+and/or making a fake "bond" instance (i.e. ensure the singleton \b can
+only be the one and only instance).
+
+@note	Ofcourse this will have the side effect that some of the code
+you added in step 2 to fake tickets will become illegal.
+Please surround such code with pre-processor guards like:
+@code{.cpp}
+#if	0
+
+
+#endif
+@endcode
+rather then deleting them or turning them into comment.
+
+<p><br></p>
+
+*/

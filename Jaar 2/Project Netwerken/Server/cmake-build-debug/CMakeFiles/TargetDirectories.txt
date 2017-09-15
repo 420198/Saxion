@@ -1,0 +1,3 @@
+/Volumes/Opslag/School/Leerjaar 2 Kwartiel 3/Netwerken/Server/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Volumes/Opslag/School/Leerjaar 2 Kwartiel 3/Netwerken/Server/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Volumes/Opslag/School/Leerjaar 2 Kwartiel 3/Netwerken/Server/cmake-build-debug/CMakeFiles/Server.dir

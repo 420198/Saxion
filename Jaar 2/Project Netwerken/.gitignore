@@ -1,0 +1,43 @@
+# Windows ignores
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.lnk
+
+# OSX ignores
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# ignores
+/*.iml
+.idea/
+*.ipr
+*.iws
+out/
+.idea_modules/
+atlassian-ide-plugin.xml
+com_crashlytics_export_strings.xml
+*.iml
+Server/Project1/Project1.VC.VC.opendb
+Server/Project1/Project1.VC.db
+Server/Project1/Server.VC.db
+Server/Project1/packages/cpprestsdk.v140.windesktop.msvcstl.dyn.rt-dyn.2.9.1/cpprestsdk.v140.windesktop.msvcstl.dyn.rt-dyn.2.9.1.nupkg
+Server/Project1/Server.VC.VC.opendb
+Server/packages/cpprestsdk.v140.windesktop.msvcstl.dyn.rt-dyn.2.9.1/cpprestsdk.v140.windesktop.msvcstl.dyn.rt-dyn.2.9.1.nupkg
+Server/Server.VC.db
+Server/Server.VC.VC.opendb
+Server/Server/x64/Debug/listener.new.obj.enc

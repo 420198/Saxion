@@ -1,0 +1,2 @@
+Animal.o: Animal.cc asserts.h where.h assert_error.h Animal.h
+assert_error.o: assert_error.cc assert_error.h

@@ -1,0 +1,32 @@
+{
+  "name": "emptynodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+	"jshint": "gulp default"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "jsonwebtoken": "^7.1.9",
+    "mongoose": "^4.6.2"
+  },
+  "devDependencies": {
+    "mocha": "^3.1.2",
+    "should": "^11.1.1",
+    "supertest": "^2.0.0",
+	"gulp": "^3.9.1",
+	"gulp-jshint": "^2.0.4",
+	"gulp-jshint-file-reporter": "0.0.2",
+	"gulp-jshint-xml-file-reporter": "^0.5.1",
+	"jshint": "^2.9.4",
+	"jshint-checkstyle-file-reporter": "0.0.1",
+	"jshint-stylish": "^2.2.1",
+	"selenium-standalone": "^5.9.1",
+	"webdriverio": "^4.6.1"
+  }
+}

@@ -1,0 +1,8 @@
+<map id="UnitTest.h" name="UnitTest.h">
+<area shape="rect" id="node2" href="$TestPrint_8h.html" title="The definition of class TestPrint was derived from TestOrdinay by removing a redundant testcase and a..." alt="" coords="58,80,145,107"/>
+<area shape="rect" id="node5" href="$TestLess_8h.html" title="The definition of class TestLess to compare persons and marriages. " alt="" coords="169,80,255,107"/>
+<area shape="rect" id="node7" href="$UnitTest_8cc.html" title="The implementation of class UnitTest. " alt="" coords="280,80,371,107"/>
+<area shape="rect" id="node3" href="$main_8cc.html" title="The main function running the testcases. " alt="" coords="123,155,191,181"/>
+<area shape="rect" id="node4" href="$TestPrint_8cc.html" title="The implementation of class TestPrint. " alt="" coords="5,155,99,181"/>
+<area shape="rect" id="node6" href="$TestLess_8cc.html" title="The implementation of class TestLess. " alt="" coords="215,155,310,181"/>
+</map>

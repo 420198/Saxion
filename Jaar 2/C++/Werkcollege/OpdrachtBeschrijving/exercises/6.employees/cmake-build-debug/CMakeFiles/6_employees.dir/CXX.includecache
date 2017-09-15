@@ -1,0 +1,188 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Administrator.cc
+asserts.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/asserts.h
+Administrator.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Administrator.h
+Manager.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Manager.h
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Administrator.h
+Employee.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Employee.h
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Animal.cc
+asserts.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/asserts.h
+Animal.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Animal.h
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Animal.h
+string
+-
+iostream
+-
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Cage.cc
+common.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/common.h
+asserts.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/asserts.h
+Animal.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Animal.h
+Cage.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Cage.h
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Cage.h
+string
+-
+iostream
+-
+map
+-
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Employee.cc
+asserts.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/asserts.h
+Animal.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Animal.h
+Cage.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Cage.h
+Employee.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Employee.h
+Manager.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Manager.h
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Employee.h
+string
+-
+vector
+-
+iostream
+-
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Keeper.cc
+asserts.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/asserts.h
+Animal.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Animal.h
+Cage.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Cage.h
+Keeper.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Keeper.h
+Manager.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Manager.h
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Keeper.h
+Employee.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Employee.h
+string
+-
+vector
+-
+iostream
+-
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Main.cc
+iostream
+-
+fstream
+-
+string
+-
+cstdlib
+-
+Zoo.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Zoo.h
+Employee.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Employee.h
+Animal.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Animal.h
+ansi.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/ansi.h
+asserts.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/asserts.h
+Manager.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Manager.h
+Administrator.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Administrator.h
+Keeper.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Keeper.h
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Manager.cc
+Manager.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Manager.h
+asserts.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/asserts.h
+Animal.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Animal.h
+Cage.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Cage.h
+Employee.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Employee.h
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Manager.h
+string
+-
+vector
+-
+iostream
+-
+Employee.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Employee.h
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Zoo.cc
+Zoo.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Zoo.h
+Animal.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Animal.h
+Cage.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Cage.h
+Employee.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Employee.h
+Manager.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Manager.h
+asserts.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/asserts.h
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/Zoo.h
+string
+-
+map
+-
+vector
+-
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/ansi.h
+common.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/common.h
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/assert_error.cc
+string
+-
+sstream
+-
+assert_error.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/assert_error.h
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/assert_error.h
+stdexcept
+-
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/asserts.h
+where.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/where.h
+assert_error.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/assert_error.h
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/common.h
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/6.employees/where.h
+

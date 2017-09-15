@@ -1,0 +1,122 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/Marriage.cc
+asserts.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/asserts.h
+Person.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/Person.h
+Marriage.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/Marriage.h
+iostream
+-
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/Marriage.h
+iostream
+-
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/Person.cc
+asserts.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/asserts.h
+Person.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/Person.h
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/Person.h
+string
+-
+iostream
+-
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/TestLess.cc
+ansi.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/ansi.h
+asserts.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/asserts.h
+iostream
+-
+Person.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/Person.h
+Marriage.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/Marriage.h
+TestLess.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/TestLess.h
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/TestLess.h
+UnitTest.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/UnitTest.h
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/TestPrint.cc
+ansi.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/ansi.h
+asserts.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/asserts.h
+iostream
+-
+TestPrint.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/TestPrint.h
+Person.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/Person.h
+Marriage.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/Marriage.h
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/TestPrint.h
+UnitTest.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/UnitTest.h
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/UnitTest.cc
+ansi.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/ansi.h
+asserts.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/asserts.h
+iostream
+-
+stdexcept
+-
+UnitTest.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/UnitTest.h
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/UnitTest.h
+vector
+-
+string
+-
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/ansi.h
+common.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/common.h
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/assert_error.cc
+string
+-
+sstream
+-
+assert_error.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/assert_error.h
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/assert_error.h
+stdexcept
+-
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/asserts.h
+where.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/where.h
+assert_error.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/assert_error.h
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/common.h
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/main.cc
+cstdlib
+-
+TestPrint.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/TestPrint.h
+TestLess.h
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/TestLess.h
+
+D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/5.operators/where.h
+

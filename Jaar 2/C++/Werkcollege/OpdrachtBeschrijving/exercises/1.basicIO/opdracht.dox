@@ -1,0 +1,131 @@
+// This file contains the doxygen code for this assignment
+/** @mainpage
+ 
+<h2>Basic I/O &amp; stringstream</h2>
+
+<p>In this task we study the power of the <a target='cpp'
+href='http://en.cppreference.com/w/cpp/io'>the I/O facilities provided by the standard stream classes</a>,
+especially the input stream (<a target='cpp'
+href='http://en.cppreference.com/w/cpp/io/basic_istream'>std::istream</a>) family
+(both filestream and stringstream),
+as well as some of the handy properties of the <a target='cpp'
+href='http://en.cppreference.com/w/cpp/string/basic_string'>std::string</a>
+class.</p>
+
+<p>First read the assignment then consult the hints at the bottom.</p>
+
+<p>Task: Complete the function that reads a text file and displays
+    it's contents using <a target='cpp'
+	href='http://en.cppreference.com/w/cpp/io/basic_ostream'>std::cout</a>
+	in xml style:</p>
+    @code void convert(const string& filename); @endcode
+<p>Suitable pseudo-code is already given.
+	In general, each line of pseudo-code
+	corresponds with one line of C++.
+	So, all you have to do is to "translate" the
+	given pseudo-code into working C++ code.</p>
+
+<p>The input is a file assumed to be in the format:</p>
+   @code a_keyword = one_or_more_words @endcode
+   where a "word" is any non-blank sequence of characters
+   (Warning: This may not match your concept of what a "word" is.
+   Yes, computers are stupid).
+   A suitable file called 'test' is already supplied
+   and the given codeblocks projectfile will ensure your program
+   is called with that file as an argument.
+
+<p>Each output line is expected to have the format:</p>
+   @code <keyword>one_word</keyword> @endcode
+
+<ul>
+    <li>If <b>multiple</b> words occur after the "=" then the program
+		should produce <b>multiple</b> output lines (i.e. one line
+		of output for each word).</p>
+    <li>If no words occur after the "=" then no output is expected
+		(You may instead output "<keyword></keyword>",
+		but that is your own choice).</p>
+    <li>If the keyword is not followed by a, separate, "=" then an
+		appropriate error message should be produced on @em cerr,
+		including the line-number of the faulty input line.
+	<br>Note: You may assume that the keyword and the "=" are
+	    normally separated by some whitespace.</p>
+</ul>
+
+<p>Lines that begin with a '#' character \b at \b column \b 0,
+    are comment lines that should be output as:
+
+   @code <!-- the_comment_line --> @endcode
+
+<p>A simple example:
+<br>INPUT:
+\code
+	# this is some  comment
+	family	= bakker
+	name	= jan henk kees
+	age		= 10
+	gender	=
+	badinput= x
+\endcode
+OUTPUT:
+\code
+	<xml>
+		<!-- # this is some  comment -->
+		<family>bakker</family>
+		<name>jan</name>
+		<name>henk</name>
+		<name>kees</name>
+		<age>10</age>
+	</xml>
+\endcode
+
+<p>NOTE 1: Since the input "gender =" has no words after the "=",
+that line produces no output.
+<br>
+NOTE 2: Since the "=" on the last line is not separated
+from the word before it, it is consider to be erroneous
+input at line 6.
+<br>
+NOTE 3: The actual indentation of the generated output is not important.</p>
+
+<h4>Hints</h4>
+
+<p>Look at:
+std::<a target='cpp'
+	href='http://en.cppreference.com/w/cpp/io/basic_istream'>istream</a>
+	(especially look at <span style='color:green'>operator&gt;&gt;</span>),
+and std::<a target='cpp'
+	href='http://en.cppreference.com/w/cpp/io/basic_ifstream'>ifstream</a>
+(extra hint: <span style='color:green'>operator void*()</span>),
+the std::<a target='cpp'
+	href='http://en.cppreference.com/w/cpp/string/basic_string/getline'>getline()</a> function,
+and the std::<a target='cpp'
+	href='http://en.cppreference.com/w/cpp/string/basic_string'>string</a> class
+(extra hints: <span style='color:green'>at()</span>
+or <span style='color:green'>operator[]</span>),
+std::<a target='cpp'
+	href='http://en.cppreference.com/w/cpp/io/basic_istringstream'>istringstream</a>,
+std::<a target='cpp'
+	href='http://en.cppreference.com/w/cpp/io/basic_istream'>cin</a>
+and
+std::istream::<a target='cpp'
+href='http://en.cppreference.com/w/cpp/io/basic_istream/operator_gtgt'>operator&gt;&gt;</a>.
+Also: <a target='cpp'
+href='http://en.cppreference.com/w/cpp/io/basic_ostream'>std::cout</a>
+and <a target='cpp'
+href='http://en.cppreference.com/w/cpp/io/manip/endl'>std::endl</a>.
+<br>
+Most things can be done in C++ with very little code
+when you know what features are already available.
+<br>
+For analyzing a single line of input, also study:
+<a target='faq'
+href='https://isocpp.org/wiki/faq/input-output#stream-input-failure'>stream input failure</a>
+and
+<a target='faq'
+href='https://isocpp.org/wiki/faq/input-output#istream-and-while'>istream and while</a>
+(replace the 'int' from the example with 'string').
+</p>
+<p><br></p>
+
+ */
+

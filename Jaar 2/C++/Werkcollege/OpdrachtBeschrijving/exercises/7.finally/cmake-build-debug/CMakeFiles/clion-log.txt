@@ -1,0 +1,4 @@
+"C:\Program Files (x86)\JetBrains\CLion 2016.3\bin\cmake\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" "D:\School\kwartiel 2\C++\Werkcollege\OpdrachtBeschrijving\exercises\7.finally"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/School/kwartiel 2/C++/Werkcollege/OpdrachtBeschrijving/exercises/7.finally/cmake-build-debug

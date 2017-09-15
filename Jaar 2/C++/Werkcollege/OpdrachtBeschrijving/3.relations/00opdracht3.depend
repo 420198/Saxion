@@ -1,0 +1,66 @@
+# depslib dependency file v1.0
+1455301870 source:d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\3.relations\assert_error.cc
+	<string>
+	<sstream>
+	"assert_error.h"
+
+1455301692 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\3.relations\assert_error.h
+	<stdexcept>
+
+1480598391 source:d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\3.relations\main.cc
+	<string>
+	"asserts.h"
+	"TestToYoung.h"
+	"TestOrdinary.h"
+
+1455302364 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\3.relations\asserts.h
+	"where.h"
+	"assert_error.h"
+
+1455302416 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\3.relations\where.h
+
+1476711446 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\3.relations\testtoyoung.h
+	"UnitTest.h"
+
+1476710758 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\3.relations\unittest.h
+	<vector>
+	<string>
+
+1476711506 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\3.relations\testordinary.h
+	"UnitTest.h"
+
+1476711722 source:d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\3.relations\testordinary.cc
+	"asserts.h"
+	<iostream>
+	"TestOrdinary.h"
+	"Person.h"
+	"Marriage.h"
+
+1481806650 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\3.relations\person.h
+	<string>
+
+1481808075 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\3.relations\marriage.h
+
+1480601691 source:d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\3.relations\testtoyoung.cc
+	"asserts.h"
+	<iostream>
+	"TestToYoung.h"
+	"Person.h"
+	"Marriage.h"
+
+1476710746 source:d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\3.relations\unittest.cc
+	"ansi.h"
+	"asserts.h"
+	<iostream>
+	<stdexcept>
+	"UnitTest.h"
+
+1352237946 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\3.relations\ansi.h
+	"common.h"
+
+1478719528 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\3.relations\common.h
+
+1481806650 source:d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\3.relations\person.cc
+	"asserts.h"
+	"Person.h"
+

@@ -1,0 +1,1025 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>typed - akka.typed</title>
+          <meta name="description" content="typed - akka.typed" />
+          <meta name="keywords" content="typed akka.typed" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../lib/template.js"></script>
+      <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
+      <script type="text/javascript" src="../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../lib/diagrams.js" id="diagrams-js"></script>
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../index.html';
+            var hash = 'akka.typed.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img alt="Package" src="../../lib/package_big.png" />
+        <p id="owner"><a href="../package.html" class="extype" name="akka">akka</a></p>
+        <h1>typed</h1><span class="permalink">
+      <a href="../../index.html#akka.typed.package" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">typed</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="http://github.com/akka/akka/tree/v2.4.11//akka-typed/src/main/scala/akka/typed/package.scala" target="_blank">package.scala</a></dd></dl><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Any" class="extype" target="_top">Any</a></div>
+        </div><div class="toggleContainer block diagram-container" id="content-diagram-container">
+                <span class="toggle diagram-link">Content Hierarchy</span>
+                <div class="diagram" id="content-diagram"><svg class="package-diagram" id="graph1" viewBox="0.00 0.00 1508.00 158.00" height="158pt" width="1508pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 154)" class="graph" id="graph0"><polygon points="-4,4 -4,-154 1504,-154 1504,4 -4,4" stroke="white" fill="white"></polygon><!-- node0 --><g class="node class" id="graph1_0"><g id="a_class|graph1_0"><a xlink:title="akka.typed.Terminated" xlink:href="Terminated.html#inheritance-diagram"><polygon points="94,-88 -7.10543e-15,-88 -7.10543e-15,-62 94,-62 94,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-81" x="12" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="31.877" text-anchor="start">Terminated</text></a></g></g><!-- node1 --><g class="node class" id="graph1_1"><g id="a_class|graph1_1"><a xlink:title="akka.typed.StubbedActorContext" xlink:href="StubbedActorContext.html#inheritance-diagram"><polygon points="576.25,-88 425.75,-88 425.75,-62 576.25,-62 576.25,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-81" x="438" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="457.749" text-anchor="start">StubbedActorContext[T]</text></a></g></g><!-- node9 --><g class="node class" id="graph1_9"><g id="a_class|graph1_9"><a xlink:title="akka.typed.EffectfulActorContext" xlink:href="EffectfulActorContext.html#inheritance-diagram"><polygon points="576,-26 426,-26 426,-0 576,-0 576,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-19" x="438" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-8.74951" x="457.903" text-anchor="start">EffectfulActorContext[T]</text></a></g></g><!-- node1&#45;&gt;node9 --><g class="edge inheritance" id="graph1_1_9"><g id="a_inheritance|graph1_1_9"><a xlink:title="EffectfulActorContext[T] is a subtype of StubbedActorContext[T]"><path d="M501,-56.6826C501,-46.8961 501,-34.9026 501,-26.1238" stroke="#d4d4d4" fill="none"></path><polygon points="499.25,-56.8581 501,-61.8581 502.75,-56.8581 499.25,-56.8581" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2 --><g class="node trait" id="graph1_2"><g id="a_trait|graph1_2"><a xlink:title="akka.typed.Signal" xlink:href="Signal.html#inheritance-diagram"><polygon points="241,-150 169,-150 169,-124 241,-124 241,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-143" x="181" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-132.75" x="200.712" text-anchor="start">Signal</text></a></g></g><!-- node2&#45;&gt;node0 --><g class="edge inheritance" id="graph1_2_0"><g id="a_inheritance|graph1_2_0"><a xlink:title="Terminated is a subtype of Signal"><path d="M168.074,-121.977C140.941,-111.674 104.46,-97.8202 78.6561,-88.0213" stroke="#d4d4d4" fill="none"></path><polygon points="167.731,-123.719 173.026,-123.858 168.973,-120.447 167.731,-123.719" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node3 --><g class="node object" id="graph1_3"><g id="a_object|graph1_3"><a xlink:title="akka.typed.PreStart" xlink:href="PreStart$.html#inheritance-diagram"><polygon points="193.25,-88 112.75,-88 112.75,-62 193.25,-62 193.25,-88" stroke="#102966" fill="#3556a7"></polygon><image xlink:href="../../lib/object_diagram.png" y="-81" x="125" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="144.771" text-anchor="start">PreStart</text></a></g></g><!-- node2&#45;&gt;node3 --><g class="edge inheritance" id="graph1_2_3"><g id="a_inheritance|graph1_2_3"><a xlink:title="PreStart is a subtype of Signal"><path d="M191.157,-120.027C182.478,-110.014 171.468,-97.3091 163.507,-88.1238" stroke="#d4d4d4" fill="none"></path><polygon points="189.88,-121.226 194.477,-123.858 192.525,-118.933 189.88,-121.226" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node4 --><g class="node object" id="graph1_4"><g id="a_object|graph1_4"><a xlink:title="akka.typed.PreRestart" xlink:href="PreRestart$.html#inheritance-diagram"><polygon points="304,-88 212,-88 212,-62 304,-62 304,-88" stroke="#102966" fill="#3556a7"></polygon><image xlink:href="../../lib/object_diagram.png" y="-81" x="224" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="243.714" text-anchor="start">PreRestart</text></a></g></g><!-- node2&#45;&gt;node4 --><g class="edge inheritance" id="graph1_2_4"><g id="a_inheritance|graph1_2_4"><a xlink:title="PreRestart is a subtype of Signal"><path d="M219.109,-120.027C227.955,-110.014 239.177,-97.3091 247.291,-88.1238" stroke="#d4d4d4" fill="none"></path><polygon points="217.724,-118.952 215.725,-123.858 220.347,-121.269 217.724,-118.952" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node5 --><g class="node object" id="graph1_5"><g id="a_object|graph1_5"><a xlink:title="akka.typed.PostStop" xlink:href="PostStop$.html#inheritance-diagram"><polygon points="407.25,-88 322.75,-88 322.75,-62 407.25,-62 407.25,-88" stroke="#102966" fill="#3556a7"></polygon><image xlink:href="../../lib/object_diagram.png" y="-81" x="335" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="354.82" text-anchor="start">PostStop</text></a></g></g><!-- node2&#45;&gt;node5 --><g class="edge inheritance" id="graph1_2_5"><g id="a_inheritance|graph1_2_5"><a xlink:title="PostStop is a subtype of Signal"><path d="M242.394,-121.977C269.87,-111.674 306.813,-97.8202 332.943,-88.0213" stroke="#d4d4d4" fill="none"></path><polygon points="241.446,-120.464 237.378,-123.858 242.675,-123.741 241.446,-120.464" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node6 --><g class="node class" id="graph1_6"><g id="a_class|graph1_6"><a xlink:title="akka.typed.MailboxCapacity" xlink:href="MailboxCapacity.html#inheritance-diagram"><polygon points="713,-88 595,-88 595,-62 713,-62 713,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-81" x="607" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="626.929" text-anchor="start">MailboxCapacity</text></a></g></g><!-- node7 --><g class="node class" id="graph1_7"><g id="a_class|graph1_7"><a xlink:title="akka.typed.Logger" xlink:href="Logger.html#inheritance-diagram"><polygon points="1353.25,-150 1278.75,-150 1278.75,-124 1353.25,-124 1353.25,-150" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-143" x="1291" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-132.75" x="1310.54" text-anchor="start">Logger</text></a></g></g><!-- node16 --><g class="node class" id="graph1_16"><g id="a_class|graph1_16"><a xlink:title="akka.typed.DefaultLogger" xlink:href="DefaultLogger.html#inheritance-diagram"><polygon points="1369.25,-88 1262.75,-88 1262.75,-62 1369.25,-62 1369.25,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-81" x="1275" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="1294.7" text-anchor="start">DefaultLogger</text></a></g></g><!-- node7&#45;&gt;node16 --><g class="edge inheritance" id="graph1_7_16"><g id="a_inheritance|graph1_7_16"><a xlink:title="DefaultLogger is a subtype of Logger"><path d="M1316,-118.683C1316,-108.896 1316,-96.9026 1316,-88.1238" stroke="#d4d4d4" fill="none"></path><polygon points="1314.25,-118.858 1316,-123.858 1317.75,-118.858 1314.25,-118.858" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node8 --><g class="node object" id="graph1_8"><g id="a_object|graph1_8"><a xlink:title="akka.typed.EmptyDeploymentConfig" xlink:href="EmptyDeploymentConfig$.html#inheritance-diagram"><polygon points="886.25,-88 731.75,-88 731.75,-62 886.25,-62 886.25,-88" stroke="#102966" fill="#3556a7"></polygon><image xlink:href="../../lib/object_diagram.png" y="-81" x="744" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="763.808" text-anchor="start">EmptyDeploymentConfig</text></a></g></g><!-- node10 --><g class="node trait" id="graph1_10"><g id="a_trait|graph1_10"><a xlink:title="akka.typed.DispatcherSelector" xlink:href="DispatcherSelector.html#inheritance-diagram"><polygon points="1110.25,-88 981.75,-88 981.75,-62 1110.25,-62 1110.25,-88" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-81" x="994" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="1013.87" text-anchor="start">DispatcherSelector</text></a></g></g><!-- node11 --><g class="node class" id="graph1_11"><g id="a_class|graph1_11"><a xlink:title="akka.typed.DispatcherFromExecutor" xlink:href="DispatcherFromExecutor.html#inheritance-diagram"><polygon points="836.25,-26 681.75,-26 681.75,-0 836.25,-0 836.25,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-19" x="694" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-8.74951" x="713.815" text-anchor="start">DispatcherFromExecutor</text></a></g></g><!-- node10&#45;&gt;node11 --><g class="edge inheritance" id="graph1_10_11"><g id="a_inheritance|graph1_10_11"><a xlink:title="DispatcherFromExecutor is a subtype of DispatcherSelector"><path d="M983.223,-60.8758C933.597,-50.5012 864.883,-36.1357 816.641,-26.0504" stroke="#d4d4d4" fill="none"></path><polygon points="983.014,-62.62 988.267,-61.9303 983.73,-59.1941 983.014,-62.62" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node12 --><g class="node class" id="graph1_12"><g id="a_class|graph1_12"><a xlink:title="akka.typed.DispatcherFromExecutionContext" xlink:href="DispatcherFromExecutionContext.html#inheritance-diagram"><polygon points="1049,-26 855,-26 855,-0 1049,-0 1049,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-19" x="867" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-8.74951" x="886.857" text-anchor="start">DispatcherFromExecutionContext</text></a></g></g><!-- node10&#45;&gt;node12 --><g class="edge inheritance" id="graph1_10_12"><g id="a_inheritance|graph1_10_12"><a xlink:title="DispatcherFromExecutionContext is a subtype of DispatcherSelector"><path d="M1022.63,-59.0801C1006.7,-48.9173 985.894,-35.6342 970.994,-26.1238" stroke="#d4d4d4" fill="none"></path><polygon points="1021.82,-60.643 1026.98,-61.8581 1023.7,-57.6928 1021.82,-60.643" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node13 --><g class="node class" id="graph1_13"><g id="a_class|graph1_13"><a xlink:title="akka.typed.DispatcherFromConfig" xlink:href="DispatcherFromConfig.html#inheritance-diagram"><polygon points="1211,-26 1067,-26 1067,-0 1211,-0 1211,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-19" x="1079" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-8.74951" x="1098.59" text-anchor="start">DispatcherFromConfig</text></a></g></g><!-- node10&#45;&gt;node13 --><g class="edge inheritance" id="graph1_10_13"><g id="a_inheritance|graph1_10_13"><a xlink:title="DispatcherFromConfig is a subtype of DispatcherSelector"><path d="M1069.13,-59.0801C1084.88,-48.9173 1105.47,-35.6342 1120.21,-26.1238" stroke="#d4d4d4" fill="none"></path><polygon points="1068.07,-57.6769 1064.82,-61.8581 1069.97,-60.618 1068.07,-57.6769" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node14 --><g class="node class" id="graph1_14"><g id="a_class|graph1_14"><a xlink:title="akka.typed.DispatcherDefault" xlink:href="DispatcherDefault.html#inheritance-diagram"><polygon points="1353,-26 1229,-26 1229,-0 1353,-0 1353,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-19" x="1241" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-8.74951" x="1260.87" text-anchor="start">DispatcherDefault</text></a></g></g><!-- node10&#45;&gt;node14 --><g class="edge inheritance" id="graph1_10_14"><g id="a_inheritance|graph1_10_14"><a xlink:title="DispatcherDefault is a subtype of DispatcherSelector"><path d="M1100.36,-60.6868C1142.66,-50.3272 1200.86,-36.0746 1241.79,-26.0504" stroke="#d4d4d4" fill="none"></path><polygon points="1099.72,-59.0411 1095.28,-61.9303 1100.56,-62.4406 1099.72,-59.0411" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node15 --><g class="node class" id="graph1_15"><g id="a_class|graph1_15"><a xlink:title="akka.typed.DeploymentConfig" xlink:href="DeploymentConfig.html#inheritance-diagram"><polygon points="1016.25,-150 889.75,-150 889.75,-124 1016.25,-124 1016.25,-150" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-143" x="902" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-132.75" x="921.978" text-anchor="start">DeploymentConfig</text></a></g></g><!-- node15&#45;&gt;node6 --><g class="edge inheritance" id="graph1_15_6"><g id="a_inheritance|graph1_15_6"><a xlink:title="MailboxCapacity is a subtype of DeploymentConfig"><path d="M887.878,-122.932C835.806,-112.483 763.428,-97.9588 713.032,-87.8458" stroke="#d4d4d4" fill="none"></path><polygon points="887.606,-124.662 892.853,-123.93 888.295,-121.231 887.606,-124.662" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node15&#45;&gt;node8 --><g class="edge inheritance" id="graph1_15_8"><g id="a_inheritance|graph1_15_8"><a xlink:title="EmptyDeploymentConfig is a subtype of DeploymentConfig"><path d="M919.054,-121.856C894.442,-111.601 861.507,-97.8781 838.097,-88.1238" stroke="#d4d4d4" fill="none"></path><polygon points="918.571,-123.55 923.859,-123.858 919.917,-120.32 918.571,-123.55" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node15&#45;&gt;node10 --><g class="edge inheritance" id="graph1_15_10"><g id="a_inheritance|graph1_15_10"><a xlink:title="DispatcherSelector is a subtype of DeploymentConfig"><path d="M976.126,-121.08C991.878,-110.917 1012.47,-97.6342 1027.21,-88.1238" stroke="#d4d4d4" fill="none"></path><polygon points="975.073,-119.677 971.82,-123.858 976.97,-122.618 975.073,-119.677" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node15&#45;&gt;node11 --><g class="edge inheritance" id="graph1_15_11"><g id="a_inheritance|graph1_15_11"><a xlink:title="DispatcherFromExecutor is a subtype of DeploymentConfig"><path d="M943.763,-119.285C933.758,-102.605 916.332,-77.3146 895,-62 871.304,-44.9882 841.01,-33.5192 815.031,-26.0713" stroke="#d4d4d4" fill="none"></path><polygon points="942.342,-120.322 946.385,-123.745 945.36,-118.548 942.342,-120.322" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node15&#45;&gt;node12 --><g class="edge inheritance" id="graph1_15_12"><g id="a_inheritance|graph1_15_12"><a xlink:title="DispatcherFromExecutionContext is a subtype of DeploymentConfig"><path d="M952.859,-118.848C952.654,-93.8158 952.278,-47.8906 952.099,-26.0947" stroke="#d4d4d4" fill="none"></path><polygon points="951.109,-118.871 952.9,-123.856 954.609,-118.842 951.109,-118.871" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node15&#45;&gt;node13 --><g class="edge inheritance" id="graph1_15_13"><g id="a_inheritance|graph1_15_13"><a xlink:title="DispatcherFromConfig is a subtype of DeploymentConfig"><path d="M1021.95,-131.571C1055.37,-125.941 1093.65,-113.796 1119,-88 1135.42,-71.2935 1138.71,-42.5819 1139.17,-26.2686" stroke="#d4d4d4" fill="none"></path><polygon points="1021.29,-129.904 1016.63,-132.42 1021.84,-133.36 1021.29,-129.904" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node15&#45;&gt;node14 --><g class="edge inheritance" id="graph1_15_14"><g id="a_inheritance|graph1_15_14"><a xlink:title="DispatcherDefault is a subtype of DeploymentConfig"><path d="M1018.57,-122.788C1055.16,-114.542 1101.25,-102.697 1141,-88 1188.66,-70.3775 1241.26,-42.2681 1269.77,-26.2443" stroke="#d4d4d4" fill="none"></path><polygon points="1017.74,-121.18 1013.24,-123.978 1018.5,-124.596 1017.74,-121.18" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node17 --><g class="node trait" id="graph1_17"><g id="a_trait|graph1_17"><a xlink:title="akka.typed.ActorSystem" xlink:href="ActorSystem.html#inheritance-diagram"><polygon points="1500.25,-88 1387.75,-88 1387.75,-62 1500.25,-62 1500.25,-88" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-81" x="1400" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="1419.94" text-anchor="start">ActorSystem[T]</text></a></g></g><!-- node18 --><g class="node class" id="graph1_18"><g id="a_class|graph1_18"><a xlink:title="akka.typed.ActorRef" xlink:href="ActorRef.html#inheritance-diagram"><polygon points="1491.25,-150 1396.75,-150 1396.75,-124 1491.25,-124 1491.25,-150" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-143" x="1409" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-132.75" x="1428.83" text-anchor="start">ActorRef[T]</text></a></g></g><!-- node18&#45;&gt;node17 --><g class="edge inheritance" id="graph1_18_17"><g id="a_inheritance|graph1_18_17"><a xlink:title="ActorSystem[T] is a subtype of ActorRef[T]"><path d="M1444,-118.683C1444,-108.896 1444,-96.9026 1444,-88.1238" stroke="#d4d4d4" fill="none"></path><polygon points="1442.25,-118.858 1444,-123.858 1445.75,-118.858 1442.25,-118.858" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node19 --><g class="node trait" id="graph1_19"><g id="a_trait|graph1_19"><a xlink:title="akka.typed.ActorContext" xlink:href="ActorContext.html#inheritance-diagram"><polygon points="558,-150 444,-150 444,-124 558,-124 558,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-143" x="456" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-132.75" x="475.877" text-anchor="start">ActorContext[T]</text></a></g></g><!-- node19&#45;&gt;node1 --><g class="edge inheritance" id="graph1_19_1"><g id="a_inheritance|graph1_19_1"><a xlink:title="StubbedActorContext[T] is a subtype of ActorContext[T]"><path d="M501,-118.683C501,-108.896 501,-96.9026 501,-88.1238" stroke="#d4d4d4" fill="none"></path><polygon points="499.25,-118.858 501,-123.858 502.75,-118.858 499.25,-118.858" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
+              </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By Inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="akka.typed"><span>typed</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show All</span></li>
+            </ol>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="akka.typed.ActorContext" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ActorContext[T]extendsAnyRef"></a>
+      <a id="ActorContext[T]:ActorContext[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ActorContext.html"><span class="name">ActorContext</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@ActorContext[T]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An Actor is given by the combination of a <a href="Behavior.html" class="extype" name="akka.typed.Behavior">Behavior</a> and a context in
+which this behavior is executed.</p><div class="fullcomment"><div class="comment cmt"><p>An Actor is given by the combination of a <a href="Behavior.html" class="extype" name="akka.typed.Behavior">Behavior</a> and a context in
+which this behavior is executed. As per the Actor Model an Actor can perform
+the following actions when processing a message:</p><ul><li>send a finite number of messages to other Actors it knows</li><li>create a finite number of Actors</li><li>designate the behavior for the next message</li></ul><p>In Akka the first capability is accessed by using the <code>!</code> or <code>tell</code> method
+on an <a href="ActorRef.html" class="extype" name="akka.typed.ActorRef">ActorRef</a>, the second is provided by <a href="ActorContext.html#spawn[U](behavior:akka.typed.Behavior[U],name:String,deployment:akka.typed.DeploymentConfig):akka.typed.ActorRef[U]" class="extmbr" name="akka.typed.ActorContext#spawn">ActorContext#spawn</a>
+and the third is implicit in the signature of <a href="Behavior.html" class="extype" name="akka.typed.Behavior">Behavior</a> in that the next
+behavior is always returned from the message processing logic.</p><p>An <code>ActorContext</code> in addition provides access to the Actor’s own identity (“<code>self</code>”),
+the <a href="ActorSystem.html" class="extype" name="akka.typed.ActorSystem">ActorSystem</a> it is part of, methods for querying the list of child Actors it
+created, access to <a href="Terminated.html" class="extype" name="akka.typed.Terminated">DeathWatch</a> and timed message scheduling.
+</p></div></div>
+    </li><li name="akka.typed.ActorRef" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ActorRef[-T]extendsComparable[akka.typed.ActorRef[Nothing]]"></a>
+      <a id="ActorRef[-T]:ActorRef[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ActorRef.html"><span class="name">ActorRef</span></a><span class="tparams">[<span name="T">-T</span>]</span><span class="result"> extends <span class="extype" name="java.lang.Comparable">Comparable</span>[<a href="ActorRef.html" class="extype" name="akka.typed.ActorRef">ActorRef</a>[<a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Nothing" class="extype" target="_top">Nothing</a>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@ActorRef[-T]extendsComparable[akka.typed.ActorRef[Nothing]]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An ActorRef is the identity or address of an Actor instance.</p><div class="fullcomment"><div class="comment cmt"><p>An ActorRef is the identity or address of an Actor instance. It is valid
+only during the Actor’s lifetime and allows messages to be sent to that
+Actor instance. Sending a message to an Actor that has terminated before
+receiving the message will lead to that message being discarded; such
+messages are delivered to the <a href="../actor/DeadLetter.html" class="extype" name="akka.actor.DeadLetter">akka.actor.DeadLetter</a> channel of the
+<a href="../event/EventStream.html" class="extype" name="akka.event.EventStream">akka.event.EventStream</a> on a best effort basis
+(i.e. this delivery is not reliable).
+</p></div></div>
+    </li><li name="akka.typed.ActorSystem" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ActorSystem[-T]extendsActorRef[T]"></a>
+      <a id="ActorSystem[-T]:ActorSystem[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ActorSystem.html"><span class="name">ActorSystem</span></a><span class="tparams">[<span name="T">-T</span>]</span><span class="result"> extends <a href="ActorRef.html" class="extype" name="akka.typed.ActorRef">ActorRef</a>[<span class="extype" name="akka.typed.ActorSystem.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@ActorSystem[-T]extendsActorRef[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An ActorSystem is home to a hierarchy of Actors.</p><div class="fullcomment"><div class="comment cmt"><p>An ActorSystem is home to a hierarchy of Actors. It is created using
+<a href="ActorSystem$.html" class="extype" name="akka.typed.ActorSystem">ActorSystem$</a> <code>apply</code> from a <span class="extype" name="Props">Props</span> object that describes the root
+Actor of this hierarchy and which will create all other Actors beneath it.
+A system also implements the <a href="ActorRef.html" class="extype" name="akka.typed.ActorRef">ActorRef</a> type, and sending a message to
+the system directs that message to the root Actor.
+</p></div></div>
+    </li><li name="akka.typed.Behavior" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="Behavior[T]extendsAnyRef"></a>
+      <a id="Behavior[T]:Behavior[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Behavior.html"><span class="name">Behavior</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@Behavior[T]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The behavior of an actor defines how it reacts to the messages that it
+receives.</p><div class="fullcomment"><div class="comment cmt"><p>The behavior of an actor defines how it reacts to the messages that it
+receives. The message may either be of the type that the Actor declares
+and which is part of the <a href="ActorRef.html" class="extype" name="akka.typed.ActorRef">ActorRef</a> signature, or it may be a system
+<a href="Signal.html" class="extype" name="akka.typed.Signal">Signal</a> that expresses a lifecycle event of either this actor or one of
+its child actors.</p><p>Behaviors can be formulated in a number of different ways, either by
+creating a derived class or by employing factory methods like the ones
+in the <a href="ScalaDSL$.html" class="extype" name="akka.typed.ScalaDSL">ScalaDSL$</a> object.
+</p></div></div>
+    </li><li name="akka.typed.BusLogging" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BusLoggingextendsLoggingAdapter"></a>
+      <a id="BusLogging:BusLogging"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="BusLogging.html"><span class="name">BusLogging</span></a><span class="result"> extends <a href="../event/LoggingAdapter.html" class="extype" name="akka.event.LoggingAdapter">LoggingAdapter</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@BusLoggingextendsLoggingAdapter" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt"><a href="../event/LoggingAdapter.html" class="extype" name="akka.event.LoggingAdapter">akka.event.LoggingAdapter</a> that publishes <a href="../event/Logging$$LogEvent.html" class="extype" name="akka.event.Logging.LogEvent">akka.event.Logging.LogEvent</a> to event stream.</p>
+    </li><li name="akka.typed.DeadLetter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DeadLetterextendsProductwithSerializable"></a>
+      <a id="DeadLetter:DeadLetter"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="DeadLetter.html"><span class="name">DeadLetter</span></a><span class="params">(<span name="msg">msg: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@DeadLetterextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Envelope for dead letters.</p>
+    </li><li name="akka.typed.DeathPactException" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DeathPactExceptionextendsRuntimeExceptionwithProductwithSerializable"></a>
+      <a id="DeathPactException:DeathPactException"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="DeathPactException.html"><span class="name">DeathPactException</span></a><span class="params">(<span name="ref">ref: <a href="ActorRef.html" class="extype" name="akka.typed.ActorRef">ActorRef</a>[<a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Nothing" class="extype" target="_top">Nothing</a>]</span>)</span><span class="result"> extends <span class="extype" name="scala.RuntimeException">RuntimeException</span> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@DeathPactExceptionextendsRuntimeExceptionwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Exception that an actor fails with if it does not handle a Terminated message.</p>
+    </li><li name="akka.typed.DefaultLogger" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DefaultLoggerextendsLoggerwithLogging.StdOutLogger"></a>
+      <a id="DefaultLogger:DefaultLogger"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="DefaultLogger.html"><span class="name">DefaultLogger</span></a><span class="result"> extends <a href="Logger.html" class="extype" name="akka.typed.Logger">Logger</a> with <a href="../event/Logging$$StdOutLogger.html" class="extype" name="akka.event.Logging.StdOutLogger">StdOutLogger</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@DefaultLoggerextendsLoggerwithLogging.StdOutLogger" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.typed.DefaultLoggingFilter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DefaultLoggingFilterextendsDefaultLoggingFilter"></a>
+      <a id="DefaultLoggingFilter:DefaultLoggingFilter"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="DefaultLoggingFilter.html"><span class="name">DefaultLoggingFilter</span></a><span class="result"> extends <a href="../event/DefaultLoggingFilter.html" class="extype" name="akka.event.DefaultLoggingFilter">event.DefaultLoggingFilter</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@DefaultLoggingFilterextendsDefaultLoggingFilter" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.typed.DeploymentConfig" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="DeploymentConfigextendsProductwithSerializable"></a>
+      <a id="DeploymentConfig:DeploymentConfig"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="DeploymentConfig.html"><span class="name">DeploymentConfig</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@DeploymentConfigextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Data structure for describing an actor’s deployment details like which
+executor to run it on.</p><div class="fullcomment"><div class="comment cmt"><p>Data structure for describing an actor’s deployment details like which
+executor to run it on. For each type of setting (e.g. <a href="DispatcherSelector.html" class="extype" name="akka.typed.DispatcherSelector">DispatcherSelector</a>
+or <a href="MailboxCapacity.html" class="extype" name="akka.typed.MailboxCapacity">MailboxCapacity</a>) the FIRST occurrence is used when creating the
+actor; this means that adding configuration using the &quot;with&quot; methods
+overrides what was configured previously.</p><p>Deliberately not sealed in order to emphasize future extensibility by the
+framework—this is not intended to be extended by user code.</p><p>The DeploymentConfig includes a <code>next</code> reference so that it can form an
+internally linked list. Traversal of this list stops when encountering the
+<a href="EmptyDeploymentConfig$.html" class="extype" name="akka.typed.EmptyDeploymentConfig">EmptyDeploymentConfig$</a> object.
+</p></div></div>
+    </li><li name="akka.typed.DispatcherDefault" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DispatcherDefaultextendsDeploymentConfigwithDispatcherSelectorwithProductwithSerializable"></a>
+      <a id="DispatcherDefault:DispatcherDefault"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="DispatcherDefault.html"><span class="name">DispatcherDefault</span></a><span class="params">(<span name="next">next: <a href="DeploymentConfig.html" class="extype" name="akka.typed.DeploymentConfig">DeploymentConfig</a></span>)</span><span class="result"> extends <a href="DeploymentConfig.html" class="extype" name="akka.typed.DeploymentConfig">DeploymentConfig</a> with <a href="DispatcherSelector.html" class="extype" name="akka.typed.DispatcherSelector">DispatcherSelector</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@DispatcherDefaultextendsDeploymentConfigwithDispatcherSelectorwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Use the <a href="ActorSystem.html" class="extype" name="akka.typed.ActorSystem">ActorSystem</a> default executor to run the actor.</p>
+    </li><li name="akka.typed.DispatcherFromConfig" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="DispatcherFromConfigextendsDeploymentConfigwithDispatcherSelectorwithProductwithSerializable"></a>
+      <a id="DispatcherFromConfig:DispatcherFromConfig"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="DispatcherFromConfig.html"><span class="name">DispatcherFromConfig</span></a><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="next">next: <a href="DeploymentConfig.html" class="extype" name="akka.typed.DeploymentConfig">DeploymentConfig</a> = <span class="symbol"><span class="name"><a href="EmptyDeploymentConfig$.html">EmptyDeploymentConfig</a></span></span></span>)</span><span class="result"> extends <a href="DeploymentConfig.html" class="extype" name="akka.typed.DeploymentConfig">DeploymentConfig</a> with <a href="DispatcherSelector.html" class="extype" name="akka.typed.DispatcherSelector">DispatcherSelector</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@DispatcherFromConfigextendsDeploymentConfigwithDispatcherSelectorwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Look up an executor definition in the <a href="ActorSystem.html" class="extype" name="akka.typed.ActorSystem">ActorSystem</a> configuration.</p><div class="fullcomment"><div class="comment cmt"><p>Look up an executor definition in the <a href="ActorSystem.html" class="extype" name="akka.typed.ActorSystem">ActorSystem</a> configuration.
+ExecutorServices created in this fashion will be shut down when the
+ActorSystem terminates.
+</p></div></div>
+    </li><li name="akka.typed.DispatcherFromExecutionContext" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="DispatcherFromExecutionContextextendsDeploymentConfigwithDispatcherSelectorwithProductwithSerializable"></a>
+      <a id="DispatcherFromExecutionContext:DispatcherFromExecutionContext"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="DispatcherFromExecutionContext.html"><span class="name">DispatcherFromExecutionContext</span></a><span class="params">(<span name="ec">ec: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.concurrent.ExecutionContext" class="extype" target="_top">ExecutionContext</a></span>, <span name="next">next: <a href="DeploymentConfig.html" class="extype" name="akka.typed.DeploymentConfig">DeploymentConfig</a> = <span class="symbol"><span class="name"><a href="EmptyDeploymentConfig$.html">EmptyDeploymentConfig</a></span></span></span>)</span><span class="result"> extends <a href="DeploymentConfig.html" class="extype" name="akka.typed.DeploymentConfig">DeploymentConfig</a> with <a href="DispatcherSelector.html" class="extype" name="akka.typed.DispatcherSelector">DispatcherSelector</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@DispatcherFromExecutionContextextendsDeploymentConfigwithDispatcherSelectorwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Directly use the given ExecutionContext whenever the actor needs to be run.</p><div class="fullcomment"><div class="comment cmt"><p>Directly use the given ExecutionContext whenever the actor needs to be run.
+No attempt will be made to shut down this thread pool, even if it is an
+instance of ExecutorService.
+</p></div></div>
+    </li><li name="akka.typed.DispatcherFromExecutor" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="DispatcherFromExecutorextendsDeploymentConfigwithDispatcherSelectorwithProductwithSerializable"></a>
+      <a id="DispatcherFromExecutor:DispatcherFromExecutor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="DispatcherFromExecutor.html"><span class="name">DispatcherFromExecutor</span></a><span class="params">(<span name="executor">executor: <span class="extype" name="java.util.concurrent.Executor">Executor</span></span>, <span name="next">next: <a href="DeploymentConfig.html" class="extype" name="akka.typed.DeploymentConfig">DeploymentConfig</a> = <span class="symbol"><span class="name"><a href="EmptyDeploymentConfig$.html">EmptyDeploymentConfig</a></span></span></span>)</span><span class="result"> extends <a href="DeploymentConfig.html" class="extype" name="akka.typed.DeploymentConfig">DeploymentConfig</a> with <a href="DispatcherSelector.html" class="extype" name="akka.typed.DispatcherSelector">DispatcherSelector</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@DispatcherFromExecutorextendsDeploymentConfigwithDispatcherSelectorwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Directly use the given Executor whenever the actor needs to be run.</p><div class="fullcomment"><div class="comment cmt"><p>Directly use the given Executor whenever the actor needs to be run.
+No attempt will be made to shut down this thread pool, even if it is an
+instance of ExecutorService.
+</p></div></div>
+    </li><li name="akka.typed.DispatcherSelector" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="DispatcherSelectorextendsDeploymentConfig"></a>
+      <a id="DispatcherSelector:DispatcherSelector"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="DispatcherSelector.html"><span class="name">DispatcherSelector</span></a><span class="result"> extends <a href="DeploymentConfig.html" class="extype" name="akka.typed.DeploymentConfig">DeploymentConfig</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@DispatcherSelectorextendsDeploymentConfig" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Subclasses of this type describe which thread pool shall be used to run
+the actor to which this configuration is applied.</p><div class="fullcomment"><div class="comment cmt"><p>Subclasses of this type describe which thread pool shall be used to run
+the actor to which this configuration is applied.</p><p>The default configuration if none of these options are present is to run
+the actor on the same executor as its parent.
+</p></div></div>
+    </li><li name="akka.typed.Dispatchers" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="DispatchersextendsAnyRef"></a>
+      <a id="Dispatchers:Dispatchers"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Dispatchers.html"><span class="name">Dispatchers</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@DispatchersextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An <a href="ActorSystem.html" class="extype" name="akka.typed.ActorSystem">ActorSystem</a> looks up all its thread pools via a Dispatchers instance.</p>
+    </li><li name="akka.typed.Dropped" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DroppedextendsProductwithSerializable"></a>
+      <a id="Dropped:Dropped"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Dropped.html"><span class="name">Dropped</span></a><span class="params">(<span name="msg">msg: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Any" class="extype" target="_top">Any</a></span>, <span name="recipient">recipient: <a href="ActorRef.html" class="extype" name="akka.typed.ActorRef">ActorRef</a>[<a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Nothing" class="extype" target="_top">Nothing</a>]</span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@DroppedextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Envelope that is published on the eventStream for every message that is
+dropped due to overfull queues.</p>
+    </li><li name="akka.typed.Effect" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="EffectextendsAnyRef"></a>
+      <a id="Effect:Effect"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Effect.html"><span class="name">Effect</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@EffectextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">All tracked effects must extend implement this type.</p><div class="fullcomment"><div class="comment cmt"><p>All tracked effects must extend implement this type. It is deliberately
+not sealed in order to allow extensions.
+</p></div></div>
+    </li><li name="akka.typed.EffectfulActorContext" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="EffectfulActorContext[T]extendsStubbedActorContext[T]"></a>
+      <a id="EffectfulActorContext[T]:EffectfulActorContext[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="EffectfulActorContext.html"><span class="name">EffectfulActorContext</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="StubbedActorContext.html" class="extype" name="akka.typed.StubbedActorContext">StubbedActorContext</a>[<span class="extype" name="akka.typed.EffectfulActorContext.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@EffectfulActorContext[T]extendsStubbedActorContext[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An <a href="ActorContext.html" class="extype" name="akka.typed.ActorContext">ActorContext</a> for testing purposes that records the effects performed
+on it and otherwise stubs them out like a <a href="StubbedActorContext.html" class="extype" name="akka.typed.StubbedActorContext">StubbedActorContext</a>.</p>
+    </li><li name="akka.typed.EventStream" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="EventStreamextendsAnyRef"></a>
+      <a id="EventStream:EventStream"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="EventStream.html"><span class="name">EventStream</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@EventStreamextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An EventStream allows local actors to register for certain message types, including
+their subtypes automatically.</p><div class="fullcomment"><div class="comment cmt"><p>An EventStream allows local actors to register for certain message types, including
+their subtypes automatically. Publishing events will broadcast them to all
+currently subscribed actors with matching subscriptions for the event type.</p><p>IMPORTANT NOTICE</p><p>This EventStream is local to the ActorSystem, it does not span a cluster. For
+disseminating messages across a cluster please refer to the DistributedPubSub
+module.
+</p></div></div>
+    </li><li name="akka.typed.Inbox" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Inbox[T]extendsAnyRef"></a>
+      <a id="Inbox[T]:Inbox[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Inbox.html"><span class="name">Inbox</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@Inbox[T]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.typed.Logger" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="LoggerextendsAnyRef"></a>
+      <a id="Logger:Logger"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Logger.html"><span class="name">Logger</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@LoggerextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.typed.MailboxCapacity" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="MailboxCapacityextendsDeploymentConfigwithProductwithSerializable"></a>
+      <a id="MailboxCapacity:MailboxCapacity"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="MailboxCapacity.html"><span class="name">MailboxCapacity</span></a><span class="params">(<span name="capacity">capacity: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Int" class="extype" target="_top">Int</a></span>, <span name="next">next: <a href="DeploymentConfig.html" class="extype" name="akka.typed.DeploymentConfig">DeploymentConfig</a> = <span class="symbol"><span class="name"><a href="EmptyDeploymentConfig$.html">EmptyDeploymentConfig</a></span></span></span>)</span><span class="result"> extends <a href="DeploymentConfig.html" class="extype" name="akka.typed.DeploymentConfig">DeploymentConfig</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@MailboxCapacityextendsDeploymentConfigwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Configure the maximum mailbox capacity for the actor.</p><div class="fullcomment"><div class="comment cmt"><p>Configure the maximum mailbox capacity for the actor. If more messages are
+enqueued because the actor does not process them quickly enough then further
+messages will be dropped.</p><p>The default mailbox capacity that is used when this option is not given is
+taken from the <code>akka.typed.mailbox-capacity</code> configuration setting.
+</p></div></div>
+    </li><li name="akka.typed.Settings" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="SettingsextendsAnyRef"></a>
+      <a id="Settings:Settings"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Settings.html"><span class="name">Settings</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@SettingsextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The configuration settings that were parsed from the config by an <a href="ActorSystem.html" class="extype" name="akka.typed.ActorSystem">ActorSystem</a>.</p><div class="fullcomment"><div class="comment cmt"><p>The configuration settings that were parsed from the config by an <a href="ActorSystem.html" class="extype" name="akka.typed.ActorSystem">ActorSystem</a>.
+This class is immutable.
+</p></div></div>
+    </li><li name="akka.typed.Signal" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="SignalextendsAnyRef"></a>
+      <a id="Signal:Signal"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Signal.html"><span class="name">Signal</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@SignalextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">System signals are notifications that are generated by the system and
+delivered to the Actor behavior in a reliable fashion (i.e.</p><div class="fullcomment"><div class="comment cmt"><p>System signals are notifications that are generated by the system and
+delivered to the Actor behavior in a reliable fashion (i.e. they are
+guaranteed to arrive in contrast to the at-most-once semantics of normal
+Actor messages).
+</p></div></div>
+    </li><li name="akka.typed.StubbedActorContext" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="StubbedActorContext[T]extendsActorContext[T]"></a>
+      <a id="StubbedActorContext[T]:StubbedActorContext[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="StubbedActorContext.html"><span class="name">StubbedActorContext</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="ActorContext.html" class="extype" name="akka.typed.ActorContext">ActorContext</a>[<span class="extype" name="akka.typed.StubbedActorContext.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@StubbedActorContext[T]extendsActorContext[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An <a href="ActorContext.html" class="extype" name="akka.typed.ActorContext">ActorContext</a> for synchronous execution of a <a href="Behavior.html" class="extype" name="akka.typed.Behavior">Behavior</a> that
+provides only stubs for the effects an Actor can perform and replaces
+created child Actors by a synchronous Inbox (see <code>Inbox.sync</code>).</p><div class="fullcomment"><div class="comment cmt"><p>An <a href="ActorContext.html" class="extype" name="akka.typed.ActorContext">ActorContext</a> for synchronous execution of a <a href="Behavior.html" class="extype" name="akka.typed.Behavior">Behavior</a> that
+provides only stubs for the effects an Actor can perform and replaces
+created child Actors by a synchronous Inbox (see <code>Inbox.sync</code>).</p><p>See <a href="EffectfulActorContext.html" class="extype" name="akka.typed.EffectfulActorContext">EffectfulActorContext</a> for more advanced uses.
+</p></div></div>
+    </li><li name="akka.typed.Terminated" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="TerminatedextendsSignalwithProductwithSerializable"></a>
+      <a id="Terminated:Terminated"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Terminated.html"><span class="name">Terminated</span></a><span class="params">(<span name="ref">ref: <a href="ActorRef.html" class="extype" name="akka.typed.ActorRef">ActorRef</a>[<a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Nothing" class="extype" target="_top">Nothing</a>]</span>)</span><span class="params">(<span name="failed">failed: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result"> extends <a href="Signal.html" class="extype" name="akka.typed.Signal">Signal</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@TerminatedextendsSignalwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Lifecycle signal that is fired when an Actor that was watched has terminated.</p><div class="fullcomment"><div class="comment cmt"><p>Lifecycle signal that is fired when an Actor that was watched has terminated.
+Watching is performed by invoking the
+<a href="ActorContext.html" class="extype" name="akka.typed.ActorContext">akka.typed.ActorContext</a> <code>watch</code> method. The DeathWatch service is
+idempotent, meaning that registering twice has the same effect as registering
+once. Registration does not need to happen before the Actor terminates, a
+notification is guaranteed to arrive after both registration and termination
+have occurred. Termination of a remote Actor can also be effected by declaring
+the Actor’s home system as failed (e.g. as a result of being unreachable).
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@SerialVersionUID</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="akka.typed.ActorRef" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ActorRef"></a>
+      <a id="ActorRef:ActorRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ActorRef$.html"><span class="name">ActorRef</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@ActorRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.typed.ActorSystem" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ActorSystem"></a>
+      <a id="ActorSystem:ActorSystem"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ActorSystem$.html"><span class="name">ActorSystem</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@ActorSystem" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.typed.AskPattern" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="AskPattern"></a>
+      <a id="AskPattern:AskPattern"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="AskPattern$.html"><span class="name">AskPattern</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@AskPattern" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The ask-pattern implements the initiator side of a request–reply protocol.</p><div class="fullcomment"><div class="comment cmt"><p>The ask-pattern implements the initiator side of a request–reply protocol.
+The party that asks may be within or without an Actor, since the
+implementation will fabricate a (hidden) <a href="ActorRef.html" class="extype" name="akka.typed.ActorRef">ActorRef</a> that is bound to a
+<a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.concurrent.Promise" class="extype" target="_top">scala.concurrent.Promise</a>. This ActorRef will need to be injected in the
+message that is sent to the target Actor in order to function as a reply-to
+address, therefore the argument to the ask / <code>?</code>
+operator is not the message itself but a function that given the reply-to
+address will create the message.</p><pre><span class="kw">case</span> <span class="kw">class</span> Request(msg: <span class="std">String</span>, replyTo: ActorRef[Reply])
+<span class="kw">case</span> <span class="kw">class</span> Reply(msg: <span class="std">String</span>)
+
+<span class="kw">implicit</span> <span class="kw">val</span> timeout = Timeout(<span class="num">3.</span>seconds)
+<span class="kw">val</span> target: ActorRef[Request] = ...
+<span class="kw">val</span> f: Future[Reply] = target ? (Request(<span class="lit">"hello"</span>, _))</pre></div></div>
+    </li><li name="akka.typed.Behavior" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Behavior"></a>
+      <a id="Behavior:Behavior"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Behavior$.html"><span class="name">Behavior</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@Behavior" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.typed.DispatcherDefault" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DispatcherDefault"></a>
+      <a id="DispatcherDefault:DispatcherDefault"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="DispatcherDefault$.html"><span class="name">DispatcherDefault</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@DispatcherDefault" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.typed.Dispatchers" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Dispatchers"></a>
+      <a id="Dispatchers:Dispatchers"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Dispatchers$.html"><span class="name">Dispatchers</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@Dispatchers" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.typed.Effect" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Effect"></a>
+      <a id="Effect:Effect"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Effect$.html"><span class="name">Effect</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@Effect" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.typed.EmptyDeploymentConfig" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="EmptyDeploymentConfig"></a>
+      <a id="EmptyDeploymentConfig:EmptyDeploymentConfig"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="EmptyDeploymentConfig$.html"><span class="name">EmptyDeploymentConfig</span></a><span class="result"> extends <a href="DeploymentConfig.html" class="extype" name="akka.typed.DeploymentConfig">DeploymentConfig</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@EmptyDeploymentConfig" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The empty configuration node, used as a terminator for the internally linked
+list of each DeploymentConfig.</p>
+    </li><li name="akka.typed.Failed" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Failed"></a>
+      <a id="Failed:Failed"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Failed$.html"><span class="name">Failed</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@Failed" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">FIXME correct this documentation when the Restarter behavior has been implemented</p><div class="fullcomment"><div class="comment cmt"><p>FIXME correct this documentation when the Restarter behavior has been implemented</p><p>The parent of an actor decides upon the fate of a failed child actor by
+encapsulating its next behavior in one of the four wrappers defined within
+this class.</p><p>Failure responses have an associated precedence that ranks them, which is in
+descending importance:</p><ul><li>Escalate</li><li>Stop</li><li>Restart</li><li>Resume
+</li></ul></div></div>
+    </li><li name="akka.typed.Inbox" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Inbox"></a>
+      <a id="Inbox:Inbox"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Inbox$.html"><span class="name">Inbox</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@Inbox" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.typed.Logger" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Logger"></a>
+      <a id="Logger:Logger"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Logger$.html"><span class="name">Logger</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@Logger" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.typed.PostStop" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="PostStop"></a>
+      <a id="PostStop:PostStop"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="PostStop$.html"><span class="name">PostStop</span></a><span class="result"> extends <a href="Signal.html" class="extype" name="akka.typed.Signal">Signal</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@PostStop" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Lifecycle signal that is fired after this actor and all its child actors
+(transitively) have terminated.</p><div class="fullcomment"><div class="comment cmt"><p>Lifecycle signal that is fired after this actor and all its child actors
+(transitively) have terminated. The <a href="Terminated.html" class="extype" name="akka.typed.Terminated">Terminated</a> signal is only sent to
+registered watchers after this signal has been processed.</p><p><b>IMPORTANT NOTE:</b> if the actor terminated by switching to the
+<code>Stopped</code> behavior then this signal will be ignored (i.e. the
+Stopped behavior will do nothing in reaction to it).
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@SerialVersionUID</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="akka.typed.PreRestart" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="PreRestart"></a>
+      <a id="PreRestart:PreRestart"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="PreRestart$.html"><span class="name">PreRestart</span></a><span class="result"> extends <a href="Signal.html" class="extype" name="akka.typed.Signal">Signal</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@PreRestart" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Lifecycle signal that is fired upon restart of the Actor before replacing
+the behavior with the fresh one (i.e.</p><div class="fullcomment"><div class="comment cmt"><p>Lifecycle signal that is fired upon restart of the Actor before replacing
+the behavior with the fresh one (i.e. this signal is received within the
+behavior that failed).
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@SerialVersionUID</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="akka.typed.PreStart" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="PreStart"></a>
+      <a id="PreStart:PreStart"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="PreStart$.html"><span class="name">PreStart</span></a><span class="result"> extends <a href="Signal.html" class="extype" name="akka.typed.Signal">Signal</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@PreStart" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Lifecycle signal that is fired upon creation of the Actor.</p><div class="fullcomment"><div class="comment cmt"><p>Lifecycle signal that is fired upon creation of the Actor. This will be the
+first message that the actor processes.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@SerialVersionUID</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="akka.typed.ScalaDSL" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ScalaDSL"></a>
+      <a id="ScalaDSL:ScalaDSL"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ScalaDSL$.html"><span class="name">ScalaDSL</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@ScalaDSL" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This object holds several behavior factories and combinators that can be
+used to construct Behavior instances.</p>
+    </li><li name="akka.typed.adapter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="adapter"></a>
+      <a id="adapter:adapter"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="adapter/package.html"><span class="name">adapter</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@adapter" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.typed.internal" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="internal"></a>
+      <a id="internal:internal"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="internal/package.html"><span class="name">internal</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@internal" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.typed.patterns" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="patterns"></a>
+      <a id="patterns:patterns"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="patterns/package.html"><span class="name">patterns</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#akka.typed.package@patterns" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Any" class="extype" target="_top">Any</a></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>

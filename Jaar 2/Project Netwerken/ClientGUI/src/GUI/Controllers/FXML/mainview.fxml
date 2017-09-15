@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane style="-fx-background-color: #1d232d;" stylesheets="@../../style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Pane fx:id="channelpane" layoutX="307.0" layoutY="23.0" prefHeight="683.0" prefWidth="564.0" visible="false">
+            <children>
+                <ListView fx:id="chatList" layoutY="98.0" prefHeight="475.0" prefWidth="564.0" style="-fx-background-color: #1d232d;" styleClass="chatlist" />
+                <TextField fx:id="userNameToSendTo" editable="false" prefHeight="68.0" prefWidth="564.0" style="-fx-text-fill: #ff5a53; -fx-background-color: #1d232d;" text="Name will come in here">
+                    <font>
+                        <Font size="29.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="message" alignment="TOP_LEFT" layoutY="580.0" onAction="#onEnter" prefHeight="87.0" prefWidth="564.0" style="-fx-border-color: #353e53; -fx-border-width: 2 2 2 2; -fx-background-color: #1d232d;-fx-text-fill: #fff;">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </TextField>
+                <Button fx:id="sendMessageButton" layoutX="446.0" layoutY="632.0" mnemonicParsing="false" onAction="#sendMessage" onTouchPressed="#sendMessage" prefHeight="31.0" prefWidth="118.0" style="-fx-border-color: #353e53; -fx-border-width: 2; -fx-background-color: #28303b;-fx-border-radius: 2 0 0 0; -fx-text-fill: #eee;" text="Verzenden" />
+                <Button layoutY="68.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="564.0" style="-fx-background-color: #ff5a53; -fx-border-radius: 0; -fx-background-radius: 0;" styleClass="addfriendbutton" text="You have not added this person as your friend yet. Click here!" textFill="WHITE" />
+            </children>
+        </Pane>
+        <ListView fx:id="friendsList" layoutY="45.0" maxHeight="705.0" maxWidth="274.0" minHeight="336.0" minWidth="274.0" prefHeight="336.0" prefWidth="274.0" style="-fx-background-color: #353e53;" />
+        <Pane layoutX="916.0" layoutY="1.0" maxHeight="750.0" minHeight="750.0" prefHeight="750.0" prefWidth="284.0">
+            <children>
+                <Button fx:id="adduser" alignment="CENTER" contentDisplay="CENTER" layoutX="72.0" layoutY="262.0" mnemonicParsing="false" onAction="#openAddUserPane" prefHeight="52.0" prefWidth="212.0" style="-fx-background-color: #1d232d; -fx-background-radius: 0; -fx-border-width: 0 0 2 0;" styleClass="addbuttonclass" text="User toevoegen">
+                    <font>
+                        <Font size="22.0" />
+                    </font>
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                </Button>
+                <Button fx:id="addgroup" alignment="CENTER" contentDisplay="CENTER" layoutX="72.0" layoutY="346.0" mnemonicParsing="false" onAction="#openAddGroupPane" prefHeight="54.0" prefWidth="212.0" style="-fx-background-color: #1d232d; -fx-background-radius: 0; -fx-border-width: 0 0 2 0;" styleClass="addbuttonclass" text="Groep toevoegen">
+                    <font>
+                        <Font size="22.0" />
+                    </font>
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                </Button>
+                <Button fx:id="addNode" alignment="CENTER" contentDisplay="CENTER" layoutX="72.0" layoutY="434.0" mnemonicParsing="false" onAction="#openAddNodePane" prefHeight="54.0" prefWidth="212.0" style="-fx-background-color: #1d232d; -fx-background-radius: 0; -fx-border-width: 0 0 2 0;" styleClass="addbuttonclass" text="Node toevoegen">
+                    <font>
+                        <Font size="22.0" />
+                    </font>
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                </Button>
+            </children>
+        </Pane>
+        <Button fx:id="friendsButton" mnemonicParsing="false" onAction="#friendsVisible" prefHeight="44.0" prefWidth="130.0" style="-fx-background-color: #353e53; -fx-background-radius: 0; -fx-border-color: transparent; -fx-border-width: 0;" text="Vrienden" textFill="WHITE">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Button>
+        <Button fx:id="onlineButton" layoutX="129.0" mnemonicParsing="false" onAction="#onlineVisible" prefHeight="44.0" prefWidth="145.0" style="-fx-background-color: #596f8b; -fx-background-radius: 0; -fx-border-color: transparent; -fx-border-width: 0;" text="Online" textFill="WHITE">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Button>
+        <ListView fx:id="onlineList" layoutY="45.0" maxHeight="705.0" maxWidth="274.0" minHeight="336.0" minWidth="274.0" prefHeight="336.0" prefWidth="274.0" style="-fx-background-color: #353e53;" />
+        <Pane fx:id="infopane" layoutX="307.0" layoutY="29.0" maxWidth="564.0" prefHeight="627.0" prefWidth="564.0" style="-fx-background-color: #1d232d;">
+            <children>
+                <Text fill="WHITE" layoutX="234.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Info">
+                    <font>
+                        <Font size="55.0" />
+                    </font>
+                </Text>
+                <TextFlow layoutX="39.0" layoutY="143.0" prefHeight="35.0" prefWidth="506.0" textAlignment="CENTER">
+                    <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Deze chat applicatie is ontwikkel door team EHIVSAB-3." wrappingWidth="220.6708984375">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </TextFlow>
+                <TextFlow layoutX="41.0" layoutY="186.0" prefHeight="42.0" prefWidth="506.0" textAlignment="CENTER">
+                    <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Scrum masters: Stijn Klarenbeek en Frank Grevelink" textAlignment="CENTER">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </TextFlow>
+                <TextFlow layoutX="29.0" layoutY="256.0" maxWidth="506.0" minWidth="506.0" prefWidth="506.0" textAlignment="CENTER">
+                    <children>
+                        <Text fill="#b8b8b8" strokeType="OUTSIDE" strokeWidth="0.0" text="Als u op de 'Vrienden' tab klikt, ziet u, uw vrienden binnen het chat systeem. Als u op de 'Online' tab klikt ziet u de mensen die online zijn, deze wordt eidere twee minuten geupdate. Als u onder 'Uw nodes' op '+Voeg toe' klikt voegt u nodes toe waardoor uw berichten gaan, als u dit niet doet wordt er zelf een pad gegenereerd!" textAlignment="CENTER">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </TextFlow>
+            </children>
+        </Pane>
+        <Pane fx:id="addgrouppane" layoutX="301.0" layoutY="29.0" opacity="0.0" prefHeight="671.0" prefWidth="899.0" style="-fx-background-color: #1d232d;" visible="false">
+            <children>
+                <Button contentDisplay="TOP" layoutX="14.0" mnemonicParsing="false" onAction="#removeGroupPane" style="-fx-padding: 0; -fx-background-color: transparent;" text="X" textFill="WHITE">
+                    <font>
+                        <Font size="37.0" />
+                    </font>
+                </Button>
+                <TextField fx:id="groupname" layoutX="318.0" layoutY="146.0" prefHeight="51.0" prefWidth="239.0" promptText="Groupname" />
+                <ListView fx:id="listToAddToGroup" layoutX="78.0" layoutY="247.0" prefHeight="315.0" prefWidth="200.0" style="-fx-background-color: #28303e;" styleClass="listToAddToGroup" />
+                <ListView fx:id="newUsersList" layoutX="591.0" layoutY="247.0" prefHeight="315.0" prefWidth="200.0" style="-fx-background-color: #28303e;" />
+                <TextFlow layoutX="347.0" layoutY="253.0" />
+                <Button layoutX="359.0" layoutY="538.0" mnemonicParsing="false" onAction="#createGroup" style="-fx-background-radius: 0; -fx-background-color: #28303e; -fx-text-fill: #ff5a53; -fx-border-width: 2; -fx-border-color: #ff5a53;" styleClass="createGroupButton" text="Create group">
+                    <font>
+                        <Font size="22.0" />
+                    </font>
+                </Button>
+                <Text fill="WHITE" layoutX="362.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Click to add">
+                    <font>
+                        <Font size="29.0" />
+                    </font>
+                </Text>
+                <Text fill="WHITE" layoutX="277.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create a new group">
+                    <font>
+                        <Font size="37.0" />
+                    </font>
+                </Text>
+            </children>
+        </Pane>
+        <Pane fx:id="adduserpane" layoutX="301.0" layoutY="29.0" opacity="0.0" prefHeight="671.0" prefWidth="899.0" style="-fx-background-color: #1d232d;" visible="false">
+            <children>
+                <Button contentDisplay="TOP" layoutX="14.0" mnemonicParsing="false" onAction="#removeUserPane" style="-fx-padding: 0; -fx-background-color: transparent;" text="X" textFill="WHITE">
+                    <font>
+                        <Font size="37.0" />
+                    </font>
+                </Button>
+                <TextField fx:id="usernameToAdd" layoutX="330.0" layoutY="266.0" prefHeight="51.0" prefWidth="239.0" promptText="Username" />
+                <TextFlow layoutX="347.0" layoutY="253.0" />
+                <Button layoutX="387.0" layoutY="455.0" mnemonicParsing="false" onAction="#addUser" style="-fx-background-radius: 0; -fx-background-color: #28303e; -fx-text-fill: #ff5a53; -fx-border-width: 2; -fx-border-color: #ff5a53;" styleClass="addUserButton" text="Add User">
+                    <font>
+                        <Font size="22.0" />
+                    </font>
+                </Button>
+                <Text fill="WHITE" layoutX="376.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add user">
+                    <font>
+                        <Font size="37.0" />
+                    </font>
+                </Text>
+            <TextField fx:id="ipFromUser" layoutX="330.0" layoutY="341.0" prefHeight="51.0" prefWidth="239.0" promptText="IP" />
+            </children>
+        </Pane>
+
+        <Pane fx:id="addnodepane" layoutX="301.0" layoutY="29.0" opacity="0.0" prefHeight="671.0" prefWidth="899.0" style="-fx-background-color: #1d232d;" visible="false">
+            <children>
+                <Button contentDisplay="TOP" layoutX="14.0" mnemonicParsing="false" onAction="#removeNodePane" style="-fx-padding: 0; -fx-background-color: transparent;" text="X" textFill="WHITE">
+                    <font>
+                        <Font size="37.0" />
+                    </font>
+                </Button>
+                <TextField fx:id="nodeToAdd" layoutX="330.0" layoutY="143.0" prefHeight="51.0" prefWidth="239.0" promptText="Node ip" />
+                <TextFlow layoutX="347.0" layoutY="253.0" />
+                <Button layoutX="382.0" layoutY="531.0" mnemonicParsing="false" onAction="#createGroup" style="-fx-background-radius: 0; -fx-background-color: #28303e; -fx-text-fill: #ff5a53; -fx-border-width: 2; -fx-border-color: #ff5a53;" styleClass="addNodeButton" text="Add Node">
+                    <font>
+                        <Font size="22.0" />
+                    </font>
+                </Button>
+                <Text fill="WHITE" layoutX="365.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Node">
+                    <font>
+                        <Font size="37.0" />
+                    </font>
+                </Text>
+            </children>
+        </Pane>
+        <Label alignment="CENTER" layoutY="381.0" prefHeight="55.0" prefWidth="274.0" style="-fx-background-color: #282e3b;" text="Groepen" textFill="WHITE">
+            <font>
+                <Font size="24.0" />
+            </font>
+            <padding>
+                <Insets bottom="10.0" top="10.0" />
+            </padding>
+        </Label>
+        <ListView fx:id="grouplist" layoutY="436.0" prefHeight="315.0" prefWidth="274.0" style="-fx-background-color: #353e53;" />
+    </children>
+</Pane>

@@ -1,0 +1,67 @@
+// This file contains the doxygen code for this assignment
+/** \mainpage
+
+<h2>The Chinese Marriage</h2>
+
+<p>Finish the Person and Marriage classes
+	(See the TODO lines in Person.h, Person.cc, Marriage.h and Marriage.cc).</p>
+<p>HINT: Study <a target='faq'
+	href='https://isocpp.org/wiki/faq/ctors'>[10]
+	constructors</a> upto and especially <a target='faq'
+	href='https://isocpp.org/wiki/faq/ctors#init-lists'>[10.6]
+	initializer list</a>.
+	<br>You may also be interested in
+	<a target='cpp'
+	href='http://en.cppreference.com/w/cpp/language/enum'>enumerations</a>
+	and <a target='faq'
+	href='https://isocpp.org/wiki/faq/newbie#enumeration-is-its-own-type'>[29.19]
+	enum is int?</a>
+	<br>Likewise
+	<a target='faq'
+	href='https://isocpp.org/wiki/faq/ctors#explicit-ctors'>[10.22]
+	explicit constructors</a>
+	or <a target='cpp'
+	href='http://en.cppreference.com/w/cpp/language/explicit'>the explicit specifier</a>
+	and <a target='cpp'
+	href='http://en.cppreference.com/w/cpp/language/implicit_cast'>implicit cast</a>.
+	</p>
+
+<p>Of people we keep the \e name, \e year of birth and \e gender.
+Two people get married in a certain year.
+The marriage partners have to be at least 18 years old in the year
+they get married.</p>
+
+<p>Because of the 1-child policy in China a marriage
+may have no more then one registered child.
+Naturally, when we register the child of a marriage,
+the child should not be born earlier then the year of that marriage.</p>
+
+<p>A partial implementation is given, including two testcases
+using a simple JUnit3 like UnitTest baseclass.</p>
+
+<p>Complete the classes Person and Marriage.
+Add the needed attributes and finish the methods.</p>
+
+<p>Also, add sensible pre- and post-conditions to the methods
+using the given asserts.h macros.
+Use your common sense in adding the sanity checks (e.g. require(expr)).</p>
+
+@code
+// example: how to use the asserts macros
+
+#include "asserts.h"	// "import" the definition of require, check and ensure.
+
+void doIt(int n)
+{
+    require(n > 0); // parameter n must be positive and non-zero
+    int m = -n;
+    check(m < 0);  // this m should be negative and non-zero
+    int x = -m;
+    ensure(x == n);	// now x and n shall be the same
+}
+@endcode
+
+
+<p><br></p>
+
+ */

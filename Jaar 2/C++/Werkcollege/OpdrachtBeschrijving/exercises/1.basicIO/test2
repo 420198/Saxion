@@ -1,0 +1,216 @@
+# doxyfile 1.4.4
+#---------------------------------------------------------------------------
+# project related configuration options
+#---------------------------------------------------------------------------
+project_name           = "c++ fileconvert voorbeeld"
+project_number         = 1.1
+output_directory       = /home/akk/school/kw2.2/cpp/praktikum/text2xml/
+create_subdirs         = no
+output_language        = english
+brief_member_desc      = yes
+repeat_brief           = yes
+always_detailed_sec    = yes
+inline_inherited_memb  = yes
+full_path_names        = yes
+strip_from_path        = /home/akk/school/kw2.2/cpp/praktikum/text2xml/
+strip_from_inc_path    = 
+short_names            = no
+javadoc_autobrief      = yes
+multiline_cpp_is_brief = no
+inherit_docs           = yes
+distribute_group_doc   = no
+separate_member_pages  = no
+tab_size               = 4
+aliases                = 
+optimize_output_for_c  = no
+optimize_output_java   = no
+subgrouping            = yes
+#---------------------------------------------------------------------------
+# build related configuration options
+#---------------------------------------------------------------------------
+extract_all            = no
+extract_private        = no
+extract_static         = yes
+extract_local_classes  = yes
+extract_local_methods  = yes
+hide_undoc_members     = yes
+hide_undoc_classes     = yes
+hide_friend_compounds  = yes
+hide_in_body_docs      = no
+internal_docs          = no
+case_sense_names       = yes
+hide_scope_names       = no
+show_include_files     = yes
+inline_info            = yes
+sort_member_docs       = yes
+sort_brief_docs        = no
+sort_by_scope_name     = no
+generate_todolist      = yes
+generate_testlist      = yes
+generate_buglist       = yes
+generate_deprecatedlist= yes
+enabled_sections       = 
+max_initializer_lines  = 30
+show_used_files        = yes
+show_directories       = yes
+file_version_filter    = 
+#---------------------------------------------------------------------------
+# configuration options related to warning and progress messages
+#---------------------------------------------------------------------------
+quiet                  = no
+warnings               = yes
+warn_if_undocumented   = yes
+warn_if_doc_error      = yes
+warn_no_paramdoc       = no
+warn_format            = "$file:$line: $text"
+warn_logfile           = 
+#---------------------------------------------------------------------------
+# configuration options related to the input files
+#---------------------------------------------------------------------------
+input                  = /home/akk/school/kw2.2/cpp/praktikum/text2xml/
+file_patterns          = *.h *.cc *.cpp *.tcc
+recursive              = no
+exclude                = 
+exclude_symlinks       = no
+exclude_patterns       = 
+example_path           = example
+example_patterns       = *.c *.cc *.tcc *.cpp *.h
+example_recursive      = no
+image_path             = 
+input_filter           = 
+filter_patterns        = 
+filter_source_files    = no
+#---------------------------------------------------------------------------
+# configuration options related to source browsing
+#---------------------------------------------------------------------------
+source_browser         = no
+inline_sources         = no
+strip_code_comments    = yes
+referenced_by_relation = no
+references_relation    = no
+use_htags              = no
+verbatim_headers       = no
+#---------------------------------------------------------------------------
+# configuration options related to the alphabetical class index
+#---------------------------------------------------------------------------
+alphabetical_index     = no
+cols_in_alpha_index    = 5
+ignore_prefix          = 
+#---------------------------------------------------------------------------
+# configuration options related to the html output
+#---------------------------------------------------------------------------
+generate_html          = yes
+html_output            = docs
+html_file_extension    = .html
+html_header            = 
+html_footer            = 
+html_stylesheet        = 
+html_align_members     = yes
+generate_htmlhelp      = no
+chm_file               = 
+hhc_location           = 
+generate_chi           = no
+binary_toc             = no
+toc_expand             = no
+disable_index          = no
+enum_values_per_line   = 4
+generate_treeview      = yes
+treeview_width         = 250
+#---------------------------------------------------------------------------
+# configuration options related to the latex output
+#---------------------------------------------------------------------------
+generate_latex         = no
+latex_output           = latex
+latex_cmd_name         = latex
+makeindex_cmd_name     = makeindex
+compact_latex          = no
+paper_type             = a4wide
+extra_packages         = 
+latex_header           = 
+pdf_hyperlinks         = no
+use_pdflatex           = no
+latex_batchmode        = no
+latex_hide_indices     = no
+#---------------------------------------------------------------------------
+# configuration options related to the rtf output
+#---------------------------------------------------------------------------
+generate_rtf           = no
+rtf_output             = rtf
+compact_rtf            = no
+rtf_hyperlinks         = no
+rtf_stylesheet_file    = 
+rtf_extensions_file    = 
+#---------------------------------------------------------------------------
+# configuration options related to the man page output
+#---------------------------------------------------------------------------
+generate_man           = no
+man_output             = man
+man_extension          = .3
+man_links              = no
+#---------------------------------------------------------------------------
+# configuration options related to the xml output
+#---------------------------------------------------------------------------
+generate_xml           = no
+xml_output             = xml
+xml_schema             = 
+xml_dtd                = 
+xml_programlisting     = yes
+#---------------------------------------------------------------------------
+# configuration options for the autogen definitions output
+#---------------------------------------------------------------------------
+generate_autogen_def   = no
+#---------------------------------------------------------------------------
+# configuration options related to the perl module output
+#---------------------------------------------------------------------------
+generate_perlmod       = no
+perlmod_latex          = no
+perlmod_pretty         = yes
+perlmod_makevar_prefix = 
+#---------------------------------------------------------------------------
+# configuration options related to the preprocessor   
+#---------------------------------------------------------------------------
+enable_preprocessing   = yes
+macro_expansion        = no
+expand_only_predef     = no
+search_includes        = yes
+include_path           = 
+include_file_patterns  = 
+predefined             = 
+expand_as_defined      = 
+skip_function_macros   = yes
+#---------------------------------------------------------------------------
+# configuration::additions related to external references   
+#---------------------------------------------------------------------------
+tagfiles               = 
+generate_tagfile       = 
+allexternals           = no
+external_groups        = yes
+perl_path              = /usr/bin/perl
+#---------------------------------------------------------------------------
+# configuration options related to the dot tool   
+#---------------------------------------------------------------------------
+class_diagrams         = yes
+hide_undoc_relations   = yes
+have_dot               = no
+class_graph            = yes
+collaboration_graph    = yes
+group_graphs           = yes
+uml_look               = no
+template_relations     = no
+include_graph          = yes
+included_by_graph      = yes
+call_graph             = no
+graphical_hierarchy    = yes
+directory_graph        = yes
+dot_image_format       = png
+dot_path               = 
+dotfile_dirs           = 
+max_dot_graph_depth    = 1000
+dot_transparent        = no
+dot_multi_targets      = no
+generate_legend        = yes
+dot_cleanup            = yes
+#---------------------------------------------------------------------------
+# configuration::additions related to the search engine   
+#---------------------------------------------------------------------------
+searchengine           = no

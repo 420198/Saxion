@@ -1,0 +1,93 @@
+.class public WorkingFile2
+.super java/lang/Object
+
+.method public <init>()V
+	.limit stack 5
+	.limit locals 1
+	aload_0
+	invokespecial java/lang/Object/<init>()V
+	return
+.end method
+
+.method public static main([Ljava/lang/String;)V
+	.limit stack 5
+	.limit locals 1
+
+	aload 0
+
+	new WorkingFile2
+	dup
+	invokespecial WorkingFile2/<init>()V
+	invokespecial WorkingFile2/startpunt()V
+
+	return
+.end method
+
+.method public startpunt()V
+	.limit stack 15
+	.limit locals 3
+
+	aload 0
+	ldc "Dit is een leuk praatje"
+	bipush 30
+	invokevirtual WorkingFile2/ikPraat(Ljava/lang/String;I)V
+	ldc ""
+	astore 1
+	ldc ""
+	astore 2
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	ldc "\r\nWat is zijn naam"
+	invokevirtual java/io/PrintStream/println(Ljava/lang/String;)V
+	aload 1
+	new java/util/Scanner
+	dup
+	getstatic java/lang/System/in Ljava/io/InputStream;
+	invokespecial java/util/Scanner/<init>(Ljava/io/InputStream;)V
+	invokevirtual java/util/Scanner/nextLine()Ljava/lang/String;
+	astore 1
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	ldc "\r\nNaam is "
+	invokevirtual java/io/PrintStream/println(Ljava/lang/String;)V
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	aload 1
+	invokevirtual java/io/PrintStream/println(Ljava/lang/String;)V
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	ldc "\r\nWat is zijn naam"
+	invokevirtual java/io/PrintStream/println(Ljava/lang/String;)V
+	aload 2
+	new java/util/Scanner
+	dup
+	getstatic java/lang/System/in Ljava/io/InputStream;
+	invokespecial java/util/Scanner/<init>(Ljava/io/InputStream;)V
+	invokevirtual java/util/Scanner/nextLine()Ljava/lang/String;
+	astore 2
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	ldc "\r\nNaam is "
+	invokevirtual java/io/PrintStream/println(Ljava/lang/String;)V
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	aload 2
+	invokevirtual java/io/PrintStream/println(Ljava/lang/String;)V
+
+	return
+.end method
+
+.method public ikPraat(Ljava/lang/String;I)V
+	.limit stack 9
+	.limit locals 4
+
+	bipush 0
+	istore 3
+	zolang_1:
+	iload 3
+	iload 2
+	if_icmpge zolang_1_end
+	getstatic java/lang/System/out Ljava/io/PrintStream;
+	aload 1
+	invokevirtual java/io/PrintStream/println(Ljava/lang/String;)V
+	iinc 3 1
+	goto zolang_1
+	zolang_1_end:
+
+	return
+.end method
+

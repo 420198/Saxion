@@ -1,0 +1,89 @@
+// This file contains the doxygen code for this assignment
+/** \mainpage
+
+<h2>About sizes</h2>
+
+<p>This time you'll have to extend the given program a bit more.</p>
+
+<p>In this task we look at the sizes of various <a target='cpp'
+	href='http://en.cppreference.com/w/cpp/language/types'>C++ built-in types</a>
+	and derived types.</p>
+
+<p>Extend this simple program that reports the size in bytes,
+	i.e. how much computer memory each object would cost, of various data-types.
+	Some of the results may not be what you might have expected initially.</p>
+
+<p>Note:
+The '<tt style='color:green'>sizeof</tt>' operation looks at the
+\e data-type of an expression,
+so there is no need to define variables of that type.
+You can simply ask for, for instance, <tt>sizeof(int)</tt>.</p>
+
+<p>Your program should look at least at:</p>
+<ul>
+    <li>five of the numeric \e built-in \e types.
+	    Additionally you should also look at '<tt>sizeof(bool)</tt>'
+			and '<tt>sizeof(void)</tt>'.
+		Do you notice the warning the compiler gives you?
+		Do you understand why you get that warning
+			and how your compiler handles that situation.
+    <li>a few 'pointer' types, including
+			the <tt style='color:green'>nullptr</tt>,
+		and pointers to pointers as in
+			<tt style='color:green'>int**</tt>.
+		<br> Hint: copy-paste the lines for built-in types,
+			and then add a '*', e.g. <tt>sizeof(int*)</tt>.
+	<li>a few 'references' like
+			<tt style='color:green'>int&amp;</tt>.
+		<br> Hint: copy-paste the lines for pointers,
+			and then replace the rightmost '*' with a '&'.
+		<br> Compare the results with those from the two
+			previous groups.
+    <li>arrays with a different number of elements of the same type
+		(e.g. <tt style='color:green'>char[5]</tt>).
+		and <tt style='color:green'>int[5]</tt>),
+		and arrays which have the same number of elements,
+		but this time the elements are of different types
+		(e.g.  <tt style='color:green'>char[3]</tt>
+		and <tt style='color:green'>int[3]</tt>).
+		<br> Given how much computer memory these need,
+			can you reason whether a C++ array is an
+			object as in java or not?
+    <li>various strings e.g. instances of
+		<a target='cpp'
+		href='http://en.cppreference.com/w/cpp/string/basic_string'>std::string</a>
+		as in
+		<tt style='color:green'>std::string("this a std::string");</tt>
+		(try an empty string and a few of different length).
+    <li>various C-string constants i.e. text between double quotes
+		e.g. <tt style='color:green'>"this is a string constant"</tt>.
+		Try an empty string and a few of different length.
+		The results should be differently from the previous kinds of strings.
+		<br> Can you explain the differences?
+		<br> Can you figure out the underlying data-type of a std::string object ?
+		<br> Can you figure out the underlying data-type of a C-string constant?
+    <li>Finally, the file classes.h, contains the definition of a few classes.
+		All contain two characters and an int.
+		Can you explain the size of such an object?
+		<br>The second class has the \b same attributes but in a different \b order.
+		Can you figure out why the size of an object depends on the order
+		of attributes?
+		<br> Hint:
+		<a target='info'
+		href='http://en.wikipedia.org/wiki/Data_structure_alignment'>alignment</a>
+		<br>How about classes with and without methods.
+		Compare sizes again. The size of an object does not depend on
+		the presence or absence of methods. Any idea why?
+</ul>
+
+<p>For further study:
+<a target='faq'
+href='https://isocpp.org/wiki/faq/newbie#choosing-int-size'>
+[29.5] choosing int types</a>
+and maybe also
+<a target='cpp'
+href='http://en.cppreference.com/w/cpp/language/type'>the C++ type system overview</a>.
+
+<p><br></p>
+
+*/

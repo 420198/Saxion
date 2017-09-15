@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1476904898 source:d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\6.employees\animal.cc
+	"asserts.h"
+	"Animal.h"
+
+1455302364 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\6.employees\asserts.h
+	"where.h"
+	"assert_error.h"
+
+1455302416 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\6.employees\where.h
+
+1455301692 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\6.employees\assert_error.h
+	<stdexcept>
+
+1476904872 d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\6.employees\animal.h
+	<string>
+	<iostream>
+
+1455301870 source:d:\school\kwartiel 2\c++\werkcollege\opdrachtbeschrijving\6.employees\assert_error.cc
+	<string>
+	<sstream>
+	"assert_error.h"
+

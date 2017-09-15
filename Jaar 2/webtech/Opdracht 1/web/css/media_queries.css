@@ -1,0 +1,18 @@
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .username{width: 90%;margin-left:5%;margin-top:5px;}
+    .password{width:90%;margin-left:5%;margin-top:5px;}
+    .submit{margin:0;margin-top:5px;width:25%;margin-left:5%;}
+    .reset{margin:0;width:25%;margin-left:38%;}
+    .soort{margin-left:5%;}
+}
+@media screen and (min-width: 200px) and (max-width: 768px){
+    .username{width: 90%;margin-left:5%;margin-top:5px;}
+    .password{width:90%;margin-left:5%;margin-top:5px;}
+    .submit{margin:0;margin-top:5px; width:30%;font-size: 15px;margin-left:5%; }
+    .reset{margin:0;margin-top:5px;width:30%;font-size: 15px;margin-left:28%;}
+    .soort{margin-left:5%;}
+    .header h1{font-size: 22px;}
+}
+@media screen and (min-width: 200px) and (max-width: 620px){
+    .l_r_Box{width:90%;float:none;margin-left:5%; margin-top:20px;}
+}

@@ -1,0 +1,4 @@
+unix_error.o: unix_error.cc ansi.h common.h unix_error.h
+assert_error.o: assert_error.cc assert_error.h
+UnitTest.o: UnitTest.cc ansi.h common.h asserts.h where.h assert_error.h \
+ UnitTest.h

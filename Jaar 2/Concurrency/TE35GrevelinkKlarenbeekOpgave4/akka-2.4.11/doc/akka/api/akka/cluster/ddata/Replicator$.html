@@ -1,0 +1,1217 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>Replicator - akka.cluster.ddata.Replicator</title>
+          <meta name="description" content="Replicator - akka.cluster.ddata.Replicator" />
+          <meta name="keywords" content="Replicator akka.cluster.ddata.Replicator" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+      <script type="text/javascript" src="../../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../../lib/diagrams.js" id="diagrams-js"></script>
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../index.html';
+            var hash = 'akka.cluster.ddata.Replicator$';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <a href="Replicator.html" title="See companion class"><img alt="Object/Class" src="../../../lib/object_to_class_big.png" /></a>
+        <p id="owner"><a href="../../package.html" class="extype" name="akka">akka</a>.<a href="../package.html" class="extype" name="akka.cluster">cluster</a>.<a href="package.html" class="extype" name="akka.cluster.ddata">ddata</a></p>
+        <h1><a href="Replicator.html" title="See companion class">Replicator</a></h1><h3><span class="morelinks"><div>
+            Related Docs:
+            <a href="Replicator.html" title="See companion class">class Replicator</a>
+            | <a href="package.html" class="extype" name="akka.cluster.ddata">package ddata</a>
+          </div></span></h3><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Replicator</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="http://github.com/akka/akka/tree/v2.4.11//akka-distributed-data/src/main/scala/akka/cluster/ddata/Replicator.scala" target="_blank">Replicator.scala</a></dd></dl><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Any" class="extype" target="_top">Any</a></div>
+        </div><div class="toggleContainer block diagram-container" id="content-diagram-container">
+                <span class="toggle diagram-link">Content Hierarchy</span>
+                <div class="diagram" id="content-diagram"><svg class="package-diagram" id="graph1" viewBox="0.00 0.00 2622.00 158.00" height="158pt" width="2622pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 154)" class="graph" id="graph0"><polygon points="-4,4 -4,-154 2618,-154 2618,4 -4,4" stroke="white" fill="white"></polygon><!-- node0 --><g class="node trait" id="graph1_0"><g id="a_trait|graph1_0"><a xlink:title="akka.cluster.ddata.Replicator.ReplicatorMessage" xlink:href="Replicator$$ReplicatorMessage.html#inheritance-diagram"><polygon points="470,-150 340,-150 340,-124 470,-124 470,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-143" x="352" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-132.75" x="371.813" text-anchor="start">ReplicatorMessage</text></a></g></g><!-- node12 --><g class="node class" id="graph1_12"><g id="a_class|graph1_12"><a xlink:title="akka.cluster.ddata.Replicator.Changed" xlink:href="Replicator$$Changed.html#inheritance-diagram"><polygon points="96.25,-88 -0.25,-88 -0.25,-62 96.25,-62 96.25,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-81" x="12" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="31.7021" text-anchor="start">Changed[A]</text></a></g></g><!-- node0&#45;&gt;node12 --><g class="edge inheritance" id="graph1_0_12"><g id="a_inheritance|graph1_0_12"><a xlink:title="Changed[A] is a subtype of ReplicatorMessage"><path d="M334.774,-125.636C274.084,-116.462 184.084,-102.338 106,-88 102.865,-87.4243 99.6384,-86.8121 96.3888,-86.1806" stroke="#d4d4d4" fill="none"></path><polygon points="334.617,-127.382 339.822,-126.398 335.139,-123.921 334.617,-127.382" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node13 --><g class="node class" id="graph1_13"><g id="a_class|graph1_13"><a xlink:title="akka.cluster.ddata.Replicator.Unsubscribe" xlink:href="Replicator$$Unsubscribe.html#inheritance-diagram"><polygon points="227,-88 115,-88 115,-62 227,-62 227,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-81" x="127" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="146.707" text-anchor="start">Unsubscribe[A]</text></a></g></g><!-- node0&#45;&gt;node13 --><g class="edge inheritance" id="graph1_0_13"><g id="a_inheritance|graph1_0_13"><a xlink:title="Unsubscribe[A] is a subtype of ReplicatorMessage"><path d="M353.078,-122.687C312.676,-112.327 257.091,-98.0746 217.997,-88.0504" stroke="#d4d4d4" fill="none"></path><polygon points="352.65,-124.383 357.928,-123.93 353.519,-120.993 352.65,-124.383" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node14 --><g class="node class" id="graph1_14"><g id="a_class|graph1_14"><a xlink:title="akka.cluster.ddata.Replicator.Subscribe" xlink:href="Replicator$$Subscribe.html#inheritance-diagram"><polygon points="346.25,-88 245.75,-88 245.75,-62 346.25,-62 346.25,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-81" x="258" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="277.764" text-anchor="start">Subscribe[A]</text></a></g></g><!-- node0&#45;&gt;node14 --><g class="edge inheritance" id="graph1_0_14"><g id="a_inheritance|graph1_0_14"><a xlink:title="Subscribe[A] is a subtype of ReplicatorMessage"><path d="M378.368,-121.34C359.846,-111.145 335.45,-97.7155 318.025,-88.1238" stroke="#d4d4d4" fill="none"></path><polygon points="377.718,-122.98 382.942,-123.858 379.406,-119.914 377.718,-122.98" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node15 --><g class="node class" id="graph1_15"><g id="a_class|graph1_15"><a xlink:title="akka.cluster.ddata.Replicator.GetFailure" xlink:href="Replicator$$GetFailure.html#inheritance-diagram"><polygon points="467.25,-88 364.75,-88 364.75,-62 467.25,-62 467.25,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-81" x="377" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="396.655" text-anchor="start">GetFailure[A]</text></a></g></g><!-- node0&#45;&gt;node15 --><g class="edge inheritance" id="graph1_0_15"><g id="a_inheritance|graph1_0_15"><a xlink:title="GetFailure[A] is a subtype of ReplicatorMessage"><path d="M408.175,-118.683C409.969,-108.896 412.168,-96.9026 413.777,-88.1238" stroke="#d4d4d4" fill="none"></path><polygon points="406.406,-118.624 407.226,-123.858 409.849,-119.256 406.406,-118.624" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node16 --><g class="node class" id="graph1_16"><g id="a_class|graph1_16"><a xlink:title="akka.cluster.ddata.Replicator.NotFound" xlink:href="Replicator$$NotFound.html#inheritance-diagram"><polygon points="586,-88 486,-88 486,-62 586,-62 586,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-81" x="498" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="517.54" text-anchor="start">NotFound[A]</text></a></g></g><!-- node0&#45;&gt;node16 --><g class="edge inheritance" id="graph1_0_16"><g id="a_inheritance|graph1_0_16"><a xlink:title="NotFound[A] is a subtype of ReplicatorMessage"><path d="M436.162,-121.727C458.521,-111.487 488.322,-97.8374 509.53,-88.1238" stroke="#d4d4d4" fill="none"></path><polygon points="435.327,-120.185 431.51,-123.858 436.784,-123.367 435.327,-120.185" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node17 --><g class="node class" id="graph1_17"><g id="a_class|graph1_17"><a xlink:title="akka.cluster.ddata.Replicator.GetSuccess" xlink:href="Replicator$$GetSuccess.html#inheritance-diagram"><polygon points="714,-88 604,-88 604,-62 714,-62 714,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-81" x="616" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="635.542" text-anchor="start">GetSuccess[A]</text></a></g></g><!-- node0&#45;&gt;node17 --><g class="edge inheritance" id="graph1_0_17"><g id="a_inheritance|graph1_0_17"><a xlink:title="GetSuccess[A] is a subtype of ReplicatorMessage"><path d="M461.092,-122.75C504.969,-112.385 565.465,-98.095 607.987,-88.0504" stroke="#d4d4d4" fill="none"></path><polygon points="460.559,-121.078 456.095,-123.93 461.364,-124.484 460.559,-121.078" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node19 --><g class="node class" id="graph1_19"><g id="a_class|graph1_19"><a xlink:title="akka.cluster.ddata.Replicator.Get" xlink:href="Replicator$$Get.html#inheritance-diagram"><polygon points="805.25,-88 732.75,-88 732.75,-62 805.25,-62 805.25,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-81" x="745" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="764.938" text-anchor="start">Get[A]</text></a></g></g><!-- node0&#45;&gt;node19 --><g class="edge inheritance" id="graph1_0_19"><g id="a_inheritance|graph1_0_19"><a xlink:title="Get[A] is a subtype of ReplicatorMessage"><path d="M475.524,-124.54C476.691,-124.358 477.85,-124.178 479,-124 587.327,-107.226 615.585,-109.867 723,-88 726.154,-87.3579 729.415,-86.6329 732.676,-85.8652" stroke="#d4d4d4" fill="none"></path><polygon points="475.031,-122.846 470.362,-125.349 475.573,-126.304 475.031,-122.846" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node1 --><g class="node class" id="graph1_1"><g id="a_class|graph1_1"><a xlink:title="akka.cluster.ddata.Replicator.DataDeleted" xlink:href="Replicator$$DataDeleted.html#inheritance-diagram"><polygon points="1146,-88 1034,-88 1034,-62 1146,-62 1146,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-81" x="1046" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="1065.7" text-anchor="start">DataDeleted[A]</text></a></g></g><!-- node2 --><g class="node class" id="graph1_2"><g id="a_class|graph1_2"><a xlink:title="akka.cluster.ddata.Replicator.ReplicationDeleteFailure" xlink:href="Replicator$$ReplicationDeleteFailure.html#inheritance-diagram"><polygon points="1329.25,-88 1164.75,-88 1164.75,-62 1329.25,-62 1329.25,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-81" x="1177" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="1196.52" text-anchor="start">ReplicationDeleteFailure[A]</text></a></g></g><!-- node3 --><g class="node class" id="graph1_3"><g id="a_class|graph1_3"><a xlink:title="akka.cluster.ddata.Replicator.DeleteSuccess" xlink:href="Replicator$$DeleteSuccess.html#inheritance-diagram"><polygon points="1470.25,-88 1347.75,-88 1347.75,-62 1470.25,-62 1470.25,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-81" x="1360" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="1379.65" text-anchor="start">DeleteSuccess[A]</text></a></g></g><!-- node4 --><g class="node trait" id="graph1_4"><g id="a_trait|graph1_4"><a xlink:title="akka.cluster.ddata.Replicator.DeleteResponse" xlink:href="Replicator$$DeleteResponse.html#inheritance-diagram"><polygon points="1312,-150 1182,-150 1182,-124 1312,-124 1312,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-143" x="1194" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-132.75" x="1213.53" text-anchor="start">DeleteResponse[A]</text></a></g></g><!-- node4&#45;&gt;node1 --><g class="edge inheritance" id="graph1_4_1"><g id="a_inheritance|graph1_4_1"><a xlink:title="DataDeleted[A] is a subtype of DeleteResponse[A]"><path d="M1210.31,-121.977C1183.35,-111.674 1147.1,-97.8202 1121.46,-88.0213" stroke="#d4d4d4" fill="none"></path><polygon points="1209.93,-123.708 1215.23,-123.858 1211.18,-120.438 1209.93,-123.708" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node4&#45;&gt;node2 --><g class="edge inheritance" id="graph1_4_2"><g id="a_inheritance|graph1_4_2"><a xlink:title="ReplicationDeleteFailure[A] is a subtype of DeleteResponse[A]"><path d="M1247,-118.683C1247,-108.896 1247,-96.9026 1247,-88.1238" stroke="#d4d4d4" fill="none"></path><polygon points="1245.25,-118.858 1247,-123.858 1248.75,-118.858 1245.25,-118.858" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node4&#45;&gt;node3 --><g class="edge inheritance" id="graph1_4_3"><g id="a_inheritance|graph1_4_3"><a xlink:title="DeleteSuccess[A] is a subtype of DeleteResponse[A]"><path d="M1284.52,-122.105C1312.37,-111.789 1349.98,-97.8609 1376.54,-88.0213" stroke="#d4d4d4" fill="none"></path><polygon points="1283.86,-120.48 1279.78,-123.858 1285.08,-123.763 1283.86,-120.48" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node5 --><g class="node class" id="graph1_5"><g id="a_class|graph1_5"><a xlink:title="akka.cluster.ddata.Replicator.Delete" xlink:href="Replicator$$Delete.html#inheritance-diagram"><polygon points="1015.25,-88 930.75,-88 930.75,-62 1015.25,-62 1015.25,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-81" x="943" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="962.544" text-anchor="start">Delete[A]</text></a></g></g><!-- node6 --><g class="node class" id="graph1_6"><g id="a_class|graph1_6"><a xlink:title="akka.cluster.ddata.Replicator.ModifyFailure" xlink:href="Replicator$$ModifyFailure.html#inheritance-diagram"><polygon points="1536.25,-26 1419.75,-26 1419.75,-0 1536.25,-0 1536.25,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-19" x="1432" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-8.74951" x="1451.99" text-anchor="start">ModifyFailure[A]</text></a></g></g><!-- node7 --><g class="node class" id="graph1_7"><g id="a_class|graph1_7"><a xlink:title="akka.cluster.ddata.Replicator.UpdateTimeout" xlink:href="Replicator$$UpdateTimeout.html#inheritance-diagram"><polygon points="1679.25,-26 1554.75,-26 1554.75,-0 1679.25,-0 1679.25,-26" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-19" x="1567" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-8.74951" x="1587" text-anchor="start">UpdateTimeout[A]</text></a></g></g><!-- node8 --><g class="node class" id="graph1_8"><g id="a_class|graph1_8"><a xlink:title="akka.cluster.ddata.Replicator.UpdateFailure" xlink:href="Replicator$$UpdateFailure.html#inheritance-diagram"><polygon points="1607.25,-88 1488.75,-88 1488.75,-62 1607.25,-62 1607.25,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-81" x="1501" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="1520.59" text-anchor="start">UpdateFailure[A]</text></a></g></g><!-- node8&#45;&gt;node6 --><g class="edge inheritance" id="graph1_8_6"><g id="a_inheritance|graph1_8_6"><a xlink:title="ModifyFailure[A] is a subtype of UpdateFailure[A]"><path d="M1529.98,-58.5563C1518.21,-48.4643 1503.05,-35.4716 1492.14,-26.1238" stroke="#d4d4d4" fill="none"></path><polygon points="1528.9,-59.9328 1533.83,-61.8581 1531.18,-57.2754 1528.9,-59.9328" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node8&#45;&gt;node7 --><g class="edge inheritance" id="graph1_8_7"><g id="a_inheritance|graph1_8_7"><a xlink:title="UpdateTimeout[A] is a subtype of UpdateFailure[A]"><path d="M1565.76,-58.5563C1577.37,-48.4643 1592.31,-35.4716 1603.06,-26.1238" stroke="#d4d4d4" fill="none"></path><polygon points="1564.59,-57.2566 1561.96,-61.8581 1566.88,-59.8977 1564.59,-57.2566" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node9 --><g class="node class" id="graph1_9"><g id="a_class|graph1_9"><a xlink:title="akka.cluster.ddata.Replicator.UpdateSuccess" xlink:href="Replicator$$UpdateSuccess.html#inheritance-diagram"><polygon points="1752.25,-88 1625.75,-88 1625.75,-62 1752.25,-62 1752.25,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-81" x="1638" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="1657.98" text-anchor="start">UpdateSuccess[A]</text></a></g></g><!-- node10 --><g class="node class" id="graph1_10"><g id="a_class|graph1_10"><a xlink:title="akka.cluster.ddata.Replicator.UpdateResponse" xlink:href="Replicator$$UpdateResponse.html#inheritance-diagram"><polygon points="1685,-150 1551,-150 1551,-124 1685,-124 1685,-150" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-143" x="1563" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-132.75" x="1582.86" text-anchor="start">UpdateResponse[A]</text></a></g></g><!-- node10&#45;&gt;node8 --><g class="edge inheritance" id="graph1_10_8"><g id="a_inheritance|graph1_10_8"><a xlink:title="UpdateFailure[A] is a subtype of UpdateResponse[A]"><path d="M1599.98,-120.556C1588.21,-110.464 1573.05,-97.4716 1562.14,-88.1238" stroke="#d4d4d4" fill="none"></path><polygon points="1598.9,-121.933 1603.83,-123.858 1601.18,-119.275 1598.9,-121.933" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node10&#45;&gt;node9 --><g class="edge inheritance" id="graph1_10_9"><g id="a_inheritance|graph1_10_9"><a xlink:title="UpdateSuccess[A] is a subtype of UpdateResponse[A]"><path d="M1636.28,-120.556C1648.22,-110.464 1663.59,-97.4716 1674.65,-88.1238" stroke="#d4d4d4" fill="none"></path><polygon points="1635.06,-119.294 1632.37,-123.858 1637.32,-121.967 1635.06,-119.294" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node11 --><g class="node class" id="graph1_11"><g id="a_class|graph1_11"><a xlink:title="akka.cluster.ddata.Replicator.Update" xlink:href="Replicator$$Update.html#inheritance-diagram"><polygon points="912.25,-88 823.75,-88 823.75,-62 912.25,-62 912.25,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-81" x="836" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="855.875" text-anchor="start">Update[A]</text></a></g></g><!-- node18 --><g class="node class" id="graph1_18"><g id="a_class|graph1_18"><a xlink:title="akka.cluster.ddata.Replicator.GetResponse" xlink:href="Replicator$$GetResponse.html#inheritance-diagram"><polygon points="606,-150 488,-150 488,-124 606,-124 606,-150" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-143" x="500" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-132.75" x="519.924" text-anchor="start">GetResponse[A]</text></a></g></g><!-- node18&#45;&gt;node15 --><g class="edge inheritance" id="graph1_18_15"><g id="a_inheritance|graph1_18_15"><a xlink:title="GetFailure[A] is a subtype of GetResponse[A]"><path d="M515.838,-121.727C493.479,-111.487 463.678,-97.8374 442.47,-88.1238" stroke="#d4d4d4" fill="none"></path><polygon points="515.216,-123.367 520.49,-123.858 516.673,-120.185 515.216,-123.367" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node18&#45;&gt;node16 --><g class="edge inheritance" id="graph1_18_16"><g id="a_inheritance|graph1_18_16"><a xlink:title="NotFound[A] is a subtype of GetResponse[A]"><path d="M543.825,-118.683C542.031,-108.896 539.832,-96.9026 538.223,-88.1238" stroke="#d4d4d4" fill="none"></path><polygon points="542.151,-119.256 544.774,-123.858 545.594,-118.624 542.151,-119.256" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node18&#45;&gt;node17 --><g class="edge inheritance" id="graph1_18_17"><g id="a_inheritance|graph1_18_17"><a xlink:title="GetSuccess[A] is a subtype of GetResponse[A]"><path d="M574.365,-121.34C593.397,-111.145 618.464,-97.7155 636.369,-88.1238" stroke="#d4d4d4" fill="none"></path><polygon points="573.246,-119.954 569.665,-123.858 574.899,-123.04 573.246,-119.954" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node20 --><g class="node trait" id="graph1_20"><g id="a_trait|graph1_20"><a xlink:title="akka.cluster.ddata.Replicator.Command" xlink:href="Replicator$$Command.html#inheritance-diagram"><polygon points="919.25,-150 816.75,-150 816.75,-124 919.25,-124 919.25,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-143" x="829" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-132.75" x="848.934" text-anchor="start">Command[A]</text></a></g></g><!-- node20&#45;&gt;node5 --><g class="edge inheritance" id="graph1_20_5"><g id="a_inheritance|graph1_20_5"><a xlink:title="Delete[A] is a subtype of Command[A]"><path d="M893.655,-121.34C911.497,-111.145 934.998,-97.7155 951.783,-88.1238" stroke="#d4d4d4" fill="none"></path><polygon points="892.721,-119.858 889.248,-123.858 894.458,-122.897 892.721,-119.858" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node20&#45;&gt;node11 --><g class="edge inheritance" id="graph1_20_11"><g id="a_inheritance|graph1_20_11"><a xlink:title="Update[A] is a subtype of Command[A]"><path d="M868,-118.683C868,-108.896 868,-96.9026 868,-88.1238" stroke="#d4d4d4" fill="none"></path><polygon points="866.25,-118.858 868,-123.858 869.75,-118.858 866.25,-118.858" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node20&#45;&gt;node19 --><g class="edge inheritance" id="graph1_20_19"><g id="a_inheritance|graph1_20_19"><a xlink:title="Get[A] is a subtype of Command[A]"><path d="M843.382,-121.08C826.614,-110.917 804.696,-97.6342 789.004,-88.1238" stroke="#d4d4d4" fill="none"></path><polygon points="842.783,-122.763 847.966,-123.858 844.597,-119.77 842.783,-122.763" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node21 --><g class="node class" id="graph1_21"><g id="a_class|graph1_21"><a xlink:title="akka.cluster.ddata.Replicator.WriteAll" xlink:href="Replicator$$WriteAll.html#inheritance-diagram"><polygon points="1849.25,-88 1770.75,-88 1770.75,-62 1849.25,-62 1849.25,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-81" x="1783" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="1802.98" text-anchor="start">WriteAll</text></a></g></g><!-- node22 --><g class="node class" id="graph1_22"><g id="a_class|graph1_22"><a xlink:title="akka.cluster.ddata.Replicator.WriteMajority" xlink:href="Replicator$$WriteMajority.html#inheritance-diagram"><polygon points="1970,-88 1868,-88 1868,-62 1970,-62 1970,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-81" x="1880" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="1899.53" text-anchor="start">WriteMajority</text></a></g></g><!-- node23 --><g class="node class" id="graph1_23"><g id="a_class|graph1_23"><a xlink:title="akka.cluster.ddata.Replicator.WriteTo" xlink:href="Replicator$$WriteTo.html#inheritance-diagram"><polygon points="2066,-88 1988,-88 1988,-62 2066,-62 2066,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-81" x="2000" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="2019.76" text-anchor="start">WriteTo</text></a></g></g><!-- node24 --><g class="node object" id="graph1_24"><g id="a_object|graph1_24"><a xlink:title="akka.cluster.ddata.Replicator.WriteLocal" xlink:href="Replicator$$WriteLocal$.html#inheritance-diagram"><polygon points="2175.25,-88 2084.75,-88 2084.75,-62 2175.25,-62 2175.25,-88" stroke="#102966" fill="#3556a7"></polygon><image xlink:href="../../../lib/object_diagram.png" y="-81" x="2097" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="2116.58" text-anchor="start">WriteLocal</text></a></g></g><!-- node25 --><g class="node trait" id="graph1_25"><g id="a_trait|graph1_25"><a xlink:title="akka.cluster.ddata.Replicator.WriteConsistency" xlink:href="Replicator$$WriteConsistency.html#inheritance-diagram"><polygon points="2034,-150 1912,-150 1912,-124 2034,-124 2034,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-143" x="1924" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-132.75" x="1943.8" text-anchor="start">WriteConsistency</text></a></g></g><!-- node25&#45;&gt;node21 --><g class="edge inheritance" id="graph1_25_21"><g id="a_inheritance|graph1_25_21"><a xlink:title="WriteAll is a subtype of WriteConsistency"><path d="M1935.25,-122.105C1907.23,-111.789 1869.39,-97.8609 1842.66,-88.0213" stroke="#d4d4d4" fill="none"></path><polygon points="1934.72,-123.773 1940.01,-123.858 1935.93,-120.489 1934.72,-123.773" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node25&#45;&gt;node22 --><g class="edge inheritance" id="graph1_25_22"><g id="a_inheritance|graph1_25_22"><a xlink:title="WriteMajority is a subtype of WriteConsistency"><path d="M1958.62,-120.027C1949.61,-110.014 1938.18,-97.3091 1929.91,-88.1238" stroke="#d4d4d4" fill="none"></path><polygon points="1957.43,-121.312 1962.07,-123.858 1960.03,-118.971 1957.43,-121.312" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node25&#45;&gt;node23 --><g class="edge inheritance" id="graph1_25_23"><g id="a_inheritance|graph1_25_23"><a xlink:title="WriteTo is a subtype of WriteConsistency"><path d="M1987.38,-120.027C1996.39,-110.014 2007.82,-97.3091 2016.09,-88.1238" stroke="#d4d4d4" fill="none"></path><polygon points="1985.97,-118.971 1983.93,-123.858 1988.57,-121.312 1985.97,-118.971" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node25&#45;&gt;node24 --><g class="edge inheritance" id="graph1_25_24"><g id="a_inheritance|graph1_25_24"><a xlink:title="WriteLocal is a subtype of WriteConsistency"><path d="M2009.69,-121.977C2036.65,-111.674 2072.9,-97.8202 2098.54,-88.0213" stroke="#d4d4d4" fill="none"></path><polygon points="2008.82,-120.438 2004.77,-123.858 2010.07,-123.708 2008.82,-120.438" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node26 --><g class="node class" id="graph1_26"><g id="a_class|graph1_26"><a xlink:title="akka.cluster.ddata.Replicator.ReadAll" xlink:href="Replicator$$ReadAll.html#inheritance-diagram"><polygon points="2272.25,-88 2193.75,-88 2193.75,-62 2272.25,-62 2272.25,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-81" x="2206" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="2225.6" text-anchor="start">ReadAll</text></a></g></g><!-- node27 --><g class="node class" id="graph1_27"><g id="a_class|graph1_27"><a xlink:title="akka.cluster.ddata.Replicator.ReadMajority" xlink:href="Replicator$$ReadMajority.html#inheritance-diagram"><polygon points="2393.25,-88 2290.75,-88 2290.75,-62 2393.25,-62 2393.25,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-81" x="2303" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="2322.66" text-anchor="start">ReadMajority</text></a></g></g><!-- node28 --><g class="node class" id="graph1_28"><g id="a_class|graph1_28"><a xlink:title="akka.cluster.ddata.Replicator.ReadFrom" xlink:href="Replicator$$ReadFrom.html#inheritance-diagram"><polygon points="2504,-88 2412,-88 2412,-62 2504,-62 2504,-88" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../../lib/class_diagram.png" y="-81" x="2424" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="2443.99" text-anchor="start">ReadFrom</text></a></g></g><!-- node29 --><g class="node object" id="graph1_29"><g id="a_object|graph1_29"><a xlink:title="akka.cluster.ddata.Replicator.ReadLocal" xlink:href="Replicator$$ReadLocal$.html#inheritance-diagram"><polygon points="2614,-88 2522,-88 2522,-62 2614,-62 2614,-88" stroke="#102966" fill="#3556a7"></polygon><image xlink:href="../../../lib/object_diagram.png" y="-81" x="2534" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.7495" x="2553.7" text-anchor="start">ReadLocal</text></a></g></g><!-- node30 --><g class="node trait" id="graph1_30"><g id="a_trait|graph1_30"><a xlink:title="akka.cluster.ddata.Replicator.ReadConsistency" xlink:href="Replicator$$ReadConsistency.html#inheritance-diagram"><polygon points="2461.25,-150 2338.75,-150 2338.75,-124 2461.25,-124 2461.25,-150" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../../lib/trait_diagram.png" y="-143" x="2351" preserveAspectRatio="xMinYMin meet" height="12px" width="12px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-132.75" x="2370.92" text-anchor="start">ReadConsistency</text></a></g></g><!-- node30&#45;&gt;node26 --><g class="edge inheritance" id="graph1_30_26"><g id="a_inheritance|graph1_30_26"><a xlink:title="ReadAll is a subtype of ReadConsistency"><path d="M2361.33,-122.105C2332.61,-111.789 2293.85,-97.8609 2266.46,-88.0213" stroke="#d4d4d4" fill="none"></path><polygon points="2360.91,-123.814 2366.21,-123.858 2362.09,-120.521 2360.91,-123.814" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node30&#45;&gt;node27 --><g class="edge inheritance" id="graph1_30_27"><g id="a_inheritance|graph1_30_27"><a xlink:title="ReadMajority is a subtype of ReadConsistency"><path d="M2384.56,-120.027C2374.88,-110.014 2362.6,-97.3091 2353.72,-88.1238" stroke="#d4d4d4" fill="none"></path><polygon points="2383.53,-121.479 2388.26,-123.858 2386.05,-119.047 2383.53,-121.479" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node30&#45;&gt;node28 --><g class="edge inheritance" id="graph1_30_28"><g id="a_inheritance|graph1_30_28"><a xlink:title="ReadFrom is a subtype of ReadConsistency"><path d="M2415.44,-120.027C2425.12,-110.014 2437.4,-97.3091 2446.28,-88.1238" stroke="#d4d4d4" fill="none"></path><polygon points="2413.95,-119.047 2411.74,-123.858 2416.47,-121.479 2413.95,-119.047" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node30&#45;&gt;node29 --><g class="edge inheritance" id="graph1_30_29"><g id="a_inheritance|graph1_30_29"><a xlink:title="ReadLocal is a subtype of ReadConsistency"><path d="M2438.9,-122.105C2467.79,-111.789 2506.79,-97.8609 2534.34,-88.0213" stroke="#d4d4d4" fill="none"></path><polygon points="2438.12,-120.528 2434,-123.858 2439.29,-123.824 2438.12,-120.528" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
+              </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By Inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="akka.cluster.ddata.Replicator"><span>Replicator</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show All</span></li>
+            </ol>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="akka.cluster.ddata.Replicator.Changed" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Changed[A&lt;:akka.cluster.ddata.ReplicatedData]extendsReplicator.ReplicatorMessagewithProductwithSerializable"></a>
+      <a id="Changed[A&lt;:ReplicatedData]:Changed[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Replicator$$Changed.html"><span class="name">Changed</span></a><span class="tparams">[<span name="A">A &lt;: <a href="ReplicatedData.html" class="extype" name="akka.cluster.ddata.ReplicatedData">ReplicatedData</a></span>]</span><span class="params">(<span name="key">key: <a href="Key.html" class="extype" name="akka.cluster.ddata.Key">Key</a>[<span class="extype" name="akka.cluster.ddata.Replicator.Changed.A">A</span>]</span>)</span><span class="params">(<span name="data">data: <span class="extype" name="akka.cluster.ddata.Replicator.Changed.A">A</span></span>)</span><span class="result"> extends <a href="Replicator$$ReplicatorMessage.html" class="extype" name="akka.cluster.ddata.Replicator.ReplicatorMessage">ReplicatorMessage</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@Changed[A&lt;:akka.cluster.ddata.ReplicatedData]extendsReplicator.ReplicatorMessagewithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The data value is retrieved with <a href="Replicator$$Changed.html#get[T&lt;:akka.cluster.ddata.ReplicatedData](key:akka.cluster.ddata.Key[T]):T" class="extmbr" name="akka.cluster.ddata.Replicator.Changed#get">#get</a> using the typed key.</p><div class="fullcomment"><div class="comment cmt"><p>The data value is retrieved with <a href="Replicator$$Changed.html#get[T&lt;:akka.cluster.ddata.ReplicatedData](key:akka.cluster.ddata.Key[T]):T" class="extmbr" name="akka.cluster.ddata.Replicator.Changed#get">#get</a> using the typed key.
+</p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><a href="Replicator$$Subscribe.html" class="extype" name="akka.cluster.ddata.Replicator.Subscribe">Replicator.Subscribe</a></p></span></dd></dl></div>
+    </li><li name="akka.cluster.ddata.Replicator.Command" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Command[A&lt;:akka.cluster.ddata.ReplicatedData]extendsAnyRef"></a>
+      <a id="Command[A&lt;:ReplicatedData]:Command[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Replicator$$Command.html"><span class="name">Command</span></a><span class="tparams">[<span name="A">A &lt;: <a href="ReplicatedData.html" class="extype" name="akka.cluster.ddata.ReplicatedData">ReplicatedData</a></span>]</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@Command[A&lt;:akka.cluster.ddata.ReplicatedData]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.Replicator.DataDeleted" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DataDeleted[A&lt;:akka.cluster.ddata.ReplicatedData]extendsRuntimeExceptionwithNoStackTracewithReplicator.DeleteResponse[A]withProductwithSerializable"></a>
+      <a id="DataDeleted[A&lt;:ReplicatedData]:DataDeleted[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Replicator$$DataDeleted.html"><span class="name">DataDeleted</span></a><span class="tparams">[<span name="A">A &lt;: <a href="ReplicatedData.html" class="extype" name="akka.cluster.ddata.ReplicatedData">ReplicatedData</a></span>]</span><span class="params">(<span name="key">key: <a href="Key.html" class="extype" name="akka.cluster.ddata.Key">Key</a>[<span class="extype" name="akka.cluster.ddata.Replicator.DataDeleted.A">A</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.RuntimeException">RuntimeException</span> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.util.control.NoStackTrace" class="extype" target="_top">NoStackTrace</a> with <a href="Replicator$$DeleteResponse.html" class="extype" name="akka.cluster.ddata.Replicator.DeleteResponse">DeleteResponse</a>[<span class="extype" name="akka.cluster.ddata.Replicator.DataDeleted.A">A</span>] with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@DataDeleted[A&lt;:akka.cluster.ddata.ReplicatedData]extendsRuntimeExceptionwithNoStackTracewithReplicator.DeleteResponse[A]withProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.Replicator.Delete" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Delete[A&lt;:akka.cluster.ddata.ReplicatedData]extendsReplicator.Command[A]withProductwithSerializable"></a>
+      <a id="Delete[A&lt;:ReplicatedData]:Delete[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Replicator$$Delete.html"><span class="name">Delete</span></a><span class="tparams">[<span name="A">A &lt;: <a href="ReplicatedData.html" class="extype" name="akka.cluster.ddata.ReplicatedData">ReplicatedData</a></span>]</span><span class="params">(<span name="key">key: <a href="Key.html" class="extype" name="akka.cluster.ddata.Key">Key</a>[<span class="extype" name="akka.cluster.ddata.Replicator.Delete.A">A</span>]</span>, <span name="consistency">consistency: <a href="Replicator$$WriteConsistency.html" class="extype" name="akka.cluster.ddata.Replicator.WriteConsistency">WriteConsistency</a></span>)</span><span class="result"> extends <a href="Replicator$$Command.html" class="extype" name="akka.cluster.ddata.Replicator.Command">Command</a>[<span class="extype" name="akka.cluster.ddata.Replicator.Delete.A">A</span>] with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@Delete[A&lt;:akka.cluster.ddata.ReplicatedData]extendsReplicator.Command[A]withProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Send this message to the local <code>Replicator</code> to delete a data value for the
+given <code>key</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Send this message to the local <code>Replicator</code> to delete a data value for the
+given <code>key</code>. The <code>Replicator</code> will reply with one of the <a href="Replicator$$DeleteResponse.html" class="extype" name="akka.cluster.ddata.Replicator.DeleteResponse">DeleteResponse</a> messages.
+</p></div></div>
+    </li><li name="akka.cluster.ddata.Replicator.DeleteResponse" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="DeleteResponse[A&lt;:akka.cluster.ddata.ReplicatedData]extendsAnyRef"></a>
+      <a id="DeleteResponse[A&lt;:ReplicatedData]:DeleteResponse[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Replicator$$DeleteResponse.html"><span class="name">DeleteResponse</span></a><span class="tparams">[<span name="A">A &lt;: <a href="ReplicatedData.html" class="extype" name="akka.cluster.ddata.ReplicatedData">ReplicatedData</a></span>]</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@DeleteResponse[A&lt;:akka.cluster.ddata.ReplicatedData]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.Replicator.DeleteSuccess" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DeleteSuccess[A&lt;:akka.cluster.ddata.ReplicatedData]extendsReplicator.DeleteResponse[A]withProductwithSerializable"></a>
+      <a id="DeleteSuccess[A&lt;:ReplicatedData]:DeleteSuccess[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Replicator$$DeleteSuccess.html"><span class="name">DeleteSuccess</span></a><span class="tparams">[<span name="A">A &lt;: <a href="ReplicatedData.html" class="extype" name="akka.cluster.ddata.ReplicatedData">ReplicatedData</a></span>]</span><span class="params">(<span name="key">key: <a href="Key.html" class="extype" name="akka.cluster.ddata.Key">Key</a>[<span class="extype" name="akka.cluster.ddata.Replicator.DeleteSuccess.A">A</span>]</span>)</span><span class="result"> extends <a href="Replicator$$DeleteResponse.html" class="extype" name="akka.cluster.ddata.Replicator.DeleteResponse">DeleteResponse</a>[<span class="extype" name="akka.cluster.ddata.Replicator.DeleteSuccess.A">A</span>] with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@DeleteSuccess[A&lt;:akka.cluster.ddata.ReplicatedData]extendsReplicator.DeleteResponse[A]withProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.Replicator.Get" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Get[A&lt;:akka.cluster.ddata.ReplicatedData]extendsReplicator.Command[A]withReplicator.ReplicatorMessagewithProductwithSerializable"></a>
+      <a id="Get[A&lt;:ReplicatedData]:Get[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Replicator$$Get.html"><span class="name">Get</span></a><span class="tparams">[<span name="A">A &lt;: <a href="ReplicatedData.html" class="extype" name="akka.cluster.ddata.ReplicatedData">ReplicatedData</a></span>]</span><span class="params">(<span name="key">key: <a href="Key.html" class="extype" name="akka.cluster.ddata.Key">Key</a>[<span class="extype" name="akka.cluster.ddata.Replicator.Get.A">A</span>]</span>, <span name="consistency">consistency: <a href="Replicator$$ReadConsistency.html" class="extype" name="akka.cluster.ddata.Replicator.ReadConsistency">ReadConsistency</a></span>, <span name="request">request: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Any" class="extype" target="_top">Any</a>] = <span class="symbol">None</span></span>)</span><span class="result"> extends <a href="Replicator$$Command.html" class="extype" name="akka.cluster.ddata.Replicator.Command">Command</a>[<span class="extype" name="akka.cluster.ddata.Replicator.Get.A">A</span>] with <a href="Replicator$$ReplicatorMessage.html" class="extype" name="akka.cluster.ddata.Replicator.ReplicatorMessage">ReplicatorMessage</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@Get[A&lt;:akka.cluster.ddata.ReplicatedData]extendsReplicator.Command[A]withReplicator.ReplicatorMessagewithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Send this message to the local <code>Replicator</code> to retrieve a data value for the
+given <code>key</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Send this message to the local <code>Replicator</code> to retrieve a data value for the
+given <code>key</code>. The <code>Replicator</code> will reply with one of the <a href="Replicator$$GetResponse.html" class="extype" name="akka.cluster.ddata.Replicator.GetResponse">GetResponse</a> messages.</p><p>The optional <code>request</code> context is included in the reply messages. This is a convenient
+way to pass contextual information (e.g. original sender) without having to use <code>ask</code>
+or maintain local correlation data structures.
+</p></div></div>
+    </li><li name="akka.cluster.ddata.Replicator.GetFailure" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GetFailure[A&lt;:akka.cluster.ddata.ReplicatedData]extendsReplicator.GetResponse[A]withReplicator.ReplicatorMessagewithProductwithSerializable"></a>
+      <a id="GetFailure[A&lt;:ReplicatedData]:GetFailure[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Replicator$$GetFailure.html"><span class="name">GetFailure</span></a><span class="tparams">[<span name="A">A &lt;: <a href="ReplicatedData.html" class="extype" name="akka.cluster.ddata.ReplicatedData">ReplicatedData</a></span>]</span><span class="params">(<span name="key">key: <a href="Key.html" class="extype" name="akka.cluster.ddata.Key">Key</a>[<span class="extype" name="akka.cluster.ddata.Replicator.GetFailure.A">A</span>]</span>, <span name="request">request: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Any" class="extype" target="_top">Any</a>]</span>)</span><span class="result"> extends <a href="Replicator$$GetResponse.html" class="extype" name="akka.cluster.ddata.Replicator.GetResponse">GetResponse</a>[<span class="extype" name="akka.cluster.ddata.Replicator.GetFailure.A">A</span>] with <a href="Replicator$$ReplicatorMessage.html" class="extype" name="akka.cluster.ddata.Replicator.ReplicatorMessage">ReplicatorMessage</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@GetFailure[A&lt;:akka.cluster.ddata.ReplicatedData]extendsReplicator.GetResponse[A]withReplicator.ReplicatorMessagewithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The <a href="Replicator$$Get.html" class="extype" name="akka.cluster.ddata.Replicator.Get">Get</a> request could not be fulfill according to the given
+<a href="Replicator$$ReadConsistency.html" class="extype" name="akka.cluster.ddata.Replicator.ReadConsistency">consistency level</a> and <a href="Replicator$$ReadConsistency.html#timeout:scala.concurrent.duration.FiniteDuration" class="extmbr" name="akka.cluster.ddata.Replicator.ReadConsistency#timeout">timeout</a>.</p>
+    </li><li name="akka.cluster.ddata.Replicator.GetResponse" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="GetResponse[A&lt;:akka.cluster.ddata.ReplicatedData]extendsNoSerializationVerificationNeeded"></a>
+      <a id="GetResponse[A&lt;:ReplicatedData]:GetResponse[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Replicator$$GetResponse.html"><span class="name">GetResponse</span></a><span class="tparams">[<span name="A">A &lt;: <a href="ReplicatedData.html" class="extype" name="akka.cluster.ddata.ReplicatedData">ReplicatedData</a></span>]</span><span class="result"> extends <a href="../../actor/NoSerializationVerificationNeeded.html" class="extype" name="akka.actor.NoSerializationVerificationNeeded">NoSerializationVerificationNeeded</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@GetResponse[A&lt;:akka.cluster.ddata.ReplicatedData]extendsNoSerializationVerificationNeeded" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.Replicator.GetSuccess" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="GetSuccess[A&lt;:akka.cluster.ddata.ReplicatedData]extendsReplicator.GetResponse[A]withReplicator.ReplicatorMessagewithProductwithSerializable"></a>
+      <a id="GetSuccess[A&lt;:ReplicatedData]:GetSuccess[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Replicator$$GetSuccess.html"><span class="name">GetSuccess</span></a><span class="tparams">[<span name="A">A &lt;: <a href="ReplicatedData.html" class="extype" name="akka.cluster.ddata.ReplicatedData">ReplicatedData</a></span>]</span><span class="params">(<span name="key">key: <a href="Key.html" class="extype" name="akka.cluster.ddata.Key">Key</a>[<span class="extype" name="akka.cluster.ddata.Replicator.GetSuccess.A">A</span>]</span>, <span name="request">request: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Any" class="extype" target="_top">Any</a>]</span>)</span><span class="params">(<span name="data">data: <span class="extype" name="akka.cluster.ddata.Replicator.GetSuccess.A">A</span></span>)</span><span class="result"> extends <a href="Replicator$$GetResponse.html" class="extype" name="akka.cluster.ddata.Replicator.GetResponse">GetResponse</a>[<span class="extype" name="akka.cluster.ddata.Replicator.GetSuccess.A">A</span>] with <a href="Replicator$$ReplicatorMessage.html" class="extype" name="akka.cluster.ddata.Replicator.ReplicatorMessage">ReplicatorMessage</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@GetSuccess[A&lt;:akka.cluster.ddata.ReplicatedData]extendsReplicator.GetResponse[A]withReplicator.ReplicatorMessagewithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Reply from <code>Get</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Reply from <code>Get</code>. The data value is retrieved with <a href="Replicator$$GetSuccess.html#get[T&lt;:akka.cluster.ddata.ReplicatedData](key:akka.cluster.ddata.Key[T]):T" class="extmbr" name="akka.cluster.ddata.Replicator.GetSuccess#get">#get</a> using the typed key.
+</p></div></div>
+    </li><li name="akka.cluster.ddata.Replicator.ModifyFailure" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ModifyFailure[A&lt;:akka.cluster.ddata.ReplicatedData]extendsReplicator.UpdateFailure[A]withProductwithSerializable"></a>
+      <a id="ModifyFailure[A&lt;:ReplicatedData]:ModifyFailure[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Replicator$$ModifyFailure.html"><span class="name">ModifyFailure</span></a><span class="tparams">[<span name="A">A &lt;: <a href="ReplicatedData.html" class="extype" name="akka.cluster.ddata.ReplicatedData">ReplicatedData</a></span>]</span><span class="params">(<span name="key">key: <a href="Key.html" class="extype" name="akka.cluster.ddata.Key">Key</a>[<span class="extype" name="akka.cluster.ddata.Replicator.ModifyFailure.A">A</span>]</span>, <span name="errorMessage">errorMessage: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="cause">cause: <span class="extype" name="scala.Throwable">Throwable</span></span>, <span name="request">request: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Any" class="extype" target="_top">Any</a>]</span>)</span><span class="result"> extends <a href="Replicator$$UpdateFailure.html" class="extype" name="akka.cluster.ddata.Replicator.UpdateFailure">UpdateFailure</a>[<span class="extype" name="akka.cluster.ddata.Replicator.ModifyFailure.A">A</span>] with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@ModifyFailure[A&lt;:akka.cluster.ddata.ReplicatedData]extendsReplicator.UpdateFailure[A]withProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">If the <code>modify</code> function of the <a href="Replicator$$Update.html" class="extype" name="akka.cluster.ddata.Replicator.Update">Update</a> throws an exception the reply message
+will be this <code>ModifyFailure</code> message.</p><div class="fullcomment"><div class="comment cmt"><p>If the <code>modify</code> function of the <a href="Replicator$$Update.html" class="extype" name="akka.cluster.ddata.Replicator.Update">Update</a> throws an exception the reply message
+will be this <code>ModifyFailure</code> message. The original exception is included as <code>cause</code>.
+</p></div></div>
+    </li><li name="akka.cluster.ddata.Replicator.NotFound" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NotFound[A&lt;:akka.cluster.ddata.ReplicatedData]extendsReplicator.GetResponse[A]withReplicator.ReplicatorMessagewithProductwithSerializable"></a>
+      <a id="NotFound[A&lt;:ReplicatedData]:NotFound[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Replicator$$NotFound.html"><span class="name">NotFound</span></a><span class="tparams">[<span name="A">A &lt;: <a href="ReplicatedData.html" class="extype" name="akka.cluster.ddata.ReplicatedData">ReplicatedData</a></span>]</span><span class="params">(<span name="key">key: <a href="Key.html" class="extype" name="akka.cluster.ddata.Key">Key</a>[<span class="extype" name="akka.cluster.ddata.Replicator.NotFound.A">A</span>]</span>, <span name="request">request: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Any" class="extype" target="_top">Any</a>]</span>)</span><span class="result"> extends <a href="Replicator$$GetResponse.html" class="extype" name="akka.cluster.ddata.Replicator.GetResponse">GetResponse</a>[<span class="extype" name="akka.cluster.ddata.Replicator.NotFound.A">A</span>] with <a href="Replicator$$ReplicatorMessage.html" class="extype" name="akka.cluster.ddata.Replicator.ReplicatorMessage">ReplicatorMessage</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@NotFound[A&lt;:akka.cluster.ddata.ReplicatedData]extendsReplicator.GetResponse[A]withReplicator.ReplicatorMessagewithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.Replicator.ReadAll" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ReadAllextendsReplicator.ReadConsistencywithProductwithSerializable"></a>
+      <a id="ReadAll:ReadAll"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Replicator$$ReadAll.html"><span class="name">ReadAll</span></a><span class="params">(<span name="timeout">timeout: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.concurrent.duration.FiniteDuration" class="extype" target="_top">FiniteDuration</a></span>)</span><span class="result"> extends <a href="Replicator$$ReadConsistency.html" class="extype" name="akka.cluster.ddata.Replicator.ReadConsistency">ReadConsistency</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@ReadAllextendsReplicator.ReadConsistencywithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.Replicator.ReadConsistency" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ReadConsistencyextendsAnyRef"></a>
+      <a id="ReadConsistency:ReadConsistency"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Replicator$$ReadConsistency.html"><span class="name">ReadConsistency</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@ReadConsistencyextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.Replicator.ReadFrom" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ReadFromextendsReplicator.ReadConsistencywithProductwithSerializable"></a>
+      <a id="ReadFrom:ReadFrom"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Replicator$$ReadFrom.html"><span class="name">ReadFrom</span></a><span class="params">(<span name="n">n: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Int" class="extype" target="_top">Int</a></span>, <span name="timeout">timeout: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.concurrent.duration.FiniteDuration" class="extype" target="_top">FiniteDuration</a></span>)</span><span class="result"> extends <a href="Replicator$$ReadConsistency.html" class="extype" name="akka.cluster.ddata.Replicator.ReadConsistency">ReadConsistency</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@ReadFromextendsReplicator.ReadConsistencywithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.Replicator.ReadMajority" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ReadMajorityextendsReplicator.ReadConsistencywithProductwithSerializable"></a>
+      <a id="ReadMajority:ReadMajority"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Replicator$$ReadMajority.html"><span class="name">ReadMajority</span></a><span class="params">(<span name="timeout">timeout: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.concurrent.duration.FiniteDuration" class="extype" target="_top">FiniteDuration</a></span>)</span><span class="result"> extends <a href="Replicator$$ReadConsistency.html" class="extype" name="akka.cluster.ddata.Replicator.ReadConsistency">ReadConsistency</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@ReadMajorityextendsReplicator.ReadConsistencywithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.Replicator.ReplicaCount" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ReplicaCountextendsProductwithSerializable"></a>
+      <a id="ReplicaCount:ReplicaCount"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Replicator$$ReplicaCount.html"><span class="name">ReplicaCount</span></a><span class="params">(<span name="n">n: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@ReplicaCountextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Current number of replicas.</p><div class="fullcomment"><div class="comment cmt"><p>Current number of replicas. Reply to <code>GetReplicaCount</code>.
+</p></div></div>
+    </li><li name="akka.cluster.ddata.Replicator.ReplicationDeleteFailure" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ReplicationDeleteFailure[A&lt;:akka.cluster.ddata.ReplicatedData]extendsReplicator.DeleteResponse[A]withProductwithSerializable"></a>
+      <a id="ReplicationDeleteFailure[A&lt;:ReplicatedData]:ReplicationDeleteFailure[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Replicator$$ReplicationDeleteFailure.html"><span class="name">ReplicationDeleteFailure</span></a><span class="tparams">[<span name="A">A &lt;: <a href="ReplicatedData.html" class="extype" name="akka.cluster.ddata.ReplicatedData">ReplicatedData</a></span>]</span><span class="params">(<span name="key">key: <a href="Key.html" class="extype" name="akka.cluster.ddata.Key">Key</a>[<span class="extype" name="akka.cluster.ddata.Replicator.ReplicationDeleteFailure.A">A</span>]</span>)</span><span class="result"> extends <a href="Replicator$$DeleteResponse.html" class="extype" name="akka.cluster.ddata.Replicator.DeleteResponse">DeleteResponse</a>[<span class="extype" name="akka.cluster.ddata.Replicator.ReplicationDeleteFailure.A">A</span>] with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@ReplicationDeleteFailure[A&lt;:akka.cluster.ddata.ReplicatedData]extendsReplicator.DeleteResponse[A]withProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.Replicator.ReplicatorMessage" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ReplicatorMessageextendsSerializable"></a>
+      <a id="ReplicatorMessage:ReplicatorMessage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Replicator$$ReplicatorMessage.html"><span class="name">ReplicatorMessage</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@ReplicatorMessageextendsSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Marker trait for remote messages serialized by
+<a href="protobuf/ReplicatorMessageSerializer.html" class="extype" name="akka.cluster.ddata.protobuf.ReplicatorMessageSerializer">akka.cluster.ddata.protobuf.ReplicatorMessageSerializer</a>.</p>
+    </li><li name="akka.cluster.ddata.Replicator.Subscribe" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Subscribe[A&lt;:akka.cluster.ddata.ReplicatedData]extendsReplicator.ReplicatorMessagewithProductwithSerializable"></a>
+      <a id="Subscribe[A&lt;:ReplicatedData]:Subscribe[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Replicator$$Subscribe.html"><span class="name">Subscribe</span></a><span class="tparams">[<span name="A">A &lt;: <a href="ReplicatedData.html" class="extype" name="akka.cluster.ddata.ReplicatedData">ReplicatedData</a></span>]</span><span class="params">(<span name="key">key: <a href="Key.html" class="extype" name="akka.cluster.ddata.Key">Key</a>[<span class="extype" name="akka.cluster.ddata.Replicator.Subscribe.A">A</span>]</span>, <span name="subscriber">subscriber: <a href="../../actor/ActorRef.html" class="extype" name="akka.actor.ActorRef">ActorRef</a></span>)</span><span class="result"> extends <a href="Replicator$$ReplicatorMessage.html" class="extype" name="akka.cluster.ddata.Replicator.ReplicatorMessage">ReplicatorMessage</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@Subscribe[A&lt;:akka.cluster.ddata.ReplicatedData]extendsReplicator.ReplicatorMessagewithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Register a subscriber that will be notified with a <a href="Replicator$$Changed.html" class="extype" name="akka.cluster.ddata.Replicator.Changed">Changed</a> message
+when the value of the given <code>key</code> is changed.</p><div class="fullcomment"><div class="comment cmt"><p>Register a subscriber that will be notified with a <a href="Replicator$$Changed.html" class="extype" name="akka.cluster.ddata.Replicator.Changed">Changed</a> message
+when the value of the given <code>key</code> is changed. Current value is also
+sent as a <a href="Replicator$$Changed.html" class="extype" name="akka.cluster.ddata.Replicator.Changed">Changed</a> message to a new subscriber.</p><p>Subscribers will be notified periodically with the configured <code>notify-subscribers-interval</code>,
+and it is also possible to send an explicit <code>FlushChanges</code> message to
+the <code>Replicator</code> to notify the subscribers immediately.</p><p>The subscriber will automatically be unregistered if it is terminated.</p><p>If the key is deleted the subscriber is notified with a <a href="Replicator$$DataDeleted.html" class="extype" name="akka.cluster.ddata.Replicator.DataDeleted">DataDeleted</a>
+message.
+</p></div></div>
+    </li><li name="akka.cluster.ddata.Replicator.Unsubscribe" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Unsubscribe[A&lt;:akka.cluster.ddata.ReplicatedData]extendsReplicator.ReplicatorMessagewithProductwithSerializable"></a>
+      <a id="Unsubscribe[A&lt;:ReplicatedData]:Unsubscribe[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Replicator$$Unsubscribe.html"><span class="name">Unsubscribe</span></a><span class="tparams">[<span name="A">A &lt;: <a href="ReplicatedData.html" class="extype" name="akka.cluster.ddata.ReplicatedData">ReplicatedData</a></span>]</span><span class="params">(<span name="key">key: <a href="Key.html" class="extype" name="akka.cluster.ddata.Key">Key</a>[<span class="extype" name="akka.cluster.ddata.Replicator.Unsubscribe.A">A</span>]</span>, <span name="subscriber">subscriber: <a href="../../actor/ActorRef.html" class="extype" name="akka.actor.ActorRef">ActorRef</a></span>)</span><span class="result"> extends <a href="Replicator$$ReplicatorMessage.html" class="extype" name="akka.cluster.ddata.Replicator.ReplicatorMessage">ReplicatorMessage</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@Unsubscribe[A&lt;:akka.cluster.ddata.ReplicatedData]extendsReplicator.ReplicatorMessagewithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Unregister a subscriber.</p><div class="fullcomment"><div class="comment cmt"><p>Unregister a subscriber.
+</p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><a href="Replicator$$Subscribe.html" class="extype" name="akka.cluster.ddata.Replicator.Subscribe">Replicator.Subscribe</a></p></span></dd></dl></div>
+    </li><li name="akka.cluster.ddata.Replicator.Update" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Update[A&lt;:akka.cluster.ddata.ReplicatedData]extendsReplicator.Command[A]withNoSerializationVerificationNeededwithProductwithSerializable"></a>
+      <a id="Update[A&lt;:ReplicatedData]:Update[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Replicator$$Update.html"><span class="name">Update</span></a><span class="tparams">[<span name="A">A &lt;: <a href="ReplicatedData.html" class="extype" name="akka.cluster.ddata.ReplicatedData">ReplicatedData</a></span>]</span><span class="params">(<span name="key">key: <a href="Key.html" class="extype" name="akka.cluster.ddata.Key">Key</a>[<span class="extype" name="akka.cluster.ddata.Replicator.Update.A">A</span>]</span>, <span name="writeConsistency">writeConsistency: <a href="Replicator$$WriteConsistency.html" class="extype" name="akka.cluster.ddata.Replicator.WriteConsistency">WriteConsistency</a></span>, <span name="request">request: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Any" class="extype" target="_top">Any</a>]</span>)</span><span class="params">(<span name="modify">modify: (<a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Option" class="extype" target="_top">Option</a>[<span class="extype" name="akka.cluster.ddata.Replicator.Update.A">A</span>]) ⇒ <span class="extype" name="akka.cluster.ddata.Replicator.Update.A">A</span></span>)</span><span class="result"> extends <a href="Replicator$$Command.html" class="extype" name="akka.cluster.ddata.Replicator.Command">Command</a>[<span class="extype" name="akka.cluster.ddata.Replicator.Update.A">A</span>] with <a href="../../actor/NoSerializationVerificationNeeded.html" class="extype" name="akka.actor.NoSerializationVerificationNeeded">NoSerializationVerificationNeeded</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@Update[A&lt;:akka.cluster.ddata.ReplicatedData]extendsReplicator.Command[A]withNoSerializationVerificationNeededwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Send this message to the local <code>Replicator</code> to update a data value for the
+given <code>key</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Send this message to the local <code>Replicator</code> to update a data value for the
+given <code>key</code>. The <code>Replicator</code> will reply with one of the <a href="Replicator$$UpdateResponse.html" class="extype" name="akka.cluster.ddata.Replicator.UpdateResponse">UpdateResponse</a> messages.</p><p>Note that the <a href="Replicator$$Update$.html" class="extype" name="akka.cluster.ddata.Replicator.Update">companion</a> object provides <code>apply</code> functions for convenient
+construction of this message.</p><p>The current data value for the <code>key</code> is passed as parameter to the <code>modify</code> function.
+It is <code>None</code> if there is no value for the <code>key</code>, and otherwise <code>Some(data)</code>. The function
+is supposed to return the new value of the data, which will then be replicated according to
+the given <code>writeConsistency</code>.</p><p>The <code>modify</code> function is called by the <code>Replicator</code> actor and must therefore be a pure
+function that only uses the data parameter and stable fields from enclosing scope. It must
+for example not access <code>sender()</code> reference of an enclosing actor.
+</p></div></div>
+    </li><li name="akka.cluster.ddata.Replicator.UpdateFailure" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="UpdateFailure[A&lt;:akka.cluster.ddata.ReplicatedData]extendsReplicator.UpdateResponse[A]"></a>
+      <a id="UpdateFailure[A&lt;:ReplicatedData]:UpdateFailure[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Replicator$$UpdateFailure.html"><span class="name">UpdateFailure</span></a><span class="tparams">[<span name="A">A &lt;: <a href="ReplicatedData.html" class="extype" name="akka.cluster.ddata.ReplicatedData">ReplicatedData</a></span>]</span><span class="result"> extends <a href="Replicator$$UpdateResponse.html" class="extype" name="akka.cluster.ddata.Replicator.UpdateResponse">UpdateResponse</a>[<span class="extype" name="akka.cluster.ddata.Replicator.UpdateFailure.A">A</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@UpdateFailure[A&lt;:akka.cluster.ddata.ReplicatedData]extendsReplicator.UpdateResponse[A]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.Replicator.UpdateResponse" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="UpdateResponse[A&lt;:akka.cluster.ddata.ReplicatedData]extendsNoSerializationVerificationNeeded"></a>
+      <a id="UpdateResponse[A&lt;:ReplicatedData]:UpdateResponse[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Replicator$$UpdateResponse.html"><span class="name">UpdateResponse</span></a><span class="tparams">[<span name="A">A &lt;: <a href="ReplicatedData.html" class="extype" name="akka.cluster.ddata.ReplicatedData">ReplicatedData</a></span>]</span><span class="result"> extends <a href="../../actor/NoSerializationVerificationNeeded.html" class="extype" name="akka.actor.NoSerializationVerificationNeeded">NoSerializationVerificationNeeded</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@UpdateResponse[A&lt;:akka.cluster.ddata.ReplicatedData]extendsNoSerializationVerificationNeeded" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.Replicator.UpdateSuccess" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="UpdateSuccess[A&lt;:akka.cluster.ddata.ReplicatedData]extendsReplicator.UpdateResponse[A]withProductwithSerializable"></a>
+      <a id="UpdateSuccess[A&lt;:ReplicatedData]:UpdateSuccess[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Replicator$$UpdateSuccess.html"><span class="name">UpdateSuccess</span></a><span class="tparams">[<span name="A">A &lt;: <a href="ReplicatedData.html" class="extype" name="akka.cluster.ddata.ReplicatedData">ReplicatedData</a></span>]</span><span class="params">(<span name="key">key: <a href="Key.html" class="extype" name="akka.cluster.ddata.Key">Key</a>[<span class="extype" name="akka.cluster.ddata.Replicator.UpdateSuccess.A">A</span>]</span>, <span name="request">request: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Any" class="extype" target="_top">Any</a>]</span>)</span><span class="result"> extends <a href="Replicator$$UpdateResponse.html" class="extype" name="akka.cluster.ddata.Replicator.UpdateResponse">UpdateResponse</a>[<span class="extype" name="akka.cluster.ddata.Replicator.UpdateSuccess.A">A</span>] with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@UpdateSuccess[A&lt;:akka.cluster.ddata.ReplicatedData]extendsReplicator.UpdateResponse[A]withProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.Replicator.UpdateTimeout" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="UpdateTimeout[A&lt;:akka.cluster.ddata.ReplicatedData]extendsReplicator.UpdateFailure[A]withProductwithSerializable"></a>
+      <a id="UpdateTimeout[A&lt;:ReplicatedData]:UpdateTimeout[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Replicator$$UpdateTimeout.html"><span class="name">UpdateTimeout</span></a><span class="tparams">[<span name="A">A &lt;: <a href="ReplicatedData.html" class="extype" name="akka.cluster.ddata.ReplicatedData">ReplicatedData</a></span>]</span><span class="params">(<span name="key">key: <a href="Key.html" class="extype" name="akka.cluster.ddata.Key">Key</a>[<span class="extype" name="akka.cluster.ddata.Replicator.UpdateTimeout.A">A</span>]</span>, <span name="request">request: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Any" class="extype" target="_top">Any</a>]</span>)</span><span class="result"> extends <a href="Replicator$$UpdateFailure.html" class="extype" name="akka.cluster.ddata.Replicator.UpdateFailure">UpdateFailure</a>[<span class="extype" name="akka.cluster.ddata.Replicator.UpdateTimeout.A">A</span>] with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@UpdateTimeout[A&lt;:akka.cluster.ddata.ReplicatedData]extendsReplicator.UpdateFailure[A]withProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The direct replication of the <a href="Replicator$$Update.html" class="extype" name="akka.cluster.ddata.Replicator.Update">Update</a> could not be fulfill according to
+the given <a href="Replicator$$WriteConsistency.html" class="extype" name="akka.cluster.ddata.Replicator.WriteConsistency">consistency level</a> and
+<a href="Replicator$$WriteConsistency.html#timeout:scala.concurrent.duration.FiniteDuration" class="extmbr" name="akka.cluster.ddata.Replicator.WriteConsistency#timeout">timeout</a>.</p><div class="fullcomment"><div class="comment cmt"><p>The direct replication of the <a href="Replicator$$Update.html" class="extype" name="akka.cluster.ddata.Replicator.Update">Update</a> could not be fulfill according to
+the given <a href="Replicator$$WriteConsistency.html" class="extype" name="akka.cluster.ddata.Replicator.WriteConsistency">consistency level</a> and
+<a href="Replicator$$WriteConsistency.html#timeout:scala.concurrent.duration.FiniteDuration" class="extmbr" name="akka.cluster.ddata.Replicator.WriteConsistency#timeout">timeout</a>.</p><p>The <code>Update</code> was still performed locally and possibly replicated to some nodes.
+It will eventually be disseminated to other replicas, unless the local replica
+crashes before it has been able to communicate with other replicas.
+</p></div></div>
+    </li><li name="akka.cluster.ddata.Replicator.WriteAll" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="WriteAllextendsReplicator.WriteConsistencywithProductwithSerializable"></a>
+      <a id="WriteAll:WriteAll"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Replicator$$WriteAll.html"><span class="name">WriteAll</span></a><span class="params">(<span name="timeout">timeout: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.concurrent.duration.FiniteDuration" class="extype" target="_top">FiniteDuration</a></span>)</span><span class="result"> extends <a href="Replicator$$WriteConsistency.html" class="extype" name="akka.cluster.ddata.Replicator.WriteConsistency">WriteConsistency</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@WriteAllextendsReplicator.WriteConsistencywithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.Replicator.WriteConsistency" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="WriteConsistencyextendsAnyRef"></a>
+      <a id="WriteConsistency:WriteConsistency"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Replicator$$WriteConsistency.html"><span class="name">WriteConsistency</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@WriteConsistencyextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.Replicator.WriteMajority" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="WriteMajorityextendsReplicator.WriteConsistencywithProductwithSerializable"></a>
+      <a id="WriteMajority:WriteMajority"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Replicator$$WriteMajority.html"><span class="name">WriteMajority</span></a><span class="params">(<span name="timeout">timeout: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.concurrent.duration.FiniteDuration" class="extype" target="_top">FiniteDuration</a></span>)</span><span class="result"> extends <a href="Replicator$$WriteConsistency.html" class="extype" name="akka.cluster.ddata.Replicator.WriteConsistency">WriteConsistency</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@WriteMajorityextendsReplicator.WriteConsistencywithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.Replicator.WriteTo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="WriteToextendsReplicator.WriteConsistencywithProductwithSerializable"></a>
+      <a id="WriteTo:WriteTo"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Replicator$$WriteTo.html"><span class="name">WriteTo</span></a><span class="params">(<span name="n">n: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Int" class="extype" target="_top">Int</a></span>, <span name="timeout">timeout: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.concurrent.duration.FiniteDuration" class="extype" target="_top">FiniteDuration</a></span>)</span><span class="result"> extends <a href="Replicator$$WriteConsistency.html" class="extype" name="akka.cluster.ddata.Replicator.WriteConsistency">WriteConsistency</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@WriteToextendsReplicator.WriteConsistencywithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a>
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Int" class="extype" target="_top">Int</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@##():Int" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a>
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@==(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="akka.cluster.ddata.Replicator.FlushChanges" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FlushChanges"></a>
+      <a id="FlushChanges:FlushChanges"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Replicator$$FlushChanges$.html"><span class="name">FlushChanges</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@FlushChanges" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Notify subscribers of changes now, otherwise they will be notified periodically
+with the configured <code>notify-subscribers-interval</code>.</p>
+    </li><li name="akka.cluster.ddata.Replicator.GetReplicaCount" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="GetReplicaCount"></a>
+      <a id="GetReplicaCount:GetReplicaCount"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Replicator$$GetReplicaCount$.html"><span class="name">GetReplicaCount</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@GetReplicaCount" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Get current number of replicas, including the local replica.</p><div class="fullcomment"><div class="comment cmt"><p>Get current number of replicas, including the local replica.
+Will reply to sender with <a href="Replicator$$ReplicaCount.html" class="extype" name="akka.cluster.ddata.Replicator.ReplicaCount">ReplicaCount</a>.
+</p></div></div>
+    </li><li name="akka.cluster.ddata.Replicator.ReadLocal" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ReadLocal"></a>
+      <a id="ReadLocal:ReadLocal"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Replicator$$ReadLocal$.html"><span class="name">ReadLocal</span></a><span class="result"> extends <a href="Replicator$$ReadConsistency.html" class="extype" name="akka.cluster.ddata.Replicator.ReadConsistency">ReadConsistency</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@ReadLocal" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.Replicator.Update" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Update"></a>
+      <a id="Update:Update"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Replicator$$Update$.html"><span class="name">Update</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@Update" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="akka.cluster.ddata.Replicator.WriteLocal" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="WriteLocal"></a>
+      <a id="WriteLocal:WriteLocal"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Replicator$$WriteLocal$.html"><span class="name">WriteLocal</span></a><span class="result"> extends <a href="Replicator$$WriteConsistency.html" class="extype" name="akka.cluster.ddata.Replicator.WriteConsistency">WriteConsistency</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@WriteLocal" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a>
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@clone():Object" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a>
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a>
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@equals(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@finalize():Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="akka.cluster.ddata.Replicator#flushChanges" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="flushChanges:akka.cluster.ddata.Replicator.FlushChanges.type"></a>
+      <a id="flushChanges:FlushChanges.type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">flushChanges</span><span class="result">: <a href="Replicator$$FlushChanges$.html" class="extype" name="akka.cluster.ddata.Replicator.FlushChanges">FlushChanges</a>.type</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@flushChanges:akka.cluster.ddata.Replicator.FlushChanges.type" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Java API: The <code>FlushChanges</code> instance
+</p>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <a id="getClass():Class[_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@getClass():Class[_]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="akka.cluster.ddata.Replicator#getReplicaCount" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getReplicaCount:akka.cluster.ddata.Replicator.GetReplicaCount.type"></a>
+      <a id="getReplicaCount:GetReplicaCount.type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getReplicaCount</span><span class="result">: <a href="Replicator$$GetReplicaCount$.html" class="extype" name="akka.cluster.ddata.Replicator.GetReplicaCount">GetReplicaCount</a>.type</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@getReplicaCount:akka.cluster.ddata.Replicator.GetReplicaCount.type" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Java API: The <code>GetReplicaCount</code> instance
+</p>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Int" class="extype" target="_top">Int</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@hashCode():Int" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a>
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@notify():Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@notifyAll():Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="akka.cluster.ddata.Replicator#props" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="props(settings:akka.cluster.ddata.ReplicatorSettings):akka.actor.Props"></a>
+      <a id="props(ReplicatorSettings):Props"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">props</span><span class="params">(<span name="settings">settings: <a href="ReplicatorSettings.html" class="extype" name="akka.cluster.ddata.ReplicatorSettings">ReplicatorSettings</a></span>)</span><span class="result">: <a href="../../actor/Props.html" class="extype" name="akka.actor.Props">Props</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@props(settings:akka.cluster.ddata.ReplicatorSettings):akka.actor.Props" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Factory method for the <a href="../../actor/Props.html" class="extype" name="akka.actor.Props">akka.actor.Props</a> of the <a href="Replicator.html" class="extype" name="akka.cluster.ddata.Replicator">Replicator</a> actor.</p>
+    </li><li name="akka.cluster.ddata.Replicator#readLocal" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="readLocal:akka.cluster.ddata.Replicator.ReadLocal.type"></a>
+      <a id="readLocal:ReadLocal.type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">readLocal</span><span class="result">: <a href="Replicator$$ReadLocal$.html" class="extype" name="akka.cluster.ddata.Replicator.ReadLocal">ReadLocal</a>.type</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@readLocal:akka.cluster.ddata.Replicator.ReadLocal.type" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Java API: The <code>ReadLocal</code> instance
+</p>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
+      <a id="synchronized[T0](⇒T0):T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@toString():String" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@wait():Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a>
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Long" class="extype" target="_top">Long</a></span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a>
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Long" class="extype" target="_top">Long</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@wait(x$1:Long):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="akka.cluster.ddata.Replicator#writeLocal" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="writeLocal:akka.cluster.ddata.Replicator.WriteLocal.type"></a>
+      <a id="writeLocal:WriteLocal.type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">writeLocal</span><span class="result">: <a href="Replicator$$WriteLocal$.html" class="extype" name="akka.cluster.ddata.Replicator.WriteLocal">WriteLocal</a>.type</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#akka.cluster.ddata.Replicator$@writeLocal:akka.cluster.ddata.Replicator.WriteLocal.type" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Java API: The <code>WriteLocal</code> instance
+</p>
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.11.8/index.html#scala.Any" class="extype" target="_top">Any</a></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>

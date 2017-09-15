@@ -1,0 +1,14 @@
+schrijf "Geef twee hele getallen";
+nummer getal1;
+getal1 < (nummer);
+
+nummer getal2;
+getal2 < (nummer);
+
+als(getal1 < getal2){
+    schrijf "getal 1 is kleiner dan getal 2";
+}alsanders (getal1 == getal2){
+    schrijf "getal 1 is gelijk aangetal 2";
+}anders{
+    schrijf "getal 1 is groter dan getal 2";
+}

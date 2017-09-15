@@ -1,0 +1,16 @@
+// This file contains the doxygen code for this assignment
+/** \mainpage
+
+<h2>Various</h2>
+
+<p>A collection of common .h and .cc files used by many exercises.
+	<br>If you unpacked the <b>.tgz</b> file on a unix, linux or MacOS system,
+		then all identically named files in the various directories
+		will actually be <b>one and the same</b> file.
+		So, if you alter a file somewhere,
+		the changes will also show in other directories.
+	<br>If you unpacked the <b>.zip</b> version, all those files
+		will be duplicates. Change a file will not change the
+		corresponding file in another directory.
+
+ */
