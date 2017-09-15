@@ -1,12 +1,12 @@
 # Concurrency
 
 
-Kut vak eerste klas. Maarja, toch maar erbij dan he. Hier vind je alles betreft Semaphores, Threading, Mutex, Reentrant locking en dat laastste.
+Kut vak eerste klas. Maarja, toch maar erbij dan he. Hier vind je alles betreft Semaphores, Threading, Mutex, Reentrant locking en AKKA
 
   - Opdracht 1-2 bevat alles qua threading
-  - Mutex en Semaphores in map TE35GREVELINKKLARENBEEKOPGAVE2
-  - Reentrant locking in map TE35GREVELINKKLARENBEEKOPGAVE3
-  - Laatste in week 4
+  - Mutex en Semaphores in opgave 2
+  - Reentrant locking in opgave 3
+  - AKKA in opgave 4
 
 > Ik hoop dat iedereen die van deze repo gebruik maakt,
 > zich realiseert dat hij of zijn niets heeft aan het
