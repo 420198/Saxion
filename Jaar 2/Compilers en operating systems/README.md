@@ -4,10 +4,13 @@
 Hier vind je alles wat betreft het vak compilers en operating systems
 
   - Compiler
+    - Grammatica
     - Type en scope checker
     - Model
     - Code generator
   - Shell`
+    - Grammatica
+    - Alles wat ook maar iets met de shell te maken heeft. Over shell ga ik ook verder geen vragen beantwoorden.
 
 
 > Ik hoop dat iedereen die van deze repo gebruik maakt,
