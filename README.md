@@ -1,4 +1,4 @@
-# Saxion
+# Saxion - HBO-ICT
 
 
 Op deze repo vind je al het huiswerk van het tweede jaar (2016,2017) van de studie HBO-ICT, en het kan op den duur voorkomen dat er ook eerste jaars huiswerk bij komt. Voorbeelden die je hier zult vinden zijn:
