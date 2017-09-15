@@ -1,11 +1,18 @@
-Hallo mensen,
+# Saxion
 
-Mensen die hier gekomen zijn hebben hulp nodig bij bepaalde opgaves. Alles is netjes gestructureerd, de meeste projecten zijn NIET online gezet aangezien deze makkelijk kunnen veranderen.
 
-Voor compilers en operating systems is er ook een verslag bij gezet aangezien het geen makkelijke structuur is en ingewikkeld in elkaar zit.
+Op deze repo vind je al het huiswerk van het tweede jaar (2016,2017) van de studie HBO-ICT, en het kan op den duur voorkomen dat er ook eerste jaars huiswerk bij komt. Voorbeelden die je hier zult vinden zijn:
 
-Verder vraag ik iedereen de codes slecht als een reference te gebruiken en niet klakkeloos copy pasta gaat lopen doen. Hier leer je niks van, is misschien niet eens mogelijk en krijg je alleen maar gezeik mee.
+  - Concurrency
+  - C++
+  - Compilers en Operating Systems
+  - Internet technologie
+  - Complexiteit en Algoritmiek
+  - Webtechnologie
+  - Project netwerken
 
-De groeten,
 
-Stijn (422253).
+> Ik hoop dat iedereen die van deze repo gebruik maakt,
+> zich realiseert dat hij of zijn niets heeft aan het
+> klakkeloos kopieren. Vandaar dat ik ook aan iedereen
+> vraag om deze repo slechts als referentiekader te gebruiken. Ik behoud het recht tot het neerhalen van deze repo, op ieder moment dat ik wil. Voor eventuele extra vragen over deze repo of vragen over opdrachten stuur een mail naar 422253@student.saxion.nl of s.klarenbeek@hotmail.nl.
