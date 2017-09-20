@@ -9,6 +9,7 @@ public class Opdracht5 {
     }
 
     private void run(){
+        //Put everything into a map so you dont get a million if-else
         HashMap<Integer,String> roman = new HashMap<Integer, String>(){{
             put(1,"I");
             put(2,"II");
@@ -22,15 +23,24 @@ public class Opdracht5 {
             put(10,"X");
         }};
 
+        //Create a scanner
         Scanner s = new Scanner(System.in);
+
+        //Create variable
         int toTranslate;
 
         System.out.println("Enter a number between 1 and 10: ");
+
+        //loop
         do{
+            //Read in the number
             toTranslate = s.nextInt();
+
+            //Check if number is between x and y
             if(toTranslate>0 && toTranslate < 11){
                 System.out.println("Roman numeral value: "+roman.get(toTranslate));
             }else{
+                //else
                 System.out.println("Incorrect number, asshat. Type \"exit\" to exit the loop!");
             }
             System.out.println("Enter a number between 1 and 10: ");
