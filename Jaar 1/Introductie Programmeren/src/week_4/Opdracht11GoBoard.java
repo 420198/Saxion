@@ -25,6 +25,8 @@ public class Opdracht11GoBoard {
                     drawBoard(19);
                     break;
                 default:
+                    System.out.println("Incorrect number chosen");
+                    System.out.print("Please enter the size of the board to draw (1-3): ");
                     continue;
             }
             System.out.print("Please enter the size of the board to draw (1-3): ");
@@ -34,10 +36,18 @@ public class Opdracht11GoBoard {
     private void drawBoard(int n) {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
+                System.out.print("+");
                 if(j<n-1){
-
+                    System.out.print("--");
                 }
             }
+            System.out.println("");
+            if(i<n-1) {
+                for (int j = 0; j < n; j++) {
+                    System.out.print("|  ");
+                }
+            }
+            System.out.println("");
         }
     }
 }
