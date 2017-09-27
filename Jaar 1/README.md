@@ -1,9 +1,10 @@
 # Saxion - HBO-ICT
 
 
-Dit is het mapje voor 1e jaars huiswerk, hier vind je onderhand:
+Dit is het mapje voor 1e jaars huiswerk (2017-2018), hier vind je onderhand:
 
   - `Introductie programmeren`
+  
 
 > Ik hoop dat iedereen die van deze repo gebruik maakt,
 > zich realiseert dat hij of zij niets heeft aan het
