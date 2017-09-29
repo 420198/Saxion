@@ -1,9 +1,10 @@
-package week_5;
+package week_5.MasterMind;
 
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.stream.IntStream;
 
-public class MasterMind {
+public class MasterMind2 {
     /**
      * PERFOMANCE BOOSTS
      * <p>
@@ -17,14 +18,14 @@ public class MasterMind {
 
     private static final int MAX_NUM = 8;
     private static final int MAX_PLACES = 4;
-    private static final int MAX_TURNS = 2;
+    private static final int MAX_TURNS = 12;
 
     private int[] solution = new int[MAX_PLACES];
     private int[] mySol = new int[MAX_PLACES];
     private Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        new MasterMind().run();
+        new MasterMind2().run();
     }
 
     public void run() {
@@ -87,7 +88,7 @@ public class MasterMind {
                 // Number in my solution is equal to the one in the solution
                 if (mySol[i] == solution[i]) {
                     correctNumsCorrectPos += String.valueOf(mySol[i]) + "  ";
-                } else if (hasNum(solution, mySol[i])) {
+                } else if (Arrays.binarySearch(solution, mySol[i]) != -1) {
                     //Number aint correct but it is in the solution
                     correctNumsWrongPos += String.valueOf(mySol[i]) + "  ";
                 }
@@ -107,30 +108,12 @@ public class MasterMind {
             // REINTIZILIZING IS IMPORTANT OTHERWISE THE NUMBERS IN ARRAY WONT BE RESET.
             mySol = new int[MAX_PLACES];
         }
-        System.out.println("Too bad, you didnt guess it. Program stopping!");
-    }
-
-    /**
-     * Check if an array has a num
-     *
-     * @param arr the array
-     * @param num the num
-     * @return true or false if num is in there
-     */
-    private boolean hasNum(int[] arr, int num) {
-        for (int i : arr) {
-            if (i == num) {
-                return true;
-            }
-        }
-        return false;
+        System.out.println("Too bad, your turns are up and you didn't guess it. Program stopping!");
     }
 
     /**
      * Check if a solution has been found, taking two arrays (mysolution and the ACTUAL solution). If one of the nums aint
-     * correct, it will return false.
-     * <p>
-     * At the end of the loop, there was no return. This means all items are correct.
+     * correct, it will return false. At the end of the loop, there was no return. This means all items are correct.
      *
      * @param mySol    mySolution array
      * @param solution the actual solution
@@ -138,9 +121,7 @@ public class MasterMind {
      */
     private boolean solutionFound(int[] mySol, int[] solution) {
         for (int i = 0; i < MAX_PLACES; i++) {
-            if (mySol[i] != solution[i]) {
-                return false;
-            }
+            if (mySol[i] != solution[i]) return false;
         }
         return true;
     }
