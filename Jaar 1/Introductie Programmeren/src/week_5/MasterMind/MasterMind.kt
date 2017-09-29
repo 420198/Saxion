@@ -4,23 +4,11 @@ import java.util.Arrays
 import java.util.Scanner
 
 class MasterMind {
-
     private val solution = IntArray(MAX_PLACES)
     private var mySol = IntArray(MAX_PLACES)
     private val scanner = Scanner(System.`in`)
 
     fun run() {
-        /*
-         The rules of the game:
-          - Computer picks 4 numbers out of [1, 8].
-            For now, duplicates are NOT allowed.
-          - while the combination has not been guessed and the number of turns has not been exceeded:
-            - Player provides an (educated) guess
-            - Computer provides feedback on the number of
-              correctly placed items and the amount of numbers
-              that are part of the solution but occur in thE wrong location
-         */
-
         // Let the computer pick the solution...
         for (i in 0 until MAX_PLACES) {
             // Pick a number between 1 and 8 (inclusive)
@@ -88,13 +76,6 @@ class MasterMind {
     }
 
     companion object {
-        /**
-         * RECODED INTO KOTLIN
-         * 
-         * HAVE FUN YA ALL
-         * ~ Stijn Klarenbeek
-         */
-
         private val MAX_NUM = 8
         private val MAX_PLACES = 4
         private val MAX_TURNS = 2
