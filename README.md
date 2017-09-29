@@ -22,6 +22,6 @@ Op deze repo vind je al het huiswerk van het tweede jaar (2016,2017) van de stud
 > klakkeloos kopieren. Vandaar dat ik ook aan iedereen
 > vraag om deze repo slechts als referentiekader te gebruiken. Ik behoud het recht tot het neerhalen van deze repo op ieder moment dat ik wil. Voor eventuele extra vragen over deze repo of vragen over opdrachten stuur een mail naar 422253@student.saxion.nl of s.klarenbeek@hotmail.nl.
 
-# Update 27-09-2017 15:02
+## Update 27-09-2017 15:02
 
 Inmiddels zijn de eerste paar weken van `introductie programmeren` toegevoegd.
