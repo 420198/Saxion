@@ -4,6 +4,9 @@ package week_3;
  * Created by thama on 20-9-2017.
  */
 public class Opdracht10 {
+    public static void main(String[] args) {
+        new Opdracht10().run();
+    }
     //2D array
     private String[][] objects = new String[][]{
             {"2", "X", "2"},
@@ -11,9 +14,6 @@ public class Opdracht10 {
             {"X", "7", "2"}
     };
 
-    public static void main(String[] args) {
-        new Opdracht10().run();
-    }
 
     private void run() {
         printBoard();
