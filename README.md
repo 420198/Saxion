@@ -22,7 +22,9 @@ Op deze repo vind je al het huiswerk van het tweede jaar (2016,2017) en eerste j
 
   - `Introductie programmeren`
 
+### Update 06-10-2017 10:19
+Door tijdgebrek (moest trein halen) ister was er een versie van tictactoe op de repo gekomen die nog wat fouten had. Deze fouten zijn nu opgelost en er zijn een paar extra dingetjes toegevoegd. Voor vollgedige aanpassing, check de commit message.
 
-## Update 27-09-2017 15:02
+### Update 27-09-2017 15:02
 
 Inmiddels zijn de eerste paar weken van `introductie programmeren` toegevoegd.
