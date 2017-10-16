@@ -38,7 +38,7 @@
       <file leaf-file-name="MemoryJava.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/week_7/Opdracht5/MemoryJava.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="966">
+            <state relative-caret-position="0">
               <caret line="46" column="23" lean-forward="false" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -52,25 +52,45 @@
       <file leaf-file-name="MemoryPair.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/week_7/Opdracht5/MemoryPair.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
+            <state relative-caret-position="1104">
               <caret line="48" column="21" lean-forward="false" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HangManJava.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HangManJava.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/week_7/Opdracht6/HangManJava.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2254">
-              <caret line="116" column="25" lean-forward="true" selection-start-line="116" selection-start-column="25" selection-end-line="116" selection-end-column="25" />
+            <state relative-caret-position="807">
+              <caret line="116" column="25" lean-forward="false" selection-start-line="116" selection-start-column="25" selection-end-line="116" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#600#601#0" expanded="true" />
-                <element signature="e#639#640#0" expanded="true" />
-                <element signature="e#2059#2060#0" expanded="true" />
-                <element signature="e#2113#2114#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AanhangerTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/week_8/AanhangerTest/AanhangerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="474">
+              <caret line="166" column="1" lean-forward="false" selection-start-line="166" selection-start-column="1" selection-end-line="166" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#199#200#0" expanded="true" />
+                <element signature="e#240#241#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AanhangerTestKotlin.kt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/week_8/AanhangerTest/AanhangerTestKotlin.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2999">
+              <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -78,7 +98,7 @@
       <file leaf-file-name="HangManKotlin.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/week_7/Opdracht6/HangManKotlin.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2355">
+            <state relative-caret-position="230">
               <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
               <folding />
             </state>
@@ -89,7 +109,7 @@
         <entry file="file://$PROJECT_DIR$/src/week_7/Opdracht6/Board.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="115">
-              <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+              <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -120,8 +140,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/week_5/Opdracht8.java" />
-        <option value="$PROJECT_DIR$/src/week_5/Opdracht9.java" />
         <option value="$PROJECT_DIR$/src/week_5/Opdracht10.java" />
         <option value="$PROJECT_DIR$/src/week_5/Opdracht11.java" />
         <option value="$PROJECT_DIR$/src/week_5/MasterMind.java" />
@@ -171,6 +189,8 @@
         <option value="$PROJECT_DIR$/src/week_7/Opdracht6/Board.java" />
         <option value="$PROJECT_DIR$/src/week_7/Opdracht6/HangManJava.java" />
         <option value="$PROJECT_DIR$/src/week_7/Opdracht6/HangManKotlin.kt" />
+        <option value="$PROJECT_DIR$/src/week_8/AanhangerTest/AanhangerTest.java" />
+        <option value="$PROJECT_DIR$/src/week_8/AanhangerTest/AanhangerTestKotlin.kt" />
       </list>
     </option>
   </component>
@@ -216,30 +236,16 @@
               <item name="Introductie Programmeren" type="b2602c69:ProjectViewProjectNode" />
               <item name="Introductie Programmeren" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="week_7" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Introductie Programmeren" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Introductie Programmeren" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="week_7" type="462c0819:PsiDirectoryNode" />
-              <item name="Opdracht5" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Introductie Programmeren" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Introductie Programmeren" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="week_7" type="462c0819:PsiDirectoryNode" />
-              <item name="Opdracht6" type="462c0819:PsiDirectoryNode" />
+              <item name="week_8" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -269,15 +275,15 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.week_7.Opdracht6.HangManKotlin">
-    <configuration name="HangManJava" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.AanhangerTest">
+    <configuration name="AanhangerTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="week_7.Opdracht6.*" />
+          <option name="PATTERN" value="week_8.AanhangerTest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="week_7.Opdracht6.HangManJava" />
+      <option name="MAIN_CLASS_NAME" value="week_8.AanhangerTest.AanhangerTest" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -289,14 +295,14 @@
       <module name="Introductie Programmeren" />
       <envs />
     </configuration>
-    <configuration name="MatchDotComJava" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="HangManJava" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="week_7.Opdracht4.*" />
+          <option name="PATTERN" value="week_7.Opdracht6.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="week_7.Opdracht4.MatchDotComJava" />
+      <option name="MAIN_CLASS_NAME" value="week_7.Opdracht6.HangManJava" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -731,19 +737,19 @@
       <envs />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.MatchDotComJava" />
-      <item index="1" class="java.lang.String" itemvalue="Kotlin.week_7.Opdracht4.MatchDotComeKotlin" />
-      <item index="2" class="java.lang.String" itemvalue="Application.MemoryJava" />
-      <item index="3" class="java.lang.String" itemvalue="Application.HangManJava" />
-      <item index="4" class="java.lang.String" itemvalue="Kotlin.week_7.Opdracht6.HangManKotlin" />
+      <item index="0" class="java.lang.String" itemvalue="Kotlin.week_7.Opdracht4.MatchDotComeKotlin" />
+      <item index="1" class="java.lang.String" itemvalue="Application.MemoryJava" />
+      <item index="2" class="java.lang.String" itemvalue="Application.HangManJava" />
+      <item index="3" class="java.lang.String" itemvalue="Kotlin.week_7.Opdracht6.HangManKotlin" />
+      <item index="4" class="java.lang.String" itemvalue="Application.AanhangerTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Kotlin.week_7.Opdracht6.HangManKotlin" />
-        <item index="1" class="java.lang.String" itemvalue="Application.HangManJava" />
-        <item index="2" class="java.lang.String" itemvalue="Application.MemoryJava" />
-        <item index="3" class="java.lang.String" itemvalue="Kotlin.week_7.Opdracht4.MatchDotComeKotlin" />
-        <item index="4" class="java.lang.String" itemvalue="Application.MatchDotComJava" />
+        <item index="0" class="java.lang.String" itemvalue="Application.AanhangerTest" />
+        <item index="1" class="java.lang.String" itemvalue="Kotlin.week_7.Opdracht6.HangManKotlin" />
+        <item index="2" class="java.lang.String" itemvalue="Application.HangManJava" />
+        <item index="3" class="java.lang.String" itemvalue="Application.MemoryJava" />
+        <item index="4" class="java.lang.String" itemvalue="Kotlin.week_7.Opdracht4.MatchDotComeKotlin" />
       </list>
     </recent_temporary>
   </component>
@@ -773,12 +779,13 @@
       <workItem from="1507272072121" duration="4514000" />
       <workItem from="1507552640993" duration="3997000" />
       <workItem from="1507616121905" duration="9892000" />
-      <workItem from="1507802280708" duration="10008000" />
+      <workItem from="1507802280708" duration="10586000" />
+      <workItem from="1508148064390" duration="5293000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81993000" />
+    <option name="totallyTimeSpent" value="87864000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -791,7 +798,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1628" height="1047" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -806,7 +812,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16315137" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16315137" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -835,7 +841,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <option name="time" value="7" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -844,28 +850,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/week_5/Opdracht8.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/week_5/Opdracht5.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="8" column="39" lean-forward="false" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/week_6/Opdracht1/trh.java" />
-    <entry file="file://$PROJECT_DIR$/src/week_6/Opdracht1/HouseInJava.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="29" lean-forward="true" selection-start-line="10" selection-start-column="29" selection-end-line="18" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/week_6/Opdracht1/HouseInKotlin.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
@@ -943,7 +927,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
           <caret line="399" column="18" lean-forward="true" selection-start-line="399" selection-start-column="18" selection-end-line="399" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1076,9 +1059,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="301">
           <caret line="24" column="48" lean-forward="false" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
-          <folding>
-            <element signature="e#26#78#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1128,7 +1108,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
           <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1142,7 +1121,7 @@
     <entry file="file://$PROJECT_DIR$/src/week_7/Opdracht5/MemoryPair.java" />
     <entry file="file://$PROJECT_DIR$/src/week_7/Opdracht5/MemoryJava.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="966">
+        <state relative-caret-position="0">
           <caret line="46" column="23" lean-forward="false" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1154,7 +1133,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/week_7/Opdracht5/MemoryPair.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
+        <state relative-caret-position="1104">
           <caret line="48" column="21" lean-forward="false" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
           <folding />
         </state>
@@ -1163,14 +1142,14 @@
     <entry file="file://$PROJECT_DIR$/src/week_7/Opdracht6/Board.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
-          <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+          <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/week_7/Opdracht6/HangManKotlin.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2355">
+        <state relative-caret-position="230">
           <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
           <folding />
         </state>
@@ -1178,15 +1157,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/week_7/Opdracht6/HangManJava.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2254">
-          <caret line="116" column="25" lean-forward="true" selection-start-line="116" selection-start-column="25" selection-end-line="116" selection-end-column="25" />
+        <state relative-caret-position="807">
+          <caret line="116" column="25" lean-forward="false" selection-start-line="116" selection-start-column="25" selection-end-line="116" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#600#601#0" expanded="true" />
-            <element signature="e#639#640#0" expanded="true" />
-            <element signature="e#2059#2060#0" expanded="true" />
-            <element signature="e#2113#2114#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/week_8/fill.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/Scanner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="2401" column="18" lean-forward="false" selection-start-line="2401" selection-start-column="18" selection-end-line="2401" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/week_8/AanhangerTest/AanhangerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="166" column="1" lean-forward="false" selection-start-line="166" selection-start-column="1" selection-end-line="166" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#199#200#0" expanded="true" />
+            <element signature="e#240#241#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/week_8/AanhangerTest/AanhangerTestKotlin.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2999">
+          <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
